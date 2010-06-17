@@ -1,0 +1,15 @@
+Game idea and ground concept taken from
+Drag-n-Drop Solitaire 95
+(C) 1995 Intuitive Software Inc.
+
+Win.bmp was taken from
+Drag-n-Drop Solitaire 95
+(C) 1995 Intuitive Software Inc.
+
+Jump.wav (Originally: Click.wav) was taken from
+Prairie Dog Hunt PRO '97
+(C) 1997 Diversions Software
+
+Finish.wav (Originally: Win3.wav) was taken from
+Let it Ride for 95
+(C) 1996 SilverDisc Software

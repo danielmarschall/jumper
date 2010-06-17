@@ -1,0 +1,9 @@
+GreenStone	BITMAP	Private\Resource\GreenStone.bmp
+YellowStone	BITMAP	Private\Resource\YellowStone.bmp
+RedStone	BITMAP	Private\Resource\RedStone.bmp
+EmptyField	BITMAP	Private\Resource\EmptyField.bmp
+
+Finish		WAVE	Private\Resource\Finish.wav
+Jump		WAVE	Private\Resource\Jump.wav
+
+1 		24 	Private\Resource\PegSolitaire.manifest

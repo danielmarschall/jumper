@@ -1,0 +1,17 @@
+Verwendet wird der Ressourcen-DLL-Experte von Delphi 7.
+
+Basisquelltext: Englisch unter deutscher RTL (problematisch...)
+
+Übersetzung in Deutsch DEU
+
+Wichtiger Hinweis:
+
+Änderungen an der Programmfunktionalität müssen in dem Stammprojekt EXE durchgeführt werden.
+Werden grundlegende Dinge wie z.B. Events oder neue VCLs angelegt, so muss die DEU Datei
+neu synchronisiert werden. Das geht über:
+
+Projekt -> Sprachen -> Ressourcen DLLs aktualisieren!
+
+Damit die Sprache verwendet werden kann, muss DEU und EXE kompiliert werden! (Mit Projektmanager DEU und EXE nacheinander aktivieren)
+
+Die DEU kann mit der IDE übersetzt werden. Quellcodesprünge sind nur in EXE möglich.

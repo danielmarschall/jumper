@@ -1,0 +1,13 @@
+Die Regeln von Peg Solitär sind einfach. Sie müssen ähnlich wie beim Damespiel über die benachbarten Steine hüpfen, um diese zu entfernen. Das Spiel ist beendet, wenn keine weiteren Züge mehr vorhanden sind.
+
+ViaThinkSoft Peg Solitär bietet Ihnen beliebig variierbare und erweiterbare Brettdateien, die Ihnen die Vorlage zum Spielen bieten. In den nächsten Versionen ist auch ein komfortabler Leveleditor geplant, der das Editieren per Editor überflüssig machen soll. Die bereits mitgelieferten Bretter entsprechen jedoch den üblichen Standardbrettern.
+
+Diese Variante von Peg Solitär hat verschiedenfarbige Steine, die unterschiedlich in der Punktezahl gewichtet wird. Ein entfernter roter Stein bringt Ihnen 30 Punkte, ein gelber 20 und ein entfernter Grüner 10.
+
+Das Spielen nach Punktezahl ist jedoch nicht zwingend notwendig. Sie können auch auf Zeit spielen, auf die wenigsten verbleibenden Steine oder auf die Zielfeldbelegung. Wählen Sie das Ziel, das Sie bevorzugen.
+
+In der Regel sind diagonale Spielzüge nicht erlaubt. Die Entscheidung, ob die diagonalen Züge trotzdem erlaubt sind, wird vom Entwickler der Leveldatei festgelegt. Es ist möglich, dass gewisse Bretter diagonale züge erfordern, um korrekt gelöst zu werden. Dies ist Mathematisch jedoch sehr komplex nachzuweisen. Wie haben als Komfort die Standardbretter in zwei Varianten ausgeliefert: Mit und ohne Diagonalzug.
+
+Einige Levels besitzen Zielfelder. Diese sind durch eine tiefere Prägung auf dem Spielfeld  bzw. in der Vorschau durch einen schwarzen Rand gekennzeichnet. Das Peg Solitär ist korrekt beendet, wenn auf den Zielfeldern Steine (Farbe egal) liegen, keine weiteren Züge mehr möglich sind und sonst keine Steine auf dem Brett liegen. Sie erhalten hierfür eine besondere Auszeichnung in den Highscorelisten. Sie müssen aber wie gesagt, dieses Primärziel nicht verfolgen. Sie können stattdessen auch auf Zeit oder Punktezahlen spielen.
+
+Weitere Informationen zu dem Spiel finden Sie im Internet unter dem Stichwort "Solitär" bzw. "Peg Solitaire".

@@ -1,0 +1,3 @@
+Felder
+(+ Diagonal)
++ Ziel erreicht? Welche Farbe?

@@ -1,0 +1,32 @@
+Registry: Settings\
+
+TurboDelphi Kompatibilität?
+
+Abstand oben ist größer als links und rechts vom brett
+
+ToDo
+- 2 gewinntöne
+- deutsche fassung erstellen
+- beliebig langes undo
+- zielfeld bei finishform berücksichtigen
+- how to play formulieren
+- anzeige des aktuellen levels und ob diagonal erlaubt ist
+
+Verfeinerung
+- standardbretter aus wikipedia als level entwickeln
+- Setup erstellen
+- nur 1 instanz
+- showmessage in dlg's umwandeln
+- Handsymbol ändern
+- modal Form blink fehler
+
+Zukunft
+- hervorheben von gültigen feldern (conf)
+- Leveleditor designen
+- 9 Steinsorten?
+- Panels durch Grafiken ersetzen, Grafik-Templates mit Tile-Background erlauben
+- Steingrafiken anspruchsvoller gestalten: Win-3D-Effekt
+- Spielstände inklusive History abspeicherbar
+
+Fragen
+- Sollte es möglich sein, dass es mehrere Ziele gibt? z.B. 2 Ziele für 2 Steine?

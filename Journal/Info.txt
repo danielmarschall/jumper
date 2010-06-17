@@ -1,0 +1,5 @@
+This folder contains the journal files of the levels.
+
+Your performance details of every game will be saved into the files, so that the highscore can be dynamically calculated every time.
+
+You have to have write rights to get added to the high scores.
