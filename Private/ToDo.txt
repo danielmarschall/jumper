@@ -1,9 +1,8 @@
+
 "Möchten Sie das Spiel wirklich beenden?"
 
 Den ausgewählten Stein markieren
 
 Setup.exe
 
-Fix menu bugs in German transaltion
-
-"Das Selbe nochmal spielen" -> "Das Gleiche"
+Undo/Redo gehen nicht? (sollten übrigens auch nach gameover gehen)

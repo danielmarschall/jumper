@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<PersonalityInfo>
+		<Option>
+			<Option Name="Personality">W32ResourceDLL.Personality</Option>
+			<Option Name="ProjectType">ResourceDLL</Option>
+			<Option Name="Version">1.0</Option>
+			<Option Name="GUID">{46FF2805-99D1-4BBF-A6E4-7EF395254379}</Option>
+		</Option>
+	</PersonalityInfo>
+	<W32ResourceDLL.Personality>
+		<Source>
+			<Source Name="MainSource">PegSolitaire.dpr</Source>
+		</Source>
+		<Options>
+			<Options Name="BaseLang">1033</Options>
+			<Options Name="TargetName">..\PegSolitaire.DEU</Options>
+			<Options Name="BRCC_IncludePath"></Options>
+			<Options Name="Company"></Options>
+			<Options Name="Configuration"></Options>
+			<Options Name="Copyright"></Options>
+			<Options Name="Description"></Options>
+			<Options Name="Trademark"></Options>
+			<Options Name="Product"></Options>
+			<Options Name="ProductVersion"></Options>
+			<Options Name="Title"></Options>
+			<Options Name="FileVersion"></Options>
+			<Options Name="Evidence"></Options>
+			<Options Name="KeyFile"></Options>
+			<Options Name="KeyName"></Options>
+		</Options>
+		<FileList>
+			<File FileName="About.dfm" ContainerId="W32Form" ModuleName="About.dfm"/>
+			<File FileName="Choice.dfm" ContainerId="W32Form" ModuleName="Choice.dfm"/>
+			<File FileName="Finish.dfm" ContainerId="W32Form" ModuleName="Finish.dfm"/>
+			<File FileName="Help.dfm" ContainerId="W32Form" ModuleName="Help.dfm"/>
+			<File FileName="HighScore.dfm" ContainerId="W32Form" ModuleName="HighScore.dfm"/>
+			<File FileName="History.dfm" ContainerId="W32Form" ModuleName="History.dfm"/>
+			<File FileName="Main.dfm" ContainerId="W32Form" ModuleName="Main.dfm"/>
+			<File FileName="PegSolitaire_DRC.rc" ContainerId="W32RC" ModuleName="PegSolitaire_DRC.rc"/>
+		</FileList>
+	</W32ResourceDLL.Personality>
+</BorlandProject>

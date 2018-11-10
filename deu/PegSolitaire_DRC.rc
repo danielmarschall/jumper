@@ -1,907 +1,807 @@
-/*ITE: 5.0 39880.0881944444 39880.0881481481 39880.0881944444 19 278 $00000409 $00000407 "C:\WIN98\Desktop\Primärdaten\Jumper\PegSolitaire.drc" */
-/*ITE: Nicht bearbeiten. Diese Datei wurde vom Ressourcen-DLL-Experten erzeugt. */
-#pragma code_page(1252)
-/* VER150
-  Generiert vom Borland Delphi Pascal Compiler
-  da -GD or --drc beim Compilieren angegeben war.
+/* VER320
+  Generiert vom Embarcadero Delphi Pascal Compiler,
+  weil -GD oder --drc an den Compiler übergeben wurde.
 
-  Sie enthält Compiler-generierte Ressourcen, die mit der ausführbaren Datei verbunden sind.
-  Wenn sie leer ist, wurden keine vom Compiler generierten Ressourcen mit der 
-  produzierten ausführbaren Datei verbunden.
+  Diese Datei enthält vom Compiler erzeugte Ressourcen, die an die ausführbare Datei gebunden wurden. Wenn diese Datei leer ist, dann wurden keine vom Compiler generierten Ressourcen an die erzeugte ausführbare Datei gebunden.
 */
 
-#define Constants_LNG_TIME 65232
-#define Constants_LNG_LVL_INVALID_NO_JUMP 65233
-#define Constants_LNG_JUMP_LOG 65234
-#define Constants_LNG_COULD_NOT_CREATE_DIR 65235
-#define Constants_LNG_SCORE 65236
-#define Constants_LNG_REMAINING 65237
-#define Constants_LNG_TIME_SECONDS 65238
-#define Constants_LNG_POINTS_PER_MINUTE 65239
-#define Constants_LNG_ENTER_NAME 65240
-#define ComStrs_sTabFailSetObject 65248
-#define ComStrs_sTabMustBeMultiLine 65249
-#define ComStrs_sInvalidOwner 65250
-#define ComStrs_sPageIndexError 65251
-#define ComStrs_sInvalidComCtl32 65252
-#define WinHelpViewer_hNoKeyword 65253
-#define Functions_LNG_COULD_NOT_OPEN_FILE 65254
-#define LevelFunctions_LNG_LVL_INVALID_ELEMENT 65255
-#define LevelFunctions_LNG_LVL_INVALID_WIDTH 65256
-#define LevelFunctions_LNG_LVL_INVALID_HEIGHT_MUTLIPLE 65257
-#define LevelFunctions_LNG_LVL_INVALID_MULTIPLE_WIND 65258
-#define LevelFunctions_LNG_LVL_INVALID_HEADER 65259
-#define LevelFunctions_LNG_INVALID_GOAL 65260
-#define Constants_LNG_SAVED 65261
-#define Constants_LNG_STONES_REMOVED 65262
-#define Constants_LNG_POINTS 65263
-#define ExtCtrls_clNameInfoBk 65264
-#define ExtCtrls_clNameInfoText 65265
-#define ExtCtrls_clNameMenu 65266
-#define ExtCtrls_clNameMenuText 65267
-#define ExtCtrls_clNameNone 65268
-#define ExtCtrls_clNameScrollBar 65269
-#define ExtCtrls_clName3DDkShadow 65270
-#define ExtCtrls_clName3DLight 65271
-#define ExtCtrls_clNameWindow 65272
-#define ExtCtrls_clNameWindowFrame 65273
-#define ExtCtrls_clNameWindowText 65274
-#define ComStrs_sTabFailClear 65275
-#define ComStrs_sTabFailDelete 65276
-#define ComStrs_sTabFailRetrieve 65277
-#define ComStrs_sTabFailGetObject 65278
-#define ComStrs_sTabFailSet 65279
-#define ExtCtrls_clNameActiveBorder 65280
-#define ExtCtrls_clNameActiveCaption 65281
-#define ExtCtrls_clNameAppWorkSpace 65282
-#define ExtCtrls_clNameBackground 65283
-#define ExtCtrls_clNameBtnFace 65284
-#define ExtCtrls_clNameBtnHighlight 65285
-#define ExtCtrls_clNameBtnShadow 65286
-#define ExtCtrls_clNameBtnText 65287
-#define ExtCtrls_clNameCaptionText 65288
-#define ExtCtrls_clNameDefault 65289
-#define ExtCtrls_clNameGrayText 65290
-#define ExtCtrls_clNameHighlight 65291
-#define ExtCtrls_clNameHighlightText 65292
-#define ExtCtrls_clNameInactiveBorder 65293
-#define ExtCtrls_clNameInactiveCaption 65294
-#define ExtCtrls_clNameInactiveCaptionText 65295
-#define ExtCtrls_clNameNavy 65296
-#define ExtCtrls_clNamePurple 65297
-#define ExtCtrls_clNameTeal 65298
-#define ExtCtrls_clNameGray 65299
-#define ExtCtrls_clNameSilver 65300
-#define ExtCtrls_clNameRed 65301
-#define ExtCtrls_clNameLime 65302
-#define ExtCtrls_clNameYellow 65303
-#define ExtCtrls_clNameBlue 65304
-#define ExtCtrls_clNameFuchsia 65305
-#define ExtCtrls_clNameAqua 65306
-#define ExtCtrls_clNameWhite 65307
-#define ExtCtrls_clNameMoneyGreen 65308
-#define ExtCtrls_clNameSkyBlue 65309
-#define ExtCtrls_clNameCream 65310
-#define ExtCtrls_clNameMedGray 65311
-#define Consts_SCannotOpenClipboard 65312
-#define Consts_SInvalidMemoSize 65313
-#define Consts_SDuplicateMenus 65314
-#define Consts_SDockedCtlNeedsName 65315
-#define Consts_SDockTreeRemoveError 65316
-#define Consts_SDockZoneNotFound 65317
-#define Consts_SDockZoneHasNoCtl 65318
-#define Consts_SNoGetItemEventHandler 65319
-#define HelpIntfs_hNoTableOfContents 65320
-#define HelpIntfs_hNothingFound 65321
-#define HelpIntfs_hNoContext 65322
-#define HelpIntfs_hNoTopics 65323
-#define ExtCtrls_clNameBlack 65324
-#define ExtCtrls_clNameMaroon 65325
-#define ExtCtrls_clNameGreen 65326
-#define ExtCtrls_clNameOlive 65327
-#define Consts_SmkcEnter 65328
-#define Consts_SmkcSpace 65329
-#define Consts_SmkcPgUp 65330
-#define Consts_SmkcPgDn 65331
-#define Consts_SmkcEnd 65332
-#define Consts_SmkcHome 65333
-#define Consts_SmkcLeft 65334
-#define Consts_SmkcUp 65335
-#define Consts_SmkcRight 65336
-#define Consts_SmkcDown 65337
-#define Consts_SmkcIns 65338
-#define Consts_SmkcDel 65339
-#define Consts_SmkcShift 65340
-#define Consts_SmkcCtrl 65341
-#define Consts_SmkcAlt 65342
-#define Consts_SIconToClipboard 65343
-#define Consts_SMsgDlgInformation 65344
-#define Consts_SMsgDlgConfirm 65345
-#define Consts_SMsgDlgYes 65346
-#define Consts_SMsgDlgNo 65347
-#define Consts_SMsgDlgOK 65348
-#define Consts_SMsgDlgCancel 65349
-#define Consts_SMsgDlgHelp 65350
-#define Consts_SMsgDlgAbort 65351
-#define Consts_SMsgDlgRetry 65352
-#define Consts_SMsgDlgIgnore 65353
-#define Consts_SMsgDlgAll 65354
-#define Consts_SMsgDlgNoToAll 65355
-#define Consts_SMsgDlgYesToAll 65356
-#define Consts_SmkcBkSp 65357
-#define Consts_SmkcTab 65358
-#define Consts_SmkcEsc 65359
-#define Consts_SCancelButton 65360
-#define Consts_SYesButton 65361
-#define Consts_SNoButton 65362
-#define Consts_SHelpButton 65363
-#define Consts_SCloseButton 65364
-#define Consts_SIgnoreButton 65365
-#define Consts_SRetryButton 65366
-#define Consts_SAbortButton 65367
-#define Consts_SAllButton 65368
-#define Consts_SCannotDragForm 65369
-#define Consts_SVMetafiles 65370
-#define Consts_SVEnhMetafiles 65371
-#define Consts_SVIcons 65372
-#define Consts_SVBitmaps 65373
-#define Consts_SMsgDlgWarning 65374
-#define Consts_SMsgDlgError 65375
-#define Consts_SCannotFocus 65376
-#define Consts_SParentRequired 65377
-#define Consts_SParentGivenNotAParent 65378
-#define Consts_SMDIChildNotVisible 65379
-#define Consts_SVisibleChanged 65380
-#define Consts_SCannotShowModal 65381
-#define Consts_SPropertyOutOfRange 65382
-#define Consts_SMenuIndexError 65383
-#define Consts_SMenuReinserted 65384
-#define Consts_SMenuNotFound 65385
-#define Consts_SNoTimers 65386
-#define Consts_SGroupIndexTooLow 65387
-#define Consts_SNoMDIForm 65388
-#define Consts_SImageCanvasNeedsBitmap 65389
-#define Consts_SControlParentSetToSelf 65390
-#define Consts_SOKButton 65391
-#define Consts_SInvalidTabPosition 65392
-#define Consts_SInvalidTabStyle 65393
-#define Consts_SInvalidBitmap 65394
-#define Consts_SInvalidIcon 65395
-#define Consts_SInvalidMetafile 65396
-#define Consts_SChangeIconSize 65397
-#define Consts_SUnknownClipboardFormat 65398
-#define Consts_SOutOfResources 65399
-#define Consts_SNoCanvasHandle 65400
-#define Consts_SInvalidImageSize 65401
-#define Consts_SInvalidImageList 65402
-#define Consts_SImageIndexError 65403
-#define Consts_SImageReadFail 65404
-#define Consts_SImageWriteFail 65405
-#define Consts_SWindowDCError 65406
-#define Consts_SWindowClass 65407
-#define RTLConsts_SInvalidRegType 65408
-#define RTLConsts_SListCapacityError 65409
-#define RTLConsts_SListCountError 65410
-#define RTLConsts_SListIndexError 65411
-#define RTLConsts_SMemoryStreamError 65412
-#define RTLConsts_SPropertyException 65413
-#define RTLConsts_SReadError 65414
-#define RTLConsts_SReadOnlyProperty 65415
-#define RTLConsts_SRegGetDataFailed 65416
-#define RTLConsts_SRegSetDataFailed 65417
-#define RTLConsts_SResNotFound 65418
-#define RTLConsts_SSeekNotImplemented 65419
-#define RTLConsts_SSortedListError 65420
-#define RTLConsts_SUnknownGroup 65421
-#define RTLConsts_SUnknownProperty 65422
-#define RTLConsts_SWriteError 65423
-#define RTLConsts_SAssignError 65424
-#define RTLConsts_SBitsIndexError 65425
-#define RTLConsts_SCantWriteResourceStreamError 65426
-#define RTLConsts_SCheckSynchronizeError 65427
-#define RTLConsts_SClassNotFound 65428
-#define RTLConsts_SDuplicateClass 65429
-#define RTLConsts_SDuplicateItem 65430
-#define RTLConsts_SDuplicateName 65431
-#define RTLConsts_SDuplicateString 65432
-#define RTLConsts_SFCreateErrorEx 65433
-#define RTLConsts_SFOpenErrorEx 65434
-#define RTLConsts_SInvalidImage 65435
-#define RTLConsts_SInvalidName 65436
-#define RTLConsts_SInvalidProperty 65437
-#define RTLConsts_SInvalidPropertyPath 65438
-#define RTLConsts_SInvalidPropertyValue 65439
-#define SysConst_SShortDayNameSun 65440
-#define SysConst_SShortDayNameMon 65441
-#define SysConst_SShortDayNameTue 65442
-#define SysConst_SShortDayNameWed 65443
-#define SysConst_SShortDayNameThu 65444
-#define SysConst_SShortDayNameFri 65445
-#define SysConst_SShortDayNameSat 65446
-#define SysConst_SLongDayNameSun 65447
-#define SysConst_SLongDayNameMon 65448
-#define SysConst_SLongDayNameTue 65449
-#define SysConst_SLongDayNameWed 65450
-#define SysConst_SLongDayNameThu 65451
-#define SysConst_SLongDayNameFri 65452
-#define SysConst_SLongDayNameSat 65453
-#define SysConst_SCannotCreateDir 65454
-#define RTLConsts_SAncestorNotFound 65455
-#define SysConst_SShortMonthNameSep 65456
-#define SysConst_SShortMonthNameOct 65457
-#define SysConst_SShortMonthNameNov 65458
-#define SysConst_SShortMonthNameDec 65459
-#define SysConst_SLongMonthNameJan 65460
-#define SysConst_SLongMonthNameFeb 65461
-#define SysConst_SLongMonthNameMar 65462
-#define SysConst_SLongMonthNameApr 65463
-#define SysConst_SLongMonthNameMay 65464
-#define SysConst_SLongMonthNameJun 65465
-#define SysConst_SLongMonthNameJul 65466
-#define SysConst_SLongMonthNameAug 65467
-#define SysConst_SLongMonthNameSep 65468
-#define SysConst_SLongMonthNameOct 65469
-#define SysConst_SLongMonthNameNov 65470
-#define SysConst_SLongMonthNameDec 65471
-#define SysConst_SAssertionFailed 65472
-#define SysConst_SIntfCastError 65473
-#define SysConst_SSafecallException 65474
-#define SysConst_SAssertError 65475
-#define SysConst_SAbstractError 65476
-#define SysConst_SModuleAccessViolation 65477
-#define SysConst_SOSError 65478
-#define SysConst_SUnkOSError 65479
-#define SysConst_SShortMonthNameJan 65480
-#define SysConst_SShortMonthNameFeb 65481
-#define SysConst_SShortMonthNameMar 65482
-#define SysConst_SShortMonthNameApr 65483
-#define SysConst_SShortMonthNameMay 65484
-#define SysConst_SShortMonthNameJun 65485
-#define SysConst_SShortMonthNameJul 65486
-#define SysConst_SShortMonthNameAug 65487
-#define SysConst_SWriteAccess 65488
-#define SysConst_SVarArrayCreate 65489
-#define SysConst_SVarArrayBounds 65490
-#define SysConst_SVarArrayLocked 65491
-#define SysConst_SInvalidVarCast 65492
-#define SysConst_SInvalidVarOp 65493
-#define SysConst_SInvalidVarNullOp 65494
-#define SysConst_SInvalidVarOpWithHResultWithPrefix 65495
-#define SysConst_SVarTypeCouldNotConvert 65496
-#define SysConst_SVarTypeConvertOverflow 65497
-#define SysConst_SVarOverflow 65498
-#define SysConst_SVarInvalid 65499
-#define SysConst_SVarBadType 65500
-#define SysConst_SVarNotImplemented 65501
-#define SysConst_SVarUnexpected 65502
-#define SysConst_SExternalException 65503
-#define SysConst_SZeroDivide 65504
-#define SysConst_SOverflow 65505
-#define SysConst_SUnderflow 65506
-#define SysConst_SInvalidPointer 65507
-#define SysConst_SInvalidCast 65508
-#define SysConst_SAccessViolationArg3 65509
-#define SysConst_SAccessViolationNoArg 65510
-#define SysConst_SStackOverflow 65511
-#define SysConst_SControlC 65512
-#define SysConst_SPrivilege 65513
-#define SysConst_SException 65514
-#define SysConst_SExceptTitle 65515
-#define SysConst_SInvalidFormat 65516
-#define SysConst_SArgumentMissing 65517
-#define SysConst_SDispatchError 65518
-#define SysConst_SReadAccess 65519
-#define SysConst_SInvalidInteger 65520
-#define SysConst_STimeEncodeError 65521
-#define SysConst_SDateEncodeError 65522
-#define SysConst_SOutOfMemory 65523
-#define SysConst_SInOutError 65524
-#define SysConst_SFileNotFound 65525
-#define SysConst_SInvalidFilename 65526
-#define SysConst_STooManyOpenFiles 65527
-#define SysConst_SAccessDenied 65528
-#define SysConst_SEndOfFile 65529
-#define SysConst_SDiskFull 65530
-#define SysConst_SInvalidInput 65531
-#define SysConst_SDivByZero 65532
-#define SysConst_SRangeError 65533
-#define SysConst_SIntOverflow 65534
-#define SysConst_SInvalidOp 65535
+#define Constants_LNG_LVL_INVALID_NO_JUMP 65136
+#define Constants_LNG_JUMP_LOG 65137
+#define Constants_LNG_COULD_NOT_CREATE_DIR 65138
+#define Constants_LNG_SCORE 65139
+#define Constants_LNG_REMAINING 65140
+#define Constants_LNG_TIME_SECONDS 65141
+#define Constants_LNG_POINTS_PER_MINUTE 65142
+#define Constants_LNG_ENTER_NAME 65143
+#define Vcl_ComStrs_sTabFailSet 65152
+#define Vcl_ComStrs_sTabFailSetObject 65153
+#define Vcl_ComStrs_sTabMustBeMultiLine 65154
+#define Vcl_ComStrs_sInvalidOwner 65155
+#define Vcl_ComStrs_sPageIndexError 65156
+#define Functions_LNG_COULD_NOT_OPEN_FILE 65157
+#define LevelFunctions_LNG_LVL_INVALID_ELEMENT 65158
+#define LevelFunctions_LNG_LVL_INVALID_WIDTH 65159
+#define LevelFunctions_LNG_LVL_INVALID_HEIGHT_MUTLIPLE 65160
+#define LevelFunctions_LNG_LVL_INVALID_MULTIPLE_WIND 65161
+#define LevelFunctions_LNG_LVL_INVALID_HEADER 65162
+#define LevelFunctions_LNG_INVALID_GOAL 65163
+#define Constants_LNG_SAVED 65164
+#define Constants_LNG_STONES_REMOVED 65165
+#define Constants_LNG_POINTS 65166
+#define Constants_LNG_TIME 65167
+#define Vcl_Consts_SStyleHookClassRegistered 65168
+#define Vcl_Consts_SStyleHookClassNotRegistered 65169
+#define Vcl_Consts_SStyleInvalidParameter 65170
+#define Vcl_Consts_SStyleFeatureNotSupported 65171
+#define Vcl_Consts_SStyleNotRegistered 65172
+#define Vcl_Consts_SStyleUnregisterError 65173
+#define Vcl_Consts_SStyleNotRegisteredNoName 65174
+#define Vcl_Consts_sBeginInvokeNoHandle 65175
+#define System_Win_ComConst_SOleError 65176
+#define System_Win_ComConst_SNoMethod 65177
+#define System_Win_ComConst_SVarNotObject 65178
+#define System_Win_ComConst_STooManyParams 65179
+#define Vcl_ComStrs_sTabFailClear 65180
+#define Vcl_ComStrs_sTabFailDelete 65181
+#define Vcl_ComStrs_sTabFailRetrieve 65182
+#define Vcl_ComStrs_sTabFailGetObject 65183
+#define Vcl_Consts_SLogin 65184
+#define Vcl_Consts_SNoGetItemEventHandler 65185
+#define Vcl_Consts_STrayIconRemoveError 65186
+#define Vcl_Consts_SPageControlNotSet 65187
+#define Vcl_Consts_SWindowsVistaRequired 65188
+#define Vcl_Consts_STaskDlgButtonCaption 65189
+#define Vcl_Consts_STaskDlgRadioButtonCaption 65190
+#define Vcl_Consts_SInvalidTaskDlgButtonCaption 65191
+#define Vcl_Consts_SStyleLoadError 65192
+#define Vcl_Consts_SStyleLoadErrors 65193
+#define Vcl_Consts_SStyleRegisterError 65194
+#define Vcl_Consts_SStyleClassRegisterError 65195
+#define Vcl_Consts_SStyleNotFound 65196
+#define Vcl_Consts_SStyleClassNotFound 65197
+#define Vcl_Consts_SStyleInvalidHandle 65198
+#define Vcl_Consts_SStyleFormatError 65199
+#define Vcl_Consts_SIconToClipboard 65200
+#define Vcl_Consts_SCannotOpenClipboard 65201
+#define Vcl_Consts_SInvalidMemoSize 65202
+#define Vcl_Consts_SInvalidPrinterOp 65203
+#define Vcl_Consts_SNoDefaultPrinter 65204
+#define Vcl_Consts_SDuplicateMenus 65205
+#define Vcl_Consts_SDockedCtlNeedsName 65206
+#define Vcl_Consts_SDockTreeRemoveError 65207
+#define Vcl_Consts_SDockZoneNotFound 65208
+#define Vcl_Consts_SDockZoneHasNoCtl 65209
+#define Vcl_Consts_SDockZoneVersionConflict 65210
+#define Vcl_Consts_SPromptArrayTooShort 65211
+#define Vcl_Consts_SPromptArrayEmpty 65212
+#define Vcl_Consts_SUsername 65213
+#define Vcl_Consts_SPassword 65214
+#define Vcl_Consts_SDomain 65215
+#define Vcl_Consts_SmkcSpace 65216
+#define Vcl_Consts_SmkcPgUp 65217
+#define Vcl_Consts_SmkcPgDn 65218
+#define Vcl_Consts_SmkcEnd 65219
+#define Vcl_Consts_SmkcHome 65220
+#define Vcl_Consts_SmkcLeft 65221
+#define Vcl_Consts_SmkcUp 65222
+#define Vcl_Consts_SmkcRight 65223
+#define Vcl_Consts_SmkcDown 65224
+#define Vcl_Consts_SmkcIns 65225
+#define Vcl_Consts_SmkcDel 65226
+#define Vcl_Consts_SmkcShift 65227
+#define Vcl_Consts_SmkcCtrl 65228
+#define Vcl_Consts_SmkcAlt 65229
+#define Vcl_Consts_SOutOfRange 65230
+#define Vcl_Consts_sAllFilter 65231
+#define Vcl_Consts_SMsgDlgYes 65232
+#define Vcl_Consts_SMsgDlgNo 65233
+#define Vcl_Consts_SMsgDlgOK 65234
+#define Vcl_Consts_SMsgDlgCancel 65235
+#define Vcl_Consts_SMsgDlgHelp 65236
+#define Vcl_Consts_SMsgDlgAbort 65237
+#define Vcl_Consts_SMsgDlgRetry 65238
+#define Vcl_Consts_SMsgDlgIgnore 65239
+#define Vcl_Consts_SMsgDlgAll 65240
+#define Vcl_Consts_SMsgDlgNoToAll 65241
+#define Vcl_Consts_SMsgDlgYesToAll 65242
+#define Vcl_Consts_SMsgDlgClose 65243
+#define Vcl_Consts_SmkcBkSp 65244
+#define Vcl_Consts_SmkcTab 65245
+#define Vcl_Consts_SmkcEsc 65246
+#define Vcl_Consts_SmkcEnter 65247
+#define Vcl_Consts_SHelpButton 65248
+#define Vcl_Consts_SCloseButton 65249
+#define Vcl_Consts_SIgnoreButton 65250
+#define Vcl_Consts_SRetryButton 65251
+#define Vcl_Consts_SAbortButton 65252
+#define Vcl_Consts_SAllButton 65253
+#define Vcl_Consts_SCannotDragForm 65254
+#define Vcl_Consts_SVMetafiles 65255
+#define Vcl_Consts_SVEnhMetafiles 65256
+#define Vcl_Consts_SVIcons 65257
+#define Vcl_Consts_SVBitmaps 65258
+#define Vcl_Consts_SVTIFFImages 65259
+#define Vcl_Consts_SMsgDlgWarning 65260
+#define Vcl_Consts_SMsgDlgError 65261
+#define Vcl_Consts_SMsgDlgInformation 65262
+#define Vcl_Consts_SMsgDlgConfirm 65263
+#define Vcl_Consts_SMenuReinserted 65264
+#define Vcl_Consts_SMenuNotFound 65265
+#define Vcl_Consts_SNoTimers 65266
+#define Vcl_Consts_SNotPrinting 65267
+#define Vcl_Consts_SPrinting 65268
+#define Vcl_Consts_SPrinterIndexError 65269
+#define Vcl_Consts_SInvalidPrinter 65270
+#define Vcl_Consts_SDeviceOnPort 65271
+#define Vcl_Consts_SGroupIndexTooLow 65272
+#define Vcl_Consts_SNoMDIForm 65273
+#define Vcl_Consts_SImageCanvasNeedsBitmap 65274
+#define Vcl_Consts_SControlParentSetToSelf 65275
+#define Vcl_Consts_SOKButton 65276
+#define Vcl_Consts_SCancelButton 65277
+#define Vcl_Consts_SYesButton 65278
+#define Vcl_Consts_SNoButton 65279
+#define Vcl_Consts_SReplaceImage 65280
+#define Vcl_Consts_SInsertImage 65281
+#define Vcl_Consts_SImageIndexError 65282
+#define Vcl_Consts_SImageReadFail 65283
+#define Vcl_Consts_SImageWriteFail 65284
+#define Vcl_Consts_SWindowDCError 65285
+#define Vcl_Consts_SWindowClass 65286
+#define Vcl_Consts_SCannotFocus 65287
+#define Vcl_Consts_SParentRequired 65288
+#define Vcl_Consts_SParentGivenNotAParent 65289
+#define Vcl_Consts_SMDIChildNotVisible 65290
+#define Vcl_Consts_SVisibleChanged 65291
+#define Vcl_Consts_SCannotShowModal 65292
+#define Vcl_Consts_SScrollBarRange 65293
+#define Vcl_Consts_SPropertyOutOfRange 65294
+#define Vcl_Consts_SMenuIndexError 65295
+#define Vcl_Consts_SInvalidBitmap 65296
+#define Vcl_Consts_SInvalidIcon 65297
+#define Vcl_Consts_SInvalidMetafile 65298
+#define Vcl_Consts_SInvalidPixelFormat 65299
+#define Vcl_Consts_SInvalidImage 65300
+#define Vcl_Consts_SScanLine 65301
+#define Vcl_Consts_SChangeIconSize 65302
+#define Vcl_Consts_SChangeWicSize 65303
+#define Vcl_Consts_SUnknownExtension 65304
+#define Vcl_Consts_SUnknownClipboardFormat 65305
+#define Vcl_Consts_SUnknownStreamFormat 65306
+#define Vcl_Consts_SOutOfResources 65307
+#define Vcl_Consts_SNoCanvasHandle 65308
+#define Vcl_Consts_SInvalidTextFormatFlag 65309
+#define Vcl_Consts_SInvalidImageSize 65310
+#define Vcl_Consts_SInvalidImageList 65311
+#define System_RTLConsts_SWindows8 65312
+#define System_RTLConsts_SWindows8Point1 65313
+#define System_RTLConsts_SWindows10 65314
+#define System_RTLConsts_sObserverUnsupported 65315
+#define System_RTLConsts_sObserverMultipleSingleCast 65316
+#define System_RTLConsts_sObserverNoInterface 65317
+#define System_RTLConsts_sObserverNoSinglecastFound 65318
+#define System_RTLConsts_sObserverNoMulticastFound 65319
+#define System_RTLConsts_sObserverNotAvailable 65320
+#define System_RTLConsts_SInvalidDateString 65321
+#define System_RTLConsts_SInvalidTimeString 65322
+#define System_RTLConsts_SInvalidOffsetString 65323
+#define System_RTLConsts_sMustWaitOnOneEvent 65324
+#define System_RTLConsts_sBeginInvokeDestroying 65325
+#define Vcl_Consts_SInvalidTabPosition 65326
+#define Vcl_Consts_SInvalidTabStyle 65327
+#define System_RTLConsts_SVersionStr 65328
+#define System_RTLConsts_SSPVersionStr 65329
+#define System_RTLConsts_SVersion32 65330
+#define System_RTLConsts_SVersion64 65331
+#define System_RTLConsts_SWindows 65332
+#define System_RTLConsts_SWindowsVista 65333
+#define System_RTLConsts_SWindowsServer2008 65334
+#define System_RTLConsts_SWindows7 65335
+#define System_RTLConsts_SWindowsServer2008R2 65336
+#define System_RTLConsts_SWindows2000 65337
+#define System_RTLConsts_SWindowsXP 65338
+#define System_RTLConsts_SWindowsServer2003 65339
+#define System_RTLConsts_SWindowsServer2003R2 65340
+#define System_RTLConsts_SWindowsServer2012 65341
+#define System_RTLConsts_SWindowsServer2012R2 65342
+#define System_RTLConsts_SWindowsServer2016 65343
+#define System_RTLConsts_SNoContext 65344
+#define System_RTLConsts_SNoContextFound 65345
+#define System_RTLConsts_SNoIndex 65346
+#define System_RTLConsts_SNoSearch 65347
+#define System_RTLConsts_SNoTableOfContents 65348
+#define System_RTLConsts_SNoTopics 65349
+#define System_RTLConsts_SNothingFound 65350
+#define System_RTLConsts_SArgumentOutOfRange 65351
+#define System_RTLConsts_SArgumentNil 65352
+#define System_RTLConsts_SGenericItemNotFound 65353
+#define System_RTLConsts_SGenericDuplicateItem 65354
+#define System_RTLConsts_SInsufficientRtti 65355
+#define System_RTLConsts_SParameterCountMismatch 65356
+#define System_RTLConsts_SNonPublicType 65357
+#define System_RTLConsts_SByRefArgMismatch 65358
+#define System_RTLConsts_SServiceNotFound 65359
+#define System_RTLConsts_SParamIsNegative 65360
+#define System_RTLConsts_SInputBufferExceed 65361
+#define System_RTLConsts_SInvalidCharsInPath 65362
+#define System_RTLConsts_SFileNotFound 65363
+#define System_RTLConsts_hNoFilterViewer 65364
+#define System_RTLConsts_sArgumentOutOfRange_Index 65365
+#define System_RTLConsts_sInvalidStringAndObjectArrays 65366
+#define System_RTLConsts_sNoConstruct 65367
+#define System_RTLConsts_sInvalidTimeoutValue 65368
+#define System_RTLConsts_sSpinCountOutOfRange 65369
+#define System_RTLConsts_sTimespanTooLong 65370
+#define System_RTLConsts_sInvalidTimespanDuration 65371
+#define System_RTLConsts_sTimespanValueCannotBeNan 65372
+#define System_RTLConsts_sCannotNegateTimespan 65373
+#define System_RTLConsts_sInvalidTimespanFormat 65374
+#define System_RTLConsts_sTimespanElementTooLong 65375
+#define System_RTLConsts_SRegGetDataFailed 65376
+#define System_RTLConsts_SRegSetDataFailed 65377
+#define System_RTLConsts_SResNotFound 65378
+#define System_RTLConsts_SSeekNotImplemented 65379
+#define System_RTLConsts_SSortedListError 65380
+#define System_RTLConsts_SUnknownGroup 65381
+#define System_RTLConsts_SUnknownProperty 65382
+#define System_RTLConsts_SWriteError 65383
+#define System_RTLConsts_SThreadCreateError 65384
+#define System_RTLConsts_SThreadError 65385
+#define System_RTLConsts_SThreadExternalTerminate 65386
+#define System_RTLConsts_SThreadExternalWait 65387
+#define System_RTLConsts_SThreadStartError 65388
+#define System_RTLConsts_SThreadExternalCheckTerminated 65389
+#define System_RTLConsts_SThreadExternalSetReturnValue 65390
+#define System_RTLConsts_SParamIsNil 65391
+#define System_RTLConsts_SInvalidFileName 65392
+#define System_RTLConsts_SInvalidImage 65393
+#define System_RTLConsts_SInvalidName 65394
+#define System_RTLConsts_SInvalidProperty 65395
+#define System_RTLConsts_SInvalidPropertyPath 65396
+#define System_RTLConsts_SInvalidPropertyValue 65397
+#define System_RTLConsts_SInvalidRegType 65398
+#define System_RTLConsts_SListCapacityError 65399
+#define System_RTLConsts_SListCountError 65400
+#define System_RTLConsts_SListIndexError 65401
+#define System_RTLConsts_SMemoryStreamError 65402
+#define System_RTLConsts_SNoComSupport 65403
+#define System_RTLConsts_SPropertyException 65404
+#define System_RTLConsts_SReadError 65405
+#define System_RTLConsts_SReadOnlyProperty 65406
+#define System_RTLConsts_SRegCreateFailed 65407
+#define System_SysConst_SInvalidCodePage 65408
+#define System_SysConst_SInvalidEncodingName 65409
+#define System_SysConst_SNoMappingForUnicodeCharacter 65410
+#define System_SysConst_SInvalidStringBaseIndex 65411
+#define System_RTLConsts_SAncestorNotFound 65412
+#define System_RTLConsts_SAssignError 65413
+#define System_RTLConsts_SBitsIndexError 65414
+#define System_RTLConsts_SCantWriteResourceStreamError 65415
+#define System_RTLConsts_SCheckSynchronizeError 65416
+#define System_RTLConsts_SClassNotFound 65417
+#define System_RTLConsts_SDuplicateClass 65418
+#define System_RTLConsts_SDuplicateItem 65419
+#define System_RTLConsts_SDuplicateName 65420
+#define System_RTLConsts_SDuplicateString 65421
+#define System_RTLConsts_SFCreateErrorEx 65422
+#define System_RTLConsts_SFOpenErrorEx 65423
+#define System_SysConst_SShortDayNameFri 65424
+#define System_SysConst_SShortDayNameSat 65425
+#define System_SysConst_SLongDayNameSun 65426
+#define System_SysConst_SLongDayNameMon 65427
+#define System_SysConst_SLongDayNameTue 65428
+#define System_SysConst_SLongDayNameWed 65429
+#define System_SysConst_SLongDayNameThu 65430
+#define System_SysConst_SLongDayNameFri 65431
+#define System_SysConst_SLongDayNameSat 65432
+#define System_SysConst_SCannotCreateDir 65433
+#define System_SysConst_SInvalidSourceArray 65434
+#define System_SysConst_SInvalidDestinationArray 65435
+#define System_SysConst_SCharIndexOutOfBounds 65436
+#define System_SysConst_SByteIndexOutOfBounds 65437
+#define System_SysConst_SInvalidCharCount 65438
+#define System_SysConst_SInvalidDestinationIndex 65439
+#define System_SysConst_SLongMonthNameFeb 65440
+#define System_SysConst_SLongMonthNameMar 65441
+#define System_SysConst_SLongMonthNameApr 65442
+#define System_SysConst_SLongMonthNameMay 65443
+#define System_SysConst_SLongMonthNameJun 65444
+#define System_SysConst_SLongMonthNameJul 65445
+#define System_SysConst_SLongMonthNameAug 65446
+#define System_SysConst_SLongMonthNameSep 65447
+#define System_SysConst_SLongMonthNameOct 65448
+#define System_SysConst_SLongMonthNameNov 65449
+#define System_SysConst_SLongMonthNameDec 65450
+#define System_SysConst_SShortDayNameSun 65451
+#define System_SysConst_SShortDayNameMon 65452
+#define System_SysConst_SShortDayNameTue 65453
+#define System_SysConst_SShortDayNameWed 65454
+#define System_SysConst_SShortDayNameThu 65455
+#define System_SysConst_SModuleAccessViolation 65456
+#define System_SysConst_SOSError 65457
+#define System_SysConst_SUnkOSError 65458
+#define System_SysConst_SShortMonthNameJan 65459
+#define System_SysConst_SShortMonthNameFeb 65460
+#define System_SysConst_SShortMonthNameMar 65461
+#define System_SysConst_SShortMonthNameApr 65462
+#define System_SysConst_SShortMonthNameMay 65463
+#define System_SysConst_SShortMonthNameJun 65464
+#define System_SysConst_SShortMonthNameJul 65465
+#define System_SysConst_SShortMonthNameAug 65466
+#define System_SysConst_SShortMonthNameSep 65467
+#define System_SysConst_SShortMonthNameOct 65468
+#define System_SysConst_SShortMonthNameNov 65469
+#define System_SysConst_SShortMonthNameDec 65470
+#define System_SysConst_SLongMonthNameJan 65471
+#define System_SysConst_SVarTypeConvertOverflow 65472
+#define System_SysConst_SVarOverflow 65473
+#define System_SysConst_SVarInvalid 65474
+#define System_SysConst_SVarBadType 65475
+#define System_SysConst_SVarNotImplemented 65476
+#define System_SysConst_SVarUnexpected 65477
+#define System_SysConst_SExternalException 65478
+#define System_SysConst_SAssertionFailed 65479
+#define System_SysConst_SIntfCastError 65480
+#define System_SysConst_SSafecallException 65481
+#define System_SysConst_SMonitorLockException 65482
+#define System_SysConst_SNoMonitorSupportException 65483
+#define System_SysConst_SNotImplemented 65484
+#define System_SysConst_SObjectDisposed 65485
+#define System_SysConst_SAssertError 65486
+#define System_SysConst_SAbstractError 65487
+#define System_SysConst_SReadAccess 65488
+#define System_SysConst_SWriteAccess 65489
+#define System_SysConst_SExecuteAccess 65490
+#define System_SysConst_SInvalidAccess 65491
+#define System_SysConst_SVarArrayCreate 65492
+#define System_SysConst_SVarArrayBounds 65493
+#define System_SysConst_SVarArrayLocked 65494
+#define System_SysConst_SInvalidVarCast 65495
+#define System_SysConst_SInvalidVarOp 65496
+#define System_SysConst_SInvalidVarNullOp 65497
+#define System_SysConst_SInvalidVarOpWithHResultWithPrefix 65498
+#define System_SysConst_SVarTypeOutOfRangeWithPrefix 65499
+#define System_SysConst_SVarTypeAlreadyUsedWithPrefix 65500
+#define System_SysConst_SVarTypeNotUsableWithPrefix 65501
+#define System_SysConst_SVarTypeTooManyCustom 65502
+#define System_SysConst_SVarTypeCouldNotConvert 65503
+#define System_SysConst_SInvalidOp 65504
+#define System_SysConst_SZeroDivide 65505
+#define System_SysConst_SOverflow 65506
+#define System_SysConst_SUnderflow 65507
+#define System_SysConst_SInvalidPointer 65508
+#define System_SysConst_SInvalidCast 65509
+#define System_SysConst_SAccessViolationArg3 65510
+#define System_SysConst_SAccessViolationNoArg 65511
+#define System_SysConst_SStackOverflow 65512
+#define System_SysConst_SControlC 65513
+#define System_SysConst_SPrivilege 65514
+#define System_SysConst_SException 65515
+#define System_SysConst_SExceptTitle 65516
+#define System_SysConst_SInvalidFormat 65517
+#define System_SysConst_SArgumentMissing 65518
+#define System_SysConst_SDispatchError 65519
+#define System_SysConst_SUnknown 65520
+#define System_SysConst_SInvalidInteger 65521
+#define System_SysConst_SInvalidTimeStamp 65522
+#define System_SysConst_SInvalidGUID 65523
+#define System_SysConst_STimeEncodeError 65524
+#define System_SysConst_SDateEncodeError 65525
+#define System_SysConst_SOutOfMemory 65526
+#define System_SysConst_SInOutError 65527
+#define System_SysConst_STooManyOpenFiles 65528
+#define System_SysConst_SAccessDenied 65529
+#define System_SysConst_SEndOfFile 65530
+#define System_SysConst_SDiskFull 65531
+#define System_SysConst_SInvalidInput 65532
+#define System_SysConst_SDivByZero 65533
+#define System_SysConst_SRangeError 65534
+#define System_SysConst_SIntOverflow 65535
 STRINGTABLE
 BEGIN
-	/* ID:Constants_LNG_TIMEOrig:"Time: %s"Status:1Created:39879.996412037Modified:39879.9992708333PrevOrig:PrevCurr:Comment: */
-  Constants_LNG_TIME "Zeit: %s"
-	/* ID:Constants_LNG_LVL_INVALID_NO_JUMPOrig:"Warning! The level is not playable. There are no jumps possible."Status:1Created:39879.996412037Modified:39879.9995949074PrevOrig:PrevCurr:Comment: */
-  Constants_LNG_LVL_INVALID_NO_JUMP "Achtung! Das Level ist nicht spielbar. Es sind keine Sprünge möglich."
-	/* ID:Constants_LNG_JUMP_LOGOrig:"%d [%d, %d] -> %d [%d, %d];"Status:1Created:39879.996412037Modified:39880.000775463PrevOrig:PrevCurr:Comment: */
-  Constants_LNG_JUMP_LOG "%d [%d, %d] -> %d [%d, %d];"
-	/* ID:Constants_LNG_COULD_NOT_CREATE_DIROrig:"Warning: Could not create directory \"%s\"."Status:1Created:39879.996412037Modified:39880PrevOrig:PrevCurr:Comment: */
-  Constants_LNG_COULD_NOT_CREATE_DIR "Achtung: Konnte das Verzeichnis \"%s\" nicht anlegen."
-	/* ID:Constants_LNG_SCOREOrig:"Score: %d"Status:1Created:39879.996412037Modified:39880.0000462963PrevOrig:PrevCurr:Comment: */
-  Constants_LNG_SCORE "Punkte: %d"
-	/* ID:Constants_LNG_REMAININGOrig:"Remaining stones: %d (%f%%)"Status:1Created:39879.996412037Modified:39880.000150463PrevOrig:PrevCurr:Comment: */
-  Constants_LNG_REMAINING "Verbleibende Steine: %d (%f%%)"
-	/* ID:Constants_LNG_TIME_SECONDSOrig:"Time: %d seconds"Status:1Created:39879.996412037Modified:39880.0002083333PrevOrig:PrevCurr:Comment: */
-  Constants_LNG_TIME_SECONDS "Zeit: %d Sekunden"
-	/* ID:Constants_LNG_POINTS_PER_MINUTEOrig:"%d points per minute"Status:1Created:39879.996412037Modified:39880.0002777778PrevOrig:PrevCurr:Comment: */
-  Constants_LNG_POINTS_PER_MINUTE "%d Punkte in der Minute"
-	/* ID:Constants_LNG_ENTER_NAMEOrig:"Please enter your name to get added to the high score lists."Status:1Created:39879.996412037Modified:39880.0005092593PrevOrig:PrevCurr:Comment: */
-  Constants_LNG_ENTER_NAME "Bitte geben Sie Ihren Namen ein, um zu den Highscores hinzugefügt zu werden."
-	/* ID:ComStrs_sTabFailSetObjectOrig:"Objekt mit Index %d konnte nicht gesetzt werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ComStrs_sTabFailSetObject "Objekt mit Index %d konnte nicht gesetzt werden"
-	/* ID:ComStrs_sTabMustBeMultiLineOrig:"Bei TabPosition tpLeft und tpRight muss MultiLine True sein"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ComStrs_sTabMustBeMultiLine "Bei TabPosition tpLeft und tpRight muss MultiLine True sein"
-	/* ID:ComStrs_sInvalidOwnerOrig:"Ungültiger Besitzer"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ComStrs_sInvalidOwner "Ungültiger Besitzer"
-	/* ID:ComStrs_sPageIndexErrorOrig:"%d ist ein ungültiger Wert für PageIndex. PageIndex muß zwischen 0 und %d liegen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ComStrs_sPageIndexError "%d ist ein ungültiger Wert für PageIndex. PageIndex muß zwischen 0 und %d liegen"
-	/* ID:ComStrs_sInvalidComCtl32Orig:"Dieses Element benötigt COMCTL32.DLL in der Version 4.70 oder höher"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ComStrs_sInvalidComCtl32 "Dieses Element benötigt COMCTL32.DLL in der Version 4.70 oder höher"
-	/* ID:WinHelpViewer_hNoKeywordOrig:"Es wurden keine Schlüsselwörter für die Hilfe angegeben."Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  WinHelpViewer_hNoKeyword "Es wurden keine Schlüsselwörter für die Hilfe angegeben."
-	/* ID:Functions_LNG_COULD_NOT_OPEN_FILEOrig:"Could not open file \"%s\"."Status:1Created:39879.996412037Modified:39880.0245023148PrevOrig:PrevCurr:Comment: */
-  Functions_LNG_COULD_NOT_OPEN_FILE "Konnte Datei \"%s\" nicht öffnen."
-	/* ID:LevelFunctions_LNG_LVL_INVALID_ELEMENTOrig:"Level invalid: There are invalid elements in the file.\r\n\r\nValid elements are \"1\", \"2\", \"3\", \"X\", \"*\", \"E\" and \">\" as goal prefix."Status:1Created:39879.996412037Modified:39880.0223842593PrevOrig:PrevCurr:Comment: */
-  LevelFunctions_LNG_LVL_INVALID_ELEMENT "Level ungültig: Es wurden ungültige Elemente in der Datei gefunden.\r\n\r\nGültige Elemente sind \"1\", \"2\", \"3\", \"X\", \"*\", \"E\" und der Ziel-Präfix \">\"."
-	/* ID:LevelFunctions_LNG_LVL_INVALID_WIDTHOrig:"Level invalid: No width indicator (\"!\") found."Status:1Created:39879.996412037Modified:39880.022662037PrevOrig:PrevCurr:Comment: */
-  LevelFunctions_LNG_LVL_INVALID_WIDTH "Level ungültig: Kein Breitindikator (\"!\") gefunden."
-	/* ID:LevelFunctions_LNG_LVL_INVALID_HEIGHT_MUTLIPLEOrig:"Level invalid: The level's actual length is not a multiple of the width."Status:1Created:39879.996412037Modified:39880.0229861111PrevOrig:PrevCurr:Comment: */
-  LevelFunctions_LNG_LVL_INVALID_HEIGHT_MUTLIPLE "Level ungültig: Die Länge ist kein Vielfaches der Breite."
-	/* ID:LevelFunctions_LNG_LVL_INVALID_MULTIPLE_WINDOrig:"Level invalid: There are multiple width indicators (\"!\")."Status:1Created:39879.996412037Modified:39880.0231712963PrevOrig:PrevCurr:Comment: */
-  LevelFunctions_LNG_LVL_INVALID_MULTIPLE_WIND "Level ungültig: Es gibt mehrere Breitindikatoren (\"!\")."
-	/* ID:LevelFunctions_LNG_LVL_INVALID_HEADEROrig:"Level invalid: The header is invalid. It does not match the structure \"1(D|N)~\"."Status:1Created:39879.996412037Modified:39880.0234606481PrevOrig:PrevCurr:Comment: */
-  LevelFunctions_LNG_LVL_INVALID_HEADER "Level ungültig: Der Dateikopf ist ungültig. Er passt nicht zu der Struktur \"1(D|N)~\"."
-	/* ID:LevelFunctions_LNG_INVALID_GOALOrig:"Level invalid: A goal does not point to a valid accessable element (\"3\", \"2\", \"1\" or \"E\")."Status:1Created:39879.996412037Modified:39880.0237037037PrevOrig:PrevCurr:Comment: */
-  LevelFunctions_LNG_INVALID_GOAL "Level ungültig: Eine Zielmarkierung zeigt nicht auf ein zugängliches Element (\"3\", \"2\", \"1\" or \"E\")."
-	/* ID:Constants_LNG_SAVEDOrig:"History successfully saved!"Status:1Created:39879.996412037Modified:39880.0009606481PrevOrig:PrevCurr:Comment: */
-  Constants_LNG_SAVED "Erfolgreich gespeichert!"
-	/* ID:Constants_LNG_STONES_REMOVEDOrig:"%d of %d stones removed"Status:1Created:39879.996412037Modified:39880.0010763889PrevOrig:PrevCurr:Comment: */
-  Constants_LNG_STONES_REMOVED "%d von %d Steine entfernt"
-	/* ID:Constants_LNG_POINTSOrig:"Score: %d"Status:1Created:39879.996412037Modified:39880.0008333333PrevOrig:PrevCurr:Comment: */
-  Constants_LNG_POINTS "Punkte: %d"
-	/* ID:ExtCtrls_clNameInfoBkOrig:"Info-Hintergrund"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameInfoBk "Info-Hintergrund"
-	/* ID:ExtCtrls_clNameInfoTextOrig:"Info-Text"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameInfoText "Info-Text"
-	/* ID:ExtCtrls_clNameMenuOrig:"Menühintergrund"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameMenu "Menühintergrund"
-	/* ID:ExtCtrls_clNameMenuTextOrig:"Menütext"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameMenuText "Menütext"
-	/* ID:ExtCtrls_clNameNoneOrig:"Ohne"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameNone "Ohne"
-	/* ID:ExtCtrls_clNameScrollBarOrig:"Bildlaufleiste"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameScrollBar "Bildlaufleiste"
-	/* ID:ExtCtrls_clName3DDkShadowOrig:"3D Dunkler Schatten"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clName3DDkShadow "3D Dunkler Schatten"
-	/* ID:ExtCtrls_clName3DLightOrig:"3D Hell"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clName3DLight "3D Hell"
-	/* ID:ExtCtrls_clNameWindowOrig:"Fensterhintergrund"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameWindow "Fensterhintergrund"
-	/* ID:ExtCtrls_clNameWindowFrameOrig:"Fensterrahmen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameWindowFrame "Fensterrahmen"
-	/* ID:ExtCtrls_clNameWindowTextOrig:"Fenstertext"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameWindowText "Fenstertext"
-	/* ID:ComStrs_sTabFailClearOrig:"Register-Element konnte nicht geleert werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ComStrs_sTabFailClear "Register-Element konnte nicht geleert werden"
-	/* ID:ComStrs_sTabFailDeleteOrig:"Registerseite mit Index %d konnte nicht gelöscht werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ComStrs_sTabFailDelete "Registerseite mit Index %d konnte nicht gelöscht werden"
-	/* ID:ComStrs_sTabFailRetrieveOrig:"Registerseite mit Index %d konnte nicht gelesen werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ComStrs_sTabFailRetrieve "Registerseite mit Index %d konnte nicht gelesen werden"
-	/* ID:ComStrs_sTabFailGetObjectOrig:"Objekt mit Index %d konnte nicht gelesen werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ComStrs_sTabFailGetObject "Objekt mit Index %d konnte nicht gelesen werden"
-	/* ID:ComStrs_sTabFailSetOrig:"Registerseite '%s' mit Index %d konnte nicht gesetzt werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ComStrs_sTabFailSet "Registerseite '%s' mit Index %d konnte nicht gesetzt werden"
-	/* ID:ExtCtrls_clNameActiveBorderOrig:"Aktiver Rahmen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameActiveBorder "Aktiver Rahmen"
-	/* ID:ExtCtrls_clNameActiveCaptionOrig:"Aktive Titelleiste"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameActiveCaption "Aktive Titelleiste"
-	/* ID:ExtCtrls_clNameAppWorkSpaceOrig:"Anwendungsarbeitsbereich"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameAppWorkSpace "Anwendungsarbeitsbereich"
-	/* ID:ExtCtrls_clNameBackgroundOrig:"Hintergrund"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameBackground "Hintergrund"
-	/* ID:ExtCtrls_clNameBtnFaceOrig:"Schalterfläche"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameBtnFace "Schalterfläche"
-	/* ID:ExtCtrls_clNameBtnHighlightOrig:"Schalterhervorhebung"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameBtnHighlight "Schalterhervorhebung"
-	/* ID:ExtCtrls_clNameBtnShadowOrig:"Schalterschatten"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameBtnShadow "Schalterschatten"
-	/* ID:ExtCtrls_clNameBtnTextOrig:"Schaltertext"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameBtnText "Schaltertext"
-	/* ID:ExtCtrls_clNameCaptionTextOrig:"Titeltext"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameCaptionText "Titeltext"
-	/* ID:ExtCtrls_clNameDefaultOrig:"Vorgabe"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameDefault "Vorgabe"
-	/* ID:ExtCtrls_clNameGrayTextOrig:"Grauer Text"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameGrayText "Grauer Text"
-	/* ID:ExtCtrls_clNameHighlightOrig:"Hervorgehobener Hintergrund"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameHighlight "Hervorgehobener Hintergrund"
-	/* ID:ExtCtrls_clNameHighlightTextOrig:"Hervorgehobener Text"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameHighlightText "Hervorgehobener Text"
-	/* ID:ExtCtrls_clNameInactiveBorderOrig:"Inaktiver Rahmen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameInactiveBorder "Inaktiver Rahmen"
-	/* ID:ExtCtrls_clNameInactiveCaptionOrig:"Inaktiver Titel"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameInactiveCaption "Inaktiver Titel"
-	/* ID:ExtCtrls_clNameInactiveCaptionTextOrig:"Inaktiver Titeltext"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameInactiveCaptionText "Inaktiver Titeltext"
-	/* ID:ExtCtrls_clNameNavyOrig:"Dunkelblau"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameNavy "Dunkelblau"
-	/* ID:ExtCtrls_clNamePurpleOrig:"Purpur"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNamePurple "Purpur"
-	/* ID:ExtCtrls_clNameTealOrig:"Grünblau"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameTeal "Grünblau"
-	/* ID:ExtCtrls_clNameGrayOrig:"Grau"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameGray "Grau"
-	/* ID:ExtCtrls_clNameSilverOrig:"Silber"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameSilver "Silber"
-	/* ID:ExtCtrls_clNameRedOrig:"Rot"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameRed "Rot"
-	/* ID:ExtCtrls_clNameLimeOrig:"Limone"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameLime "Limone"
-	/* ID:ExtCtrls_clNameYellowOrig:"Gelb"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameYellow "Gelb"
-	/* ID:ExtCtrls_clNameBlueOrig:"Blau"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameBlue "Blau"
-	/* ID:ExtCtrls_clNameFuchsiaOrig:"Fuchsie"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameFuchsia "Fuchsie"
-	/* ID:ExtCtrls_clNameAquaOrig:"Aquamarin"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameAqua "Aquamarin"
-	/* ID:ExtCtrls_clNameWhiteOrig:"Weiß"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameWhite "Weiß"
-	/* ID:ExtCtrls_clNameMoneyGreenOrig:"Dollargrün"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameMoneyGreen "Dollargrün"
-	/* ID:ExtCtrls_clNameSkyBlueOrig:"Himmelblau"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameSkyBlue "Himmelblau"
-	/* ID:ExtCtrls_clNameCreamOrig:"Creme"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameCream "Creme"
-	/* ID:ExtCtrls_clNameMedGrayOrig:"Mittelgrau"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameMedGray "Mittelgrau"
-	/* ID:Consts_SCannotOpenClipboardOrig:"Zwischenablage kann nicht geöffnet werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SCannotOpenClipboard "Zwischenablage kann nicht geöffnet werden"
-	/* ID:Consts_SInvalidMemoSizeOrig:"Text überschreitet Memo-Kapazität"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SInvalidMemoSize "Text überschreitet Memo-Kapazität"
-	/* ID:Consts_SDuplicateMenusOrig:"Menü '%s' wird bereits von einem anderen Formular benutzt"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SDuplicateMenus "Menü '%s' wird bereits von einem anderen Formular benutzt"
-	/* ID:Consts_SDockedCtlNeedsNameOrig:"Angedocktes Steuerelement muss einen Namen haben."Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SDockedCtlNeedsName "Angedocktes Steuerelement muss einen Namen haben."
-	/* ID:Consts_SDockTreeRemoveErrorOrig:"Fehler beim Entfernen des Steuerelements aus der Andock-Hierarchie"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SDockTreeRemoveError "Fehler beim Entfernen des Steuerelements aus der Andock-Hierarchie"
-	/* ID:Consts_SDockZoneNotFoundOrig:" - Andockzone nicht gefunden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SDockZoneNotFound " - Andockzone nicht gefunden"
-	/* ID:Consts_SDockZoneHasNoCtlOrig:" - Andockzone besitzt kein Steuerelement"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SDockZoneHasNoCtl " - Andockzone besitzt kein Steuerelement"
-	/* ID:Consts_SNoGetItemEventHandlerOrig:"Es wurde keine OnGetItem-Ereignisbehandlung zugewiesen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SNoGetItemEventHandler "Es wurde keine OnGetItem-Ereignisbehandlung zugewiesen"
-	/* ID:HelpIntfs_hNoTableOfContentsOrig:"Inhaltsverzeichnis konnte nicht gefunden werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  HelpIntfs_hNoTableOfContents "Inhaltsverzeichnis konnte nicht gefunden werden"
-	/* ID:HelpIntfs_hNothingFoundOrig:"Für %s sind keine Hilfeinformationen vorhanden."Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  HelpIntfs_hNothingFound "Für %s sind keine Hilfeinformationen vorhanden."
-	/* ID:HelpIntfs_hNoContextOrig:"Keine kontextsensitive Hilfe installiert"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  HelpIntfs_hNoContext "Keine kontextsensitive Hilfe installiert"
-	/* ID:HelpIntfs_hNoTopicsOrig:"Es ist keine themenbasierte Hilfe installiert."Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  HelpIntfs_hNoTopics "Es ist keine themenbasierte Hilfe installiert."
-	/* ID:ExtCtrls_clNameBlackOrig:"Schwarz"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameBlack "Schwarz"
-	/* ID:ExtCtrls_clNameMaroonOrig:"Braun"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameMaroon "Braun"
-	/* ID:ExtCtrls_clNameGreenOrig:"Grün"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameGreen "Grün"
-	/* ID:ExtCtrls_clNameOliveOrig:"Olivgrün"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  ExtCtrls_clNameOlive "Olivgrün"
-	/* ID:Consts_SmkcEnterOrig:"Enter"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcEnter "Enter"
-	/* ID:Consts_SmkcSpaceOrig:"Leerzeichen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcSpace "Leerzeichen"
-	/* ID:Consts_SmkcPgUpOrig:"BildAuf"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcPgUp "BildAuf"
-	/* ID:Consts_SmkcPgDnOrig:"BildAb"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcPgDn "BildAb"
-	/* ID:Consts_SmkcEndOrig:"Ende"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcEnd "Ende"
-	/* ID:Consts_SmkcHomeOrig:"Start"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcHome "Start"
-	/* ID:Consts_SmkcLeftOrig:"Links"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcLeft "Links"
-	/* ID:Consts_SmkcUpOrig:"Nach oben"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcUp "Nach oben"
-	/* ID:Consts_SmkcRightOrig:"Rechts"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcRight "Rechts"
-	/* ID:Consts_SmkcDownOrig:"Nach unten"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcDown "Nach unten"
-	/* ID:Consts_SmkcInsOrig:"Einfg"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcIns "Einfg"
-	/* ID:Consts_SmkcDelOrig:"Entf"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcDel "Entf"
-	/* ID:Consts_SmkcShiftOrig:"Umsch+"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcShift "Umsch+"
-	/* ID:Consts_SmkcCtrlOrig:"Strg+"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcCtrl "Strg+"
-	/* ID:Consts_SmkcAltOrig:"Alt+"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcAlt "Alt+"
-	/* ID:Consts_SIconToClipboardOrig:"Zwischenablage unterstützt keine Symbole"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SIconToClipboard "Zwischenablage unterstützt keine Symbole"
-	/* ID:Consts_SMsgDlgInformationOrig:"Informationen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgInformation "Informationen"
-	/* ID:Consts_SMsgDlgConfirmOrig:"Bestätigung"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgConfirm "Bestätigung"
-	/* ID:Consts_SMsgDlgYesOrig:"&Ja"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgYes "&Ja"
-	/* ID:Consts_SMsgDlgNoOrig:"&Nein"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgNo "&Nein"
-	/* ID:Consts_SMsgDlgOKOrig:"OK"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgOK "OK"
-	/* ID:Consts_SMsgDlgCancelOrig:"Abbrechen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgCancel "Abbrechen"
-	/* ID:Consts_SMsgDlgHelpOrig:"&Hilfe"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgHelp "&Hilfe"
-	/* ID:Consts_SMsgDlgAbortOrig:"&Abbrechen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgAbort "&Abbrechen"
-	/* ID:Consts_SMsgDlgRetryOrig:"&Wiederholen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgRetry "&Wiederholen"
-	/* ID:Consts_SMsgDlgIgnoreOrig:"&Ignorieren"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgIgnore "&Ignorieren"
-	/* ID:Consts_SMsgDlgAllOrig:"&Alle"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgAll "&Alle"
-	/* ID:Consts_SMsgDlgNoToAllOrig:"&Alle Nein"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgNoToAll "&Alle Nein"
-	/* ID:Consts_SMsgDlgYesToAllOrig:"A&lle Ja"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgYesToAll "A&lle Ja"
-	/* ID:Consts_SmkcBkSpOrig:"Rück"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcBkSp "Rück"
-	/* ID:Consts_SmkcTabOrig:"Tab"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcTab "Tab"
-	/* ID:Consts_SmkcEscOrig:"Esc"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SmkcEsc "Esc"
-	/* ID:Consts_SCancelButtonOrig:"Abbrechen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SCancelButton "Abbrechen"
-	/* ID:Consts_SYesButtonOrig:"&Ja"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SYesButton "&Ja"
-	/* ID:Consts_SNoButtonOrig:"&Nein"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SNoButton "&Nein"
-	/* ID:Consts_SHelpButtonOrig:"&Hilfe"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SHelpButton "&Hilfe"
-	/* ID:Consts_SCloseButtonOrig:"&Schließen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SCloseButton "&Schließen"
-	/* ID:Consts_SIgnoreButtonOrig:"&Ignorieren"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SIgnoreButton "&Ignorieren"
-	/* ID:Consts_SRetryButtonOrig:"&Wiederholen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SRetryButton "&Wiederholen"
-	/* ID:Consts_SAbortButtonOrig:"Abbrechen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SAbortButton "Abbrechen"
-	/* ID:Consts_SAllButtonOrig:"&Alle"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SAllButton "&Alle"
-	/* ID:Consts_SCannotDragFormOrig:"Formulare können nicht gezogen werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SCannotDragForm "Formulare können nicht gezogen werden"
-	/* ID:Consts_SVMetafilesOrig:"Metadateien"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SVMetafiles "Metadateien"
-	/* ID:Consts_SVEnhMetafilesOrig:"Erweiterte Metadateien"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SVEnhMetafiles "Erweiterte Metadateien"
-	/* ID:Consts_SVIconsOrig:"Symbole"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SVIcons "Symbole"
-	/* ID:Consts_SVBitmapsOrig:"Bitmaps"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SVBitmaps "Bitmaps"
-	/* ID:Consts_SMsgDlgWarningOrig:"Warnung"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgWarning "Warnung"
-	/* ID:Consts_SMsgDlgErrorOrig:"Fehler"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMsgDlgError "Fehler"
-	/* ID:Consts_SCannotFocusOrig:"Ein deaktiviertes oder unsichtbares Fenster kann nicht den Fokus erhalten"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SCannotFocus "Ein deaktiviertes oder unsichtbares Fenster kann nicht den Fokus erhalten"
-	/* ID:Consts_SParentRequiredOrig:"Element '%s' hat kein übergeordnetes Fenster"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SParentRequired "Element '%s' hat kein übergeordnetes Fenster"
-	/* ID:Consts_SParentGivenNotAParentOrig:"Das angegebene übergeordnete Element ist kein übergeordnetes Element von '%s'"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SParentGivenNotAParent "Das angegebene übergeordnete Element ist kein übergeordnetes Element von '%s'"
-	/* ID:Consts_SMDIChildNotVisibleOrig:"Untergeordnetes MDI-Formular kann nicht verborgen werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMDIChildNotVisible "Untergeordnetes MDI-Formular kann nicht verborgen werden"
-	/* ID:Consts_SVisibleChangedOrig:"Eigenschaft Visible kann in OnShow oder OnHide nicht verändert werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SVisibleChanged "Eigenschaft Visible kann in OnShow oder OnHide nicht verändert werden"
-	/* ID:Consts_SCannotShowModalOrig:"Aus einem sichtbaren Fenster kann kein modales gemacht werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SCannotShowModal "Aus einem sichtbaren Fenster kann kein modales gemacht werden"
-	/* ID:Consts_SPropertyOutOfRangeOrig:"Eigenschaft %s außerhalb des gültigen Bereichs"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SPropertyOutOfRange "Eigenschaft %s außerhalb des gültigen Bereichs"
-	/* ID:Consts_SMenuIndexErrorOrig:"Menüindex außerhalb des zulässigen Bereichs"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMenuIndexError "Menüindex außerhalb des zulässigen Bereichs"
-	/* ID:Consts_SMenuReinsertedOrig:"Menü zweimal eingefügt"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMenuReinserted "Menü zweimal eingefügt"
-	/* ID:Consts_SMenuNotFoundOrig:"Untermenü ist nicht im Menü"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SMenuNotFound "Untermenü ist nicht im Menü"
-	/* ID:Consts_SNoTimersOrig:"Nicht genügend Timer verfügbar"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SNoTimers "Nicht genügend Timer verfügbar"
-	/* ID:Consts_SGroupIndexTooLowOrig:"GroupIndex kann nicht kleiner sein als der GroupIndex eines vorhergehenden Menüelementes"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SGroupIndexTooLow "GroupIndex kann nicht kleiner sein als der GroupIndex eines vorhergehenden Menüelementes"
-	/* ID:Consts_SNoMDIFormOrig:"Formular kann nicht erstellt werden. Zur Zeit sind keine MDI-Formulare aktiv"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SNoMDIForm "Formular kann nicht erstellt werden. Zur Zeit sind keine MDI-Formulare aktiv"
-	/* ID:Consts_SImageCanvasNeedsBitmapOrig:"Ein Bild kann nur geändert werden, wenn es ein Bitmap enthält"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SImageCanvasNeedsBitmap "Ein Bild kann nur geändert werden, wenn es ein Bitmap enthält"
-	/* ID:Consts_SControlParentSetToSelfOrig:"Steuerelement kann nicht sich selbst als Vorfahr haben"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SControlParentSetToSelf "Steuerelement kann nicht sich selbst als Vorfahr haben"
-	/* ID:Consts_SOKButtonOrig:"OK"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SOKButton "OK"
-	/* ID:Consts_SInvalidTabPositionOrig:"Position des Register ist nicht mit dem aktuellen Register-Stil kompatibel."Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SInvalidTabPosition "Position des Register ist nicht mit dem aktuellen Register-Stil kompatibel."
-	/* ID:Consts_SInvalidTabStyleOrig:"Register-Stil ist mit der aktuellen Position nicht kompatibel."Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SInvalidTabStyle "Register-Stil ist mit der aktuellen Position nicht kompatibel."
-	/* ID:Consts_SInvalidBitmapOrig:"Bitmap ist ungültig"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SInvalidBitmap "Bitmap ist ungültig"
-	/* ID:Consts_SInvalidIconOrig:"Ungültiges Symbol"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SInvalidIcon "Ungültiges Symbol"
-	/* ID:Consts_SInvalidMetafileOrig:"Metadatei ist ungültig"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SInvalidMetafile "Metadatei ist ungültig"
-	/* ID:Consts_SChangeIconSizeOrig:"Die Größe eines Symbols kann nicht geändert werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SChangeIconSize "Die Größe eines Symbols kann nicht geändert werden"
-	/* ID:Consts_SUnknownClipboardFormatOrig:"Format der Zwischenablage wird nicht unterstützt"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SUnknownClipboardFormat "Format der Zwischenablage wird nicht unterstützt"
-	/* ID:Consts_SOutOfResourcesOrig:"Systemressourcen erschöpft."Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SOutOfResources "Systemressourcen erschöpft."
-	/* ID:Consts_SNoCanvasHandleOrig:"Leinwand/Bild erlaubt kein Zeichnen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SNoCanvasHandle "Leinwand/Bild erlaubt kein Zeichnen"
-	/* ID:Consts_SInvalidImageSizeOrig:"Ungültige Grafikgröße"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SInvalidImageSize "Ungültige Grafikgröße"
-	/* ID:Consts_SInvalidImageListOrig:"Ungültige ImageList"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SInvalidImageList "Ungültige ImageList"
-	/* ID:Consts_SImageIndexErrorOrig:"Ungültiger ImageList-Index"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SImageIndexError "Ungültiger ImageList-Index"
-	/* ID:Consts_SImageReadFailOrig:"ImageList-Daten konnten nicht aus dem Stream gelesen werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SImageReadFail "ImageList-Daten konnten nicht aus dem Stream gelesen werden"
-	/* ID:Consts_SImageWriteFailOrig:"ImageList-Daten konnten nicht in den Stream geschrieben werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SImageWriteFail "ImageList-Daten konnten nicht in den Stream geschrieben werden"
-	/* ID:Consts_SWindowDCErrorOrig:"Fehler beim Erstellen des Fenster-Gerätekontexts"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SWindowDCError "Fehler beim Erstellen des Fenster-Gerätekontexts"
-	/* ID:Consts_SWindowClassOrig:"Fehler beim Erzeugen einer Fensterklasse"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  Consts_SWindowClass "Fehler beim Erzeugen einer Fensterklasse"
-	/* ID:RTLConsts_SInvalidRegTypeOrig:"Ungültiger Datentyp für '%s'"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SInvalidRegType "Ungültiger Datentyp für '%s'"
-	/* ID:RTLConsts_SListCapacityErrorOrig:"Kapazität der Liste ist erschöpft (%d)"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SListCapacityError "Kapazität der Liste ist erschöpft (%d)"
-	/* ID:RTLConsts_SListCountErrorOrig:"Zu viele Einträge in der Liste (%d)"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SListCountError "Zu viele Einträge in der Liste (%d)"
-	/* ID:RTLConsts_SListIndexErrorOrig:"Listenindex überschreitet das Maximum (%d)"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SListIndexError "Listenindex überschreitet das Maximum (%d)"
-	/* ID:RTLConsts_SMemoryStreamErrorOrig:"Expandieren des Speicher-Stream wegen Speichermangel nicht möglich"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SMemoryStreamError "Expandieren des Speicher-Stream wegen Speichermangel nicht möglich"
-	/* ID:RTLConsts_SPropertyExceptionOrig:"Fehler beim Lesen von %s%s%s: %s"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SPropertyException "Fehler beim Lesen von %s%s%s: %s"
-	/* ID:RTLConsts_SReadErrorOrig:"Stream-Lesefehler"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SReadError "Stream-Lesefehler"
-	/* ID:RTLConsts_SReadOnlyPropertyOrig:"Eigenschaft kann nur gelesen werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SReadOnlyProperty "Eigenschaft kann nur gelesen werden"
-	/* ID:RTLConsts_SRegGetDataFailedOrig:"Fehler beim Holen der Daten für '%s'"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SRegGetDataFailed "Fehler beim Holen der Daten für '%s'"
-	/* ID:RTLConsts_SRegSetDataFailedOrig:"Fehler beim Setzen der Daten für '%s'"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SRegSetDataFailed "Fehler beim Setzen der Daten für '%s'"
-	/* ID:RTLConsts_SResNotFoundOrig:"Ressource %s wurde nicht gefunden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SResNotFound "Ressource %s wurde nicht gefunden"
-	/* ID:RTLConsts_SSeekNotImplementedOrig:"%s.Seek nicht implementiert"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SSeekNotImplemented "%s.Seek nicht implementiert"
-	/* ID:RTLConsts_SSortedListErrorOrig:"Operation für sortierte Listen nicht zulässig"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SSortedListError "Operation für sortierte Listen nicht zulässig"
-	/* ID:RTLConsts_SUnknownGroupOrig:"%s befindet sich nicht in einer Gruppe für Klassenregistrierungen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SUnknownGroup "%s befindet sich nicht in einer Gruppe für Klassenregistrierungen"
-	/* ID:RTLConsts_SUnknownPropertyOrig:"Eigenschaft %s existiert nicht."Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SUnknownProperty "Eigenschaft %s existiert nicht."
-	/* ID:RTLConsts_SWriteErrorOrig:"Stream-Schreibfehler"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SWriteError "Stream-Schreibfehler"
-	/* ID:RTLConsts_SAssignErrorOrig:"%s kann nicht zu %s zugewiesen werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SAssignError "%s kann nicht zu %s zugewiesen werden"
-	/* ID:RTLConsts_SBitsIndexErrorOrig:"Bits-Index außerhalb des zulässigen Bereichs"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SBitsIndexError "Bits-Index außerhalb des zulässigen Bereichs"
-	/* ID:RTLConsts_SCantWriteResourceStreamErrorOrig:"In einen zum Lesen geöffneten Ressourcen-Stream kann nicht geschrieben werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SCantWriteResourceStreamError "In einen zum Lesen geöffneten Ressourcen-Stream kann nicht geschrieben werden"
-	/* ID:RTLConsts_SCheckSynchronizeErrorOrig:"CheckSynchronize wurde vom Thread $%x aufgerufen, der NICHT der Haupt-Thread ist."Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SCheckSynchronizeError "CheckSynchronize wurde vom Thread $%x aufgerufen, der NICHT der Haupt-Thread ist."
-	/* ID:RTLConsts_SClassNotFoundOrig:"Klasse %s nicht gefunden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SClassNotFound "Klasse %s nicht gefunden"
-	/* ID:RTLConsts_SDuplicateClassOrig:"Klasse mit der Bezeichnung %s existiert bereits"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SDuplicateClass "Klasse mit der Bezeichnung %s existiert bereits"
-	/* ID:RTLConsts_SDuplicateItemOrig:"Liste gestattet keine doppelten Einträge ($0%x)"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SDuplicateItem "Liste gestattet keine doppelten Einträge ($0%x)"
-	/* ID:RTLConsts_SDuplicateNameOrig:"Komponente mit der Bezeichnung %s existiert bereits"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SDuplicateName "Komponente mit der Bezeichnung %s existiert bereits"
-	/* ID:RTLConsts_SDuplicateStringOrig:"In der Stringliste sind Duplikate nicht erlaubt"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SDuplicateString "In der Stringliste sind Duplikate nicht erlaubt"
-	/* ID:RTLConsts_SFCreateErrorExOrig:"Datei \"%s\" kann nicht erstellt werden. %s"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SFCreateErrorEx "Datei \"%s\" kann nicht erstellt werden. %s"
-	/* ID:RTLConsts_SFOpenErrorExOrig:"Datei %s kann nicht geöffnet werden. %s"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SFOpenErrorEx "Datei %s kann nicht geöffnet werden. %s"
-	/* ID:RTLConsts_SInvalidImageOrig:"Ungültiges Stream-Format"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SInvalidImage "Ungültiges Stream-Format"
-	/* ID:RTLConsts_SInvalidNameOrig:"''%s'' ist kein gültiger Komponentenname"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SInvalidName "''%s'' ist kein gültiger Komponentenname"
-	/* ID:RTLConsts_SInvalidPropertyOrig:"Ungültiger Eigenschaftswert"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SInvalidProperty "Ungültiger Eigenschaftswert"
-	/* ID:RTLConsts_SInvalidPropertyPathOrig:"Ungültiger Pfad für Eigenschaft"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SInvalidPropertyPath "Ungültiger Pfad für Eigenschaft"
-	/* ID:RTLConsts_SInvalidPropertyValueOrig:"Ungültiger Eigenschaftswert"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SInvalidPropertyValue "Ungültiger Eigenschaftswert"
-	/* ID:SysConst_SShortDayNameSunOrig:"So"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortDayNameSun "So"
-	/* ID:SysConst_SShortDayNameMonOrig:"Mo"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortDayNameMon "Mo"
-	/* ID:SysConst_SShortDayNameTueOrig:"Di"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortDayNameTue "Di"
-	/* ID:SysConst_SShortDayNameWedOrig:"Mi"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortDayNameWed "Mi"
-	/* ID:SysConst_SShortDayNameThuOrig:"Do"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortDayNameThu "Do"
-	/* ID:SysConst_SShortDayNameFriOrig:"Fr"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortDayNameFri "Fr"
-	/* ID:SysConst_SShortDayNameSatOrig:"Sa"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortDayNameSat "Sa"
-	/* ID:SysConst_SLongDayNameSunOrig:"Sonntag"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongDayNameSun "Sonntag"
-	/* ID:SysConst_SLongDayNameMonOrig:"Montag"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongDayNameMon "Montag"
-	/* ID:SysConst_SLongDayNameTueOrig:"Dienstag"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongDayNameTue "Dienstag"
-	/* ID:SysConst_SLongDayNameWedOrig:"Mittwoch"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongDayNameWed "Mittwoch"
-	/* ID:SysConst_SLongDayNameThuOrig:"Donnerstag"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongDayNameThu "Donnerstag"
-	/* ID:SysConst_SLongDayNameFriOrig:"Freitag"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongDayNameFri "Freitag"
-	/* ID:SysConst_SLongDayNameSatOrig:"Samstag"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongDayNameSat "Samstag"
-	/* ID:SysConst_SCannotCreateDirOrig:"Verzeichnis kann nicht erstellt werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SCannotCreateDir "Verzeichnis kann nicht erstellt werden"
-	/* ID:RTLConsts_SAncestorNotFoundOrig:"Vorfahr für '%s' nicht gefunden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  RTLConsts_SAncestorNotFound "Vorfahr für '%s' nicht gefunden"
-	/* ID:SysConst_SShortMonthNameSepOrig:"Sep"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortMonthNameSep "Sep"
-	/* ID:SysConst_SShortMonthNameOctOrig:"Okt"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortMonthNameOct "Okt"
-	/* ID:SysConst_SShortMonthNameNovOrig:"Nov"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortMonthNameNov "Nov"
-	/* ID:SysConst_SShortMonthNameDecOrig:"Dez"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortMonthNameDec "Dez"
-	/* ID:SysConst_SLongMonthNameJanOrig:"Januar"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongMonthNameJan "Januar"
-	/* ID:SysConst_SLongMonthNameFebOrig:"Februar"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongMonthNameFeb "Februar"
-	/* ID:SysConst_SLongMonthNameMarOrig:"März"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongMonthNameMar "März"
-	/* ID:SysConst_SLongMonthNameAprOrig:"April"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongMonthNameApr "April"
-	/* ID:SysConst_SLongMonthNameMayOrig:"Mai"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongMonthNameMay "Mai"
-	/* ID:SysConst_SLongMonthNameJunOrig:"Juni"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongMonthNameJun "Juni"
-	/* ID:SysConst_SLongMonthNameJulOrig:"Juli"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongMonthNameJul "Juli"
-	/* ID:SysConst_SLongMonthNameAugOrig:"August"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongMonthNameAug "August"
-	/* ID:SysConst_SLongMonthNameSepOrig:"September"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongMonthNameSep "September"
-	/* ID:SysConst_SLongMonthNameOctOrig:"Oktober"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongMonthNameOct "Oktober"
-	/* ID:SysConst_SLongMonthNameNovOrig:"November"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongMonthNameNov "November"
-	/* ID:SysConst_SLongMonthNameDecOrig:"Dezember"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SLongMonthNameDec "Dezember"
-	/* ID:SysConst_SAssertionFailedOrig:"Auswertung von assert fehlgeschlagen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SAssertionFailed "Auswertung von assert fehlgeschlagen"
-	/* ID:SysConst_SIntfCastErrorOrig:"Schnittstelle nicht unterstützt"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SIntfCastError "Schnittstelle nicht unterstützt"
-	/* ID:SysConst_SSafecallExceptionOrig:"Exception in safecall-Methode"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SSafecallException "Exception in safecall-Methode"
-	/* ID:SysConst_SAssertErrorOrig:"%s (%s, Zeile %d)"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SAssertError "%s (%s, Zeile %d)"
-	/* ID:SysConst_SAbstractErrorOrig:"Abstrakter Fehler"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SAbstractError "Abstrakter Fehler"
-	/* ID:SysConst_SModuleAccessViolationOrig:"Zugriffsverletzung bei Adresse %p in Modul '%s'. %s von Adresse %p"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SModuleAccessViolation "Zugriffsverletzung bei Adresse %p in Modul '%s'. %s von Adresse %p"
-	/* ID:SysConst_SOSErrorOrig:"Systemfehler.  Code: %d.\r\n%s"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SOSError "Systemfehler.  Code: %d.\r\n%s"
-	/* ID:SysConst_SUnkOSErrorOrig:"Ein Aufruf einer Betriebssystemfunktion ist fehlgeschlagen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SUnkOSError "Ein Aufruf einer Betriebssystemfunktion ist fehlgeschlagen"
-	/* ID:SysConst_SShortMonthNameJanOrig:"Jan"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortMonthNameJan "Jan"
-	/* ID:SysConst_SShortMonthNameFebOrig:"Feb"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortMonthNameFeb "Feb"
-	/* ID:SysConst_SShortMonthNameMarOrig:"Mär"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortMonthNameMar "Mär"
-	/* ID:SysConst_SShortMonthNameAprOrig:"Apr"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortMonthNameApr "Apr"
-	/* ID:SysConst_SShortMonthNameMayOrig:"Mai"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortMonthNameMay "Mai"
-	/* ID:SysConst_SShortMonthNameJunOrig:"Jun"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortMonthNameJun "Jun"
-	/* ID:SysConst_SShortMonthNameJulOrig:"Jul"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortMonthNameJul "Jul"
-	/* ID:SysConst_SShortMonthNameAugOrig:"Aug"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SShortMonthNameAug "Aug"
-	/* ID:SysConst_SWriteAccessOrig:"Schreiben"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SWriteAccess "Schreiben"
-	/* ID:SysConst_SVarArrayCreateOrig:"Fehler beim Erzeugen von Variante oder sicherem Array"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SVarArrayCreate "Fehler beim Erzeugen von Variante oder sicherem Array"
-	/* ID:SysConst_SVarArrayBoundsOrig:"Variante oder sicherer Array-Index außerhalb des gültigen Bereichs"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SVarArrayBounds "Variante oder sicherer Array-Index außerhalb des gültigen Bereichs"
-	/* ID:SysConst_SVarArrayLockedOrig:"Variante oder sicherer Array ist gesperrt"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SVarArrayLocked "Variante oder sicherer Array ist gesperrt"
-	/* ID:SysConst_SInvalidVarCastOrig:"Ungültige Variant-Typumwandlung"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SInvalidVarCast "Ungültige Variant-Typumwandlung"
-	/* ID:SysConst_SInvalidVarOpOrig:"Ungültige Variant-Operation"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SInvalidVarOp "Ungültige Variant-Operation"
-	/* ID:SysConst_SInvalidVarNullOpOrig:"Ungültige NULL-Variant-Operation"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SInvalidVarNullOp "Ungültige NULL-Variant-Operation"
-	/* ID:SysConst_SInvalidVarOpWithHResultWithPrefixOrig:"Ungültige Variant-Operation (%s%.8x)\n%s"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SInvalidVarOpWithHResultWithPrefix "Ungültige Variant-Operation (%s%.8x)\n%s"
-	/* ID:SysConst_SVarTypeCouldNotConvertOrig:"Variante des Typs (%s) konnte nicht in Typ (%s) konvertiert werden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SVarTypeCouldNotConvert "Variante des Typs (%s) konnte nicht in Typ (%s) konvertiert werden"
-	/* ID:SysConst_SVarTypeConvertOverflowOrig:"Überlauf bei der Konvertierung einer Variante vom Typ (%s) in Typ (%s)"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SVarTypeConvertOverflow "Überlauf bei der Konvertierung einer Variante vom Typ (%s) in Typ (%s)"
-	/* ID:SysConst_SVarOverflowOrig:"Variant-Überlauf"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SVarOverflow "Variant-Überlauf"
-	/* ID:SysConst_SVarInvalidOrig:"Ungültiges Argument"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SVarInvalid "Ungültiges Argument"
-	/* ID:SysConst_SVarBadTypeOrig:"Ungültiger Variant-Typ"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SVarBadType "Ungültiger Variant-Typ"
-	/* ID:SysConst_SVarNotImplementedOrig:"Operation nicht unterstützt"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SVarNotImplemented "Operation nicht unterstützt"
-	/* ID:SysConst_SVarUnexpectedOrig:"Unerwarteter Variant-Fehler"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SVarUnexpected "Unerwarteter Variant-Fehler"
-	/* ID:SysConst_SExternalExceptionOrig:"Externe Exception %x"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SExternalException "Externe Exception %x"
-	/* ID:SysConst_SZeroDivideOrig:"Gleitkommadivision durch Null"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SZeroDivide "Gleitkommadivision durch Null"
-	/* ID:SysConst_SOverflowOrig:"Gleitkommaüberlauf"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SOverflow "Gleitkommaüberlauf"
-	/* ID:SysConst_SUnderflowOrig:"Gleitkommaunterlauf"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SUnderflow "Gleitkommaunterlauf"
-	/* ID:SysConst_SInvalidPointerOrig:"Ungültige Zeigeroperation"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SInvalidPointer "Ungültige Zeigeroperation"
-	/* ID:SysConst_SInvalidCastOrig:"Ungültige Typumwandlung"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SInvalidCast "Ungültige Typumwandlung"
-	/* ID:SysConst_SAccessViolationArg3Orig:"Zugriffsverletzung bei Adresse %p. %s von Adresse %p"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SAccessViolationArg3 "Zugriffsverletzung bei Adresse %p. %s von Adresse %p"
-	/* ID:SysConst_SAccessViolationNoArgOrig:"Zugriffsverletzung"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SAccessViolationNoArg "Zugriffsverletzung"
-	/* ID:SysConst_SStackOverflowOrig:"Stack-Überlauf"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SStackOverflow "Stack-Überlauf"
-	/* ID:SysConst_SControlCOrig:"Strg+C gedrückt"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SControlC "Strg+C gedrückt"
-	/* ID:SysConst_SPrivilegeOrig:"Privilegierte Anweisung"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SPrivilege "Privilegierte Anweisung"
-	/* ID:SysConst_SExceptionOrig:"Exception %s in Modul %s bei %p.\r\n%s%s\r\n"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SException "Exception %s in Modul %s bei %p.\r\n%s%s\r\n"
-	/* ID:SysConst_SExceptTitleOrig:"Anwendungsfehler"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SExceptTitle "Anwendungsfehler"
-	/* ID:SysConst_SInvalidFormatOrig:"Format '%s' ungültig oder nicht kompatibel mit Argument"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SInvalidFormat "Format '%s' ungültig oder nicht kompatibel mit Argument"
-	/* ID:SysConst_SArgumentMissingOrig:"Kein Argument für Format '%s'"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SArgumentMissing "Kein Argument für Format '%s'"
-	/* ID:SysConst_SDispatchErrorOrig:"Variant-Methodenaufruf nicht unterstützt"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SDispatchError "Variant-Methodenaufruf nicht unterstützt"
-	/* ID:SysConst_SReadAccessOrig:"Lesen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SReadAccess "Lesen"
-	/* ID:SysConst_SInvalidIntegerOrig:"'%s' ist kein gültiger Integerwert"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SInvalidInteger "'%s' ist kein gültiger Integerwert"
-	/* ID:SysConst_STimeEncodeErrorOrig:"Ungültiges Argument zum Codieren der Uhrzeit"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_STimeEncodeError "Ungültiges Argument zum Codieren der Uhrzeit"
-	/* ID:SysConst_SDateEncodeErrorOrig:"Ungültiges Argument zum Codieren des Datums"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SDateEncodeError "Ungültiges Argument zum Codieren des Datums"
-	/* ID:SysConst_SOutOfMemoryOrig:"Zu wenig Arbeitsspeicher"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SOutOfMemory "Zu wenig Arbeitsspeicher"
-	/* ID:SysConst_SInOutErrorOrig:"E/A-Fehler %d"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SInOutError "E/A-Fehler %d"
-	/* ID:SysConst_SFileNotFoundOrig:"Datei nicht gefunden"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SFileNotFound "Datei nicht gefunden"
-	/* ID:SysConst_SInvalidFilenameOrig:"Ungültiger Dateiname"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SInvalidFilename "Ungültiger Dateiname"
-	/* ID:SysConst_STooManyOpenFilesOrig:"Zu viele geöffnete Dateien"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_STooManyOpenFiles "Zu viele geöffnete Dateien"
-	/* ID:SysConst_SAccessDeniedOrig:"Dateizugriff verweigert"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SAccessDenied "Dateizugriff verweigert"
-	/* ID:SysConst_SEndOfFileOrig:"Versuch hinter dem Dateiende zu lesen"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SEndOfFile "Versuch hinter dem Dateiende zu lesen"
-	/* ID:SysConst_SDiskFullOrig:"Zu wenig Speicherplatz"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SDiskFull "Zu wenig Speicherplatz"
-	/* ID:SysConst_SInvalidInputOrig:"Ungültige numerische Eingabe"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SInvalidInput "Ungültige numerische Eingabe"
-	/* ID:SysConst_SDivByZeroOrig:"Division durch Null"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SDivByZero "Division durch Null"
-	/* ID:SysConst_SRangeErrorOrig:"Fehler bei Bereichsprüfung"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SRangeError "Fehler bei Bereichsprüfung"
-	/* ID:SysConst_SIntOverflowOrig:"Integerüberlauf"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SIntOverflow "Integerüberlauf"
-	/* ID:SysConst_SInvalidOpOrig:"Ungültige Gleitkommaoperation"Status:0Created:39879.996412037Modified:39879.996412037PrevOrig:PrevCurr:Comment: */
-  SysConst_SInvalidOp "Ungültige Gleitkommaoperation"
+	Constants_LNG_LVL_INVALID_NO_JUMP,	L"Achtung! Das Level ist nicht spielbar. Es sind keine Spr\x00FCnge m\x00F6glich."
+	Constants_LNG_JUMP_LOG,	L"%d [%d, %d] -> %d [%d, %d];"
+	Constants_LNG_COULD_NOT_CREATE_DIR,	L"Achtung: Konnte das Verzeichnis ""%s"" nicht anlegen."
+	Constants_LNG_SCORE,	L"Punkte: %d"
+	Constants_LNG_REMAINING,	L"Verbleibende Steine: %d (%f%%)"
+	Constants_LNG_TIME_SECONDS,	L"Zeit: %d Sekunden"
+	Constants_LNG_POINTS_PER_MINUTE,	L"%d Punkte in der Minute"
+	Constants_LNG_ENTER_NAME,	L"Bitte geben Sie Ihren Namen ein, um zu den Highscores hinzugef\x00FCgt zu werden."
+	Vcl_ComStrs_sTabFailSet,	L"Registerseite  ""%s"" mit Index %d konnte nicht gesetzt werden"
+	Vcl_ComStrs_sTabFailSetObject,	L"Objekt mit Index %d konnte nicht gesetzt werden"
+	Vcl_ComStrs_sTabMustBeMultiLine,	L"F\x00FCr TabPosition tpLeft und tpRight muss MultiLine True sein"
+	Vcl_ComStrs_sInvalidOwner,	L"Ung\x00FCltiger Besitzer"
+	Vcl_ComStrs_sPageIndexError,	L"%d ist ein ung\x00FCltiger Wert f\x00FCr PageIndex.  PageIndex muss zwischen 0 und %d liegen"
+	Functions_LNG_COULD_NOT_OPEN_FILE,	L"Konnte Datei ""%s"" nicht \x00F6ffnen."
+	LevelFunctions_LNG_LVL_INVALID_ELEMENT,	L"Level ung\x00FCltig: Es wurden ung\x00FCltige Elemente in der Datei gefunden.\r\n\r\nG\x00FCltige Elemente sind ""1"", ""2"", ""3"", ""X"", ""*"", ""E"" und der Ziel-Pr\x00E4fix "">""."
+	LevelFunctions_LNG_LVL_INVALID_WIDTH,	L"Level ung\x00FCltig: Kein Breitindikator (""!"") gefunden."
+	LevelFunctions_LNG_LVL_INVALID_HEIGHT_MUTLIPLE,	L"Level ung\x00FCltig: Die L\x00E4nge ist kein Vielfaches der Breite."
+	LevelFunctions_LNG_LVL_INVALID_MULTIPLE_WIND,	L"Level ung\x00FCltig: Es gibt mehrere Breitindikatoren (""!"")."
+	LevelFunctions_LNG_LVL_INVALID_HEADER,	L"Level ung\x00FCltig: Der Dateikopf ist ung\x00FCltig. Er passt nicht zu der Struktur ""1(D|N)~""."
+	LevelFunctions_LNG_INVALID_GOAL,	L"Level ung\x00FCltig: Eine Zielmarkierung zeigt nicht auf ein zug\x00E4ngliches Element (""3"", ""2"", ""1"" or ""E"")."
+	Constants_LNG_SAVED,	L"Erfolgreich gespeichert!"
+	Constants_LNG_STONES_REMOVED,	L"%d von %d Steine entfernt"
+	Constants_LNG_POINTS,	L"Punkte: %d"
+	Constants_LNG_TIME,	L"Zeit: %s"
+	Vcl_Consts_SStyleHookClassRegistered,	L"Klasse '%s' ist f\x00FCr '%s' bereits registriert"
+	Vcl_Consts_SStyleHookClassNotRegistered,	L"Klasse '%s' ist f\x00FCr '%s' nicht registriert"
+	Vcl_Consts_SStyleInvalidParameter,	L"Parameter %s darf nicht nil sein"
+	Vcl_Consts_SStyleFeatureNotSupported,	L"Funktion wird von diesem Stil nicht unterst\x00FCtzt"
+	Vcl_Consts_SStyleNotRegistered,	L"Der Stil '%s' ist nicht registriert"
+	Vcl_Consts_SStyleUnregisterError,	L"Die Registrierung des Systemstils kann nicht aufgehoben werden"
+	Vcl_Consts_SStyleNotRegisteredNoName,	L"Stil nicht registriert"
+	Vcl_Consts_sBeginInvokeNoHandle,	L"BeginInvoke kann nicht ohne \x00FCbergeordnetes Element oder Fenster-Handle aufgerufen werden"
+	System_Win_ComConst_SOleError,	L"OLE-Fehler %.8x"
+	System_Win_ComConst_SNoMethod,	L"Die Methode '%s' wird vom Automatisierungsobjekt nicht unterst\x00FCtzt"
+	System_Win_ComConst_SVarNotObject,	L"Variante referenziert kein Automatisierungsobjekt"
+	System_Win_ComConst_STooManyParams,	L"Dispatch-Methoden unterst\x00FCtzen maximal 64 Parameter."
+	Vcl_ComStrs_sTabFailClear,	L"Registerelement konnte nicht geleert werden"
+	Vcl_ComStrs_sTabFailDelete,	L"Registerseite mit Index %d konnte nicht gel\x00F6scht werden"
+	Vcl_ComStrs_sTabFailRetrieve,	L"Registerseite mit Index %d konnte nicht gelesen werden"
+	Vcl_ComStrs_sTabFailGetObject,	L"Objekt mit Index %d konnte nicht gelesen werden"
+	Vcl_Consts_SLogin,	L"Anmelden"
+	Vcl_Consts_SNoGetItemEventHandler,	L"Keine OnGetItem-Ereignisbehandlungsroutine zugewiesen"
+	Vcl_Consts_STrayIconRemoveError,	L"Shell-Benachrichtigungssymbol kann nicht entfernt werden"
+	Vcl_Consts_SPageControlNotSet,	L"PageControl muss zuerst zugewiesen werden"
+	Vcl_Consts_SWindowsVistaRequired,	L"F\x00FCr %s ist Windows Vista oder h\x00F6her erforderlich"
+	Vcl_Consts_STaskDlgButtonCaption,	L"Button%d"
+	Vcl_Consts_STaskDlgRadioButtonCaption,	L"RadioButton%d"
+	Vcl_Consts_SInvalidTaskDlgButtonCaption,	L"Caption darf nicht leer sein"
+	Vcl_Consts_SStyleLoadError,	L"Stil '%s' kann nicht geladen werden"
+	Vcl_Consts_SStyleLoadErrors,	L"Stile %s k\x00F6nnen nicht geladen werden"
+	Vcl_Consts_SStyleRegisterError,	L"Stil '%s' bereits registriert"
+	Vcl_Consts_SStyleClassRegisterError,	L"Stilklasse '%s' bereits registriert"
+	Vcl_Consts_SStyleNotFound,	L"Stil '%s' nicht gefunden"
+	Vcl_Consts_SStyleClassNotFound,	L"Stilklasse '%s' nicht gefunden"
+	Vcl_Consts_SStyleInvalidHandle,	L"Ung\x00FCltiges Stil-Handle"
+	Vcl_Consts_SStyleFormatError,	L"Ung\x00FCltiges Stilformat"
+	Vcl_Consts_SIconToClipboard,	L"Zwischenablage unterst\x00FCtzt keine Symbole"
+	Vcl_Consts_SCannotOpenClipboard,	L"Zwischenablage %s kann nicht ge\x00F6ffnet werden"
+	Vcl_Consts_SInvalidMemoSize,	L"Text \x00FCberschreitet Memo-Kapazit\x00E4t"
+	Vcl_Consts_SInvalidPrinterOp,	L"Operation auf ausgew\x00E4hltem Drucker nicht verf\x00FCgbar"
+	Vcl_Consts_SNoDefaultPrinter,	L"Aktuell ist kein Standarddrucker ausgew\x00E4hlt"
+	Vcl_Consts_SDuplicateMenus,	L"Men\x00FC '%s' wird bereits von einem anderen Formular verwendet"
+	Vcl_Consts_SDockedCtlNeedsName,	L"Angedocktes Steuerelement muss einen Namen haben."
+	Vcl_Consts_SDockTreeRemoveError,	L"Fehler beim Entfernen des Steuerelements aus der Andock-Hierarchie"
+	Vcl_Consts_SDockZoneNotFound,	L" - Andockzone nicht gefunden"
+	Vcl_Consts_SDockZoneHasNoCtl,	L" - Andockzone enth\x00E4lt kein Steuerelement"
+	Vcl_Consts_SDockZoneVersionConflict,	L"Fehler beim Laden der Andockzone aus dem Stream. Version %d erwartet, aber %d gefunden."
+	Vcl_Consts_SPromptArrayTooShort,	L"L\x00E4nge des Werte-Arrays muss >= der L\x00E4nge des Prompt-Arrays sein"
+	Vcl_Consts_SPromptArrayEmpty,	L"Prompt-Array darf nicht leer sein"
+	Vcl_Consts_SUsername,	L"&Benutzername"
+	Vcl_Consts_SPassword,	L"&Passwort"
+	Vcl_Consts_SDomain,	L"&Dom\x00E4ne"
+	Vcl_Consts_SmkcSpace,	L"Leer"
+	Vcl_Consts_SmkcPgUp,	L"BildAuf"
+	Vcl_Consts_SmkcPgDn,	L"BildAb"
+	Vcl_Consts_SmkcEnd,	L"Ende"
+	Vcl_Consts_SmkcHome,	L"Pos1"
+	Vcl_Consts_SmkcLeft,	L"Link"
+	Vcl_Consts_SmkcUp,	L"Auf"
+	Vcl_Consts_SmkcRight,	L"Rechts"
+	Vcl_Consts_SmkcDown,	L"Ab"
+	Vcl_Consts_SmkcIns,	L"Einfg"
+	Vcl_Consts_SmkcDel,	L"Entf"
+	Vcl_Consts_SmkcShift,	L"Umsch+"
+	Vcl_Consts_SmkcCtrl,	L"Strg+"
+	Vcl_Consts_SmkcAlt,	L"Alt+"
+	Vcl_Consts_SOutOfRange,	L"Wert muss zwischen %d und %d liegen"
+	Vcl_Consts_sAllFilter,	L"Alle"
+	Vcl_Consts_SMsgDlgYes,	L"&Ja"
+	Vcl_Consts_SMsgDlgNo,	L"&Nein"
+	Vcl_Consts_SMsgDlgOK,	L"OK"
+	Vcl_Consts_SMsgDlgCancel,	L"Abbrechen"
+	Vcl_Consts_SMsgDlgHelp,	L"&Hilfe"
+	Vcl_Consts_SMsgDlgAbort,	L"&Abbrechen"
+	Vcl_Consts_SMsgDlgRetry,	L"&Wiederholen"
+	Vcl_Consts_SMsgDlgIgnore,	L"&Ignorieren"
+	Vcl_Consts_SMsgDlgAll,	L"&Alle"
+	Vcl_Consts_SMsgDlgNoToAll,	L"&Alle Nein"
+	Vcl_Consts_SMsgDlgYesToAll,	L"A&lle Ja"
+	Vcl_Consts_SMsgDlgClose,	L"S&chlie\x00DFen"
+	Vcl_Consts_SmkcBkSp,	L"R\x00FCck"
+	Vcl_Consts_SmkcTab,	L"Tab"
+	Vcl_Consts_SmkcEsc,	L"Esc"
+	Vcl_Consts_SmkcEnter,	L"Eingabe"
+	Vcl_Consts_SHelpButton,	L"&Hilfe"
+	Vcl_Consts_SCloseButton,	L"&Schlie\x00DFen"
+	Vcl_Consts_SIgnoreButton,	L"&Ignorieren"
+	Vcl_Consts_SRetryButton,	L"&Wiederholen"
+	Vcl_Consts_SAbortButton,	L"Abbrechen"
+	Vcl_Consts_SAllButton,	L"&Alle"
+	Vcl_Consts_SCannotDragForm,	L"Formulare k\x00F6nnen nicht gezogen werden"
+	Vcl_Consts_SVMetafiles,	L"Metadateien"
+	Vcl_Consts_SVEnhMetafiles,	L"Erweiterte Metadateien"
+	Vcl_Consts_SVIcons,	L"Symbole"
+	Vcl_Consts_SVBitmaps,	L"Bitmaps"
+	Vcl_Consts_SVTIFFImages,	L"TIFF-Grafiken"
+	Vcl_Consts_SMsgDlgWarning,	L"Warnung"
+	Vcl_Consts_SMsgDlgError,	L"Fehler"
+	Vcl_Consts_SMsgDlgInformation,	L"Informationen"
+	Vcl_Consts_SMsgDlgConfirm,	L"Best\x00E4tigen"
+	Vcl_Consts_SMenuReinserted,	L"Men\x00FC zweimal eingef\x00FCgt"
+	Vcl_Consts_SMenuNotFound,	L"Untermen\x00FC ist nicht im Men\x00FC"
+	Vcl_Consts_SNoTimers,	L"Nicht gen\x00FCgend Timer verf\x00FCgbar"
+	Vcl_Consts_SNotPrinting,	L"Der Drucker druckt aktuell nicht"
+	Vcl_Consts_SPrinting,	L"Druckvorgang l\x00E4uft"
+	Vcl_Consts_SPrinterIndexError,	L"Druckerindex au\x00DFerhalb des zul\x00E4ssigen Bereichs"
+	Vcl_Consts_SInvalidPrinter,	L"Ausgew\x00E4hlter Drucker ist ung\x00FCltig"
+	Vcl_Consts_SDeviceOnPort,	L"%s an %s"
+	Vcl_Consts_SGroupIndexTooLow,	L"GroupIndex darf nicht kleiner sein als der GroupIndex eines vorherigen Men\x00FCelements"
+	Vcl_Consts_SNoMDIForm,	L"Formular kann nicht erstellt werden. Aktuell sind keine MDI-Formulare aktiv"
+	Vcl_Consts_SImageCanvasNeedsBitmap,	L"Ein Bild kann nur ge\x00E4ndert werden, wenn es ein Bitmap enth\x00E4lt"
+	Vcl_Consts_SControlParentSetToSelf,	L"Steuerelement kann nicht sich selbst als Vorfahr haben"
+	Vcl_Consts_SOKButton,	L"OK"
+	Vcl_Consts_SCancelButton,	L"Abbrechen"
+	Vcl_Consts_SYesButton,	L"&Ja"
+	Vcl_Consts_SNoButton,	L"&Nein"
+	Vcl_Consts_SReplaceImage,	L"Bild kann nicht ersetzt werden"
+	Vcl_Consts_SInsertImage,	L"Bild kann nicht eingef\x00FCgt werden"
+	Vcl_Consts_SImageIndexError,	L"Ung\x00FCltiger ImageList-Index"
+	Vcl_Consts_SImageReadFail,	L"ImageList-Daten konnten nicht aus dem Stream gelesen werden"
+	Vcl_Consts_SImageWriteFail,	L"ImageList-Daten konnten nicht in den Stream geschrieben werden"
+	Vcl_Consts_SWindowDCError,	L"Fehler beim Erstellen des Fenster-Ger\x00E4tekontexts"
+	Vcl_Consts_SWindowClass,	L"Fehler beim Erzeugen einer Fensterklasse"
+	Vcl_Consts_SCannotFocus,	L"Deaktiviertes oder unsichtbares Fenster kann den Fokus nicht erhalten"
+	Vcl_Consts_SParentRequired,	L"Element '%s' hat kein \x00FCbergeordnetes Fenster"
+	Vcl_Consts_SParentGivenNotAParent,	L"Das angegebene \x00FCbergeordnete Element ist kein \x00FCbergeordnetes Element von '%s'"
+	Vcl_Consts_SMDIChildNotVisible,	L"Untergeordnetes MDI-Formular kann nicht verborgen werden"
+	Vcl_Consts_SVisibleChanged,	L"Eigenschaft Visible kann in OnShow oder OnHide nicht ver\x00E4ndert werden"
+	Vcl_Consts_SCannotShowModal,	L"Sichtbares Fenster kann nicht in modales ge\x00E4ndert werden"
+	Vcl_Consts_SScrollBarRange,	L"Eigenschaft Scrollbar au\x00DFerhalb des zul\x00E4ssigen Bereichs"
+	Vcl_Consts_SPropertyOutOfRange,	L"Eigenschaft %s au\x00DFerhalb des zul\x00E4ssigen Bereichs"
+	Vcl_Consts_SMenuIndexError,	L"Men\x00FCindex au\x00DFerhalb des zul\x00E4ssigen Bereichs"
+	Vcl_Consts_SInvalidBitmap,	L"Bitmap ist ung\x00FCltig"
+	Vcl_Consts_SInvalidIcon,	L"Ung\x00FCltiges Symbol"
+	Vcl_Consts_SInvalidMetafile,	L"Metadatei ist ung\x00FCltig"
+	Vcl_Consts_SInvalidPixelFormat,	L"Ung\x00FCltiges Pixel-Format"
+	Vcl_Consts_SInvalidImage,	L"Ung\x00FCltiges Bild"
+	Vcl_Consts_SScanLine,	L"Bereichs\x00FCberschreitung bei Zeilenindex"
+	Vcl_Consts_SChangeIconSize,	L"Die Gr\x00F6\x00DFe eines Symbols kann nicht ge\x00E4ndert werden"
+	Vcl_Consts_SChangeWicSize,	L"Die Gr\x00F6\x00DFe einer WIC-Grafik kann nicht ver\x00E4ndert werden"
+	Vcl_Consts_SUnknownExtension,	L"Unbekannte Bilddateierweiterung (.%s)"
+	Vcl_Consts_SUnknownClipboardFormat,	L"Nicht unterst\x00FCtztes Zwischenablagenformat"
+	Vcl_Consts_SUnknownStreamFormat,	L"Nicht unterst\x00FCtztes Stream-Format"
+	Vcl_Consts_SOutOfResources,	L"Systemressourcen ersch\x00F6pft"
+	Vcl_Consts_SNoCanvasHandle,	L"Canvas erlaubt kein Zeichnen"
+	Vcl_Consts_SInvalidTextFormatFlag,	L"Das Textformat-Flag '%s' wird nicht unterst\x00FCtzt"
+	Vcl_Consts_SInvalidImageSize,	L"Ung\x00FCltige Bildgr\x00F6\x00DFe"
+	Vcl_Consts_SInvalidImageList,	L"Ung\x00FCltige Bilderliste"
+	System_RTLConsts_SWindows8,	L"Windows 8"
+	System_RTLConsts_SWindows8Point1,	L"Windows 8.1"
+	System_RTLConsts_SWindows10,	L"Windows 10"
+	System_RTLConsts_sObserverUnsupported,	L"Observer wird nicht unterst\x00FCtzt"
+	System_RTLConsts_sObserverMultipleSingleCast,	L"Der Observer-Kollektion k\x00F6nnen nicht mehrere Einfach-Typumwandlungs-Observer hinzugef\x00FCgt werden"
+	System_RTLConsts_sObserverNoInterface,	L"Das Objekt implementiert das Observer-Interface nicht"
+	System_RTLConsts_sObserverNoSinglecastFound,	L"Der Observer-Kollektion wurde kein Einfach-Typumwandlungs-Observer mit der ID %d hinzugef\x00FCgt"
+	System_RTLConsts_sObserverNoMulticastFound,	L"Der Observer-Kollektion wurde kein Mehrfach-Typumwandlungs-Observer mit der ID %d hinzugef\x00FCgt"
+	System_RTLConsts_sObserverNotAvailable,	L"Observer ist nicht verf\x00FCgbar"
+	System_RTLConsts_SInvalidDateString,	L"Ung\x00FCltiger Datums-String: %s"
+	System_RTLConsts_SInvalidTimeString,	L"Ung\x00FCltiger Zeit-String: %s"
+	System_RTLConsts_SInvalidOffsetString,	L"Ung\x00FCltiger Zeit-Offset-String: %s"
+	System_RTLConsts_sMustWaitOnOneEvent,	L"Es muss auf mindestens ein Ereignis gewartet werden"
+	System_RTLConsts_sBeginInvokeDestroying,	L"BeginInvoke kann bei der Freigabe f\x00FCr TComponent nicht aufgerufen werden"
+	Vcl_Consts_SInvalidTabPosition,	L"Position des Registers ist nicht mit dem aktuellen Registerstil kompatibel"
+	Vcl_Consts_SInvalidTabStyle,	L"Registerstil ist nicht mit der aktuellen Position kompatibel"
+	System_RTLConsts_SVersionStr,	L"%s (Version %d.%d, Build %d, %5:s)"
+	System_RTLConsts_SSPVersionStr,	L"%s Service Pack %4:d (Version %1:d.%2:d, Build %3:d, %5:s)"
+	System_RTLConsts_SVersion32,	L"32-Bit-Edition"
+	System_RTLConsts_SVersion64,	L"64-Bit-Edition"
+	System_RTLConsts_SWindows,	L"Windows"
+	System_RTLConsts_SWindowsVista,	L"Windows Vista"
+	System_RTLConsts_SWindowsServer2008,	L"Windows Server 2008"
+	System_RTLConsts_SWindows7,	L"Windows 7"
+	System_RTLConsts_SWindowsServer2008R2,	L"Windows Server 2008 R2"
+	System_RTLConsts_SWindows2000,	L"Windows 2000"
+	System_RTLConsts_SWindowsXP,	L"Windows XP"
+	System_RTLConsts_SWindowsServer2003,	L"Windows Server 2003"
+	System_RTLConsts_SWindowsServer2003R2,	L"Windows Server 2003 R2"
+	System_RTLConsts_SWindowsServer2012,	L"Windows Server 2012"
+	System_RTLConsts_SWindowsServer2012R2,	L"Windows Server 2012 R2"
+	System_RTLConsts_SWindowsServer2016,	L"Windows Server 2016"
+	System_RTLConsts_SNoContext,	L"Keine kontextsensitive Hilfe installiert"
+	System_RTLConsts_SNoContextFound,	L"Keine Hilfe f\x00FCr Kontext %d gefunden"
+	System_RTLConsts_SNoIndex,	L"Index kann nicht ge\x00F6ffnet werden"
+	System_RTLConsts_SNoSearch,	L"Suche kann nicht ge\x00F6ffnet werden"
+	System_RTLConsts_SNoTableOfContents,	L"Inhaltsverzeichnis nicht gefunden"
+	System_RTLConsts_SNoTopics,	L"Kein themenbezogenes Hilfesystem installiert"
+	System_RTLConsts_SNothingFound,	L"Keine Hilfe f\x00FCr %s gefunden"
+	System_RTLConsts_SArgumentOutOfRange,	L"Argument au\x00DFerhalb des Bereichs"
+	System_RTLConsts_SArgumentNil,	L"Argument darf nicht nil sein"
+	System_RTLConsts_SGenericItemNotFound,	L"Eintrag nicht gefunden"
+	System_RTLConsts_SGenericDuplicateItem,	L"Duplikate nicht zul\x00E4ssig"
+	System_RTLConsts_SInsufficientRtti,	L"Unzureichende RTTI zur Unterst\x00FCtzung dieser Operation verf\x00FCgbar"
+	System_RTLConsts_SParameterCountMismatch,	L"Parameteranzahl stimmt nicht \x00FCberein"
+	System_RTLConsts_SNonPublicType,	L"Typ '%s' ist im interface-Abschnitt einer Unit nicht deklariert"
+	System_RTLConsts_SByRefArgMismatch,	L"VAR- und OUT-Argumente m\x00FCssen exakt mit dem Parametertyp \x00FCbereinstimmen"
+	System_RTLConsts_SServiceNotFound,	L"Angegebener Dienst f\x00FCr die Anmeldeinformationen nicht gefunden"
+	System_RTLConsts_SParamIsNegative,	L"Parameter %s darf kein negativer Wert sein"
+	System_RTLConsts_SInputBufferExceed,	L"Eingabepuffer f\x00FCr %s = %d, %s = %d \x00FCberschritten"
+	System_RTLConsts_SInvalidCharsInPath,	L"Ung\x00FCltige Zeichen im Pfad"
+	System_RTLConsts_SFileNotFound,	L"Die angegebene Datei wurde nicht gefunden"
+	System_RTLConsts_hNoFilterViewer,	L"Kein Hilfe-Viewer, der Filter unterst\x00FCtzt"
+	System_RTLConsts_sArgumentOutOfRange_Index,	L"Index au\x00DFerhalb des Bereichs (%d).  Muss >= 0 und < %d sein"
+	System_RTLConsts_sInvalidStringAndObjectArrays,	L"Die L\x00E4nge von String- und Objekt-Arrays muss gleich sein"
+	System_RTLConsts_sNoConstruct,	L"Klasse %s soll nicht erzeugt werden"
+	System_RTLConsts_sInvalidTimeoutValue,	L"Ung\x00FCltiger Wert f\x00FCr Zeit\x00FCberschreitung: %s"
+	System_RTLConsts_sSpinCountOutOfRange,	L"SpinCount au\x00DFerhalb des Bereichs. Muss zwischen 0 und %d liegen"
+	System_RTLConsts_sTimespanTooLong,	L"TimeSpan zu lang"
+	System_RTLConsts_sInvalidTimespanDuration,	L"Die Dauer kann nicht zur\x00FCckgegeben werden, weil der absolute Wert den Wert von TTimeSpan.MaxValue \x00FCberschreitet"
+	System_RTLConsts_sTimespanValueCannotBeNan,	L"Wert darf nicht NaN"
+	System_RTLConsts_sCannotNegateTimespan,	L"Negation des Minimalwertes einer Zeitspanne ist ung\x00FCltig"
+	System_RTLConsts_sInvalidTimespanFormat,	L"Ung\x00FCltiges TimeSpan-Format"
+	System_RTLConsts_sTimespanElementTooLong,	L"TimeSpan-Element zu lang"
+	System_RTLConsts_SRegGetDataFailed,	L"Fehler beim Holen der Daten f\x00FCr '%s'"
+	System_RTLConsts_SRegSetDataFailed,	L"Fehler beim Setzen der Daten f\x00FCr '%s'"
+	System_RTLConsts_SResNotFound,	L"Ressource %s nicht gefunden"
+	System_RTLConsts_SSeekNotImplemented,	L"%s.Seek nicht implementiert"
+	System_RTLConsts_SSortedListError,	L"Operation f\x00FCr sortierte Listen nicht zul\x00E4ssig"
+	System_RTLConsts_SUnknownGroup,	L"%s befindet sich nicht in einer Gruppe f\x00FCr Klassenregistrierungen"
+	System_RTLConsts_SUnknownProperty,	L"Eigenschaft %s existiert nicht"
+	System_RTLConsts_SWriteError,	L"Stream-Schreibfehler"
+	System_RTLConsts_SThreadCreateError,	L"Fehler beim Erzeugen des Thread: %s"
+	System_RTLConsts_SThreadError,	L"Thread-Fehler: %s (%d)"
+	System_RTLConsts_SThreadExternalTerminate,	L"Ein extern erstellter Thread kann nicht beendet werden"
+	System_RTLConsts_SThreadExternalWait,	L"Auf einen extern erstellten Thread kann nicht gewartet werden"
+	System_RTLConsts_SThreadStartError,	L"Start kann f\x00FCr einen laufenden oder unterbrochenen Thread nicht aufgerufen werden"
+	System_RTLConsts_SThreadExternalCheckTerminated,	L"CheckTerminated kann nicht f\x00FCr einen extern erstellten Thread aufgerufen werden"
+	System_RTLConsts_SThreadExternalSetReturnValue,	L"SetReturnValue kann nicht f\x00FCr einen extern erstellten Thread aufgerufen werden"
+	System_RTLConsts_SParamIsNil,	L"Parameter %s darf nicht Nil sein"
+	System_RTLConsts_SInvalidFileName,	L"Ung\x00FCltiger Dateiname - %s"
+	System_RTLConsts_SInvalidImage,	L"Ung\x00FCltiges Stream-Format"
+	System_RTLConsts_SInvalidName,	L"''%s'' ist kein g\x00FCltiger Komponentenname"
+	System_RTLConsts_SInvalidProperty,	L"Ung\x00FCltiger Eigenschaftswert"
+	System_RTLConsts_SInvalidPropertyPath,	L"Ung\x00FCltiger Pfad f\x00FCr Eigenschaft"
+	System_RTLConsts_SInvalidPropertyValue,	L"Ung\x00FCltiger Eigenschaftswert"
+	System_RTLConsts_SInvalidRegType,	L"Ung\x00FCltiger Datentyp f\x00FCr '%s'"
+	System_RTLConsts_SListCapacityError,	L"Kapazit\x00E4t der Liste ist ersch\x00F6pft (%d)"
+	System_RTLConsts_SListCountError,	L"Zu viele Eintr\x00E4ge in der Liste (%d)"
+	System_RTLConsts_SListIndexError,	L"Listenindex au\x00DFerhalb des g\x00FCltigen Bereichs (%d)"
+	System_RTLConsts_SMemoryStreamError,	L"Expandieren des Speicher-Stream wegen Speichermangel nicht m\x00F6glich"
+	System_RTLConsts_SNoComSupport,	L"%s wurde nicht als COM-Klasse registriert"
+	System_RTLConsts_SPropertyException,	L"Fehler beim Lesen von %s%s%s: %s"
+	System_RTLConsts_SReadError,	L"Stream-Lesefehler"
+	System_RTLConsts_SReadOnlyProperty,	L"Eigenschaft kann nur gelesen werden"
+	System_RTLConsts_SRegCreateFailed,	L"Erzeugung von Schl\x00FCssel %s misslungen"
+	System_SysConst_SInvalidCodePage,	L"Ung\x00FCltige Codeseite"
+	System_SysConst_SInvalidEncodingName,	L"Ung\x00FCltiger Codierungsname"
+	System_SysConst_SNoMappingForUnicodeCharacter,	L"Keine Zuordnung f\x00FCr Unicode-Zeichen in der Multibyte-Zielcodeseite vorhanden"
+	System_SysConst_SInvalidStringBaseIndex,	L"Ung\x00FCltiger StringBaseIndex"
+	System_RTLConsts_SAncestorNotFound,	L"Vorfahr f\x00FCr '%s' nicht gefunden"
+	System_RTLConsts_SAssignError,	L"%s kann nicht zu %s zugewiesen werden"
+	System_RTLConsts_SBitsIndexError,	L"Bits-Index au\x00DFerhalb des zul\x00E4ssigen Bereichs"
+	System_RTLConsts_SCantWriteResourceStreamError,	L"In einen zum Lesen ge\x00F6ffneten Ressourcen-Stream kann nicht geschrieben werden"
+	System_RTLConsts_SCheckSynchronizeError,	L"CheckSynchronize wurde vom Thread $%x aufgerufen, der NICHT der Haupt-Thread ist."
+	System_RTLConsts_SClassNotFound,	L"Klasse %s nicht gefunden"
+	System_RTLConsts_SDuplicateClass,	L"Klasse mit der Bezeichnung %s existiert bereits"
+	System_RTLConsts_SDuplicateItem,	L"Liste gestattet keine doppelten Eintr\x00E4ge ($0%x)"
+	System_RTLConsts_SDuplicateName,	L"Komponente mit der Bezeichnung %s existiert bereits"
+	System_RTLConsts_SDuplicateString,	L"In der String-Liste sind Duplikate nicht zul\x00E4ssig"
+	System_RTLConsts_SFCreateErrorEx,	L"Datei ""%s"" kann nicht erstellt werden. %s"
+	System_RTLConsts_SFOpenErrorEx,	L"Datei %s kann nicht ge\x00F6ffnet werden. %s"
+	System_SysConst_SShortDayNameFri,	L"Fr"
+	System_SysConst_SShortDayNameSat,	L"Sa"
+	System_SysConst_SLongDayNameSun,	L"Sonntag"
+	System_SysConst_SLongDayNameMon,	L"Montag"
+	System_SysConst_SLongDayNameTue,	L"Dienstag"
+	System_SysConst_SLongDayNameWed,	L"Mittwoch"
+	System_SysConst_SLongDayNameThu,	L"Donnerstag"
+	System_SysConst_SLongDayNameFri,	L"Freitag"
+	System_SysConst_SLongDayNameSat,	L"Samstag"
+	System_SysConst_SCannotCreateDir,	L"Verzeichnis kann nicht erstellt werden"
+	System_SysConst_SInvalidSourceArray,	L"Ung\x00FCltiges Quell-Array"
+	System_SysConst_SInvalidDestinationArray,	L"Ung\x00FCltiges Ziel-Array"
+	System_SysConst_SCharIndexOutOfBounds,	L"Zeichenindex au\x00DFerhalb des g\x00FCltigen Bereichs (%d)"
+	System_SysConst_SByteIndexOutOfBounds,	L"Startindex au\x00DFerhalb des g\x00FCltigen Bereichs (%d)"
+	System_SysConst_SInvalidCharCount,	L"Ung\x00FCltige Anzahl (%d)"
+	System_SysConst_SInvalidDestinationIndex,	L"Ung\x00FCltiger Zielindex (%d)"
+	System_SysConst_SLongMonthNameFeb,	L"Februar"
+	System_SysConst_SLongMonthNameMar,	L"M\x00E4rz"
+	System_SysConst_SLongMonthNameApr,	L"April"
+	System_SysConst_SLongMonthNameMay,	L"Mai"
+	System_SysConst_SLongMonthNameJun,	L"Juni"
+	System_SysConst_SLongMonthNameJul,	L"Juli"
+	System_SysConst_SLongMonthNameAug,	L"August"
+	System_SysConst_SLongMonthNameSep,	L"September"
+	System_SysConst_SLongMonthNameOct,	L"Oktober"
+	System_SysConst_SLongMonthNameNov,	L"November"
+	System_SysConst_SLongMonthNameDec,	L"Dezember"
+	System_SysConst_SShortDayNameSun,	L"So"
+	System_SysConst_SShortDayNameMon,	L"Mo"
+	System_SysConst_SShortDayNameTue,	L"Di"
+	System_SysConst_SShortDayNameWed,	L"Mi"
+	System_SysConst_SShortDayNameThu,	L"Do"
+	System_SysConst_SModuleAccessViolation,	L"Zugriffsverletzung bei Adresse %p in Modul '%s'. %s von Adresse %p"
+	System_SysConst_SOSError,	L"Systemfehler.  Code: %d.\r\n%s%s"
+	System_SysConst_SUnkOSError,	L"Ein Aufruf einer Betriebssystemfunktion ist fehlgeschlagen"
+	System_SysConst_SShortMonthNameJan,	L"Jan"
+	System_SysConst_SShortMonthNameFeb,	L"Feb"
+	System_SysConst_SShortMonthNameMar,	L"M\x00E4r"
+	System_SysConst_SShortMonthNameApr,	L"Apr"
+	System_SysConst_SShortMonthNameMay,	L"Mai"
+	System_SysConst_SShortMonthNameJun,	L"Jun"
+	System_SysConst_SShortMonthNameJul,	L"Jul"
+	System_SysConst_SShortMonthNameAug,	L"Aug"
+	System_SysConst_SShortMonthNameSep,	L"Sep"
+	System_SysConst_SShortMonthNameOct,	L"Okt"
+	System_SysConst_SShortMonthNameNov,	L"Nov"
+	System_SysConst_SShortMonthNameDec,	L"Dez"
+	System_SysConst_SLongMonthNameJan,	L"Januar"
+	System_SysConst_SVarTypeConvertOverflow,	L"\x00DCberlauf bei der Konvertierung einer Variante vom Typ (%s) in Typ (%s)"
+	System_SysConst_SVarOverflow,	L"Variant-\x00DCberlauf"
+	System_SysConst_SVarInvalid,	L"Ung\x00FCltiges Argument"
+	System_SysConst_SVarBadType,	L"Ung\x00FCltiger Variant-Typ"
+	System_SysConst_SVarNotImplemented,	L"Operation nicht unterst\x00FCtzt"
+	System_SysConst_SVarUnexpected,	L"Unerwarteter Variant-Fehler"
+	System_SysConst_SExternalException,	L"Externe Exception %x"
+	System_SysConst_SAssertionFailed,	L"Auswertung von assert fehlgeschlagen"
+	System_SysConst_SIntfCastError,	L"Interface nicht unterst\x00FCtzt"
+	System_SysConst_SSafecallException,	L"Exception in safecall-Methode"
+	System_SysConst_SMonitorLockException,	L"Kein Eigent\x00FCmer der Objektsperre"
+	System_SysConst_SNoMonitorSupportException,	L"Unterst\x00FCtzungsfunktion f\x00FCr Monitor nicht initialisiert"
+	System_SysConst_SNotImplemented,	L"Feature nicht implementiert"
+	System_SysConst_SObjectDisposed,	L"Methode f\x00FCr freigegebenes Objekt aufgerufen"
+	System_SysConst_SAssertError,	L"%s (%s, Zeile %d)"
+	System_SysConst_SAbstractError,	L"Abstrakter Fehler"
+	System_SysConst_SReadAccess,	L"Lesen"
+	System_SysConst_SWriteAccess,	L"Schreiben"
+	System_SysConst_SExecuteAccess,	L"Ausf\x00FChrung"
+	System_SysConst_SInvalidAccess,	L"Ung\x00FCltiger Zugriff"
+	System_SysConst_SVarArrayCreate,	L"Fehler beim Erzeugen von Variante oder sicherem Array"
+	System_SysConst_SVarArrayBounds,	L"Variante oder sicheres Array-Index au\x00DFerhalb des g\x00FCltigen Bereichs"
+	System_SysConst_SVarArrayLocked,	L"Variante oder sicheres Array ist gesperrt"
+	System_SysConst_SInvalidVarCast,	L"Ung\x00FCltige Varianten-Typumwandlung"
+	System_SysConst_SInvalidVarOp,	L"Ung\x00FCltige Variantenoperation"
+	System_SysConst_SInvalidVarNullOp,	L"Ung\x00FCltige NULL-Variantenoperation"
+	System_SysConst_SInvalidVarOpWithHResultWithPrefix,	L"Ung\x00FCltige Variantenoperation (%s%.8x)\n%s"
+	System_SysConst_SVarTypeOutOfRangeWithPrefix,	L"Benutzerdefinierter Variant-Typ (%s%.4x) au\x00DFerhalb des g\x00FCltigen Bereichs"
+	System_SysConst_SVarTypeAlreadyUsedWithPrefix,	L"Benutzerdefinierter Variant-Typ (%s%.4x) bereits benutzt von %s"
+	System_SysConst_SVarTypeNotUsableWithPrefix,	L"Benutzerdefinierter Variant-Typ (%s%.4x) nicht brauchbar"
+	System_SysConst_SVarTypeTooManyCustom,	L"Es wurden zu viele benutzerdefinierte Variant-Typen registriert"
+	System_SysConst_SVarTypeCouldNotConvert,	L"Variante des Typs (%s) konnte nicht in Typ (%s) konvertiert werden"
+	System_SysConst_SInvalidOp,	L"Ung\x00FCltige Gleitkommaoperation"
+	System_SysConst_SZeroDivide,	L"Gleitkommadivision durch Null"
+	System_SysConst_SOverflow,	L"Gleitkomma\x00FCberlauf"
+	System_SysConst_SUnderflow,	L"Gleitkommaunterlauf"
+	System_SysConst_SInvalidPointer,	L"Ung\x00FCltige Zeigeroperation"
+	System_SysConst_SInvalidCast,	L"Ung\x00FCltige Typumwandlung"
+	System_SysConst_SAccessViolationArg3,	L"Zugriffsverletzung bei Adresse %p. %s von Adresse %p"
+	System_SysConst_SAccessViolationNoArg,	L"Zugriffsverletzung"
+	System_SysConst_SStackOverflow,	L"Stack-\x00DCberlauf"
+	System_SysConst_SControlC,	L"Strg+C gedr\x00FCckt"
+	System_SysConst_SPrivilege,	L"Privilegierte Anweisung"
+	System_SysConst_SException,	L"Exception %s in Modul %s bei %p.\r\n%s%s\r\n"
+	System_SysConst_SExceptTitle,	L"Anwendungsfehler"
+	System_SysConst_SInvalidFormat,	L"Format '%s' ung\x00FCltig oder nicht kompatibel mit Argument"
+	System_SysConst_SArgumentMissing,	L"Kein Argument f\x00FCr Format '%s'"
+	System_SysConst_SDispatchError,	L"Variant-Methodenaufruf nicht unterst\x00FCtzt"
+	System_SysConst_SUnknown,	L"<unbekannt>"
+	System_SysConst_SInvalidInteger,	L"'%s' ist kein g\x00FCltiger Integerwert"
+	System_SysConst_SInvalidTimeStamp,	L"'%d.%d' ist kein g\x00FCltiger Zeitstempel"
+	System_SysConst_SInvalidGUID,	L"'%s' kein g\x00FCltiger Wert f\x00FCr GUID"
+	System_SysConst_STimeEncodeError,	L"Ung\x00FCltiges Argument zum Codieren der Uhrzeit"
+	System_SysConst_SDateEncodeError,	L"Ung\x00FCltiges Argument zum Codieren des Datums"
+	System_SysConst_SOutOfMemory,	L"Zu wenig Arbeitsspeicher"
+	System_SysConst_SInOutError,	L"E/A-Fehler %d"
+	System_SysConst_STooManyOpenFiles,	L"Zu viele ge\x00F6ffnete Dateien"
+	System_SysConst_SAccessDenied,	L"Dateizugriff verweigert"
+	System_SysConst_SEndOfFile,	L"Versuch hinter dem Dateiende zu lesen"
+	System_SysConst_SDiskFull,	L"Zu wenig Speicherplatz"
+	System_SysConst_SInvalidInput,	L"Ung\x00FCltige numerische Eingabe"
+	System_SysConst_SDivByZero,	L"Division durch Null"
+	System_SysConst_SRangeError,	L"Fehler bei Bereichspr\x00FCfung"
+	System_SysConst_SIntOverflow,	L"Integer\x00FCberlauf"
 END
 
+/* c:\program files (x86)\embarcadero\studio\19.0\lib\Win32\release\Controls.res */
+/* c:\program files (x86)\embarcadero\studio\19.0\lib\Win32\release\Buttons.res */
+/* C:\Users\DELL User\SVN\Jumper\trunk\About.dfm */
+/* C:\Users\DELL User\SVN\Jumper\trunk\History.dfm */
+/* C:\Users\DELL User\SVN\Jumper\trunk\Finish.dfm */
+/* C:\Users\DELL User\SVN\Jumper\trunk\Choice.dfm */
+/* C:\Users\DELL User\SVN\Jumper\trunk\HighScore.dfm */
+/* C:\Users\DELL User\SVN\Jumper\trunk\Help.dfm */
+/* C:\Users\DELL User\SVN\Jumper\trunk\Main.dfm */
+/* C:\Users\DELL User\SVN\Jumper\trunk\PegSolitaire.res */
+/* C:\Users\DELL User\SVN\Jumper\trunk\ExtraResources.res */
+/* C:\Users\DELL User\SVN\Jumper\trunk\PegSolitaire.drf */

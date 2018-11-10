@@ -1,55 +1,287 @@
-/*ITE: 5.0 39891.735 39879.9341898148 39879.9341898148 4 49 $00000409 $00000407 "C:\WIN98\Desktop\Prim‰rdaten\Jumper\History.dfm" */
-/*ITE: Nicht bearbeiten. Diese Datei wurde vom Ressourcen-DLL-Experten erzeugt. */
-/* ID:O:HistoryForm.LeftOrig:192Status:0Curr:192PrevOrig:PrevCurr:Order:0Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39891.7348958333Comment: */
-/* ID:O:HistoryForm.TopOrig:103Status:0Curr:103PrevOrig:PrevCurr:Order:1Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.BorderIconsOrig:[biSystemMenu, biMinimize]Status:0Curr:[biSystemMenu, biMinimize]PrevOrig:PrevCurr:Order:2Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.BorderStyleOrig:bsSingleStatus:0Curr:bsSinglePrevOrig:PrevCurr:Order:3Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.CaptionOrig:'Jump History'Status:1Curr:'Springverlauf'PrevOrig:PrevCurr:Order:4Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39891.7349421296Comment: */
-/* ID:O:HistoryForm.ClientHeightOrig:353Status:0Curr:353PrevOrig:PrevCurr:Order:5Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.ClientWidthOrig:281Status:0Curr:281PrevOrig:PrevCurr:Order:6Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.ColorOrig:clBtnFaceStatus:0Curr:clBtnFacePrevOrig:PrevCurr:Order:7Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.Font.CharsetOrig:DEFAULT_CHARSETStatus:0Curr:DEFAULT_CHARSETPrevOrig:PrevCurr:Order:8Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.Font.ColorOrig:clWindowTextStatus:0Curr:clWindowTextPrevOrig:PrevCurr:Order:9Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.Font.HeightOrig:-11Status:0Curr:-11PrevOrig:PrevCurr:Order:10Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.Font.NameOrig:'MS Sans Serif'Status:0Curr:'MS Sans Serif'PrevOrig:PrevCurr:Order:11Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.Font.StyleOrig:[]Status:0Curr:[]PrevOrig:PrevCurr:Order:12Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.OldCreateOrderOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:13Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.PositionOrig:poMainFormCenterStatus:0Curr:poMainFormCenterPrevOrig:PrevCurr:Order:14Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.PixelsPerInchOrig:96Status:0Curr:96PrevOrig:PrevCurr:Order:15Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.TextHeightOrig:13Status:0Curr:13PrevOrig:PrevCurr:Order:16Type:THistoryFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.LeftOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:17Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.TopOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:18Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.WidthOrig:265Status:0Curr:265PrevOrig:PrevCurr:Order:19Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.HeightOrig:305Status:0Curr:305PrevOrig:PrevCurr:Order:20Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.TabStopOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:21Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.ColorOrig:clBtnFaceStatus:0Curr:clBtnFacePrevOrig:PrevCurr:Order:22Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.Font.CharsetOrig:ANSI_CHARSETStatus:0Curr:ANSI_CHARSETPrevOrig:PrevCurr:Order:23Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.Font.ColorOrig:clWindowTextStatus:0Curr:clWindowTextPrevOrig:PrevCurr:Order:24Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.Font.HeightOrig:-13Status:0Curr:-13PrevOrig:PrevCurr:Order:25Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.Font.NameOrig:'Courier New'Status:0Curr:'Courier New'PrevOrig:PrevCurr:Order:26Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.Font.StyleOrig:[]Status:0Curr:[]PrevOrig:PrevCurr:Order:27Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.ParentFontOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:28Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.ReadOnlyOrig:TrueStatus:0Curr:TruePrevOrig:PrevCurr:Order:29Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.ScrollBarsOrig:ssVerticalStatus:0Curr:ssVerticalPrevOrig:PrevCurr:Order:30Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpMemo.TabOrderOrig:2Status:0Curr:2PrevOrig:PrevCurr:Order:31Type:TMemoOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:SaveBtn.LeftOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:32Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:SaveBtn.TopOrig:320Status:0Curr:320PrevOrig:PrevCurr:Order:33Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:SaveBtn.WidthOrig:105Status:0Curr:105PrevOrig:PrevCurr:Order:34Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:SaveBtn.HeightOrig:25Status:0Curr:25PrevOrig:PrevCurr:Order:35Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:SaveBtn.CaptionOrig:'Save to file'Status:1Curr:'In Datei speichern'PrevOrig:PrevCurr:Order:36Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39880.0080902778Comment: */
-/* ID:O:HistoryForm.O:SaveBtn.TabOrderOrig:1Status:0Curr:1PrevOrig:PrevCurr:Order:37Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:SaveBtn.OnClickOrig:SaveBtnClickStatus:0Curr:SaveBtnClickPrevOrig:PrevCurr:Order:38Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:CloseBtn.LeftOrig:168Status:0Curr:168PrevOrig:PrevCurr:Order:39Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:CloseBtn.TopOrig:320Status:0Curr:320PrevOrig:PrevCurr:Order:40Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:CloseBtn.WidthOrig:105Status:0Curr:105PrevOrig:PrevCurr:Order:41Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:CloseBtn.HeightOrig:25Status:0Curr:25PrevOrig:PrevCurr:Order:42Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:CloseBtn.CancelOrig:TrueStatus:0Curr:TruePrevOrig:PrevCurr:Order:43Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:CloseBtn.CaptionOrig:'Close'Status:1Curr:'Schlieﬂen'PrevOrig:PrevCurr:Order:44Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39880.0083101852Comment: */
-/* ID:O:HistoryForm.O:CloseBtn.DefaultOrig:TrueStatus:0Curr:TruePrevOrig:PrevCurr:Order:45Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:CloseBtn.TabOrderOrig:0Status:0Curr:0PrevOrig:PrevCurr:Order:46Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:CloseBtn.OnClickOrig:CloseBtnClickStatus:0Curr:CloseBtnClickPrevOrig:PrevCurr:Order:47Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpSaveDialog.DefaultExtOrig:'*.txt'Status:0Curr:'*.txt'PrevOrig:PrevCurr:Order:48Type:TSaveDialogOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpSaveDialog.FilterOrig:'Text files (*.txt)|*.txt|All files (*.*)|*.*'Status:1Curr:'Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*'PrevOrig:PrevCurr:Order:49Type:TSaveDialogOpen:Localize:1Close:Created:39879.996412037Modified:39880.0082523148Comment: */
-/* ID:O:HistoryForm.O:JumpSaveDialog.OptionsOrig:[ofOverwritePrompt, ofHideReadOnly, ofPathMustExist, ofEnableSizing]Status:0Curr:[ofOverwritePrompt, ofHideReadOnly, ofPathMustExist, ofEnableSizing]PrevOrig:PrevCurr:Order:50Type:TSaveDialogOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpSaveDialog.LeftOrig:16Status:0Curr:16PrevOrig:PrevCurr:Order:51Type:TSaveDialogOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HistoryForm.O:JumpSaveDialog.TopOrig:16Status:0Curr:16PrevOrig:PrevCurr:Order:52Type:TSaveDialogOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="C:\Users\DELL User\SVN\Jumper\trunk\History.dfm" source-language="en-US" target-language="de-DE" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\DELL User\SVN\Jumper\trunk\History.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">43414.9159027778</prop>
+        <prop prop-type="OrigDateTime">43414.887662037</prop>
+        <prop prop-type="XlatDateTime">43414.8876388889</prop>
+        <prop prop-type="Translated">4</prop>
+        <prop prop-type="UnTranslated">49</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:HistoryForm.Left" resname="O:HistoryForm.Left">
+        <source>192</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.Top" resname="O:HistoryForm.Top">
+        <source>103</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.BorderIcons" resname="O:HistoryForm.BorderIcons">
+        <source>[biSystemMenu, biMinimize]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.BorderStyle" resname="O:HistoryForm.BorderStyle">
+        <source>bsSingle</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.Caption" resname="O:HistoryForm.Caption">
+        <source>'Jump History'</source>
+        <target>'Springverlauf'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">4</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.ClientHeight" resname="O:HistoryForm.ClientHeight">
+        <source>353</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.ClientWidth" resname="O:HistoryForm.ClientWidth">
+        <source>281</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.Color" resname="O:HistoryForm.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.Font.Charset" resname="O:HistoryForm.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.Font.Color" resname="O:HistoryForm.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.Font.Height" resname="O:HistoryForm.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.Font.Name" resname="O:HistoryForm.Font.Name">
+        <source>'MS Sans Serif'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.Font.Style" resname="O:HistoryForm.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.OldCreateOrder" resname="O:HistoryForm.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.Position" resname="O:HistoryForm.Position">
+        <source>poMainFormCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.PixelsPerInch" resname="O:HistoryForm.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.TextHeight" resname="O:HistoryForm.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">THistoryForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.Left" resname="O:HistoryForm.O:JumpMemo.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.Top" resname="O:HistoryForm.O:JumpMemo.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.Width" resname="O:HistoryForm.O:JumpMemo.Width">
+        <source>265</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.Height" resname="O:HistoryForm.O:JumpMemo.Height">
+        <source>305</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.TabStop" resname="O:HistoryForm.O:JumpMemo.TabStop">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.Color" resname="O:HistoryForm.O:JumpMemo.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.Font.Charset" resname="O:HistoryForm.O:JumpMemo.Font.Charset">
+        <source>ANSI_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.Font.Color" resname="O:HistoryForm.O:JumpMemo.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.Font.Height" resname="O:HistoryForm.O:JumpMemo.Font.Height">
+        <source>-13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.Font.Name" resname="O:HistoryForm.O:JumpMemo.Font.Name">
+        <source>'Courier New'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.Font.Style" resname="O:HistoryForm.O:JumpMemo.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.ParentFont" resname="O:HistoryForm.O:JumpMemo.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.ReadOnly" resname="O:HistoryForm.O:JumpMemo.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.ScrollBars" resname="O:HistoryForm.O:JumpMemo.ScrollBars">
+        <source>ssVertical</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpMemo.TabOrder" resname="O:HistoryForm.O:JumpMemo.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:SaveBtn.Left" resname="O:HistoryForm.O:SaveBtn.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:SaveBtn.Top" resname="O:HistoryForm.O:SaveBtn.Top">
+        <source>320</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:SaveBtn.Width" resname="O:HistoryForm.O:SaveBtn.Width">
+        <source>105</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:SaveBtn.Height" resname="O:HistoryForm.O:SaveBtn.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:SaveBtn.Caption" resname="O:HistoryForm.O:SaveBtn.Caption">
+        <source>'Save to file'</source>
+        <target>'In Datei speichern'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:SaveBtn.TabOrder" resname="O:HistoryForm.O:SaveBtn.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:SaveBtn.OnClick" resname="O:HistoryForm.O:SaveBtn.OnClick">
+        <source>SaveBtnClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:CloseBtn.Left" resname="O:HistoryForm.O:CloseBtn.Left">
+        <source>168</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:CloseBtn.Top" resname="O:HistoryForm.O:CloseBtn.Top">
+        <source>320</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:CloseBtn.Width" resname="O:HistoryForm.O:CloseBtn.Width">
+        <source>105</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:CloseBtn.Height" resname="O:HistoryForm.O:CloseBtn.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:CloseBtn.Cancel" resname="O:HistoryForm.O:CloseBtn.Cancel">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:CloseBtn.Caption" resname="O:HistoryForm.O:CloseBtn.Caption">
+        <source>'Close'</source>
+        <target>'Schlie√üen'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:CloseBtn.Default" resname="O:HistoryForm.O:CloseBtn.Default">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:CloseBtn.TabOrder" resname="O:HistoryForm.O:CloseBtn.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:CloseBtn.OnClick" resname="O:HistoryForm.O:CloseBtn.OnClick">
+        <source>CloseBtnClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpSaveDialog.DefaultExt" resname="O:HistoryForm.O:JumpSaveDialog.DefaultExt">
+        <source>'*.txt'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TSaveDialog</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpSaveDialog.Filter" resname="O:HistoryForm.O:JumpSaveDialog.Filter">
+        <source>'Text files (*.txt)|*.txt|All files (*.*)|*.*'</source>
+        <target>'Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TSaveDialog</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpSaveDialog.Options" resname="O:HistoryForm.O:JumpSaveDialog.Options">
+        <source>[ofOverwritePrompt, ofHideReadOnly, ofPathMustExist, ofEnableSizing]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TSaveDialog</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpSaveDialog.Left" resname="O:HistoryForm.O:JumpSaveDialog.Left">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TSaveDialog</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HistoryForm.O:JumpSaveDialog.Top" resname="O:HistoryForm.O:JumpSaveDialog.Top">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TSaveDialog</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,116 +1,603 @@
-/*ITE: 5.0 39880.0831018519 39879.9398148148 39880.0695601852 15 99 $00000409 $00000407 "C:\WIN98\Desktop\Primärdaten\Jumper\HighScore.dfm" */
-/*ITE: Nicht bearbeiten. Diese Datei wurde vom Ressourcen-DLL-Experten erzeugt. */
-/* ID:O:HighScoreForm.LeftOrig:258Status:0Curr:258PrevOrig:PrevCurr:Order:0Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39880.0084143519Comment: */
-/* ID:O:HighScoreForm.TopOrig:131Status:0Curr:131PrevOrig:PrevCurr:Order:1Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.BorderIconsOrig:[biSystemMenu, biMinimize]Status:0Curr:[biSystemMenu, biMinimize]PrevOrig:PrevCurr:Order:2Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.BorderStyleOrig:bsSingleStatus:0Curr:bsSinglePrevOrig:PrevCurr:Order:3Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.CaptionOrig:'High scores'Status:1Curr:'Highscores'PrevOrig:PrevCurr:Order:4Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39880.0697394676Comment: */
-/* ID:O:HighScoreForm.ClientHeightOrig:305Status:0Curr:305PrevOrig:PrevCurr:Order:5Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.ClientWidthOrig:441Status:0Curr:441PrevOrig:PrevCurr:Order:6Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.ColorOrig:clBtnFaceStatus:0Curr:clBtnFacePrevOrig:PrevCurr:Order:7Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.Font.CharsetOrig:DEFAULT_CHARSETStatus:0Curr:DEFAULT_CHARSETPrevOrig:PrevCurr:Order:8Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.Font.ColorOrig:clWindowTextStatus:0Curr:clWindowTextPrevOrig:PrevCurr:Order:9Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.Font.HeightOrig:-11Status:0Curr:-11PrevOrig:PrevCurr:Order:10Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.Font.NameOrig:'MS Sans Serif'Status:0Curr:'MS Sans Serif'PrevOrig:PrevCurr:Order:11Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.Font.StyleOrig:[]Status:0Curr:[]PrevOrig:PrevCurr:Order:12Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.OldCreateOrderOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:13Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.PositionOrig:poMainFormCenterStatus:0Curr:poMainFormCenterPrevOrig:PrevCurr:Order:14Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.PixelsPerInchOrig:96Status:0Curr:96PrevOrig:PrevCurr:Order:15Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.TextHeightOrig:13Status:0Curr:13PrevOrig:PrevCurr:Order:16Type:THighScoreFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.LeftOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:17Type:TPageControlOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.TopOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:18Type:TPageControlOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.WidthOrig:425Status:0Curr:425PrevOrig:PrevCurr:Order:19Type:TPageControlOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.HeightOrig:249Status:0Curr:249PrevOrig:PrevCurr:Order:20Type:TPageControlOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.ActivePageOrig:PPMTabStatus:0Curr:PPMTabPrevOrig:PrevCurr:Order:21Type:TPageControlOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.TabOrderOrig:1Status:0Curr:1PrevOrig:PrevCurr:Order:22Type:TPageControlOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.CaptionOrig:'Highest Points per Minute'Status:1Curr:'Höchste Punkte pro Minute'PrevOrig:PrevCurr:Order:23Type:TTabSheetOpen:Localize:1Close:Created:39879.996412037Modified:39880.0085532407Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.ImageIndexOrig:3Status:0Curr:3PrevOrig:PrevCurr:Order:24Type:TTabSheetOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.LeftOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:25Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.TopOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:26Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.WidthOrig:401Status:0Curr:401PrevOrig:PrevCurr:Order:27Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.HeightOrig:201Status:0Curr:201PrevOrig:PrevCurr:Order:28Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[0].CaptionOrig:'Name'Status:0Curr:'Name'PrevOrig:PrevCurr:Order:29Type:C:TListViewOpen:<itemLocalize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[0].WidthOrig:123Status:0Curr:123PrevOrig:PrevCurr:Order:30Type:C:TListViewOpen:Localize:1Close:endCreated:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[1].CaptionOrig:'Date'Status:1Curr:'Datum'PrevOrig:PrevCurr:Order:31Type:C:TListViewOpen:itemLocalize:1Close:Created:39879.996412037Modified:39880.008599537Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[1].WidthOrig:123Status:0Curr:123PrevOrig:PrevCurr:Order:32Type:C:TListViewOpen:Localize:1Close:endCreated:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[2].CaptionOrig:'Points per Minute'Status:1Curr:'Punkte pro Minute'PrevOrig:PrevCurr:Order:33Type:C:TListViewOpen:itemLocalize:1Close:Created:39879.996412037Modified:39880.0086458333Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[2].WidthOrig:123Status:0Curr:123PrevOrig:PrevCurr:Order:34Type:C:TListViewOpen:Localize:1Close:end>Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ColumnClickOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:35Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ReadOnlyOrig:TrueStatus:0Curr:TruePrevOrig:PrevCurr:Order:36Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.RowSelectOrig:TrueStatus:0Curr:TruePrevOrig:PrevCurr:Order:37Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.TabOrderOrig:0Status:0Curr:0PrevOrig:PrevCurr:Order:38Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.TabStopOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:39Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ViewStyleOrig:vsReportStatus:0Curr:vsReportPrevOrig:PrevCurr:Order:40Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.OnCompareOrig:CompareAscStatus:0Curr:CompareAscPrevOrig:PrevCurr:Order:41Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.CaptionOrig:'Lowest remaining stones'Status:1Curr:'Geringste verbleibende Steine'PrevOrig:PrevCurr:Order:42Type:TTabSheetOpen:Localize:1Close:Created:39879.996412037Modified:39880.0087615741Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.LeftOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:43Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.TopOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:44Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.WidthOrig:401Status:0Curr:401PrevOrig:PrevCurr:Order:45Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.HeightOrig:201Status:0Curr:201PrevOrig:PrevCurr:Order:46Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[0].CaptionOrig:'Name'Status:0Curr:'Name'PrevOrig:PrevCurr:Order:47Type:C:TListViewOpen:<itemLocalize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[0].WidthOrig:123Status:0Curr:123PrevOrig:PrevCurr:Order:48Type:C:TListViewOpen:Localize:1Close:endCreated:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[1].CaptionOrig:'Date'Status:1Curr:'Datum'PrevOrig:PrevCurr:Order:49Type:C:TListViewOpen:itemLocalize:1Close:Created:39879.996412037Modified:39880.0087962963Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[1].WidthOrig:123Status:0Curr:123PrevOrig:PrevCurr:Order:50Type:C:TListViewOpen:Localize:1Close:endCreated:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[2].CaptionOrig:'Remaining stones'Status:1Curr:'Verbleibende Steine'PrevOrig:PrevCurr:Order:51Type:C:TListViewOpen:itemLocalize:1Close:Created:39879.996412037Modified:39880.0088425926Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[2].WidthOrig:123Status:0Curr:123PrevOrig:PrevCurr:Order:52Type:C:TListViewOpen:Localize:1Close:end>Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ColumnClickOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:53Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ReadOnlyOrig:TrueStatus:0Curr:TruePrevOrig:PrevCurr:Order:54Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.RowSelectOrig:TrueStatus:0Curr:TruePrevOrig:PrevCurr:Order:55Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.TabOrderOrig:0Status:0Curr:0PrevOrig:PrevCurr:Order:56Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.TabStopOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:57Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ViewStyleOrig:vsReportStatus:0Curr:vsReportPrevOrig:PrevCurr:Order:58Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.OnCompareOrig:CompareDescStatus:0Curr:CompareDescPrevOrig:PrevCurr:Order:59Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.CaptionOrig:'Shortest time'Status:1Curr:'Kürzeste Zeit'PrevOrig:PrevCurr:Order:60Type:TTabSheetOpen:Localize:1Close:Created:39879.996412037Modified:39880.008912037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.ImageIndexOrig:1Status:0Curr:1PrevOrig:PrevCurr:Order:61Type:TTabSheetOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.LeftOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:62Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.TopOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:63Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.WidthOrig:401Status:0Curr:401PrevOrig:PrevCurr:Order:64Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.HeightOrig:201Status:0Curr:201PrevOrig:PrevCurr:Order:65Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[0].CaptionOrig:'Name'Status:0Curr:'Name'PrevOrig:PrevCurr:Order:66Type:C:TListViewOpen:<itemLocalize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[0].WidthOrig:123Status:0Curr:123PrevOrig:PrevCurr:Order:67Type:C:TListViewOpen:Localize:1Close:endCreated:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[1].CaptionOrig:'Date'Status:1Curr:'Datum'PrevOrig:PrevCurr:Order:68Type:C:TListViewOpen:itemLocalize:1Close:Created:39879.996412037Modified:39880.0089814815Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[1].WidthOrig:123Status:0Curr:123PrevOrig:PrevCurr:Order:69Type:C:TListViewOpen:Localize:1Close:endCreated:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[2].CaptionOrig:'Time [Seconds]'Status:1Curr:'Zeit in Sekunden'PrevOrig:PrevCurr:Order:70Type:C:TListViewOpen:itemLocalize:1Close:Created:39879.996412037Modified:39880.0090393519Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[2].WidthOrig:123Status:0Curr:123PrevOrig:PrevCurr:Order:71Type:C:TListViewOpen:Localize:1Close:end>Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ColumnClickOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:72Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ReadOnlyOrig:TrueStatus:0Curr:TruePrevOrig:PrevCurr:Order:73Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.RowSelectOrig:TrueStatus:0Curr:TruePrevOrig:PrevCurr:Order:74Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.TabOrderOrig:0Status:0Curr:0PrevOrig:PrevCurr:Order:75Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.TabStopOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:76Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ViewStyleOrig:vsReportStatus:0Curr:vsReportPrevOrig:PrevCurr:Order:77Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.OnCompareOrig:CompareDescStatus:0Curr:CompareDescPrevOrig:PrevCurr:Order:78Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.CaptionOrig:'Highest score'Status:1Curr:'Höchste Punktezahl'PrevOrig:PrevCurr:Order:79Type:TTabSheetOpen:Localize:1Close:Created:39879.996412037Modified:39880.0091087963Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.ImageIndexOrig:2Status:0Curr:2PrevOrig:PrevCurr:Order:80Type:TTabSheetOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.LeftOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:81Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.TopOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:82Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.WidthOrig:401Status:0Curr:401PrevOrig:PrevCurr:Order:83Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.HeightOrig:201Status:0Curr:201PrevOrig:PrevCurr:Order:84Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[0].CaptionOrig:'Name'Status:0Curr:'Name'PrevOrig:PrevCurr:Order:85Type:C:TListViewOpen:<itemLocalize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[0].WidthOrig:123Status:0Curr:123PrevOrig:PrevCurr:Order:86Type:C:TListViewOpen:Localize:1Close:endCreated:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[1].CaptionOrig:'Date'Status:1Curr:'Datum'PrevOrig:PrevCurr:Order:87Type:C:TListViewOpen:itemLocalize:1Close:Created:39879.996412037Modified:39880.0091435185Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[1].WidthOrig:123Status:0Curr:123PrevOrig:PrevCurr:Order:88Type:C:TListViewOpen:Localize:1Close:endCreated:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[2].CaptionOrig:'Score'Status:1Curr:'Punkte'PrevOrig:PrevCurr:Order:89Type:C:TListViewOpen:itemLocalize:1Close:Created:39879.996412037Modified:39880.0091898148Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[2].WidthOrig:123Status:0Curr:123PrevOrig:PrevCurr:Order:90Type:C:TListViewOpen:Localize:1Close:end>Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ColumnClickOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:91Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ReadOnlyOrig:TrueStatus:0Curr:TruePrevOrig:PrevCurr:Order:92Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.RowSelectOrig:TrueStatus:0Curr:TruePrevOrig:PrevCurr:Order:93Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.TabOrderOrig:0Status:0Curr:0PrevOrig:PrevCurr:Order:94Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.TabStopOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:95Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ViewStyleOrig:vsReportStatus:0Curr:vsReportPrevOrig:PrevCurr:Order:96Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.OnCompareOrig:CompareAscStatus:0Curr:CompareAscPrevOrig:PrevCurr:Order:97Type:TListViewOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:CloseBtn.LeftOrig:312Status:0Curr:312PrevOrig:PrevCurr:Order:98Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:CloseBtn.TopOrig:272Status:0Curr:272PrevOrig:PrevCurr:Order:99Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:CloseBtn.WidthOrig:123Status:0Curr:123PrevOrig:PrevCurr:Order:100Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:CloseBtn.HeightOrig:25Status:0Curr:25PrevOrig:PrevCurr:Order:101Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:CloseBtn.CancelOrig:TrueStatus:0Curr:TruePrevOrig:PrevCurr:Order:102Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:CloseBtn.CaptionOrig:'Close'Status:1Curr:'Schließen'PrevOrig:PrevCurr:Order:103Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:CloseBtn.DefaultOrig:TrueStatus:0Curr:TruePrevOrig:PrevCurr:Order:104Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:CloseBtn.TabOrderOrig:0Status:0Curr:0PrevOrig:PrevCurr:Order:105Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:CloseBtn.OnClickOrig:CloseBtnClickStatus:0Curr:CloseBtnClickPrevOrig:PrevCurr:Order:106Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:ClearBtn.LeftOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:107Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:ClearBtn.TopOrig:272Status:0Curr:272PrevOrig:PrevCurr:Order:108Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:ClearBtn.WidthOrig:75Status:0Curr:75PrevOrig:PrevCurr:Order:109Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:ClearBtn.HeightOrig:25Status:0Curr:25PrevOrig:PrevCurr:Order:110Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:ClearBtn.CaptionOrig:'Clear list'Status:1Curr:'Liste leeren'PrevOrig:PrevCurr:Order:111Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39880.0092824074Comment: */
-/* ID:O:HighScoreForm.O:ClearBtn.TabOrderOrig:2Status:0Curr:2PrevOrig:PrevCurr:Order:112Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:HighScoreForm.O:ClearBtn.OnClickOrig:ClearBtnClickStatus:0Curr:ClearBtnClickPrevOrig:PrevCurr:Order:113Type:TButtonOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="C:\Users\DELL User\SVN\Jumper\trunk\HighScore.dfm" source-language="en-US" target-language="de-DE" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\DELL User\SVN\Jumper\trunk\HighScore.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">43414.9159027778</prop>
+        <prop prop-type="OrigDateTime">43414.8876388889</prop>
+        <prop prop-type="XlatDateTime">43414.8876388889</prop>
+        <prop prop-type="Translated">15</prop>
+        <prop prop-type="UnTranslated">99</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:HighScoreForm.Left" resname="O:HighScoreForm.Left">
+        <source>258</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.Top" resname="O:HighScoreForm.Top">
+        <source>131</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.BorderIcons" resname="O:HighScoreForm.BorderIcons">
+        <source>[biSystemMenu, biMinimize]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.BorderStyle" resname="O:HighScoreForm.BorderStyle">
+        <source>bsSingle</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.Caption" resname="O:HighScoreForm.Caption">
+        <source>'High scores'</source>
+        <target>'Highscores'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">4</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.ClientHeight" resname="O:HighScoreForm.ClientHeight">
+        <source>305</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.ClientWidth" resname="O:HighScoreForm.ClientWidth">
+        <source>441</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.Color" resname="O:HighScoreForm.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.Font.Charset" resname="O:HighScoreForm.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.Font.Color" resname="O:HighScoreForm.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.Font.Height" resname="O:HighScoreForm.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.Font.Name" resname="O:HighScoreForm.Font.Name">
+        <source>'MS Sans Serif'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.Font.Style" resname="O:HighScoreForm.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.OldCreateOrder" resname="O:HighScoreForm.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.Position" resname="O:HighScoreForm.Position">
+        <source>poMainFormCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.PixelsPerInch" resname="O:HighScoreForm.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.TextHeight" resname="O:HighScoreForm.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">THighScoreForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.Left" resname="O:HighScoreForm.O:PageControl.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.Top" resname="O:HighScoreForm.O:PageControl.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.Width" resname="O:HighScoreForm.O:PageControl.Width">
+        <source>425</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.Height" resname="O:HighScoreForm.O:PageControl.Height">
+        <source>249</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.ActivePage" resname="O:HighScoreForm.O:PageControl.ActivePage">
+        <source>PPMTab</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.TabOrder" resname="O:HighScoreForm.O:PageControl.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.Caption" resname="O:HighScoreForm.O:PageControl.O:PPMTab.Caption">
+        <source>'Highest Points per Minute'</source>
+        <target>'HÃ¶chste Punkte pro Minute'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.ImageIndex" resname="O:HighScoreForm.O:PageControl.O:PPMTab.ImageIndex">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Left" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Top" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Width" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Width">
+        <source>401</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Height" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Height">
+        <source>201</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[0].Caption" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[0].Caption">
+        <source>'Name'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[0].Width" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[0].Width">
+        <source>123</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[1].Caption" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[1].Caption">
+        <source>'Date'</source>
+        <target>'Datum'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">31</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[1].Width" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[1].Width">
+        <source>123</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[2].Caption" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[2].Caption">
+        <source>'Points per Minute'</source>
+        <target>'Punkte pro Minute'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">33</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[2].Width" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[2].Width">
+        <source>123</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ColumnClick" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ColumnClick">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ReadOnly" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.RowSelect" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.RowSelect">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.TabOrder" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.TabStop" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.TabStop">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ViewStyle" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ViewStyle">
+        <source>vsReport</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.OnCompare" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.OnCompare">
+        <source>CompareAsc</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.Caption" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.Caption">
+        <source>'Lowest remaining stones'</source>
+        <target>'Geringste verbleibende Steine'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Left" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Top" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Width" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Width">
+        <source>401</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Height" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Height">
+        <source>201</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[0].Caption" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[0].Caption">
+        <source>'Name'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[0].Width" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[0].Width">
+        <source>123</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[1].Caption" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[1].Caption">
+        <source>'Date'</source>
+        <target>'Datum'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">49</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[1].Width" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[1].Width">
+        <source>123</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[2].Caption" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[2].Caption">
+        <source>'Remaining stones'</source>
+        <target>'Verbleibende Steine'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">51</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[2].Width" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[2].Width">
+        <source>123</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ColumnClick" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ColumnClick">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ReadOnly" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.RowSelect" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.RowSelect">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.TabOrder" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.TabStop" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.TabStop">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ViewStyle" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ViewStyle">
+        <source>vsReport</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.OnCompare" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.OnCompare">
+        <source>CompareDesc</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.Caption" resname="O:HighScoreForm.O:PageControl.O:TimeTab.Caption">
+        <source>'Shortest time'</source>
+        <target>'KÃ¼rzeste Zeit'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.ImageIndex" resname="O:HighScoreForm.O:PageControl.O:TimeTab.ImageIndex">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Left" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Top" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Width" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Width">
+        <source>401</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Height" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Height">
+        <source>201</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[0].Caption" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[0].Caption">
+        <source>'Name'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[0].Width" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[0].Width">
+        <source>123</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[1].Caption" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[1].Caption">
+        <source>'Date'</source>
+        <target>'Datum'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">68</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[1].Width" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[1].Width">
+        <source>123</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[2].Caption" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[2].Caption">
+        <source>'Time [Seconds]'</source>
+        <target>'Zeit in Sekunden'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">70</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[2].Width" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[2].Width">
+        <source>123</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ColumnClick" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ColumnClick">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ReadOnly" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.RowSelect" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.RowSelect">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.TabOrder" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.TabStop" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.TabStop">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ViewStyle" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ViewStyle">
+        <source>vsReport</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.OnCompare" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.OnCompare">
+        <source>CompareDesc</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.Caption" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.Caption">
+        <source>'Highest score'</source>
+        <target>'HÃ¶chste Punktezahl'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.ImageIndex" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.ImageIndex">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Left" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Top" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Width" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Width">
+        <source>401</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Height" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Height">
+        <source>201</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[0].Caption" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[0].Caption">
+        <source>'Name'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[0].Width" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[0].Width">
+        <source>123</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[1].Caption" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[1].Caption">
+        <source>'Date'</source>
+        <target>'Datum'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">87</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[1].Width" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[1].Width">
+        <source>123</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[2].Caption" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[2].Caption">
+        <source>'Score'</source>
+        <target>'Punkte'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">89</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[2].Width" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[2].Width">
+        <source>123</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ColumnClick" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ColumnClick">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ReadOnly" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.RowSelect" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.RowSelect">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.TabOrder" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.TabStop" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.TabStop">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ViewStyle" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ViewStyle">
+        <source>vsReport</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.OnCompare" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.OnCompare">
+        <source>CompareAsc</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:CloseBtn.Left" resname="O:HighScoreForm.O:CloseBtn.Left">
+        <source>312</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:CloseBtn.Top" resname="O:HighScoreForm.O:CloseBtn.Top">
+        <source>272</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:CloseBtn.Width" resname="O:HighScoreForm.O:CloseBtn.Width">
+        <source>123</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:CloseBtn.Height" resname="O:HighScoreForm.O:CloseBtn.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:CloseBtn.Cancel" resname="O:HighScoreForm.O:CloseBtn.Cancel">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:CloseBtn.Caption" resname="O:HighScoreForm.O:CloseBtn.Caption">
+        <source>'Close'</source>
+        <target>'SchlieÃŸen'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:CloseBtn.Default" resname="O:HighScoreForm.O:CloseBtn.Default">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:CloseBtn.TabOrder" resname="O:HighScoreForm.O:CloseBtn.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:CloseBtn.OnClick" resname="O:HighScoreForm.O:CloseBtn.OnClick">
+        <source>CloseBtnClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:ClearBtn.Left" resname="O:HighScoreForm.O:ClearBtn.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:ClearBtn.Top" resname="O:HighScoreForm.O:ClearBtn.Top">
+        <source>272</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:ClearBtn.Width" resname="O:HighScoreForm.O:ClearBtn.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:ClearBtn.Height" resname="O:HighScoreForm.O:ClearBtn.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:ClearBtn.Caption" resname="O:HighScoreForm.O:ClearBtn.Caption">
+        <source>'Clear list'</source>
+        <target>'Liste leeren'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:ClearBtn.TabOrder" resname="O:HighScoreForm.O:ClearBtn.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:ClearBtn.OnClick" resname="O:HighScoreForm.O:ClearBtn.OnClick">
+        <source>ClearBtnClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

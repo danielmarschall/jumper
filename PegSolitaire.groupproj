@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{295CC96F-5ED4-4010-B96D-F8D460483E80}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PegSolitaire.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DEU\PegSolitaire_DEU.bdsproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PegSolitaire">
+        <MSBuild Projects="PegSolitaire.dproj"/>
+    </Target>
+    <Target Name="PegSolitaire:Clean">
+        <MSBuild Projects="PegSolitaire.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PegSolitaire:Make">
+        <MSBuild Projects="PegSolitaire.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PegSolitaire_DEU">
+        <MSBuild Projects="DEU\PegSolitaire_DEU.bdsproj"/>
+    </Target>
+    <Target Name="PegSolitaire_DEU:Clean">
+        <MSBuild Projects="DEU\PegSolitaire_DEU.bdsproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PegSolitaire_DEU:Make">
+        <MSBuild Projects="DEU\PegSolitaire_DEU.bdsproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PegSolitaire;PegSolitaire_DEU"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PegSolitaire:Clean;PegSolitaire_DEU:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PegSolitaire:Make;PegSolitaire_DEU:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

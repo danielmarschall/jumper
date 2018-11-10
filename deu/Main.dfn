@@ -1,88 +1,463 @@
-/*ITE: 5.0 39891.7348842593 39880.078287037 39879.9609027778 15 71 $00000409 $00000407 "C:\WIN98\Desktop\Primärdaten\Jumper\Main.dfm" */
-/*ITE: Nicht bearbeiten. Diese Datei wurde vom Ressourcen-DLL-Experten erzeugt. */
-/* ID:O:MainForm.LeftOrig:242Status:0Curr:242PrevOrig:PrevCurr:Order:0Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39880.0066319444Comment: */
-/* ID:O:MainForm.TopOrig:142Status:0Curr:142PrevOrig:PrevCurr:Order:1Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.BorderIconsOrig:[biSystemMenu, biMinimize]Status:0Curr:[biSystemMenu, biMinimize]PrevOrig:PrevCurr:Order:2Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.BorderStyleOrig:bsSingleStatus:0Curr:bsSinglePrevOrig:PrevCurr:Order:3Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.CaptionOrig:'ViaThinkSoft Peg Solitaire'Status:1Curr:'ViaThinkSoft Peg Solitär'PrevOrig:PrevCurr:Order:4Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39880.0067708333Comment: */
-/* ID:O:MainForm.ClientHeightOrig:277Status:0Curr:277PrevOrig:PrevCurr:Order:5Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.ClientWidthOrig:340Status:0Curr:340PrevOrig:PrevCurr:Order:6Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.ColorOrig:clBtnFaceStatus:0Curr:clBtnFacePrevOrig:PrevCurr:Order:7Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.Constraints.MinHeightOrig:320Status:0Curr:320PrevOrig:PrevCurr:Order:8Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.Constraints.MinWidthOrig:300Status:0Curr:300PrevOrig:PrevCurr:Order:9Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.Font.CharsetOrig:DEFAULT_CHARSETStatus:0Curr:DEFAULT_CHARSETPrevOrig:PrevCurr:Order:10Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.Font.ColorOrig:clWindowTextStatus:0Curr:clWindowTextPrevOrig:PrevCurr:Order:11Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.Font.HeightOrig:-11Status:0Curr:-11PrevOrig:PrevCurr:Order:12Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.Font.NameOrig:'Tahoma'Status:0Curr:'Tahoma'PrevOrig:PrevCurr:Order:13Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.Font.StyleOrig:[]Status:0Curr:[]PrevOrig:PrevCurr:Order:14Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.MenuOrig:MainMenuStatus:0Curr:MainMenuPrevOrig:PrevCurr:Order:15Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.OldCreateOrderOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:16Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.PositionOrig:poDesktopCenterStatus:0Curr:poDesktopCenterPrevOrig:PrevCurr:Order:17Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.OnCloseOrig:FormCloseStatus:0Curr:FormClosePrevOrig:PrevCurr:Order:18Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.OnCreateOrig:FormCreateStatus:0Curr:FormCreatePrevOrig:PrevCurr:Order:19Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.OnDestroyOrig:FormDestroyStatus:0Curr:FormDestroyPrevOrig:PrevCurr:Order:20Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.OnShowOrig:FormShowStatus:0Curr:FormShowPrevOrig:PrevCurr:Order:21Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.PixelsPerInchOrig:96Status:0Curr:96PrevOrig:PrevCurr:Order:22Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.TextHeightOrig:13Status:0Curr:13PrevOrig:PrevCurr:Order:23Type:TMainFormOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Playground.LeftOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:24Type:TPanelOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Playground.TopOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:25Type:TPanelOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Playground.WidthOrig:313Status:0Curr:313PrevOrig:PrevCurr:Order:26Type:TPanelOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Playground.HeightOrig:289Status:0Curr:289PrevOrig:PrevCurr:Order:27Type:TPanelOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Playground.BevelOuterOrig:bvNoneStatus:0Curr:bvNonePrevOrig:PrevCurr:Order:28Type:TPanelOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Playground.TabOrderOrig:0Status:0Curr:0PrevOrig:PrevCurr:Order:29Type:TPanelOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Statistics.LeftOrig:0Status:0Curr:0PrevOrig:PrevCurr:Order:30Type:TStatusBarOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Statistics.TopOrig:258Status:0Curr:258PrevOrig:PrevCurr:Order:31Type:TStatusBarOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Statistics.WidthOrig:340Status:0Curr:340PrevOrig:PrevCurr:Order:32Type:TStatusBarOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Statistics.HeightOrig:19Status:0Curr:19PrevOrig:PrevCurr:Order:33Type:TStatusBarOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Statistics.Panels[0].WidthOrig:85Status:0Curr:85PrevOrig:PrevCurr:Order:34Type:C:TStatusBarOpen:<itemLocalize:1Close:endCreated:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Statistics.Panels[1].AlignmentOrig:taCenterStatus:0Curr:taCenterPrevOrig:PrevCurr:Order:35Type:C:TStatusBarOpen:itemLocalize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Statistics.Panels[1].WidthOrig:140Status:0Curr:140PrevOrig:PrevCurr:Order:36Type:C:TStatusBarOpen:Localize:1Close:endCreated:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Statistics.Panels[2].AlignmentOrig:taRightJustifyStatus:0Curr:taRightJustifyPrevOrig:PrevCurr:Order:37Type:C:TStatusBarOpen:itemLocalize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Statistics.Panels[2].WidthOrig:50Status:0Curr:50PrevOrig:PrevCurr:Order:38Type:C:TStatusBarOpen:Localize:1Close:end>Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.LeftOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:39Type:TMainMenuOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.TopOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:40Type:TMainMenuOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.CaptionOrig:'Game'Status:1Curr:'Spiel'PrevOrig:PrevCurr:Order:41Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39880.0077430556Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MNewGame.CaptionOrig:'New game...'Status:1Curr:'Neues Spiel...'PrevOrig:PrevCurr:Order:42Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39880.0068981481Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MNewGame.ShortCutOrig:16462Status:0Curr:16462PrevOrig:PrevCurr:Order:43Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MNewGame.OnClickOrig:MNewGameClickStatus:0Curr:MNewGameClickPrevOrig:PrevCurr:Order:44Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:N1.CaptionOrig:'-'Status:0Curr:'-'PrevOrig:PrevCurr:Order:45Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MRestartGame.CaptionOrig:'Restart level'Status:1Curr:'Neu starten'PrevOrig:PrevCurr:Order:46Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39880.0069791667Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MRestartGame.ShortCutOrig:16466Status:0Curr:16466PrevOrig:PrevCurr:Order:47Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MRestartGame.OnClickOrig:MRestartGameClickStatus:0Curr:MRestartGameClickPrevOrig:PrevCurr:Order:48Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MPauseTime.CaptionOrig:'Pause timer'Status:1Curr:'Zeit anhalten'PrevOrig:PrevCurr:Order:49Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39880.0070717593Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MPauseTime.ShortCutOrig:16464Status:0Curr:16464PrevOrig:PrevCurr:Order:50Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MPauseTime.OnClickOrig:MPauseTimeClickStatus:0Curr:MPauseTimeClickPrevOrig:PrevCurr:Order:51Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:N2.CaptionOrig:'-'Status:0Curr:'-'PrevOrig:PrevCurr:Order:52Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MUndo.CaptionOrig:'Undo'Status:1Curr:'Rückgängig'PrevOrig:PrevCurr:Order:53Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39880.0071180556Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MUndo.EnabledOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:54Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MUndo.ShortCutOrig:16474Status:0Curr:16474PrevOrig:PrevCurr:Order:55Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MRedo.CaptionOrig:'Redo'Status:1Curr:'Wiederholen'PrevOrig:PrevCurr:Order:56Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39880.0071412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MRedo.EnabledOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:57Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MRedo.ShortCutOrig:16473Status:0Curr:16473PrevOrig:PrevCurr:Order:58Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:N3.CaptionOrig:'-'Status:0Curr:'-'PrevOrig:PrevCurr:Order:59Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.CaptionOrig:'View jump history...'Status:1Curr:'Sprungverlauf...'PrevOrig:PrevCurr:Order:60Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39891.7348032407Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.ShortCutOrig:16458Status:0Curr:16458PrevOrig:PrevCurr:Order:61Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.OnClickOrig:MJumpHistoryClickStatus:0Curr:MJumpHistoryClickPrevOrig:PrevCurr:Order:62Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MHighScores.CaptionOrig:'High scores of this level...'Status:1Curr:'Highscores von diesem Level...'PrevOrig:PrevCurr:Order:63Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39880.0258680556Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MHighScores.ShortCutOrig:16456Status:0Curr:16456PrevOrig:PrevCurr:Order:64Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MHighScores.OnClickOrig:MHighScoresClickStatus:0Curr:MHighScoresClickPrevOrig:PrevCurr:Order:65Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:N4.CaptionOrig:'-'Status:0Curr:'-'PrevOrig:PrevCurr:Order:66Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MExit.CaptionOrig:'Exit'Status:1Curr:'Beenden'PrevOrig:PrevCurr:Order:67Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39880.0073611111Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MExit.ShortCutOrig:32883Status:0Curr:32883PrevOrig:PrevCurr:Order:68Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help1.O:MExit.OnClickOrig:MExitClickStatus:0Curr:MExitClickPrevOrig:PrevCurr:Order:69Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:MSettings.CaptionOrig:'Settings'Status:1Curr:'Einstellungen'PrevOrig:PrevCurr:Order:70Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39880.0073958333Comment: */
-/* ID:O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.CaptionOrig:'Enable sound'Status:1Curr:'Ton'PrevOrig:PrevCurr:Order:71Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39880.0074884259Comment: */
-/* ID:O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.CheckedOrig:TrueStatus:0Curr:TruePrevOrig:PrevCurr:Order:72Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.ShortCutOrig:32851Status:0Curr:32851PrevOrig:PrevCurr:Order:73Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.OnClickOrig:MEnableSoundClickStatus:0Curr:MEnableSoundClickPrevOrig:PrevCurr:Order:74Type:TMenuItemOpen:Localize:1Close:Created:39880.0831134259Modified:39880.0831134259Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help2.CaptionOrig:'Help'Status:1Curr:'Hilfe'PrevOrig:PrevCurr:Order:75Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39880.0076273148Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help2.O:MHelp.CaptionOrig:'Help...'Status:1Curr:'Hilfe anzeigen...'PrevOrig:PrevCurr:Order:76Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39880.0076157407Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help2.O:MHelp.ShortCutOrig:112Status:0Curr:112PrevOrig:PrevCurr:Order:77Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help2.O:MHelp.OnClickOrig:MHelpClickStatus:0Curr:MHelpClickPrevOrig:PrevCurr:Order:78Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help2.O:N5.CaptionOrig:'-'Status:0Curr:'-'PrevOrig:PrevCurr:Order:79Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help2.O:MAbout.CaptionOrig:'About...'Status:1Curr:'Über...'PrevOrig:PrevCurr:Order:80Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39880.0076851852Comment: */
-/* ID:O:MainForm.O:MainMenu.O:Help2.O:MAbout.OnClickOrig:MAboutClickStatus:0Curr:MAboutClickPrevOrig:PrevCurr:Order:81Type:TMenuItemOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Timer.EnabledOrig:FalseStatus:0Curr:FalsePrevOrig:PrevCurr:Order:82Type:TTimerOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Timer.OnTimerOrig:TimerTimerStatus:0Curr:TimerTimerPrevOrig:PrevCurr:Order:83Type:TTimerOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Timer.LeftOrig:40Status:0Curr:40PrevOrig:PrevCurr:Order:84Type:TTimerOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
-/* ID:O:MainForm.O:Timer.TopOrig:8Status:0Curr:8PrevOrig:PrevCurr:Order:85Type:TTimerOpen:Localize:1Close:Created:39879.996412037Modified:39879.996412037Comment: */
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="C:\Users\DELL User\SVN\Jumper\trunk\Main.dfm" source-language="en-US" target-language="de-DE" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\DELL User\SVN\Jumper\trunk\Main.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">43414.9159027778</prop>
+        <prop prop-type="OrigDateTime">43414.8934027778</prop>
+        <prop prop-type="XlatDateTime">43414.8876388889</prop>
+        <prop prop-type="Translated">15</prop>
+        <prop prop-type="UnTranslated">71</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:MainForm.Left" resname="O:MainForm.Left">
+        <source>242</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.Top" resname="O:MainForm.Top">
+        <source>142</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.BorderIcons" resname="O:MainForm.BorderIcons">
+        <source>[biSystemMenu, biMinimize]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.BorderStyle" resname="O:MainForm.BorderStyle">
+        <source>bsSingle</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.Caption" resname="O:MainForm.Caption">
+        <source>'ViaThinkSoft Peg Solitaire'</source>
+        <target>'ViaThinkSoft Peg SolitÃ¤r'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.ClientHeight" resname="O:MainForm.ClientHeight">
+        <source>277</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.ClientWidth" resname="O:MainForm.ClientWidth">
+        <source>340</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.Color" resname="O:MainForm.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.Constraints.MinHeight" resname="O:MainForm.Constraints.MinHeight">
+        <source>320</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.Constraints.MinWidth" resname="O:MainForm.Constraints.MinWidth">
+        <source>300</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.Font.Charset" resname="O:MainForm.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.Font.Color" resname="O:MainForm.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.Font.Height" resname="O:MainForm.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.Font.Name" resname="O:MainForm.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.Font.Style" resname="O:MainForm.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.Menu" resname="O:MainForm.Menu">
+        <source>MainMenu</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.OldCreateOrder" resname="O:MainForm.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.Position" resname="O:MainForm.Position">
+        <source>poDesktopCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.OnClose" resname="O:MainForm.OnClose">
+        <source>FormClose</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.OnCreate" resname="O:MainForm.OnCreate">
+        <source>FormCreate</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.OnDestroy" resname="O:MainForm.OnDestroy">
+        <source>FormDestroy</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.OnShow" resname="O:MainForm.OnShow">
+        <source>FormShow</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.PixelsPerInch" resname="O:MainForm.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.TextHeight" resname="O:MainForm.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TMainForm</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Playground.Left" resname="O:MainForm.O:Playground.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Playground.Top" resname="O:MainForm.O:Playground.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Playground.Width" resname="O:MainForm.O:Playground.Width">
+        <source>313</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Playground.Height" resname="O:MainForm.O:Playground.Height">
+        <source>289</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Playground.BevelOuter" resname="O:MainForm.O:Playground.BevelOuter">
+        <source>bvNone</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Playground.TabOrder" resname="O:MainForm.O:Playground.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Statistics.Left" resname="O:MainForm.O:Statistics.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TStatusBar</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Statistics.Top" resname="O:MainForm.O:Statistics.Top">
+        <source>258</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TStatusBar</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Statistics.Width" resname="O:MainForm.O:Statistics.Width">
+        <source>340</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TStatusBar</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Statistics.Height" resname="O:MainForm.O:Statistics.Height">
+        <source>19</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TStatusBar</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Statistics.Panels[0].Width" resname="O:MainForm.O:Statistics.Panels[0].Width">
+        <source>85</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Statistics.Panels[1].Alignment" resname="O:MainForm.O:Statistics.Panels[1].Alignment">
+        <source>taCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Statistics.Panels[1].Width" resname="O:MainForm.O:Statistics.Panels[1].Width">
+        <source>140</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Statistics.Panels[2].Alignment" resname="O:MainForm.O:Statistics.Panels[2].Alignment">
+        <source>taRightJustify</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Statistics.Panels[2].Width" resname="O:MainForm.O:Statistics.Panels[2].Width">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.Left" resname="O:MainForm.O:MainMenu.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TMainMenu</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.Top" resname="O:MainForm.O:MainMenu.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TMainMenu</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.Caption" resname="O:MainForm.O:MainMenu.O:Help1.Caption">
+        <source>'Game'</source>
+        <target>'Spiel'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MNewGame.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:MNewGame.Caption">
+        <source>'New game...'</source>
+        <target>'Neues Spiel...'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MNewGame.ShortCut" resname="O:MainForm.O:MainMenu.O:Help1.O:MNewGame.ShortCut">
+        <source>16462</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MNewGame.OnClick" resname="O:MainForm.O:MainMenu.O:Help1.O:MNewGame.OnClick">
+        <source>MNewGameClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:N1.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:N1.Caption">
+        <source>'-'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MRestartGame.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:MRestartGame.Caption">
+        <source>'Restart level'</source>
+        <target>'Neu starten'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MRestartGame.ShortCut" resname="O:MainForm.O:MainMenu.O:Help1.O:MRestartGame.ShortCut">
+        <source>16466</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MRestartGame.OnClick" resname="O:MainForm.O:MainMenu.O:Help1.O:MRestartGame.OnClick">
+        <source>MRestartGameClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MPauseTime.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:MPauseTime.Caption">
+        <source>'Pause timer'</source>
+        <target>'Zeit anhalten'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MPauseTime.ShortCut" resname="O:MainForm.O:MainMenu.O:Help1.O:MPauseTime.ShortCut">
+        <source>16464</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MPauseTime.OnClick" resname="O:MainForm.O:MainMenu.O:Help1.O:MPauseTime.OnClick">
+        <source>MPauseTimeClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:N2.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:N2.Caption">
+        <source>'-'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MUndo.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:MUndo.Caption">
+        <source>'Undo'</source>
+        <target>'RÃ¼ckgÃ¤ngig'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MUndo.Enabled" resname="O:MainForm.O:MainMenu.O:Help1.O:MUndo.Enabled">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MUndo.ShortCut" resname="O:MainForm.O:MainMenu.O:Help1.O:MUndo.ShortCut">
+        <source>16474</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MRedo.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:MRedo.Caption">
+        <source>'Redo'</source>
+        <target>'Wiederholen'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MRedo.Enabled" resname="O:MainForm.O:MainMenu.O:Help1.O:MRedo.Enabled">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MRedo.ShortCut" resname="O:MainForm.O:MainMenu.O:Help1.O:MRedo.ShortCut">
+        <source>16473</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:N3.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:N3.Caption">
+        <source>'-'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.Caption">
+        <source>'View jump history...'</source>
+        <target>'Sprungverlauf...'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.ShortCut" resname="O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.ShortCut">
+        <source>16458</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.OnClick" resname="O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.OnClick">
+        <source>MJumpHistoryClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MHighScores.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:MHighScores.Caption">
+        <source>'High scores of this level...'</source>
+        <target>'Highscores von diesem Level...'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MHighScores.ShortCut" resname="O:MainForm.O:MainMenu.O:Help1.O:MHighScores.ShortCut">
+        <source>16456</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MHighScores.OnClick" resname="O:MainForm.O:MainMenu.O:Help1.O:MHighScores.OnClick">
+        <source>MHighScoresClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:N4.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:N4.Caption">
+        <source>'-'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MExit.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:MExit.Caption">
+        <source>'Exit'</source>
+        <target>'Beenden'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MExit.ShortCut" resname="O:MainForm.O:MainMenu.O:Help1.O:MExit.ShortCut">
+        <source>32883</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MExit.OnClick" resname="O:MainForm.O:MainMenu.O:Help1.O:MExit.OnClick">
+        <source>MExitClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:MSettings.Caption" resname="O:MainForm.O:MainMenu.O:MSettings.Caption">
+        <source>'Settings'</source>
+        <target>'Einstellungen'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.Caption" resname="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.Caption">
+        <source>'Enable sound'</source>
+        <target>'Ton'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.Checked" resname="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.Checked">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.ShortCut" resname="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.ShortCut">
+        <source>32851</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.OnClick" resname="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.OnClick">
+        <source>MEnableSoundClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39880.0831134259</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help2.Caption" resname="O:MainForm.O:MainMenu.O:Help2.Caption">
+        <source>'Help'</source>
+        <target>'Hilfe'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help2.O:MHelp.Caption" resname="O:MainForm.O:MainMenu.O:Help2.O:MHelp.Caption">
+        <source>'Help...'</source>
+        <target>'Hilfe anzeigen...'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help2.O:MHelp.ShortCut" resname="O:MainForm.O:MainMenu.O:Help2.O:MHelp.ShortCut">
+        <source>112</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help2.O:MHelp.OnClick" resname="O:MainForm.O:MainMenu.O:Help2.O:MHelp.OnClick">
+        <source>MHelpClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help2.O:N5.Caption" resname="O:MainForm.O:MainMenu.O:Help2.O:N5.Caption">
+        <source>'-'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help2.O:MAbout.Caption" resname="O:MainForm.O:MainMenu.O:Help2.O:MAbout.Caption">
+        <source>'About...'</source>
+        <target>'Ãœber...'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help2.O:MAbout.OnClick" resname="O:MainForm.O:MainMenu.O:Help2.O:MAbout.OnClick">
+        <source>MAboutClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Timer.Enabled" resname="O:MainForm.O:Timer.Enabled">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Timer.OnTimer" resname="O:MainForm.O:Timer.OnTimer">
+        <source>TimerTimer</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Timer.Left" resname="O:MainForm.O:Timer.Left">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MainForm.O:Timer.Top" resname="O:MainForm.O:Timer.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
