@@ -40,7 +40,6 @@ type
     MPauseTime: TMenuItem;
     N1: TMenuItem;
     MUndo: TMenuItem;
-    MRedo: TMenuItem;
     N3: TMenuItem;
     procedure MExitClick(Sender: TObject);
     procedure TimerTimer(Sender: TObject);
@@ -56,11 +55,13 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure MHelpClick(Sender: TObject);
     procedure MEnableSoundClick(Sender: TObject);
+    procedure MUndoClick(Sender: TObject);
   private
     CountedSeconds: Integer;
     LevelFile: String;
     LookupFieldCoordinateArray: array of TPoint;
     OriginalPlayGroundMatrix: TPlayGroundMatrix;
+    PrevPlaygroundMatrixes: array of TPlayGroundMatrix;
     PlaygroundMatrix: TPlayGroundMatrix;
     Points: Integer;
     LevelTotalStones: Integer;
@@ -99,6 +100,8 @@ type
     procedure ClearMatrix(Matrix: TPlayGroundMatrix; FreeVCL: boolean);
     function CloneMatrix(Source: TPlayGroundMatrix): TPlayGroundMatrix;
     procedure LoadPictureForType(FieldType: TFieldType; Picture: TPicture);
+    function MatrixWorth(Matrix: TPlayGroundMatrix): integer;
+    function FieldTypeWorth(t: TFieldType): integer;
   end;
 
 var
@@ -110,6 +113,20 @@ uses
   About, Finish, Choice, Functions, History, HighScore, Help, Constants;
 
 {$R *.dfm}
+
+function TMainForm.MatrixWorth(Matrix: TPlayGroundMatrix): integer;
+var
+  i, j: integer;
+begin
+  result := 0;
+  for i := Low(Matrix) to High(Matrix) do
+  begin
+    for j := Low(Matrix[i]) to High(Matrix[i]) do
+    begin
+      Inc(result, FieldTypeWorth(Matrix[i][j].FieldType));
+    end;
+  end;
+end;
 
 procedure TMainForm.ClearMatrix(Matrix: TPlayGroundMatrix; FreeVCL: boolean);
 var
@@ -148,6 +165,8 @@ begin
 end;
 
 procedure TMainForm.DestroyLevel;
+var
+  i: Integer;
 begin
   MPauseTime.Enabled := false;
   Timer.Enabled := false;
@@ -170,6 +189,10 @@ begin
 
   ClearMatrix(PlayGroundMatrix, true);
   ClearMatrix(OriginalPlayGroundMatrix, false);
+  for i := 0 to Length(PrevPlaygroundMatrixes)-1 do
+    ClearMatrix(PrevPlaygroundMatrixes[i], false);
+  SetLength(PrevPlaygroundMatrixes, 0);
+  MUndo.Enabled := false;
 
   SetLength(LookupFieldCoordinateArray, 0);
 end;
@@ -284,11 +307,17 @@ begin
   Statistics.Panels.Items[2].Text := Format(LNG_POINTS, [Points]);
 end;
 
+function TMainForm.FieldTypeWorth(t: TFieldType): integer;
+begin
+  if t = ftGreen then result := 10
+  else if t = ftYellow then result := 20
+  else if t = ftRed then result := 30
+  else result := 0;
+end;
+
 procedure TMainForm.CountPoints(t: TFieldType);
 begin
-  if t = ftGreen then inc(Points, 10);
-  if t = ftYellow then inc(Points, 20);
-  if t = ftRed then inc(Points, 30);
+  inc(Points, FieldTypeWorth(t));
   RefreshPoints;
 end;
 
@@ -363,6 +392,7 @@ begin
 
   JumpHistory.Add(Format(LNG_JUMP_LOG, [SourceTag+1, s.x+1, s.y+1, DestTag+1, d.x+1, d.y+1]));
 
+  {$REGION 'Stein entfernen und Punkte vergeben'}
   if AllowDiagonalMoves then
   begin
     if (s.X-2 = d.X) and (s.Y-2 = d.Y) and (FieldState(s.X-1, s.Y-1) = fsStone) then RemoveStone(s.X-1, s.Y-1, true);
@@ -375,6 +405,7 @@ begin
   if (s.X-2 = d.X) and (s.Y = d.Y) and (FieldState(s.X-1, s.Y  ) = fsStone) then RemoveStone(s.X-1, s.Y, true);
   if (s.X = d.X) and (s.Y+2 = d.Y) and (FieldState(s.X  , s.Y+1) = fsStone) then RemoveStone(s.X, s.Y+1, true);
   if (s.X = d.X) and (s.Y-2 = d.Y) and (FieldState(s.X  , s.Y-1) = fsStone) then RemoveStone(s.X, s.Y-1, true);
+  {$ENDREGION}
 
   // Den Timer erst nach dem ersten Zug starten
   // oder nach einer Pause neustarten
@@ -384,19 +415,20 @@ begin
     Timer.Enabled := true;
   end;
 
-  if not MRestartGame.Enabled then MRestartGame.Enabled := true;
+  MRestartGame.Enabled := true;
 
   // Sound abspielen
   if MEnableSound.Checked then PlaySound(RES_JUMP, HInstance, SND_ASYNC or SND_NOWAIT or SND_RESOURCE);
 
-  // Nun den Stein springen lassen
+  {$REGION 'Nun den Stein springen lassen'}
   old_fieldtype := PlayGroundMatrix[s.X, s.Y].FieldType; // Steinfarbe merken
-  RemoveStone(s.X, s.Y, false); // Eigenen Stein entfernen
+  RemoveStone(s.X, s.Y, false); // Eigenen Stein entfernen. Keine Punkte zählen, da das unser eigener Stein ist, der springt
   PlayGroundMatrix[d.X, d.Y].FieldType := old_fieldtype; // Farbe wiederherstellen
   LoadPictureForType(PlayGroundMatrix[d.X, d.Y].FieldType, PlayGroundMatrix[d.X, d.Y].Stone.Picture); // Stein an neue Position malen
   StoneDraggingAllow(PlayGroundMatrix[d.X, d.Y].Stone, true); // Und die Drag-Eigenschaft erneuern
+  {$ENDREGION}
 
-  // Ist ein weiterer Sprung möglich?
+  {$REGION 'Sind weitere Sprünge möglich oder ist das Spiel vorbei?'}
   if not AreJumpsPossible then
   begin
     MPauseTime.Enabled := false;
@@ -412,6 +444,11 @@ begin
     res := FinishForm.Execute(ExtractFileNameWithoutExt(LevelFile), Points, LevelTotalStones, LevelRemovedStones, CountedSeconds, JumpHistory);
     if (res = mrOK) and FinishForm.ReplayCheckbox.Checked then RestartLevel;
   end;
+  {$ENDREGION}
+
+  SetLength(PrevPlaygroundMatrixes, Length(PrevPlaygroundMatrixes)+1);
+  PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1] := CloneMatrix(PlaygroundMatrix);
+  MUndo.Enabled := true;
 end;
 
 function TMainForm.MayJump(SourceX, SourceY, DestX, DestY: integer): boolean;
@@ -549,6 +586,9 @@ begin
   end;
 
   OriginalPlayGroundMatrix := CloneMatrix(PlayGroundMatrix);
+  SetLength(PrevPlaygroundMatrixes,1);
+  PrevPlaygroundMatrixes[0] := CloneMatrix(PlayGroundMatrix);
+  MUndo.Enabled := false;
 end;
 
 procedure TMainForm.TimerTimer(Sender: TObject);
@@ -656,6 +696,9 @@ begin
 
   RedrawStonesFromMatrix(OriginalPlayGroundMatrix);
   SetNewPlayGroundMatrix(OriginalPlayGroundMatrix);
+  SetLength(PrevPlaygroundMatrixes,1);
+  PrevPlaygroundMatrixes[0] := CloneMatrix(OriginalPlayGroundMatrix);
+  MUndo.Enabled := false;
 end;
 
 procedure TMainForm.SetNewPlayGroundMatrix(Matrix: TPlayGroundMatrix);
@@ -667,6 +710,34 @@ end;
 procedure TMainForm.MRestartGameClick(Sender: TObject);
 begin
   RestartLevel;
+end;
+
+procedure TMainForm.MUndoClick(Sender: TObject);
+var
+  PrevWorth: integer;
+  NewWorth: integer;
+begin
+  if Length(PrevPlaygroundMatrixes) > 1 then
+  begin
+    PrevWorth := MatrixWorth(PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1]);
+
+    ClearMatrix(PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1], false);
+    SetLength(PrevPlaygroundMatrixes, Length(PrevPlaygroundMatrixes)-1);
+
+    NewWorth := MatrixWorth(PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1]);
+    RedrawStonesFromMatrix(PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1]);
+    SetNewPlayGroundMatrix(PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1]);
+
+    JumpHistory.Delete(JumpHistory.Count-1);
+
+    Dec(LevelRemovedStones);
+    RefreshStonesRemoved;
+
+    Dec(Points, NewWorth-PrevWorth);
+    RefreshPoints;
+  end;
+
+  MUndo.Enabled := Length(PrevPlaygroundMatrixes) > 1;
 end;
 
 procedure TMainForm.MHighScoresClick(Sender: TObject);

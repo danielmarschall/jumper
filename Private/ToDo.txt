@@ -4,5 +4,3 @@
 Den ausgewählten Stein markieren
 
 Setup.exe
-
-Undo/Redo gehen nicht? (sollten übrigens auch nach gameover gehen)
