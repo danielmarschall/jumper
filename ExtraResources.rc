@@ -4,6 +4,7 @@ RedStone	BITMAP	Private\Resource\RedStone.bmp
 EmptyField	BITMAP	Private\Resource\EmptyField.bmp
 
 Finish		WAVE	Private\Resource\Finish.wav
+Lose		WAVE	Private\Resource\Lose.wav
 Jump		WAVE	Private\Resource\Jump.wav
 
 1 		24 	Private\Resource\PegSolitaire.manifest

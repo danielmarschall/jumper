@@ -2,3 +2,8 @@
 
 Den ausgewählten Stein markieren
 
+Setup.exe
+
+Fix menu bugs in German transaltion
+
+"Das Selbe nochmal spielen" -> "Das Gleiche"

@@ -402,7 +402,13 @@ begin
     MPauseTime.Enabled := false;
     Timer.Enabled := false;
     RefreshTime;
-    if MEnableSound.Checked then PlaySound(RES_FINISH, HInstance, SND_ASYNC or SND_NOWAIT or SND_RESOURCE);
+    if MEnableSound.Checked then
+    begin
+      if LevelRemovedStones = LevelTotalStones then
+        PlaySound(RES_FINISH, HInstance, SND_ASYNC or SND_NOWAIT or SND_RESOURCE)
+      else
+        PlaySound(RES_LOSE, HInstance, SND_ASYNC or SND_NOWAIT or SND_RESOURCE);
+    end;
     res := FinishForm.Execute(ExtractFileNameWithoutExt(LevelFile), Points, LevelTotalStones, LevelRemovedStones, CountedSeconds, JumpHistory);
     if (res = mrOK) and FinishForm.ReplayCheckbox.Checked then RestartLevel;
   end;

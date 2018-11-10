@@ -19,6 +19,7 @@ const
   // Resourcennamen
   RES_JUMP = 'Jump';
   RES_FINISH = 'Finish';
+  RES_LOSE = 'Lose';
   RES_EMPTY = 'EmptyField';
   RES_GREEN = 'GreenStone';
   RES_YELLOW = 'YellowStone';
