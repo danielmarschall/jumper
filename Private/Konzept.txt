@@ -1,13 +1,9 @@
-Registry: Settings\
 
-TurboDelphi Kompatibilität?
+Registry: Settings\
 
 Abstand oben ist größer als links und rechts vom brett
 
 ToDo
-- 2 gewinntöne
-- deutsche fassung erstellen
-- beliebig langes undo
 - zielfeld bei finishform berücksichtigen
 - how to play formulieren
 - anzeige des aktuellen levels und ob diagonal erlaubt ist
@@ -15,10 +11,12 @@ ToDo
 Verfeinerung
 - standardbretter aus wikipedia als level entwickeln
 - Setup erstellen
-- nur 1 instanz
-- showmessage in dlg's umwandeln
+- level auswahl form in bildschirmmitte
+- showmessage in dialoge umwandeln
 - Handsymbol ändern
 - modal Form blink fehler
+- den ausgewählten stein irgendwie farblich markieren?
+- abfrage "Möchten Sie das Spiel wirklich beenden?"
 
 Zukunft
 - hervorheben von gültigen feldern (conf)

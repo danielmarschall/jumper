@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ImgList, ComCtrls, Menus, ExtCtrls;
+  Dialogs, StdCtrls, ImgList, ComCtrls, Menus, ExtCtrls, System.ImageList;
 
 type
   TLevelChoice = class(TForm)

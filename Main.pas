@@ -735,6 +735,9 @@ begin
 
     Dec(Points, NewWorth-PrevWorth);
     RefreshPoints;
+
+    // Sound abspielen
+    if MEnableSound.Checked then PlaySound(RES_UNDO, HInstance, SND_ASYNC or SND_NOWAIT or SND_RESOURCE);
   end;
 
   MUndo.Enabled := Length(PrevPlaygroundMatrixes) > 1;

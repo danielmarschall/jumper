@@ -6,5 +6,6 @@ EmptyField	BITMAP	Private\Resource\EmptyField.bmp
 Finish		WAVE	Private\Resource\Finish.wav
 Lose		WAVE	Private\Resource\Lose.wav
 Jump		WAVE	Private\Resource\Jump.wav
+Undo		WAVE	Private\Resource\Undo.wav
 
 1 		24 	Private\Resource\PegSolitaire.manifest

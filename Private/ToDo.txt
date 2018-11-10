@@ -1,6 +1,0 @@
-
-"Möchten Sie das Spiel wirklich beenden?"
-
-Den ausgewählten Stein markieren
-
-Setup.exe

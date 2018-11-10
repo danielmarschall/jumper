@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">43414.9159027778</prop>
-        <prop prop-type="OrigDateTime">43414.8934027778</prop>
+        <prop prop-type="SelfDateTime">43414.9816898148</prop>
+        <prop prop-type="OrigDateTime">43414.9692592593</prop>
         <prop prop-type="XlatDateTime">43414.8876388889</prop>
-        <prop prop-type="Translated">15</prop>
-        <prop prop-type="UnTranslated">71</prop>
+        <prop prop-type="Translated">14</prop>
+        <prop prop-type="UnTranslated">70</prop>
       </prop-group>
     </header>
     <body>
@@ -299,164 +299,153 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MRedo.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:MRedo.Caption">
-        <source>'Redo'</source>
-        <target>'Wiederholen'</target>
+      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MUndo.OnClick" resname="O:MainForm.O:MainMenu.O:Help1.O:MUndo.OnClick">
+        <source>MUndoClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MRedo.Enabled" resname="O:MainForm.O:MainMenu.O:Help1.O:MRedo.Enabled">
-        <source>False</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MRedo.ShortCut" resname="O:MainForm.O:MainMenu.O:Help1.O:MRedo.ShortCut">
-        <source>16473</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">43414.9816956481</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:N3.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:N3.Caption">
         <source>'-'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.Caption">
         <source>'View jump history...'</source>
         <target>'Sprungverlauf...'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.ShortCut" resname="O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.ShortCut">
         <source>16458</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.OnClick" resname="O:MainForm.O:MainMenu.O:Help1.O:MJumpHistory.OnClick">
         <source>MJumpHistoryClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MHighScores.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:MHighScores.Caption">
         <source>'High scores of this level...'</source>
         <target>'Highscores von diesem Level...'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MHighScores.ShortCut" resname="O:MainForm.O:MainMenu.O:Help1.O:MHighScores.ShortCut">
         <source>16456</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MHighScores.OnClick" resname="O:MainForm.O:MainMenu.O:Help1.O:MHighScores.OnClick">
         <source>MHighScoresClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:N4.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:N4.Caption">
         <source>'-'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MExit.Caption" resname="O:MainForm.O:MainMenu.O:Help1.O:MExit.Caption">
         <source>'Exit'</source>
         <target>'Beenden'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MExit.ShortCut" resname="O:MainForm.O:MainMenu.O:Help1.O:MExit.ShortCut">
         <source>32883</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help1.O:MExit.OnClick" resname="O:MainForm.O:MainMenu.O:Help1.O:MExit.OnClick">
         <source>MExitClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:MSettings.Caption" resname="O:MainForm.O:MainMenu.O:MSettings.Caption">
         <source>'Settings'</source>
         <target>'Einstellungen'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.Caption" resname="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.Caption">
         <source>'Enable sound'</source>
         <target>'Ton'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.Checked" resname="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.Checked">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.ShortCut" resname="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.ShortCut">
         <source>32851</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.OnClick" resname="O:MainForm.O:MainMenu.O:MSettings.O:MEnableSound.OnClick">
         <source>MEnableSoundClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39880.0831134259</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39880.0831134259</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help2.Caption" resname="O:MainForm.O:MainMenu.O:Help2.Caption">
         <source>'Help'</source>
         <target>'Hilfe'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help2.O:MHelp.Caption" resname="O:MainForm.O:MainMenu.O:Help2.O:MHelp.Caption">
         <source>'Help...'</source>
         <target>'Hilfe anzeigen...'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help2.O:MHelp.ShortCut" resname="O:MainForm.O:MainMenu.O:Help2.O:MHelp.ShortCut">
         <source>112</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help2.O:MHelp.OnClick" resname="O:MainForm.O:MainMenu.O:Help2.O:MHelp.OnClick">
         <source>MHelpClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help2.O:N5.Caption" resname="O:MainForm.O:MainMenu.O:Help2.O:N5.Caption">
         <source>'-'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help2.O:MAbout.Caption" resname="O:MainForm.O:MainMenu.O:Help2.O:MAbout.Caption">
         <source>'About...'</source>
         <target>'Über...'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:MainMenu.O:Help2.O:MAbout.OnClick" resname="O:MainForm.O:MainMenu.O:Help2.O:MAbout.OnClick">
         <source>MAboutClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TMenuItem</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:Timer.Enabled" resname="O:MainForm.O:Timer.Enabled">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:Timer.OnTimer" resname="O:MainForm.O:Timer.OnTimer">
         <source>TimerTimer</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:Timer.Left" resname="O:MainForm.O:Timer.Left">
         <source>40</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MainForm.O:Timer.Top" resname="O:MainForm.O:Timer.Top">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

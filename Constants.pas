@@ -18,6 +18,7 @@ const
 
   // Resourcennamen
   RES_JUMP = 'Jump';
+  RES_UNDO = 'Undo';
   RES_FINISH = 'Finish';
   RES_LOSE = 'Lose';
   RES_EMPTY = 'EmptyField';

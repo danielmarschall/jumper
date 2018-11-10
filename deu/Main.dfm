@@ -79,11 +79,7 @@ object MainForm: TMainForm
         Caption = 'R'#252'ckg'#228'ngig'
         Enabled = False
         ShortCut = 16474
-      end
-      object MRedo: TMenuItem
-        Caption = 'Wiederholen'
-        Enabled = False
-        ShortCut = 16473
+        OnClick = MUndoClick
       end
       object N3: TMenuItem
         Caption = '-'

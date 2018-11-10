@@ -28,16 +28,15 @@
 			<Options Name="Evidence"></Options>
 			<Options Name="KeyFile"></Options>
 			<Options Name="KeyName"></Options>
-		</Options>
-		<FileList>
-			<File FileName="About.dfm" ContainerId="W32Form" ModuleName="About.dfm"/>
-			<File FileName="Choice.dfm" ContainerId="W32Form" ModuleName="Choice.dfm"/>
-			<File FileName="Finish.dfm" ContainerId="W32Form" ModuleName="Finish.dfm"/>
-			<File FileName="Help.dfm" ContainerId="W32Form" ModuleName="Help.dfm"/>
-			<File FileName="HighScore.dfm" ContainerId="W32Form" ModuleName="HighScore.dfm"/>
-			<File FileName="History.dfm" ContainerId="W32Form" ModuleName="History.dfm"/>
-			<File FileName="Main.dfm" ContainerId="W32Form" ModuleName="Main.dfm"/>
-			<File FileName="PegSolitaire_DRC.rc" ContainerId="W32RC" ModuleName="PegSolitaire_DRC.rc"/>
-		</FileList>
-	</W32ResourceDLL.Personality>
+		</Options>  <FileList>
+      <File FileName="About.dfm" ContainerId="W32Form" ModuleName="About.dfm"/>
+      <File FileName="Choice.dfm" ContainerId="W32Form" ModuleName="Choice.dfm"/>
+      <File FileName="Finish.dfm" ContainerId="W32Form" ModuleName="Finish.dfm"/>
+      <File FileName="Help.dfm" ContainerId="W32Form" ModuleName="Help.dfm"/>
+      <File FileName="HighScore.dfm" ContainerId="W32Form" ModuleName="HighScore.dfm"/>
+      <File FileName="History.dfm" ContainerId="W32Form" ModuleName="History.dfm"/>
+      <File FileName="Main.dfm" ContainerId="W32Form" ModuleName="Main.dfm"/>
+      <File FileName="PegSolitaire_DRC.rc" ContainerId="W32RC" ModuleName="PegSolitaire_DRC.rc"/>
+    </FileList>
+  </W32ResourceDLL.Personality>
 </BorlandProject>
