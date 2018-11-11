@@ -331,7 +331,7 @@ end;
 
 procedure TMainForm.RefreshStonesRemoved;
 begin
-  Statistics.Panels.Items[1].Text := Format(LNG_STONES_REMOVED, [LevelRemovedStones, LevelTotalStones]);
+  Statistics.Panels.Items[1].Text := Format(LNG_STONES_REMOVED, [LevelRemovedStones, LevelTotalStones-1]);
 end;
 
 procedure TMainForm.RefreshPoints;
