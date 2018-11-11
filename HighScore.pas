@@ -192,7 +192,7 @@ procedure THighScoreForm.ClearBtnClick(Sender: TObject);
 resourcestring
   LNG_ARE_YOU_SURE = 'Are you really sure you want to clear the high score list?';
 begin
-  if MessageDlg(LNG_ARE_YOU_SURE, mtConfirmation, mbYesNoCancel) = mrYes then
+  if MessageDlg(LNG_ARE_YOU_SURE, mtConfirmation, mbYesNoCancel, 0) = mrYes then
   begin
     DeleteFile(Format(JNL_FILE, [FLevelName]));
     ClearLists;

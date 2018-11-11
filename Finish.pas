@@ -74,25 +74,28 @@ begin
   if FGoalStatus = gsLastStoneInGoalRed then
   begin
     ExtraPoints := FieldTypeWorth(ftRed) * 100;
-    PerformanceMemo.Lines.Add(Format(LNG_GOAL_RED, [ExtraPoints]))
+    PerformanceMemo.Lines.Add(Format(LNG_GOAL_RED, [ExtraPoints]));
+    Inc(FScore, ExtraPoints);
   end
   else if FGoalStatus = gsLastStoneInGoalYellow then
   begin
     ExtraPoints := FieldTypeWorth(ftYellow) * 100;
-    PerformanceMemo.Lines.Add(Format(LNG_GOAL_YELLOW, [ExtraPoints]))
+    PerformanceMemo.Lines.Add(Format(LNG_GOAL_YELLOW, [ExtraPoints]));
+    Inc(FScore, ExtraPoints);
   end
   else if FGoalStatus = gsLastStoneInGoalGreen then
   begin
     ExtraPoints := FieldTypeWorth(ftGreen) * 100;
-    PerformanceMemo.Lines.Add(Format(LNG_GOAL_GREEN, [ExtraPoints]))
+    PerformanceMemo.Lines.Add(Format(LNG_GOAL_GREEN, [ExtraPoints]));
+    Inc(FScore, ExtraPoints);
   end
   else if FGoalStatus = gsLastStoneOutsideGoal then
   begin
     ExtraPoints := 0;
-    PerformanceMemo.Lines.Add(Format(LNG_GOAL_MISSED, [ExtraPoints]))
+    PerformanceMemo.Lines.Add(Format(LNG_GOAL_MISSED, [ExtraPoints]));
+    Inc(FScore, ExtraPoints);
   end;
 
-  Inc(FScore, ExtraPoints);
   PerformanceMemo.Lines.Strings[0] := Format(LNG_SCORE, [FScore]);
 
   result := ShowModal;
@@ -160,7 +163,7 @@ procedure TFinishForm.SaveBtnClick(Sender: TObject);
 begin
   if NameEdit.Text = '' then
   begin
-    showmessage(LNG_ENTER_NAME);
+    MessageDlg(LNG_ENTER_NAME, mtWarning, [mbOk], 0);
     NameEdit.SetFocus;
     Exit;
   end;
@@ -179,7 +182,7 @@ procedure TFinishForm.FormCreate(Sender: TObject);
 begin
   if not ForceDirectories(ExtractFilePath(Application.ExeName) + JNL_PATH) then
   begin
-    ShowMessage(Format(LNG_COULD_NOT_CREATE_DIR, [JNL_PATH]));
+    MessageDlg(Format(LNG_COULD_NOT_CREATE_DIR, [JNL_PATH]), mtError, [mbOk], 0);
   end;
 
   LoadSettings;

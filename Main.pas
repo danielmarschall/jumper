@@ -643,7 +643,7 @@ begin
   BuildPlayground(LevelArray);
   if not AreJumpsPossible then
   begin
-    ShowMessage(LNG_LVL_INVALID_NO_JUMP);
+    MessageDlg(LNG_LVL_INVALID_NO_JUMP, mtError, [mbOk], 0);
   end;
   RefreshTime;
   RefreshStonesRemoved;

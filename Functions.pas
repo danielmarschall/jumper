@@ -115,7 +115,7 @@ begin
 
   if not FileExists(InputFile) then
   begin
-    ShowMessage(Format(LNG_COULD_NOT_OPEN_FILE, [InputFile]));
+    MessageDlg(Format(LNG_COULD_NOT_OPEN_FILE, [InputFile]), mtError, [mbOk], 0);
     Exit;
   end;
 

@@ -36,7 +36,7 @@ begin
   if JumpSaveDialog.Execute then
   begin
     JumpMemo.Lines.SaveToFile(JumpSaveDialog.FileName);
-    ShowMessage(LNG_SAVED);
+    MessageDlg(LNG_SAVED, mtInformation, [mbOk], 0);
   end;
 end;
 

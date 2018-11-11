@@ -120,12 +120,12 @@ procedure ShowErrorMessage(error: TLevelError);
 begin
   case error of
     leNone: ;
-    leInvalidElement: ShowMessage(LNG_LVL_INVALID_ELEMENT);
-    leNoIndicator: ShowMessage(LNG_LVL_INVALID_WIDTH);
-    leMultipleIndicator: ShowMessage(LNG_LVL_INVALID_MULTIPLE_WIND);
-    leLevelIncomplete: ShowMessage(LNG_LVL_INVALID_HEIGHT_MUTLIPLE);
-    leHeaderError: ShowMessage(LNG_LVL_INVALID_HEADER);
-    leInvalidGoal: ShowMessage(LNG_INVALID_GOAL);
+    leInvalidElement: MessageDlg(LNG_LVL_INVALID_ELEMENT, mtError, [mbOk], 0);
+    leNoIndicator: MessageDlg(LNG_LVL_INVALID_WIDTH, mtError, [mbOk], 0);
+    leMultipleIndicator: MessageDlg(LNG_LVL_INVALID_MULTIPLE_WIND, mtError, [mbOk], 0);
+    leLevelIncomplete: MessageDlg(LNG_LVL_INVALID_HEIGHT_MUTLIPLE, mtError, [mbOk], 0);
+    leHeaderError: MessageDlg(LNG_LVL_INVALID_HEADER, mtError, [mbOk], 0);
+    leInvalidGoal: MessageDlg(LNG_INVALID_GOAL, mtError, [mbOk], 0);
   end;
 end;
 

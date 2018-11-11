@@ -11,7 +11,6 @@ Verfeinerung
 - standardbretter aus wikipedia als level entwickeln
 - Setup erstellen
 - level auswahl form in bildschirmmitte
-- showmessage in dialoge umwandeln
 - Handsymbol ändern
 - modal Form blink fehler
 - den ausgewählten stein irgendwie farblich markieren?

@@ -161,7 +161,7 @@ procedure TLevelChoice.FormCreate(Sender: TObject);
 begin
   if not ForceDirectories(ExtractFilePath(Application.ExeName) + LVL_PATH) then
   begin
-    ShowMessage(Format(LNG_COULD_NOT_CREATE_DIR, [LVL_PATH]));
+    MessageDlg(Format(LNG_COULD_NOT_CREATE_DIR, [LVL_PATH]), mtError, [mbOK], 0);
   end;
 end;
 
