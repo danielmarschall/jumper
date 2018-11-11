@@ -8,7 +8,6 @@ ToDo:
 
 Kleinigkeiten:
 - standardbretter aus wikipedia als level entwickeln
-- Setup erstellen
 - level auswahl form in bildschirmmitte
 - Handsymbol ändern
 - modal Form blink fehler
