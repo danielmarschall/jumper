@@ -62,7 +62,6 @@ type
     CountedSeconds: Integer;
     LevelFile: String;
     LookupFieldCoordinateArray: array of TPoint;
-    OriginalPlayGroundMatrix: TPlayGroundMatrix;
     PrevPlaygroundMatrixes: array of TPlayGroundMatrix;
     PlaygroundMatrix: TPlayGroundMatrix;
     Points: Integer;
@@ -219,7 +218,6 @@ begin
   JumpHistory.Clear;
 
   ClearMatrix(PlayGroundMatrix, true);
-  ClearMatrix(OriginalPlayGroundMatrix, false);
   for i := 0 to Length(PrevPlaygroundMatrixes)-1 do
     ClearMatrix(PrevPlaygroundMatrixes[i], false);
   SetLength(PrevPlaygroundMatrixes, 0);
@@ -613,7 +611,6 @@ begin
     PlayGround.Top := ClientHeight div 2 - PlayGround.Height div 2;
   end;
 
-  OriginalPlayGroundMatrix := CloneMatrix(PlayGroundMatrix);
   SetLength(PrevPlaygroundMatrixes,1);
   PrevPlaygroundMatrixes[0] := CloneMatrix(PlayGroundMatrix);
   MUndo.Enabled := false;
@@ -725,6 +722,8 @@ begin
 end;
 
 procedure TMainForm.RestartLevel;
+var
+  i: Integer;
 begin
   MPauseTime.Enabled := false;
   Timer.Enabled := false;
@@ -742,10 +741,12 @@ begin
 
   JumpHistory.Clear;
 
-  RedrawStonesFromMatrix(OriginalPlayGroundMatrix);
-  SetNewPlayGroundMatrix(OriginalPlayGroundMatrix);
-  SetLength(PrevPlaygroundMatrixes,1);
-  PrevPlaygroundMatrixes[0] := CloneMatrix(OriginalPlayGroundMatrix);
+  RedrawStonesFromMatrix(PrevPlaygroundMatrixes[0]);
+  SetNewPlayGroundMatrix(PrevPlaygroundMatrixes[0]);
+  for i := 1 to Length(PrevPlaygroundMatrixes)-1 do
+    ClearMatrix(PrevPlaygroundMatrixes[i], false);
+  SetLength(PrevPlaygroundMatrixes, 1);
+
   MUndo.Enabled := false;
 end;
 
