@@ -43,6 +43,7 @@ type
     N1: TMenuItem;
     MUndo: TMenuItem;
     N3: TMenuItem;
+    Aboutthislevel1: TMenuItem;
     procedure MExitClick(Sender: TObject);
     procedure TimerTimer(Sender: TObject);
     procedure MNewGameClick(Sender: TObject);
@@ -58,6 +59,8 @@ type
     procedure MHelpClick(Sender: TObject);
     procedure MEnableSoundClick(Sender: TObject);
     procedure MUndoClick(Sender: TObject);
+    procedure Aboutthislevel1Click(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
   private
     CountedSeconds: Integer;
     LevelFile: String;
@@ -382,6 +385,36 @@ begin
   end;
 
   result := false;
+end;
+
+procedure TMainForm.Aboutthislevel1Click(Sender: TObject);
+var
+  mode: string;
+  goalYeSNo: string;
+resourcestring
+  LNG_BOARD = 'Board: %s';
+  LNG_MODE = 'Mode: %s';
+  LNG_STONES_TOTAL = 'Stones: %d';
+  LNG_GOAL_AVAILABLE = 'Target field defined';
+  LNG_NO_GOAL = 'No target field';
+begin
+  if Level.GetGameMode = gmDiagonal then
+    mode := 'Diagonal'
+  else if Level.GetGameMode = gmNormal then
+    mode := 'Normal'
+  else
+    mode := '?';
+
+  if GoalStatus = gsNoGoal then
+    goalYeSNo := LNG_NO_GOAL
+  else
+    goalYeSNo := LNG_GOAL_AVAILABLE;
+
+  ShowMessage(Format(LNG_BOARD, [ExtractFileNameWithoutExt(LevelFile)]) + #13#10 +
+              #13#10 +
+              Format(LNG_MODE, [mode]) + #13#10 +
+              Format(LNG_STONES_TOTAL, [LevelTotalStones]) + #13#10 +
+              goalYesNo);
 end;
 
 function TMainForm.AreJumpsPossible: boolean;
@@ -849,6 +882,13 @@ begin
   begin
     FinishForm.SaveSettings;
   end;
+end;
+
+procedure TMainForm.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+resourcestring
+  LNG_REALLY_QUIT = 'Do you really want to quit?';
+begin
+  CanClose := MessageDlg(LNG_REALLY_QUIT, mtConfirmation, mbYesNoCancel, 0) = mrYes;
 end;
 
 procedure TMainForm.MHelpClick(Sender: TObject);

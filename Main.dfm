@@ -18,6 +18,7 @@ object MainForm: TMainForm
   OldCreateOrder = False
   Position = poDesktopCenter
   OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
@@ -118,6 +119,10 @@ object MainForm: TMainForm
         Caption = 'Help...'
         ShortCut = 112
         OnClick = MHelpClick
+      end
+      object Aboutthislevel1: TMenuItem
+        Caption = 'About this level'
+        OnClick = Aboutthislevel1Click
       end
       object N5: TMenuItem
         Caption = '-'

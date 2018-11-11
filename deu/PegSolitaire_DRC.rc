@@ -5,6 +5,7 @@
   Diese Datei enthält vom Compiler erzeugte Ressourcen, die an die ausführbare Datei gebunden wurden. Wenn diese Datei leer ist, dann wurden keine vom Compiler generierten Ressourcen an die erzeugte ausführbare Datei gebunden.
 */
 
+#define Main_LNG_REALLY_QUIT 65120
 #define Constants_LNG_COULD_NOT_CREATE_DIR 65136
 #define Constants_LNG_SCORE 65137
 #define Constants_LNG_REMAINING 65138
@@ -16,6 +17,11 @@
 #define Constants_LNG_GOAL_GREEN 65144
 #define Constants_LNG_GOAL_MISSED 65145
 #define HighScore_LNG_ARE_YOU_SURE 65146
+#define Main_LNG_BOARD 65147
+#define Main_LNG_MODE 65148
+#define Main_LNG_STONES_TOTAL 65149
+#define Main_LNG_GOAL_AVAILABLE 65150
+#define Main_LNG_NO_GOAL 65151
 #define Vcl_ComStrs_sTabFailSet 65152
 #define Vcl_ComStrs_sTabFailSetObject 65153
 #define Vcl_ComStrs_sTabMustBeMultiLine 65154
@@ -402,6 +408,7 @@
 #define System_SysConst_SIntOverflow 65535
 STRINGTABLE
 BEGIN
+	Main_LNG_REALLY_QUIT,	L"M\x00F6chten Sie das Spiel wirklich beenden?"
 	Constants_LNG_COULD_NOT_CREATE_DIR,	L"Achtung: Konnte das Verzeichnis ""%s"" nicht anlegen."
 	Constants_LNG_SCORE,	L"Punkte: %d"
 	Constants_LNG_REMAINING,	L"Verbleibende Steine: %d (%f%%)"
@@ -413,6 +420,11 @@ BEGIN
 	Constants_LNG_GOAL_GREEN,	L"Gr\x00FCner Stein im Zielfeld (%d Punkte)"
 	Constants_LNG_GOAL_MISSED,	L"Kein Stein im Zielfeld (%d Punkte)"
 	HighScore_LNG_ARE_YOU_SURE,	L"Sind Sie sicher, dass Sie die Highscore-Liste leeren m\x00F6chten?"
+	Main_LNG_BOARD,	L"Brett: %s"
+	Main_LNG_MODE,	L"Modus: %s"
+	Main_LNG_STONES_TOTAL,	L"Steine gesamt: %d"
+	Main_LNG_GOAL_AVAILABLE,	L"Ziel-Feld vorhanden"
+	Main_LNG_NO_GOAL,	L"Kein Ziel-Feld vorhanden"
 	Vcl_ComStrs_sTabFailSet,	L"Registerseite  ""%s"" mit Index %d konnte nicht gesetzt werden"
 	Vcl_ComStrs_sTabFailSetObject,	L"Objekt mit Index %d konnte nicht gesetzt werden"
 	Vcl_ComStrs_sTabMustBeMultiLine,	L"Bei TabPosition tpLeft und tpRight muss MultiLine True sein"

@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{295CC96F-5ED4-4010-B96D-F8D460483E80}</ProjectGuid>
+        <ProjectGuid>{E7F8A9BB-47AA-40DD-87CD-91F3A02084F2}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
         <Projects Include="PegSolitaire.dproj">

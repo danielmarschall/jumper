@@ -5,10 +5,10 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">43415.8190277778</prop>
-        <prop prop-type="OrigDateTime">0</prop>
+        <prop prop-type="SelfDateTime">43415.8762962963</prop>
+        <prop prop-type="OrigDateTime">43415.8763194444</prop>
         <prop prop-type="XlatDateTime">43414.8876388889</prop>
-        <prop prop-type="Translated">288</prop>
+        <prop prop-type="Translated">294</prop>
         <prop prop-type="UnTranslated">107</prop>
       </prop-group>
     </header>
@@ -5072,6 +5072,54 @@
           <prop prop-type="Status">1</prop>
         </prop-group>
         <target>"Level ungültig: Zeilen haben nicht die gleiche Anzahl an Elementen."</target>
+      </trans-unit>
+      <trans-unit id="Main_LNG_REALLY_QUIT" resname="Main_LNG_REALLY_QUIT">
+        <source>"Do you really want to quit?"</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8657502546</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Möchten Sie das Spiel wirklich beenden?"</target>
+      </trans-unit>
+      <trans-unit id="Main_LNG_BOARD" resname="Main_LNG_BOARD">
+        <source>"Board: %s"</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8657502662</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Brett: %s"</target>
+      </trans-unit>
+      <trans-unit id="Main_LNG_MODE" resname="Main_LNG_MODE">
+        <source>"Mode: %s"</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8657502662</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Modus: %s"</target>
+      </trans-unit>
+      <trans-unit id="Main_LNG_STONES_TOTAL" resname="Main_LNG_STONES_TOTAL">
+        <source>"Stones: %d"</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8657502662</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Steine gesamt: %d"</target>
+      </trans-unit>
+      <trans-unit id="Main_LNG_GOAL_AVAILABLE" resname="Main_LNG_GOAL_AVAILABLE">
+        <source>"Target field defined"</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8657502778</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Ziel-Feld vorhanden"</target>
+      </trans-unit>
+      <trans-unit id="Main_LNG_NO_GOAL" resname="Main_LNG_NO_GOAL">
+        <source>"No target field"</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8657502778</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Kein Ziel-Feld vorhanden"</target>
       </trans-unit>
     </body>
   </file>
