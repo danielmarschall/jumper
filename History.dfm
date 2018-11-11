@@ -1,8 +1,8 @@
 object HistoryForm: THistoryForm
   Left = 192
   Top = 103
-  BorderIcons = [biSystemMenu, biMinimize]
-  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'Jump History'
   ClientHeight = 353
   ClientWidth = 281

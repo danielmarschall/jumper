@@ -4,7 +4,7 @@ object FinishForm: TFinishForm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Level finished'
-  ClientHeight = 290
+  ClientHeight = 306
   ClientWidth = 274
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -90,7 +90,7 @@ object FinishForm: TFinishForm
   end
   object JumpHistoryLink: TLabel
     Left = 8
-    Top = 200
+    Top = 216
     Width = 232
     Height = 13
     Cursor = crHandPoint
@@ -106,7 +106,7 @@ object FinishForm: TFinishForm
   end
   object SaveBtn: TButton
     Left = 128
-    Top = 256
+    Top = 272
     Width = 137
     Height = 25
     Caption = 'OK'
@@ -116,7 +116,7 @@ object FinishForm: TFinishForm
   end
   object CancelBtn: TButton
     Left = 8
-    Top = 256
+    Top = 272
     Width = 89
     Height = 25
     Cancel = True
@@ -135,7 +135,7 @@ object FinishForm: TFinishForm
     Left = 8
     Top = 112
     Width = 257
-    Height = 81
+    Height = 98
     TabStop = False
     Color = clBtnFace
     ReadOnly = True
@@ -143,7 +143,7 @@ object FinishForm: TFinishForm
   end
   object ReplayCheckBox: TCheckBox
     Left = 8
-    Top = 224
+    Top = 240
     Width = 145
     Height = 17
     Caption = 'Play the same level again'

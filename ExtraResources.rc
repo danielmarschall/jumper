@@ -3,9 +3,10 @@ YellowStone	BITMAP	Private\Resource\YellowStone.bmp
 RedStone	BITMAP	Private\Resource\RedStone.bmp
 EmptyField	BITMAP	Private\Resource\EmptyField.bmp
 
-Finish		WAVE	Private\Resource\Finish.wav
+Win1		WAVE	Private\Resource\Win1.wav
+Win2		WAVE	Private\Resource\Win2.wav
 Lose		WAVE	Private\Resource\Lose.wav
 Jump		WAVE	Private\Resource\Jump.wav
 Undo		WAVE	Private\Resource\Undo.wav
 
-1 		24 	Private\Resource\PegSolitaire.manifest
+1		24	Private\Resource\PegSolitaire.manifest

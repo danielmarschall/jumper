@@ -14,6 +14,8 @@ type
     Stone: TImage;
   end;
 
+  TGoalStatus = (gsNoGoal, gsMultipleStonesRemaining, gsLastStoneInGoalRed, gsLastStoneInGoalYellow, gsLastStoneInGoalGreen, gsLastStoneOutsideGoal);
+
   TFieldState = (fsError, fsLocked, fsAvailable, fsStone);
 
   TPlayGroundMatrix = array of array of TField;
@@ -99,9 +101,11 @@ type
     function FieldState(x, y: integer): TFieldState; overload;
     procedure ClearMatrix(Matrix: TPlayGroundMatrix; FreeVCL: boolean);
     function CloneMatrix(Source: TPlayGroundMatrix): TPlayGroundMatrix;
+    function MatrixHasGoal(Matrix: TPlayGroundMatrix): boolean;
     procedure LoadPictureForType(FieldType: TFieldType; Picture: TPicture);
     function MatrixWorth(Matrix: TPlayGroundMatrix): integer;
-    function FieldTypeWorth(t: TFieldType): integer;
+    function GoalStatus: TGoalStatus;
+    function GoalFieldType(Matrix: TPlayGroundMatrix): TFieldType;
   end;
 
 var
@@ -113,6 +117,33 @@ uses
   About, Finish, Choice, Functions, History, HighScore, Help, Constants;
 
 {$R *.dfm}
+
+function TMainForm.MatrixHasGoal(Matrix: TPlayGroundMatrix): boolean;
+var
+  i, j: integer;
+begin
+  result := false;
+  for i := Low(Matrix) to High(Matrix) do
+  begin
+    for j := Low(Matrix[i]) to High(Matrix[i]) do
+    begin
+      result := result or Matrix[i][j].Goal;
+    end;
+  end;
+end;
+
+function TMainForm.GoalFieldType(Matrix: TPlayGroundMatrix): TFieldType;
+var
+  i, j: integer;
+begin
+  for i := Low(Matrix) to High(Matrix) do
+  begin
+    for j := Low(Matrix[i]) to High(Matrix[i]) do
+    begin
+      if Matrix[i][j].Goal then result := Matrix[i][j].FieldType
+    end;
+  end;
+end;
 
 function TMainForm.MatrixWorth(Matrix: TPlayGroundMatrix): integer;
 var
@@ -307,14 +338,6 @@ begin
   Statistics.Panels.Items[2].Text := Format(LNG_POINTS, [Points]);
 end;
 
-function TMainForm.FieldTypeWorth(t: TFieldType): integer;
-begin
-  if t = ftGreen then result := 10
-  else if t = ftYellow then result := 20
-  else if t = ftRed then result := 30
-  else result := 0;
-end;
-
 procedure TMainForm.CountPoints(t: TFieldType);
 begin
   inc(Points, FieldTypeWorth(t));
@@ -436,12 +459,17 @@ begin
     RefreshTime;
     if MEnableSound.Checked then
     begin
-      if LevelRemovedStones = LevelTotalStones then
-        PlaySound(RES_FINISH, HInstance, SND_ASYNC or SND_NOWAIT or SND_RESOURCE)
+      if LevelRemovedStones = LevelTotalStones-1 then
+      begin
+        if GoalStatus in [gsLastStoneInGoalRed, gsLastStoneInGoalYellow, gsLastStoneInGoalGreen] then
+          PlaySound(RES_WIN2, HInstance, SND_ASYNC or SND_NOWAIT or SND_RESOURCE)
+        else
+          PlaySound(RES_WIN1, HInstance, SND_ASYNC or SND_NOWAIT or SND_RESOURCE)
+      end
       else
         PlaySound(RES_LOSE, HInstance, SND_ASYNC or SND_NOWAIT or SND_RESOURCE);
     end;
-    res := FinishForm.Execute(ExtractFileNameWithoutExt(LevelFile), Points, LevelTotalStones, LevelRemovedStones, CountedSeconds, JumpHistory);
+    res := FinishForm.Execute(ExtractFileNameWithoutExt(LevelFile), Points, LevelTotalStones, LevelRemovedStones, CountedSeconds, GoalStatus, JumpHistory);
     if (res = mrOK) and FinishForm.ReplayCheckbox.Checked then RestartLevel;
   end;
   {$ENDREGION}
@@ -657,6 +685,26 @@ begin
     NewGame(LevelFile);
   end
   else Close();
+end;
+
+function TMainForm.GoalStatus: TGoalStatus;
+var
+  ft: TFieldType;
+begin
+  if not MatrixHasGoal(PlaygroundMatrix) then
+    result := gsNoGoal
+  else if LevelRemovedStones < LevelTotalStones-1 then
+    Result := gsMultipleStonesRemaining
+  else
+  begin
+    ft := GoalFieldType(PlaygroundMatrix);
+    if ft = ftRed then
+      result := gsLastStoneInGoalRed
+    else if ft = ftYellow then
+      result := gsLastStoneInGoalYellow
+    else if ft = ftGreen then
+      result := gsLastStoneInGoalGreen;
+  end;
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);

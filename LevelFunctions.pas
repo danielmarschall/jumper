@@ -25,6 +25,7 @@ function GetLevelType(LevelString: string): TLevelType;
 function CheckLevelIntegrity(LevelString: string; ShowErrors: boolean): TLevelError; overload;
 function CheckLevelIntegrity(LevelString: string): TLevelError; overload;
 function LevelStringToLevelArray(LevelString: string; ShowErrors: boolean): TLevelArray;
+function FieldTypeWorth(t: TFieldType): integer;
 
 var
   AllowDiagonalMoves: boolean;
@@ -303,6 +304,14 @@ begin
       inc(c);
     end;
   end;
+end;
+
+function FieldTypeWorth(t: TFieldType): integer;
+begin
+  if t = ftGreen then result := 10
+  else if t = ftYellow then result := 20
+  else if t = ftRed then result := 30
+  else result := 0;
 end;
 
 end.

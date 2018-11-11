@@ -4,7 +4,6 @@ Registry: Settings\
 Abstand oben ist größer als links und rechts vom brett
 
 ToDo
-- zielfeld bei finishform berücksichtigen
 - how to play formulieren
 - anzeige des aktuellen levels und ob diagonal erlaubt ist
 
@@ -17,6 +16,8 @@ Verfeinerung
 - modal Form blink fehler
 - den ausgewählten stein irgendwie farblich markieren?
 - abfrage "Möchten Sie das Spiel wirklich beenden?"
+- genauere statistik: wie viele grüne, gelbe, rote wurden entfernt etc.
+- im finish-form genau zeigen, wie sich die punktzahl zusammensetzt (grün+gelb+rot+goal)
 
 Zukunft
 - hervorheben von gültigen feldern (conf)

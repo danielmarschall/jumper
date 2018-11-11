@@ -189,10 +189,14 @@ begin
 end;
 
 procedure THighScoreForm.ClearBtnClick(Sender: TObject);
+resourcestring
+  LNG_ARE_YOU_SURE = 'Are you really sure you want to clear the high score list?';
 begin
-  // TODO: Benutzer fragen, ob OK
-  DeleteFile(Format(JNL_FILE, [FLevelName]));
-  ClearLists;
+  if MessageDlg(LNG_ARE_YOU_SURE, mtConfirmation, mbYesNoCancel) = mrYes then
+  begin
+    DeleteFile(Format(JNL_FILE, [FLevelName]));
+    ClearLists;
+  end;
 end;
 
 procedure THighScoreForm.ClearLists;

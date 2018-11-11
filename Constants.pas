@@ -19,7 +19,8 @@ const
   // Resourcennamen
   RES_JUMP = 'Jump';
   RES_UNDO = 'Undo';
-  RES_FINISH = 'Finish';
+  RES_WIN1 = 'Win1';
+  RES_WIN2 = 'Win2';
   RES_LOSE = 'Lose';
   RES_EMPTY = 'EmptyField';
   RES_GREEN = 'GreenStone';
@@ -57,6 +58,10 @@ resourcestring
   LNG_TIME_SECONDS = 'Time: %d seconds';
   LNG_POINTS_PER_MINUTE = '%d points per minute';
   LNG_ENTER_NAME = 'Please enter your name to get added to the high score lists.';
+  LNG_GOAL_RED = 'Red stone in target field (%d points)';
+  LNG_GOAL_YELLOW = 'Yellow stone in target field (%d points)';
+  LNG_GOAL_GREEN = 'Green stone in target field (%d points)';
+  LNG_GOAL_MISSED = 'No stone in target field (%d points)';
 
 implementation
 

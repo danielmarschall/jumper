@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, MMSystem, Math, ExtCtrls, Registry;
+  Dialogs, StdCtrls, MMSystem, Math, ExtCtrls, Registry, Main;
 
 type
   TFinishForm = class(TForm)
@@ -29,12 +29,12 @@ type
     FStonesRemoved: integer;
     FSeconds: integer;
     FHistory: TStringList;
-    procedure Calculate;
+    FGoalStatus: TGoalStatus;
     procedure SaveToJournal(PlayerName: String; Score, StonesTotal, StonesRemoved, Seconds: Integer);
     procedure LoadSettings;
   public
     procedure SaveSettings;
-    function Execute(LevelName: String; Score, StonesTotal, StonesRemoved, Seconds: Integer; JumpHistory: TStringList): Integer;
+    function Execute(LevelName: String; Score, StonesTotal, StonesRemoved, Seconds: Integer; GoalStatus: TGoalStatus; JumpHistory: TStringList): Integer;
   end;
 
 var
@@ -43,7 +43,7 @@ var
 implementation
 
 uses
-  History, Constants;
+  History, Constants, LevelFunctions;
 
 {$R *.dfm}
 
@@ -52,26 +52,49 @@ begin
   Close;
 end;
 
-procedure TFinishForm.Calculate;
-begin
-  PerformanceMemo.Lines.Clear;
-  PerformanceMemo.Lines.Add(Format(LNG_SCORE, [FScore]));
-  PerformanceMemo.Lines.Add(Format(LNG_REMAINING, [FStonesTotal - FStonesRemoved,
-   RoundTo(((FStonesTotal - FStonesRemoved) / FStonesTotal * 100), -2)]));
-  PerformanceMemo.Lines.Add(Format(LNG_TIME_SECONDS, [FSeconds]));
-  PerformanceMemo.Lines.Add(Format(LNG_POINTS_PER_MINUTE, [Round(FScore / FSeconds * 60)]));
-end;
-
-function TFinishForm.Execute(LevelName: String; Score, StonesTotal, StonesRemoved, Seconds: Integer; JumpHistory: TStringList): Integer;
+function TFinishForm.Execute(LevelName: String; Score, StonesTotal, StonesRemoved, Seconds: Integer; GoalStatus: TGoalStatus; JumpHistory: TStringList): Integer;
+var
+  ExtraPoints: Integer;
 begin
   FLevel := LevelName;
   FScore := Score;
   FStonesTotal := StonesTotal;
   FStonesRemoved := StonesRemoved;
   FSeconds := Seconds;
+  FGoalStatus := GoalStatus;
   FHistory := JumpHistory;
 
-  Calculate;
+  PerformanceMemo.Lines.Clear;
+  PerformanceMemo.Lines.Add('');
+  PerformanceMemo.Lines.Add(Format(LNG_REMAINING, [FStonesTotal - 1 - FStonesRemoved,
+                            RoundTo(((FStonesTotal - 1 - FStonesRemoved) / FStonesTotal * 100), -2)]));
+  PerformanceMemo.Lines.Add(Format(LNG_TIME_SECONDS, [FSeconds]));
+  PerformanceMemo.Lines.Add(Format(LNG_POINTS_PER_MINUTE, [Round(FScore / FSeconds * 60)]));
+
+  if FGoalStatus = gsLastStoneInGoalRed then
+  begin
+    ExtraPoints := FieldTypeWorth(ftRed) * 100;
+    PerformanceMemo.Lines.Add(Format(LNG_GOAL_RED, [ExtraPoints]))
+  end
+  else if FGoalStatus = gsLastStoneInGoalYellow then
+  begin
+    ExtraPoints := FieldTypeWorth(ftYellow) * 100;
+    PerformanceMemo.Lines.Add(Format(LNG_GOAL_YELLOW, [ExtraPoints]))
+  end
+  else if FGoalStatus = gsLastStoneInGoalGreen then
+  begin
+    ExtraPoints := FieldTypeWorth(ftGreen) * 100;
+    PerformanceMemo.Lines.Add(Format(LNG_GOAL_GREEN, [ExtraPoints]))
+  end
+  else if FGoalStatus = gsLastStoneOutsideGoal then
+  begin
+    ExtraPoints := 0;
+    PerformanceMemo.Lines.Add(Format(LNG_GOAL_MISSED, [ExtraPoints]))
+  end;
+
+  Inc(FScore, ExtraPoints);
+  PerformanceMemo.Lines.Strings[0] := Format(LNG_SCORE, [FScore]);
+
   result := ShowModal;
 end;
 
@@ -87,7 +110,10 @@ begin
     Append(f)
   else
     ReWrite(f);
-  WriteLn(f, Format(JNL_ENTRY, [DateTimeToStr(now()), NameEdit.Text, FScore, FSeconds, FStonesRemoved, FStonesTotal]));
+
+  // TODO: Maybe we should do much more details, like, how many green stones were removed, how many yellows etc., and which stone was in the goal?
+  WriteLn(f, Format(JNL_ENTRY, [DateTimeToStr(now()), NameEdit.Text, FScore, FSeconds, FStonesRemoved, FStonesTotal-1]));
+
   CloseFile(f);
 end;
 
@@ -136,13 +162,10 @@ begin
   begin
     showmessage(LNG_ENTER_NAME);
     NameEdit.SetFocus;
-  end
-  else
-  begin
-    SaveToJournal(NameEdit.Text, FScore, FStonesTotal, FStonesRemoved, FSeconds);
-    Close;
+    Exit;
   end;
 
+  SaveToJournal(NameEdit.Text, FScore, FStonesTotal, FStonesRemoved, FSeconds);
   ModalResult := mrOK;
 end;
 
