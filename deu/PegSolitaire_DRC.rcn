@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">43414.9816898148</prop>
-        <prop prop-type="OrigDateTime">43414.9816898148</prop>
+        <prop prop-type="SelfDateTime">43415.8190277778</prop>
+        <prop prop-type="OrigDateTime">0</prop>
         <prop prop-type="XlatDateTime">43414.8876388889</prop>
-        <prop prop-type="Translated">284</prop>
-        <prop prop-type="UnTranslated">108</prop>
+        <prop prop-type="Translated">288</prop>
+        <prop prop-type="UnTranslated">107</prop>
       </prop-group>
     </header>
     <body>
@@ -131,23 +131,30 @@
         <target>"Konnte Datei \"%s\" nicht öffnen."</target>
         <prop-group name="ITEFieldProp">
           <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">1</prop>
+          <prop prop-type="Status">3</prop>
         </prop-group>
       </trans-unit>
       <trans-unit id="LevelFunctions_LNG_LVL_INVALID_ELEMENT" resname="LevelFunctions_LNG_LVL_INVALID_ELEMENT">
-        <source>"Level invalid: There are invalid elements in the file.\r\n\r\nValid elements are \"1\", \"2\", \"3\", \"X\", \"*\", \"E\" and \"&gt;\" as goal prefix."</source>
-        <target>"Level ungültig: Es wurden ungültige Elemente in der Datei gefunden.\r\n\r\nGültige Elemente sind \"1\", \"2\", \"3\", \"X\", \"*\", \"E\" und der Ziel-Präfix \"&gt;\"."</target>
+        <source>"Level invalid: There are invalid elements in the file.\r\n\r\nValid elements are r/R, y/Y, g/G, e/E, . and *."</source>
         <prop-group name="ITEFieldProp">
           <prop prop-type="Created">39879.996412037</prop>
           <prop prop-type="Status">1</prop>
         </prop-group>
+        <target>"Level ungültig: Es sind ungültige Zeichen vorhanden.\r\n\r\nGültige Zeichen sind: r/R, y/Y, g/G, e/E, . und *."</target>
+        <alt-trans>
+          <source>"Level invalid: There are invalid elements in the file.\r\n\r\nValid elements are \"1\", \"2\", \"3\", \"X\", \"*\", \"E\" and \"&gt;\" as goal prefix."</source>
+          <target>"Level ungültig: Es wurden ungültige Elemente in der Datei gefunden.\r\n\r\nGültige Elemente sind \"1\", \"2\", \"3\", \"X\", \"*\", \"E\" und der Ziel-Präfix \"&gt;\"."</target>
+          <prop-group name="ITEFieldProp">
+            <prop prop-type="Modified">43415.7683010185</prop>
+          </prop-group>
+        </alt-trans>
       </trans-unit>
       <trans-unit id="LevelFunctions_LNG_LVL_INVALID_WIDTH" resname="LevelFunctions_LNG_LVL_INVALID_WIDTH">
         <source>"Level invalid: No width indicator (\"!\") found."</source>
         <target>"Level ungültig: Kein Breitindikator (\"!\") gefunden."</target>
         <prop-group name="ITEFieldProp">
           <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">1</prop>
+          <prop prop-type="Status">3</prop>
         </prop-group>
       </trans-unit>
       <trans-unit id="LevelFunctions_LNG_LVL_INVALID_HEIGHT_MUTLIPLE" resname="LevelFunctions_LNG_LVL_INVALID_HEIGHT_MUTLIPLE">
@@ -155,7 +162,7 @@
         <target>"Level ungültig: Die Länge ist kein Vielfaches der Breite."</target>
         <prop-group name="ITEFieldProp">
           <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">1</prop>
+          <prop prop-type="Status">3</prop>
         </prop-group>
       </trans-unit>
       <trans-unit id="LevelFunctions_LNG_LVL_INVALID_MULTIPLE_WIND" resname="LevelFunctions_LNG_LVL_INVALID_MULTIPLE_WIND">
@@ -163,7 +170,7 @@
         <target>"Level ungültig: Es gibt mehrere Breitindikatoren (\"!\")."</target>
         <prop-group name="ITEFieldProp">
           <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">1</prop>
+          <prop prop-type="Status">3</prop>
         </prop-group>
       </trans-unit>
       <trans-unit id="LevelFunctions_LNG_LVL_INVALID_HEADER" resname="LevelFunctions_LNG_LVL_INVALID_HEADER">
@@ -171,7 +178,7 @@
         <target>"Level ungültig: Der Dateikopf ist ungültig. Er passt nicht zu der Struktur \"1(D|N)~\"."</target>
         <prop-group name="ITEFieldProp">
           <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">1</prop>
+          <prop prop-type="Status">3</prop>
         </prop-group>
       </trans-unit>
       <trans-unit id="LevelFunctions_LNG_INVALID_GOAL" resname="LevelFunctions_LNG_INVALID_GOAL">
@@ -179,7 +186,7 @@
         <target>"Level ungültig: Eine Zielmarkierung zeigt nicht auf ein zugängliches Element (\"3\", \"2\", \"1\" or \"E\")."</target>
         <prop-group name="ITEFieldProp">
           <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">1</prop>
+          <prop prop-type="Status">3</prop>
         </prop-group>
       </trans-unit>
       <trans-unit id="Constants_LNG_SAVED" resname="Constants_LNG_SAVED">
@@ -4630,8 +4637,9 @@
         <source>"Execution"</source>
         <prop-group name="ITEFieldProp">
           <prop prop-type="Created">43414.9159335764</prop>
-          <prop prop-type="Status">0</prop>
+          <prop prop-type="Status">1</prop>
         </prop-group>
+        <target>"Ausführen"</target>
       </trans-unit>
       <trans-unit id="System_SysConst_SInvalidAccess" resname="System_SysConst_SInvalidAccess">
         <source>"Invalid access"</source>
@@ -4992,6 +5000,78 @@
           <prop prop-type="Status">2</prop>
         </prop-group>
         <target>"Integerüberlauf"</target>
+      </trans-unit>
+      <trans-unit id="Constants_LNG_GOAL_RED" resname="Constants_LNG_GOAL_RED">
+        <source>"Red stone in target field (%d points)"</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8099676736</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Roter Stein im Zielfeld (%d Punkte)"</target>
+      </trans-unit>
+      <trans-unit id="Constants_LNG_GOAL_YELLOW" resname="Constants_LNG_GOAL_YELLOW">
+        <source>"Yellow stone in target field (%d points)"</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8099676736</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Gelber Stein im Zielfeld (%d Punkte)"</target>
+      </trans-unit>
+      <trans-unit id="Constants_LNG_GOAL_GREEN" resname="Constants_LNG_GOAL_GREEN">
+        <source>"Green stone in target field (%d points)"</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8099676736</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Grüner Stein im Zielfeld (%d Punkte)"</target>
+      </trans-unit>
+      <trans-unit id="Constants_LNG_GOAL_MISSED" resname="Constants_LNG_GOAL_MISSED">
+        <source>"No stone in target field (%d points)"</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8099676736</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Kein Stein im Zielfeld (%d Punkte)"</target>
+      </trans-unit>
+      <trans-unit id="HighScore_LNG_ARE_YOU_SURE" resname="HighScore_LNG_ARE_YOU_SURE">
+        <source>"Are you really sure you want to clear the high score list?"</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8099676736</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Sind Sie sicher, dass Sie die Highscore-Liste leeren möchten?"</target>
+      </trans-unit>
+      <trans-unit id="LevelFunctions_LNG_LVL_UNSUPPORTED_VERSION" resname="LevelFunctions_LNG_LVL_UNSUPPORTED_VERSION">
+        <source>"Level format invalid: Version not supported."</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8099676852</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Level ungültig: Version wird nicht unterstützt."</target>
+      </trans-unit>
+      <trans-unit id="LevelFunctions_LNG_LVL_UNSUPPORTED_MODE" resname="LevelFunctions_LNG_LVL_UNSUPPORTED_MODE">
+        <source>"Level format invalid: Mode not supported."</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8099676852</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Level ungültig: Modus nicht unterstützt."</target>
+      </trans-unit>
+      <trans-unit id="LevelFunctions_LNG_LVL_EMPTY_BOARD" resname="LevelFunctions_LNG_LVL_EMPTY_BOARD">
+        <source>"Level invalid: Board is empty."</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8099676968</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Level ungültig: Das Brett ist leer."</target>
+      </trans-unit>
+      <trans-unit id="LevelFunctions_LNG_LVL_INVALID_LENGTH" resname="LevelFunctions_LNG_LVL_INVALID_LENGTH">
+        <source>"Level invalid: Lines don't have an equal amount of elements."</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">43415.8099676968</prop>
+          <prop prop-type="Status">1</prop>
+        </prop-group>
+        <target>"Level ungültig: Zeilen haben nicht die gleiche Anzahl an Elementen."</target>
       </trans-unit>
     </body>
   </file>

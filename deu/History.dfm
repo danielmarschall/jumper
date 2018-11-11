@@ -1,9 +1,9 @@
 object HistoryForm: THistoryForm
   Left = 192
   Top = 103
-  BorderIcons = [biSystemMenu, biMinimize]
-  BorderStyle = bsSingle
-  Caption = 'Springverlauf'
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Sprungverlauf'
   ClientHeight = 353
   ClientWidth = 281
   Color = clBtnFace

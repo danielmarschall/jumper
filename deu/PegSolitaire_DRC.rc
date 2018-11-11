@@ -5,30 +5,33 @@
   Diese Datei enthält vom Compiler erzeugte Ressourcen, die an die ausführbare Datei gebunden wurden. Wenn diese Datei leer ist, dann wurden keine vom Compiler generierten Ressourcen an die erzeugte ausführbare Datei gebunden.
 */
 
-#define Constants_LNG_LVL_INVALID_NO_JUMP 65136
-#define Constants_LNG_JUMP_LOG 65137
-#define Constants_LNG_COULD_NOT_CREATE_DIR 65138
-#define Constants_LNG_SCORE 65139
-#define Constants_LNG_REMAINING 65140
-#define Constants_LNG_TIME_SECONDS 65141
-#define Constants_LNG_POINTS_PER_MINUTE 65142
-#define Constants_LNG_ENTER_NAME 65143
+#define Constants_LNG_COULD_NOT_CREATE_DIR 65136
+#define Constants_LNG_SCORE 65137
+#define Constants_LNG_REMAINING 65138
+#define Constants_LNG_TIME_SECONDS 65139
+#define Constants_LNG_POINTS_PER_MINUTE 65140
+#define Constants_LNG_ENTER_NAME 65141
+#define Constants_LNG_GOAL_RED 65142
+#define Constants_LNG_GOAL_YELLOW 65143
+#define Constants_LNG_GOAL_GREEN 65144
+#define Constants_LNG_GOAL_MISSED 65145
+#define HighScore_LNG_ARE_YOU_SURE 65146
 #define Vcl_ComStrs_sTabFailSet 65152
 #define Vcl_ComStrs_sTabFailSetObject 65153
 #define Vcl_ComStrs_sTabMustBeMultiLine 65154
 #define Vcl_ComStrs_sInvalidOwner 65155
 #define Vcl_ComStrs_sPageIndexError 65156
-#define Functions_LNG_COULD_NOT_OPEN_FILE 65157
-#define LevelFunctions_LNG_LVL_INVALID_ELEMENT 65158
-#define LevelFunctions_LNG_LVL_INVALID_WIDTH 65159
-#define LevelFunctions_LNG_LVL_INVALID_HEIGHT_MUTLIPLE 65160
-#define LevelFunctions_LNG_LVL_INVALID_MULTIPLE_WIND 65161
-#define LevelFunctions_LNG_LVL_INVALID_HEADER 65162
-#define LevelFunctions_LNG_INVALID_GOAL 65163
-#define Constants_LNG_SAVED 65164
-#define Constants_LNG_STONES_REMOVED 65165
-#define Constants_LNG_POINTS 65166
-#define Constants_LNG_TIME 65167
+#define LevelFunctions_LNG_LVL_INVALID_ELEMENT 65157
+#define LevelFunctions_LNG_LVL_UNSUPPORTED_VERSION 65158
+#define LevelFunctions_LNG_LVL_UNSUPPORTED_MODE 65159
+#define LevelFunctions_LNG_LVL_EMPTY_BOARD 65160
+#define LevelFunctions_LNG_LVL_INVALID_LENGTH 65161
+#define Constants_LNG_SAVED 65162
+#define Constants_LNG_STONES_REMOVED 65163
+#define Constants_LNG_POINTS 65164
+#define Constants_LNG_TIME 65165
+#define Constants_LNG_LVL_INVALID_NO_JUMP 65166
+#define Constants_LNG_JUMP_LOG 65167
 #define Vcl_Consts_SStyleHookClassRegistered 65168
 #define Vcl_Consts_SStyleHookClassNotRegistered 65169
 #define Vcl_Consts_SStyleInvalidParameter 65170
@@ -399,30 +402,33 @@
 #define System_SysConst_SIntOverflow 65535
 STRINGTABLE
 BEGIN
-	Constants_LNG_LVL_INVALID_NO_JUMP,	L"Achtung! Das Level ist nicht spielbar. Es sind keine Spr\x00FCnge m\x00F6glich."
-	Constants_LNG_JUMP_LOG,	L"%d [%d, %d] -> %d [%d, %d];"
 	Constants_LNG_COULD_NOT_CREATE_DIR,	L"Achtung: Konnte das Verzeichnis ""%s"" nicht anlegen."
 	Constants_LNG_SCORE,	L"Punkte: %d"
 	Constants_LNG_REMAINING,	L"Verbleibende Steine: %d (%f%%)"
 	Constants_LNG_TIME_SECONDS,	L"Zeit: %d Sekunden"
 	Constants_LNG_POINTS_PER_MINUTE,	L"%d Punkte in der Minute"
 	Constants_LNG_ENTER_NAME,	L"Bitte geben Sie Ihren Namen ein, um zu den Highscores hinzugef\x00FCgt zu werden."
+	Constants_LNG_GOAL_RED,	L"Roter Stein im Zielfeld (%d Punkte)"
+	Constants_LNG_GOAL_YELLOW,	L"Gelber Stein im Zielfeld (%d Punkte)"
+	Constants_LNG_GOAL_GREEN,	L"Gr\x00FCner Stein im Zielfeld (%d Punkte)"
+	Constants_LNG_GOAL_MISSED,	L"Kein Stein im Zielfeld (%d Punkte)"
+	HighScore_LNG_ARE_YOU_SURE,	L"Sind Sie sicher, dass Sie die Highscore-Liste leeren m\x00F6chten?"
 	Vcl_ComStrs_sTabFailSet,	L"Registerseite  ""%s"" mit Index %d konnte nicht gesetzt werden"
 	Vcl_ComStrs_sTabFailSetObject,	L"Objekt mit Index %d konnte nicht gesetzt werden"
 	Vcl_ComStrs_sTabMustBeMultiLine,	L"Bei TabPosition tpLeft und tpRight muss MultiLine True sein"
 	Vcl_ComStrs_sInvalidOwner,	L"Ung\x00FCltiger Besitzer"
 	Vcl_ComStrs_sPageIndexError,	L"%d ist ein ung\x00FCltiger Wert f\x00FCr PageIndex. PageIndex muss zwischen 0 und %d liegen"
-	Functions_LNG_COULD_NOT_OPEN_FILE,	L"Konnte Datei ""%s"" nicht \x00F6ffnen."
-	LevelFunctions_LNG_LVL_INVALID_ELEMENT,	L"Level ung\x00FCltig: Es wurden ung\x00FCltige Elemente in der Datei gefunden.\r\n\r\nG\x00FCltige Elemente sind ""1"", ""2"", ""3"", ""X"", ""*"", ""E"" und der Ziel-Pr\x00E4fix "">""."
-	LevelFunctions_LNG_LVL_INVALID_WIDTH,	L"Level ung\x00FCltig: Kein Breitindikator (""!"") gefunden."
-	LevelFunctions_LNG_LVL_INVALID_HEIGHT_MUTLIPLE,	L"Level ung\x00FCltig: Die L\x00E4nge ist kein Vielfaches der Breite."
-	LevelFunctions_LNG_LVL_INVALID_MULTIPLE_WIND,	L"Level ung\x00FCltig: Es gibt mehrere Breitindikatoren (""!"")."
-	LevelFunctions_LNG_LVL_INVALID_HEADER,	L"Level ung\x00FCltig: Der Dateikopf ist ung\x00FCltig. Er passt nicht zu der Struktur ""1(D|N)~""."
-	LevelFunctions_LNG_INVALID_GOAL,	L"Level ung\x00FCltig: Eine Zielmarkierung zeigt nicht auf ein zug\x00E4ngliches Element (""3"", ""2"", ""1"" or ""E"")."
+	LevelFunctions_LNG_LVL_INVALID_ELEMENT,	L"Level ung\x00FCltig: Es sind ung\x00FCltige Zeichen vorhanden.\r\n\r\nG\x00FCltige Zeichen sind: r/R, y/Y, g/G, e/E, . und *."
+	LevelFunctions_LNG_LVL_UNSUPPORTED_VERSION,	L"Level ung\x00FCltig: Version wird nicht unterst\x00FCtzt."
+	LevelFunctions_LNG_LVL_UNSUPPORTED_MODE,	L"Level ung\x00FCltig: Modus nicht unterst\x00FCtzt."
+	LevelFunctions_LNG_LVL_EMPTY_BOARD,	L"Level ung\x00FCltig: Das Brett ist leer."
+	LevelFunctions_LNG_LVL_INVALID_LENGTH,	L"Level ung\x00FCltig: Zeilen haben nicht die gleiche Anzahl an Elementen."
 	Constants_LNG_SAVED,	L"Erfolgreich gespeichert!"
 	Constants_LNG_STONES_REMOVED,	L"%d von %d Steine entfernt"
 	Constants_LNG_POINTS,	L"Punkte: %d"
 	Constants_LNG_TIME,	L"Zeit: %s"
+	Constants_LNG_LVL_INVALID_NO_JUMP,	L"Achtung! Das Level ist nicht spielbar. Es sind keine Spr\x00FCnge m\x00F6glich."
+	Constants_LNG_JUMP_LOG,	L"%d [%d, %d] -> %d [%d, %d];"
 	Vcl_Consts_SStyleHookClassRegistered,	L"Class '%s' is already registered for '%s'"
 	Vcl_Consts_SStyleHookClassNotRegistered,	L"Class '%s' is not registered for '%s'"
 	Vcl_Consts_SStyleInvalidParameter,	L"%s parameter cannot be nil"
@@ -745,7 +751,7 @@ BEGIN
 	System_SysConst_SAbstractError,	L"Abstrakter Fehler"
 	System_SysConst_SReadAccess,	L"Lesen"
 	System_SysConst_SWriteAccess,	L"Schreiben"
-	System_SysConst_SExecuteAccess,	L"Execution"
+	System_SysConst_SExecuteAccess,	L"Ausf\x00FChren"
 	System_SysConst_SInvalidAccess,	L"Ung\x00FCltiger Zugriff"
 	System_SysConst_SVarArrayCreate,	L"Fehler beim Erzeugen von Variante oder sicherem Array"
 	System_SysConst_SVarArrayBounds,	L"Variante oder sicheres Array-Index au\x00DFerhalb des g\x00FCltigen Bereichs"

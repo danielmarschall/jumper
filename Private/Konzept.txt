@@ -4,19 +4,18 @@ Registry: Settings\
 Abstand oben ist größer als links und rechts vom brett
 
 ToDo
-- how to play formulieren
+- deutsche übersetzung prüfen, besonders hilfefenster
 - anzeige des aktuellen levels und ob diagonal erlaubt ist
 
 Verfeinerung
 - standardbretter aus wikipedia als level entwickeln
 - Setup erstellen
 - level auswahl form in bildschirmmitte
+- level auswahl form resize -> symbole neu anordnen
 - Handsymbol ändern
 - modal Form blink fehler
 - den ausgewählten stein irgendwie farblich markieren?
 - abfrage "Möchten Sie das Spiel wirklich beenden?"
-- genauere statistik: wie viele grüne, gelbe, rote wurden entfernt etc.
-- im finish-form genau zeigen, wie sich die punktzahl zusammensetzt (grün+gelb+rot+goal)
 
 Zukunft
 - hervorheben von gültigen feldern (conf)
@@ -25,6 +24,8 @@ Zukunft
 - Panels durch Grafiken ersetzen, Grafik-Templates mit Tile-Background erlauben
 - Steingrafiken anspruchsvoller gestalten: Win-3D-Effekt
 - Spielstände inklusive History abspeicherbar
+- genauere statistik: wie viele grüne, gelbe, rote wurden entfernt etc.
+- im finish-form genau zeigen, wie sich die punktzahl zusammensetzt (grün+gelb+rot+goal)
 
 Fragen
 - Sollte es möglich sein, dass es mehrere Ziele gibt? z.B. 2 Ziele für 2 Steine?

@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">43414.9159027778</prop>
-        <prop prop-type="OrigDateTime">43414.8876388889</prop>
+        <prop prop-type="SelfDateTime">43415.8099537037</prop>
+        <prop prop-type="OrigDateTime">43415.0508796296</prop>
         <prop prop-type="XlatDateTime">43414.8876388889</prop>
         <prop prop-type="Translated">15</prop>
-        <prop prop-type="UnTranslated">99</prop>
+        <prop prop-type="UnTranslated">115</prop>
       </prop-group>
     </header>
     <body>
@@ -140,463 +140,543 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.ExplicitLeft" resname="O:HighScoreForm.O:PageControl.O:PPMTab.ExplicitLeft">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660301</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.ExplicitTop" resname="O:HighScoreForm.O:PageControl.O:PPMTab.ExplicitTop">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660301</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.ExplicitWidth" resname="O:HighScoreForm.O:PageControl.O:PPMTab.ExplicitWidth">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660301</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.ExplicitHeight" resname="O:HighScoreForm.O:PageControl.O:PPMTab.ExplicitHeight">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660301</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Left" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Left">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Top" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Top">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Width" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Width">
         <source>401</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Height" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Height">
         <source>201</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[0].Caption" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[0].Caption">
         <source>'Name'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[0].Width" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[0].Width">
         <source>123</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[1].Caption" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[1].Caption">
         <source>'Date'</source>
         <target>'Datum'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">31</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">35</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[1].Width" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[1].Width">
         <source>123</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[2].Caption" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[2].Caption">
         <source>'Points per Minute'</source>
         <target>'Punkte pro Minute'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">33</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">37</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[2].Width" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.Columns[2].Width">
         <source>123</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ColumnClick" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ColumnClick">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ReadOnly" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.RowSelect" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.RowSelect">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.TabOrder" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.TabStop" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.TabStop">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ViewStyle" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.ViewStyle">
         <source>vsReport</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.OnCompare" resname="O:HighScoreForm.O:PageControl.O:PPMTab.O:PPMList.OnCompare">
         <source>CompareAsc</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.Caption" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.Caption">
         <source>'Lowest remaining stones'</source>
         <target>'Geringste verbleibende Steine'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.ExplicitLeft" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.ExplicitLeft">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660301</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.ExplicitTop" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.ExplicitTop">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660301</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.ExplicitWidth" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.ExplicitWidth">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660417</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.ExplicitHeight" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.ExplicitHeight">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660417</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Left" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Left">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Top" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Top">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Width" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Width">
         <source>401</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Height" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Height">
         <source>201</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[0].Caption" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[0].Caption">
         <source>'Name'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[0].Width" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[0].Width">
         <source>123</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[1].Caption" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[1].Caption">
         <source>'Date'</source>
         <target>'Datum'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">49</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">57</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[1].Width" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[1].Width">
         <source>123</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[2].Caption" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[2].Caption">
         <source>'Remaining stones'</source>
         <target>'Verbleibende Steine'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">51</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">59</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[2].Width" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.Columns[2].Width">
         <source>123</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ColumnClick" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ColumnClick">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ReadOnly" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.RowSelect" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.RowSelect">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.TabOrder" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.TabStop" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.TabStop">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ViewStyle" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.ViewStyle">
         <source>vsReport</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.OnCompare" resname="O:HighScoreForm.O:PageControl.O:RemainingTab.O:RemainingList.OnCompare">
         <source>CompareDesc</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.Caption" resname="O:HighScoreForm.O:PageControl.O:TimeTab.Caption">
         <source>'Shortest time'</source>
         <target>'Kürzeste Zeit'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.ImageIndex" resname="O:HighScoreForm.O:PageControl.O:TimeTab.ImageIndex">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.ExplicitLeft" resname="O:HighScoreForm.O:PageControl.O:TimeTab.ExplicitLeft">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660417</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.ExplicitTop" resname="O:HighScoreForm.O:PageControl.O:TimeTab.ExplicitTop">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660417</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.ExplicitWidth" resname="O:HighScoreForm.O:PageControl.O:TimeTab.ExplicitWidth">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660417</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.ExplicitHeight" resname="O:HighScoreForm.O:PageControl.O:TimeTab.ExplicitHeight">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660417</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Left" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Left">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Top" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Top">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Width" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Width">
         <source>401</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Height" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Height">
         <source>201</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[0].Caption" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[0].Caption">
         <source>'Name'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[0].Width" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[0].Width">
         <source>123</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[1].Caption" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[1].Caption">
         <source>'Date'</source>
         <target>'Datum'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">68</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">80</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[1].Width" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[1].Width">
         <source>123</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[2].Caption" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[2].Caption">
         <source>'Time [Seconds]'</source>
         <target>'Zeit in Sekunden'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">70</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">82</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[2].Width" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.Columns[2].Width">
         <source>123</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ColumnClick" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ColumnClick">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ReadOnly" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.RowSelect" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.RowSelect">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.TabOrder" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.TabStop" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.TabStop">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ViewStyle" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.ViewStyle">
         <source>vsReport</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.OnCompare" resname="O:HighScoreForm.O:PageControl.O:TimeTab.O:TimeList.OnCompare">
         <source>CompareDesc</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.Caption" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.Caption">
         <source>'Highest score'</source>
         <target>'Höchste Punktezahl'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.ImageIndex" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.ImageIndex">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.ExplicitLeft" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.ExplicitLeft">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660417</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.ExplicitTop" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.ExplicitTop">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.ExplicitWidth" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.ExplicitWidth">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.ExplicitHeight" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.ExplicitHeight">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099660532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Left" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Left">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Top" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Top">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Width" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Width">
         <source>401</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Height" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Height">
         <source>201</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[0].Caption" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[0].Caption">
         <source>'Name'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[0].Width" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[0].Width">
         <source>123</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[1].Caption" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[1].Caption">
         <source>'Date'</source>
         <target>'Datum'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">87</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">103</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[1].Width" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[1].Width">
         <source>123</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[2].Caption" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[2].Caption">
         <source>'Score'</source>
         <target>'Punkte'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">89</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">105</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[2].Width" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.Columns[2].Width">
         <source>123</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">C:TListView</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ColumnClick" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ColumnClick">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ReadOnly" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.RowSelect" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.RowSelect">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.TabOrder" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.TabStop" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.TabStop">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ViewStyle" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.ViewStyle">
         <source>vsReport</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.OnCompare" resname="O:HighScoreForm.O:PageControl.O:ScoreTab.O:ScoreList.OnCompare">
         <source>CompareAsc</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TListView</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:CloseBtn.Left" resname="O:HighScoreForm.O:CloseBtn.Left">
         <source>312</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:CloseBtn.Top" resname="O:HighScoreForm.O:CloseBtn.Top">
         <source>272</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:CloseBtn.Width" resname="O:HighScoreForm.O:CloseBtn.Width">
         <source>123</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:CloseBtn.Height" resname="O:HighScoreForm.O:CloseBtn.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:CloseBtn.Cancel" resname="O:HighScoreForm.O:CloseBtn.Cancel">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:CloseBtn.Caption" resname="O:HighScoreForm.O:CloseBtn.Caption">
         <source>'Close'</source>
         <target>'Schließen'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:CloseBtn.Default" resname="O:HighScoreForm.O:CloseBtn.Default">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:CloseBtn.TabOrder" resname="O:HighScoreForm.O:CloseBtn.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:CloseBtn.OnClick" resname="O:HighScoreForm.O:CloseBtn.OnClick">
         <source>CloseBtnClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:ClearBtn.Left" resname="O:HighScoreForm.O:ClearBtn.Left">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:ClearBtn.Top" resname="O:HighScoreForm.O:ClearBtn.Top">
         <source>272</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:ClearBtn.Width" resname="O:HighScoreForm.O:ClearBtn.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:ClearBtn.Height" resname="O:HighScoreForm.O:ClearBtn.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:ClearBtn.Caption" resname="O:HighScoreForm.O:ClearBtn.Caption">
         <source>'Clear list'</source>
         <target>'Liste leeren'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:ClearBtn.TabOrder" resname="O:HighScoreForm.O:ClearBtn.TabOrder">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HighScoreForm.O:ClearBtn.OnClick" resname="O:HighScoreForm.O:ClearBtn.OnClick">
         <source>ClearBtnClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

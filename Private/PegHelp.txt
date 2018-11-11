@@ -1,0 +1,13 @@
+The rules of Peg Solitaire are simple. You have to jump over the neighboring stones in a similar way to the drafts to remove them. The game is over when there are no more moves.
+
+ViaThinkSoft Peg Solitär offers you freely variable and extensible board files that provide you with the template for playing. In the next versions, a comfortable level editor is also planned that will make editing via the editor superfluous. However, the boards already supplied correspond to the usual standard boards.
+
+This variant of Peg Solitaire has different colored stones, which are weighted differently in the number of points. A distant red stone will give you 30 points, a yellow 20 and a distant green 10.
+
+However, playing for points is not absolutely necessary. You can also play on time, on the fewest remaining stones or on the target field assignment. Choose the destination you prefer.
+
+As a rule, diagonal moves are not allowed. The decision as to whether the diagonal moves are still allowed is determined by the developer of the level file. It is possible that certain boards require diagonal pulls to be loosened correctly. However, this is mathematically very complex to prove. How have the standard boards delivered in two versions as comfort: with and without diagonal pull.
+
+Some levels have target fields. These are characterized by a deeper imprint on the field or in the preview by a black border. The Peg Solitaire is finished correctly, if there are stones on the target fields (color does not matter), no further moves are possible and there are no other stones on the board. You will receive a special award in the high score lists. But as I said, you do not have to pursue this primary goal. You can also play for time or points instead.
+
+Further information about the game can be found on the internet under the keyword "Solitaire" or "Peg Solitaire".
