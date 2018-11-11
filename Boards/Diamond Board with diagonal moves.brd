@@ -1,10 +1,11 @@
-1D~
-XXXX2XXXX!
-XXX222XXX
-XX22222XX
-X2222222X
-2222>E2222
-X2222222X
-XX22222XX
-XXX222XXX
-XXXX2XXXX
+Version 2
+Mode: Diagonal
+* * * * y * * * *
+* * * y y y * * *
+* * y y y y y * *
+* y y y y y y y *
+y y y y E y y y y
+* y y y y y y y *
+* * y y y y y * *
+* * * y y y * * *
+* * * * y * * * *

@@ -28,3 +28,4 @@ Zukunft
 
 Fragen
 - Sollte es möglich sein, dass es mehrere Ziele gibt? z.B. 2 Ziele für 2 Steine?
+- Sollte "Triangle" ein eigener Gamemode sein? (Ist genau so wie Diagonal, aber anderes Icon)

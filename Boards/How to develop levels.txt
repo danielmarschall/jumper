@@ -3,35 +3,24 @@ VIATHINKSOFT PEG SOLITAIRE BOARD FILES
 
 Path and name:	Boards\*.brd
 Author:		Daniel Marschall
-Revision:	March, 7th 2009
+Revision:	11 November 2018
 
 == Header sequence ==
 
-1	Version/Variant 1
-D|N	Are diagonal moves allowed or not allowed?
-~	End of header
+line 1:		version 2
+line 2:		mode: normal
+		or
+		mode: diagonal
 
 == The elements ==
 
-X	This is a locked field. You cannot place a stone there
-3	This is a space with a red (30) stone.
-2	This is a space with a yellow (20) stone.
-1	This is a space with a green (10) stone.
-E	This is a space.
-*	This is handled like a locked field (X), but it has only the half width.
-	This is necessary if you want to have a playground in a triangle shape.
+*	This is a locked field. You cannot place a stone there.
+.	This is a locked field with the width of a half block. Use it for aligning triangle shaped boards.
+r	Slot with a red (30 pts) stone.
+y	Slot with a yellow (20 pts) stone.
+g	Slot filled with a green (10 pts) stone.
+e	Empty slot
 
-== Special chars between the elements ==
+Uppercase means the slot is a target (where the last stone has to go).
 
->	The next element (which may not be X, * or a line end) is the area,
-	where the last stone has to go to.
-!	Between the first and the second line of the matrix, there has to
-	be an "!". This is neccessary that the width can be detected.
-	There has to be one "!" in the file. Also, the level has to be complete.
-	If there are 9 elements before "!", then the level is only valid,
-	if there are 0, 9, 18, 27, 36, ... elements after the "!".
-
-== Hints ==
-
-Carriage-Return (CR) and Line-feeds (LF) are optional, but they are recommended because
-of a better overview.
+Whitespaces and extra line breaks are ignored.

@@ -26,6 +26,10 @@ object HighScoreForm: THighScoreForm
     object PPMTab: TTabSheet
       Caption = 'Highest Points per Minute'
       ImageIndex = 3
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object PPMList: TListView
         Left = 8
         Top = 8
@@ -55,6 +59,10 @@ object HighScoreForm: THighScoreForm
     end
     object RemainingTab: TTabSheet
       Caption = 'Lowest remaining stones'
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object RemainingList: TListView
         Left = 8
         Top = 8
@@ -85,6 +93,10 @@ object HighScoreForm: THighScoreForm
     object TimeTab: TTabSheet
       Caption = 'Shortest time'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object TimeList: TListView
         Left = 8
         Top = 8
@@ -115,6 +127,10 @@ object HighScoreForm: THighScoreForm
     object ScoreTab: TTabSheet
       Caption = 'Highest score'
       ImageIndex = 2
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object ScoreList: TListView
         Left = 8
         Top = 8

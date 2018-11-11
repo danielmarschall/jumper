@@ -50,17 +50,20 @@ end;
 
 procedure TLevelChoice.PlayBtnClick(Sender: TObject);
 var
-  LevelString: string;
+  Level: TLevel;
 begin
   if Assigned(LevelList.Selected) then
   begin
     if LevelList.Selected.ImageIndex = 2 then
     begin
-      LevelString := Functions.ReadFile(Format(LVL_FILE, [LevelList.Selected.Caption]));
-      // leNone könnte auftreten, wenn das Level z.B. repariert wurde...
-      if CheckLevelIntegrity(LevelString, true) <> leNone then
-      begin
-        exit;
+      Level := TLevel.Create(Format(LVL_FILE, [LevelList.Selected.Caption]));
+      try
+        if Level.CheckLevelIntegrity(true) <> leNone then
+        begin
+          exit;
+        end;
+      finally
+        FreeAndNil(Level);
       end;
     end;
     ModalResult := mrOk;
@@ -80,6 +83,7 @@ end;
 procedure TLevelChoice.LevelListClick(Sender: TObject);
 var
   LevelFile, LevelString: string;
+  Level: TLevel;
 begin
   PlayBtn.Enabled := Assigned(LevelList.Selected);
   PLoadLevel.Enabled := Assigned(LevelList.Selected);
@@ -87,8 +91,12 @@ begin
   if Assigned(LevelList.Selected) then
   begin
     LevelFile := Format(LVL_FILE, [LevelList.Selected.Caption]);
-    LevelString := Functions.ReadFile(LevelFile);
-    DrawLevelPreview(LevelString, PreviewImage, Color);
+    Level := TLevel.Create(LevelFile);
+    try
+      DrawLevelPreview(Level, PreviewImage, Color);
+    finally
+      FreeAndNil(Level);
+    end;
   end
   else
   begin
@@ -110,7 +118,7 @@ end;
 procedure TLevelChoice.RefreshList;
 var
   s: TSearchRec;
-  LevelString: string;
+  Level: TLevel;
 begin
   LevelList.Clear;
 
@@ -121,11 +129,11 @@ begin
       with LevelList.Items.Add do
       begin
         Caption := Copy(s.Name, 1, Length(s.Name)-Length(LVL_EXT));
-        LevelString := Functions.ReadFile(LVL_PATH + s.Name);
-        case GetLevelType(LevelString) of
-          ltStandard: ImageIndex := 0;
-          ltDiagonal: ImageIndex := 1;
-          ltError: ImageIndex := 2;
+        Level := TLevel.Create(LVL_PATH + s.Name);
+        case Level.GetGameMode of
+          gmNormal: ImageIndex := 0;
+          gmDiagonal: ImageIndex := 1;
+          gmUndefined: ImageIndex := 2;
         end;
       end;
     until FindNext(s) <> 0;

@@ -12,7 +12,6 @@ function Ganzzahlig(num: extended): boolean;
 function Explode(Separator, Text: String): TStringList;
 function Position(FullString, Search: String): Integer;
 function ReadFile(InputFile: string): string;
-function RemoveLineBreaks(inp: string): string;
 
 implementation
 
@@ -127,13 +126,6 @@ begin
     result := result + tmp + #13#10;
   end;
   CloseFile(f);
-end;
-
-function RemoveLineBreaks(inp: string): string;
-begin
-  inp := StringReplace(inp, #13, '', [rfReplaceAll]);
-  inp := StringReplace(inp, #10, '', [rfReplaceAll]);
-  result := inp;
 end;
 
 end.

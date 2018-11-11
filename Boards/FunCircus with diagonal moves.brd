@@ -1,10 +1,11 @@
-1D~
-213231232!
-123123123
-123122313
-123131223
-1232E3213
-123213122
-112312312
-122321232
-123232132
+Version 2
+Mode: Diagonal
+y g r y r g y r y
+g y r g y r g y r
+g y r g y y r g r
+g y r g r g y y r
+g y r y e r y g r
+g y r y g r g y y
+g g y r g y r g y
+g y y r y g y r y
+g y r y r y g r y

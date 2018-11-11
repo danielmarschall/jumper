@@ -68,6 +68,7 @@ type
     LevelTotalStones: Integer;
     LevelRemovedStones: Integer;
     JumpHistory: TStringList;
+    Level: TLevel;
     procedure LoadSettings;
     procedure SaveSettings;
     procedure RestartLevel;
@@ -224,6 +225,8 @@ begin
   MUndo.Enabled := false;
 
   SetLength(LookupFieldCoordinateArray, 0);
+
+  if Assigned(Level) then FreeAndNil(Level);
 end;
 
 procedure TMainForm.LoadPictureForType(FieldType: TFieldType; Picture: TPicture);
@@ -298,8 +301,8 @@ function TMainForm.FieldState(t: TFieldType): TFieldState;
 begin
   result := fsError;
   case t of
-    ftLocked:        result := fsLocked;
-    ftLockedWithTab: result := fsLocked;
+    ftFullSpace:        result := fsLocked;
+    ftHalfSpace: result := fsLocked;
     ftEmpty:         result := fsAvailable;
     ftGreen:         result := fsStone;
     ftYellow:        result := fsStone;
@@ -370,7 +373,7 @@ begin
   if MayJump(x, y, x, y+2) then exit;
   if MayJump(x, y, x, y-2) then exit;
 
-  if AllowDiagonalMoves then
+  if Level.GetGameMode = gmDiagonal then
   begin
     if MayJump(x, y, x-2, y-2) then exit;
     if MayJump(x, y, x+2, y-2) then exit;
@@ -414,7 +417,7 @@ begin
   JumpHistory.Add(Format(LNG_JUMP_LOG, [SourceTag+1, s.x+1, s.y+1, DestTag+1, d.x+1, d.y+1]));
 
   {$REGION 'Stein entfernen und Punkte vergeben'}
-  if AllowDiagonalMoves then
+  if Level.GetGameMode = gmDiagonal then
   begin
     if (s.X-2 = d.X) and (s.Y-2 = d.Y) and (FieldState(s.X-1, s.Y-1) = fsStone) then RemoveStone(s.X-1, s.Y-1, true);
     if (s.X-2 = d.X) and (s.Y+2 = d.Y) and (FieldState(s.X-1, s.Y+1) = fsStone) then RemoveStone(s.X-1, s.Y+1, true);
@@ -485,7 +488,7 @@ begin
   if FieldState(DestX, DestY) <> fsAvailable then exit;
 
   // Check 2: Befindet sich ein Stein zwischen Source und Destination und ist der Abstand 2?
-  if AllowDiagonalMoves then
+  if Level.GetGameMode = gmDiagonal then
   begin
     if (SourceX-2 = DestX) and (SourceY-2 = DestY) and (FieldState(SourceX-1, SourceY-1) = fsStone) then result := true;
     if (SourceX-2 = DestX) and (SourceY+2 = DestY) and (FieldState(SourceX-1, SourceY+1) = fsStone) then result := true;
@@ -525,7 +528,7 @@ var
   newField: TField;
   index: integer;
 begin
-  if (t.Typ = ftLocked) or (t.Typ = ftLockedWithTab) then exit;
+  if (t.Typ = ftFullSpace) or (t.Typ = ftHalfSpace) then exit;
 
   index := Length(LookupFieldCoordinateArray);
 
@@ -576,7 +579,7 @@ begin
     halftabs := 0;
     for j := Low(LevelArray[i]) to High(LevelArray[i]) do
     begin
-      if LevelArray[i][j].Typ = ftLockedWithTab then inc(halftabs);
+      if LevelArray[i][j].Typ = ftHalfSpace then inc(halftabs);
       DrawField(j, i, LevelArray[i][j], halftabs);
     end;
     cur_x := High(LevelArray[i]) + 1;
@@ -629,13 +632,12 @@ end;
 
 procedure TMainForm.NewGame(Filename: string);
 var
-  LevelString: String;
   LevelArray: TLevelArray;
-begin                           
+begin
   DestroyLevel;
   LevelFile := Filename;
-  LevelString := ReadFile(LevelFile);
-  LevelArray := LevelStringToLevelArray(LevelString, true);
+  Level := TLevel.Create(LevelFile);
+  LevelArray := Level.LevelStringToLevelArray(true);
   if Length(LevelArray) = 0 then Exit;
   BuildPlayground(LevelArray);
   if not AreJumpsPossible then
@@ -712,6 +714,7 @@ end;
 
 procedure TMainForm.FormDestroy(Sender: TObject);
 begin
+  DestroyLevel;
   JumpHistory.Free;
 end;
 
