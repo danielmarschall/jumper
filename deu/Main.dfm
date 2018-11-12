@@ -16,7 +16,7 @@ object MainForm: TMainForm
   Font.Style = []
   Menu = MainMenu
   OldCreateOrder = False
-  Position = poDesktopCenter
+  Position = poScreenCenter
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
@@ -25,8 +25,8 @@ object MainForm: TMainForm
   PixelsPerInch = 96
   TextHeight = 13
   object Playground: TPanel
-    Left = 8
-    Top = 8
+    Left = 0
+    Top = 0
     Width = 313
     Height = 289
     BevelOuter = bvNone
