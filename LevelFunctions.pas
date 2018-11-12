@@ -6,7 +6,7 @@ uses
   SysUtils, Dialogs, Functions, ExtCtrls, Graphics, Classes, Math;
 
 type
-  TFieldType = (ftFullSpace, ftHalfSpace, ftEmpty, ftRed, ftYellow, ftGreen);
+  TFieldType = (ftUndefined, ftFullSpace, ftEmpty, ftRed, ftYellow, ftGreen);
 
   TFieldProperties = record
     Typ: TFieldType;
@@ -15,9 +15,13 @@ type
 
   TGameMode = (gmUndefined, gmNormal, gmDiagonal);
 
-  TLevelArray = array of array of TFieldProperties;
+  TRow = record
+    Indent: integer;
+    Fields: array of TFieldProperties;
+  end;
+  TLevelArray = array of TRow;
 
-  TLevelError = (leNone, leInvalidElement, leEmptyBoard, leRowInvalidLength,
+  TLevelError = (leUndefined, leNone, leInvalidElement, leEmptyBoard, leRowInvalidLength,
                  leUnsupportedVersion, leUnsupportedMode);
 
   TLevel = class(TObject)
@@ -43,7 +47,7 @@ var
   LevelArray: TLevelArray;
   y, x: integer;
   t: TFieldType;
-  halftabs: integer;
+  indent: Integer;
 const
   PREVIEW_BLOCK_SIZE = 10; // Enthält Field und Abstand
   PREVIEW_TAB_SIZE = PREVIEW_BLOCK_SIZE div 2; // 5
@@ -56,32 +60,28 @@ begin
 
   for y := Low(LevelArray) to High(LevelArray) do
   begin
-    halftabs := 0;
-    for x := Low(LevelArray[y]) to High(LevelArray[y]) do
+    for x := Low(LevelArray[y].Fields) to High(LevelArray[y].Fields) do
     begin
-      t := LevelArray[y][x].Typ;
+      t      := LevelArray[y].Fields[x].Typ;
+      indent := LevelArray[y].Indent;
 
       case t of
         ftFullSpace: Image.Canvas.Brush.Color := BackgroundColor;
-        ftHalfSpace: begin
-          Image.Canvas.Brush.Color := BackgroundColor;
-          inc(halftabs);
-        end;
-        ftEmpty: Image.Canvas.Brush.Color := clWhite;
-        ftGreen: Image.Canvas.Brush.Color := clLime;
-        ftYellow: Image.Canvas.Brush.Color := clYellow;
-        ftRed: Image.Canvas.Brush.Color := clRed;
+        ftEmpty:     Image.Canvas.Brush.Color := clWhite;
+        ftGreen:     Image.Canvas.Brush.Color := clLime;
+        ftYellow:    Image.Canvas.Brush.Color := clYellow;
+        ftRed:       Image.Canvas.Brush.Color := clRed;
       end;
 
-      if LevelArray[y][x].Goal then
+      if LevelArray[y].Fields[x].Goal then
         Image.Canvas.Pen.Color := clBlack
       else
         Image.Canvas.Pen.Color := BackgroundColor;
 
-      Image.Canvas.Rectangle((x-halftabs)*PREVIEW_BLOCK_SIZE + halftabs*PREVIEW_TAB_SIZE,
+      Image.Canvas.Rectangle(x*PREVIEW_BLOCK_SIZE + indent*PREVIEW_TAB_SIZE,
                              y*PREVIEW_BLOCK_SIZE,
-                             (x-halftabs)*PREVIEW_BLOCK_SIZE + halftabs*PREVIEW_TAB_SIZE + PREVIEW_BLOCK_SIZE,
-                             y*PREVIEW_BLOCK_SIZE                                        + PREVIEW_BLOCK_SIZE);
+                             x*PREVIEW_BLOCK_SIZE + indent*PREVIEW_TAB_SIZE + PREVIEW_BLOCK_SIZE,
+                             y*PREVIEW_BLOCK_SIZE                           + PREVIEW_BLOCK_SIZE);
     end;
   end;
 end;
@@ -137,13 +137,39 @@ begin
   end;
 end;
 
+function DotsAtBeginning(s: string): integer;
+var
+  i: integer;
+begin
+  result := 0;
+  for i := 1 to Length(s) do
+  begin
+    if s[i] = '.' then
+      Inc(result)
+    else
+      Exit;
+  end;
+end;
+
+function DotsAtEnd(s: string): integer;
+var
+  i: integer;
+begin
+  result := 0;
+  for i := Length(s) downto 1 do
+  begin
+    if s[i] = '.' then
+      Inc(result)
+    else
+      Exit;
+  end;
+end;
+
 function TLevel.LevelStringToLevelArray(ShowErrors: boolean): TLevelArray;
 var
   i: integer;
   t: TFieldType;
   err: TLevelError;
-  longestLine: Integer;
-  thisLine: Integer;
   y: Integer;
   x: Integer;
   Line: string;
@@ -154,13 +180,6 @@ begin
   err := CheckLevelIntegrity(ShowErrors);
   if err <> leNone then exit;
 
-  // Längste Zeile finden
-  longestLine := 0;
-  for i := NUM_HEADERS to FStringList.Count-1 do
-  begin
-    longestLine := Max(longestLine, Length(FStringList.Strings[i]));
-  end;
-
   // Nun Matrix aufbauen
   SetLength(result, 0);
   for i := NUM_HEADERS to FStringList.Count-1 do
@@ -168,26 +187,29 @@ begin
     y := i - NUM_HEADERS;
 
     SetLength(result, Length(result)+1); // add line to matrix
-    SetLength(result[y], longestLine);
 
     Line := FStringList.Strings[i];
+    result[y].Indent := DotsAtBeginning(Line) - DotsAtEnd(Line);
+    Line := StringReplace(Line, '.', '', [rfReplaceAll]);
+    SetLength(result[y].Fields, Length(Line));
 
-    for x := 0 to LongestLine-1 do
+    for x := 0 to Length(Line)-1 do
     begin
-      ch := Copy(Line,x+1,1)[1];
+      ch := Line[x+1];
       lch := LowerCase(ch)[1];
       uch := UpperCase(ch)[1];
+
+      t := ftUndefined;
       case lch of
         '*': t := ftFullSpace;
-        '.': t := ftHalfSpace;
         'e': t := ftEmpty;
         'r': t := ftRed;
         'y': t := ftYellow;
         'g': t := ftGreen;
       end;
 
-      result[y][x].Typ := t;
-      result[y][x].Goal := (ch = uch) and (ch <> lch);
+      result[y].Fields[x].Typ := t;
+      result[y].Fields[x].Goal := (ch = uch) and (ch <> lch);
     end;
   end;
 end;
@@ -216,12 +238,11 @@ end;
 
 function TLevel.CheckLevelIntegrity: TLevelError;
 var
-  W: integer;
-  H: extended;
-  header, h_ver, h_dia, h_del, tmp: string;
-  p: integer;
+  tmp: string;
   i: Integer;
   Line: string;
+  firstLine: string;
+  thisLine: string;
 begin
   result := leNone;
 
@@ -241,7 +262,9 @@ begin
 
   // Check 2: Ist das Brett leer?
 
-  if FStringList.Count - NUM_HEADERS = 0 then
+  tmp := '';
+  for i := NUM_HEADERS to FStringList.Count-1 do tmp := tmp + FStringList.Strings[i];
+  if Trim(StringReplace(tmp, '.', '', [rfReplaceAll])) = '' then
   begin
     result := leEmptyBoard;
     exit;
@@ -249,9 +272,11 @@ begin
 
   // Check 3: Geht das Level nicht in einem Quadrat oder Rechteck auf?
 
+  firstLine := StringReplace(FStringList.Strings[NUM_HEADERS], '.', '', [rfReplaceAll]);
   for i := NUM_HEADERS to FStringList.Count-1 do
   begin
-    if Length(FStringList.Strings[i]) <> Length(FStringList.Strings[NUM_HEADERS]) then
+    thisLine := StringReplace(FStringList.Strings[i], '.', '', [rfReplaceAll]);
+    if Length(thisLine) <> Length(firstLine) then
     begin
       result := leRowInvalidLength; // at row y-NUM_HEADERS
       exit;

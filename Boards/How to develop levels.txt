@@ -3,7 +3,7 @@ VIATHINKSOFT PEG SOLITAIRE BOARD FILES
 
 Path and name:	Boards\*.brd
 Author:		Daniel Marschall
-Revision:	11 November 2018
+Revision:	12 November 2018
 
 == Header sequence ==
 
@@ -15,7 +15,6 @@ line 2:		mode: normal
 == The elements ==
 
 *	This is a locked field. You cannot place a stone there.
-.	This is a locked field with the width of a half block. Use it for aligning triangle shaped boards.
 r	Slot with a red (30 pts) stone.
 y	Slot with a yellow (20 pts) stone.
 g	Slot filled with a green (10 pts) stone.
@@ -23,4 +22,7 @@ e	Empty slot
 
 Uppercase means the slot is a target (where the last stone has to go).
 
-Whitespaces and extra line breaks are ignored.
+Dots (.) at the beginning of a line shift the line to the right by a half block size (optical only).
+Dots (.) at the end of a line shift the line to the left by a half block size (optical only).
+
+Whitespaces between elements and empty lines are ignored.

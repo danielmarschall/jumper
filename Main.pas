@@ -14,9 +14,9 @@ type
     Stone: TImage;
   end;
 
-  TGoalStatus = (gsNoGoal, gsMultipleStonesRemaining, gsLastStoneInGoalRed, gsLastStoneInGoalYellow, gsLastStoneInGoalGreen, gsLastStoneOutsideGoal);
+  TGoalStatus = (gsUndefined, gsNoGoal, gsMultipleStonesRemaining, gsLastStoneInGoalRed, gsLastStoneInGoalYellow, gsLastStoneInGoalGreen, gsLastStoneOutsideGoal);
 
-  TFieldState = (fsError, fsLocked, fsAvailable, fsStone);
+  TFieldState = (fsUndefined, fsError, fsLocked, fsAvailable, fsStone);
 
   TPlayGroundMatrix = array of array of TField;
 
@@ -93,10 +93,9 @@ type
     function CanJump(x, y: integer): boolean;
     function MayJump(SourceX, SourceY, DestX, DestY: integer): boolean; overload;
     function MayJump(SourceTag, DestTag: integer): boolean; overload;
-    procedure StoneDragOver(Sender, Source: TObject; X,
-      Y: Integer; State: TDragState; var Accept: Boolean);
+    procedure StoneDragOver(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
     procedure StoneDragDrop(Sender, Source: TObject; X, Y: Integer);
-    procedure DrawField(x, y: integer; t: TFieldProperties; halftabs: integer);
+    function DrawField(x, y: integer; t: TFieldProperties; indent: integer): TField;
     function DrawStone(fieldtype: TFieldType; panel: TPanel): TImage;
     function DrawStoneBox(x, y, tag, halftabs: integer; isGoal: boolean): TPanel;
     procedure BuildPlayground(LevelArray: TLevelArray);
@@ -118,7 +117,7 @@ var
 implementation
 
 uses
-  About, Finish, Choice, Functions, History, HighScore, Help, Constants;
+  About, Finish, Choice, Functions, History, HighScore, Help, Constants, Math;
 
 {$R *.dfm}
 
@@ -140,6 +139,7 @@ function TMainForm.GoalFieldType(Matrix: TPlayGroundMatrix): TFieldType;
 var
   i, j: integer;
 begin
+  result := ftEmpty; // Damit der Compiler nicht meckert
   for i := Low(Matrix) to High(Matrix) do
   begin
     for j := Low(Matrix[i]) to High(Matrix[i]) do
@@ -288,7 +288,7 @@ begin
   result.BevelOuter := bvLowered;
   result.Width := MET_FIELD_SIZE;
   result.Height := MET_FIELD_SIZE;
-  result.Left := x * (MET_FIELD_SIZE+MET_FIELD_SPACE) + MET_FIELD_SPACE - (halftabs*MET_HALFTAB_SIZE);
+  result.Left := x * (MET_FIELD_SIZE+MET_FIELD_SPACE) + MET_FIELD_SPACE + (halftabs*MET_HALFTAB_SIZE);
   result.Top := y * (MET_FIELD_SIZE+MET_FIELD_SPACE) + MET_FIELD_SPACE;
 
   result.Tag := tag;
@@ -305,8 +305,7 @@ function TMainForm.FieldState(t: TFieldType): TFieldState;
 begin
   result := fsError;
   case t of
-    ftFullSpace:        result := fsLocked;
-    ftHalfSpace: result := fsLocked;
+    ftFullSpace:     result := fsLocked;
     ftEmpty:         result := fsAvailable;
     ftGreen:         result := fsStone;
     ftYellow:        result := fsStone;
@@ -557,18 +556,19 @@ begin
   Accept := MayJump(TComponent(Source).Tag, TComponent(Sender).Tag);
 end;
 
-procedure TMainForm.DrawField(x, y: integer; t: TFieldProperties; halftabs: integer);
+function TMainForm.DrawField(x, y: integer; t: TFieldProperties; indent: integer): TField;
 var
   newField: TField;
   index: integer;
 begin
-  if (t.Typ = ftFullSpace) or (t.Typ = ftHalfSpace) then exit;
+  ZeroMemory(@result, SizeOf(result));
+  if t.Typ = ftFullSpace then exit;
 
   index := Length(LookupFieldCoordinateArray);
 
   newField.FieldType := t.Typ;
   newField.Goal := t.Goal;
-  newField.Panel := DrawStoneBox(x, y, index, halftabs, t.Goal);
+  newField.Panel := DrawStoneBox(x, y, index, indent, t.Goal);
   newField.Stone := DrawStone(t.Typ, newField.Panel);
   if FieldState(t.Typ) = fsStone then Inc(LevelTotalStones);
 
@@ -579,6 +579,8 @@ begin
   if Length(PlayGroundMatrix) < x+1 then SetLength(PlayGroundMatrix, x+1);
   if Length(PlayGroundMatrix[x]) < y+1 then SetLength(PlayGroundMatrix[x], y+1);
   PlaygroundMatrix[x, y] := newField;
+
+  result := newField;
 end;
 
 function TMainForm.CloneMatrix(Source: TPlayGroundMatrix): TPlayGroundMatrix;
@@ -601,52 +603,45 @@ end;
 
 procedure TMainForm.BuildPlayground(LevelArray: TLevelArray);
 var
-  i, j, halftabs, cur_x: integer;
-  max_x, max_y, old_cw, old_ch: integer;
+  y, x: integer;
+  max_x, max_y: integer;
+  p: TPanel;
 begin
   PlayGround.Visible := false;
 
   // Die Dimensionen ermitteln
   max_x := 0;
-  for i := Low(LevelArray) to High(LevelArray) do
+  max_y := 0;
+  for y := Low(LevelArray) to High(LevelArray) do
   begin
-    halftabs := 0;
-    for j := Low(LevelArray[i]) to High(LevelArray[i]) do
+    for x := Low(LevelArray[y].Fields) to High(LevelArray[y].Fields) do
     begin
-      if LevelArray[i][j].Typ = ftHalfSpace then inc(halftabs);
-      DrawField(j, i, LevelArray[i][j], halftabs);
+      p := DrawField(x, y, LevelArray[y].Fields[x], LevelArray[y].Indent).Panel;
+      if Assigned(p) then
+      begin
+        max_x := Max(max_x, p.Left + p.Width);
+        max_y := Max(max_y, p.Top  + p.Height);
+      end;
     end;
-    cur_x := High(LevelArray[i]) + 1;
-    if cur_x > max_x then max_x := cur_x;
   end;
-  max_y := High(LevelArray) + 1;
 
   PlayGround.Visible := true;
 
-  // Die aktuellen Dimensionen merken
-  old_cw := ClientWidth;
-  old_ch := ClientHeight;
-
   // Das Form an das Level anpassen
-  PlayGround.Width := MET_FIELD_SPACE + max_x * (MET_FIELD_SPACE + MET_FIELD_SIZE);
-  PlayGround.Height := MET_FIELD_SPACE + max_y * (MET_FIELD_SPACE + MET_FIELD_SIZE);
-  ClientWidth := 2 * MET_OUTER_MARGIN + PlayGround.Width;
-  ClientHeight := 2 * MET_OUTER_MARGIN + PlayGround.Height + Statistics.Height;
+  PlayGround.Top    := MET_OUTER_MARGIN;
+  PlayGround.Left   := MET_OUTER_MARGIN;
+  PlayGround.Width  := max_x;
+  PlayGround.Height := max_y;
+  ClientWidth       := 2 * MET_OUTER_MARGIN + PlayGround.Width;
+  ClientHeight      := 2 * MET_OUTER_MARGIN + PlayGround.Height + Statistics.Height;
+
+  // If the board is too small, ClientWidth/ClientHeight will stop at a minimum value
+  // in this case, we make sure that the Playground is centered
+  PlayGround.Left := ClientWidth div 2 - Playground.Width div 2;
+  PlayGround.Top := (ClientHeight - Statistics.Height) div 2 - Playground.Height div 2;
 
   Statistics.Panels.Items[0].Width := Round(ClientWidth*MET_PERCENT_PNL_TIME);
   Statistics.Panels.Items[1].Width := Round(ClientWidth*MET_PERCENT_PNL_STONES);
-
-  // Wenn sich das Form vergrößert oder verkleinert hat, neu justieren
-  if (old_cw <> ClientWidth) or (old_ch <> ClientHeight) then
-  begin
-    Left := Screen.Width div 2 - Width div 2;
-    Top := Screen.Height div 2 - Height div 2;
-    
-    // Playground mittig setzen, falls die Mindestgröße für die
-    // Punkteanzeige unterschritten wurde,
-    PlayGround.Left := ClientWidth div 2 - PlayGround.Width div 2;
-    PlayGround.Top := ClientHeight div 2 - PlayGround.Height div 2;
-  end;
 
   SetLength(PrevPlaygroundMatrixes,1);
   PrevPlaygroundMatrixes[0] := CloneMatrix(PlayGroundMatrix);
@@ -740,7 +735,9 @@ begin
     else if ft = ftYellow then
       result := gsLastStoneInGoalYellow
     else if ft = ftGreen then
-      result := gsLastStoneInGoalGreen;
+      result := gsLastStoneInGoalGreen
+    else
+      result := gsUndefined;
   end;
 end;
 

@@ -5,6 +5,7 @@ Abstand oben ist größer als links und rechts vom brett
 
 ToDo:
 - deutsche übersetzung prüfen, besonders hilfefenster
+- prüfen, welche boards lösbar sind, und in welchen diagonale züge erlaubt werden sollen und in welchen nicht
 
 Kleinigkeiten:
 - standardbretter aus wikipedia als level entwickeln
@@ -15,7 +16,7 @@ Kleinigkeiten:
 - sollte das ziel-feld besser farblich hervorgehoben werden?
 
 Zukunft:
-- hervorheben von gültigen feldern (conf)
+- hervorheben von gültigen feldern, wenn drag gestartet wird (+ deaktivierbar machen)
 - Leveleditor designen
 - 9 Steinsorten?
 - Panels durch Grafiken ersetzen, Grafik-Templates mit Tile-Background erlauben
@@ -26,4 +27,3 @@ Zukunft:
 
 Fragen:
 - Sollte es möglich sein, dass es mehrere Ziele gibt? z.B. 2 Ziele für 2 Steine?
-- Sollte "Triangle" ein eigener Gamemode sein? (Ist genau so wie Diagonal, aber anderes Icon)
