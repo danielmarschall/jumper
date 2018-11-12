@@ -62,6 +62,7 @@ type
     procedure Aboutthislevel1Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
   private
+    NoCloseQuery: boolean;
     CountedSeconds: Integer;
     LevelFile: String;
     LookupFieldCoordinateArray: array of TPoint;
@@ -716,7 +717,11 @@ begin
   begin
     NewGame(LevelFile);
   end
-  else Close();
+  else
+  begin
+    NoCloseQuery := true;
+    Close;
+  end;
 end;
 
 function TMainForm.GoalStatus: TGoalStatus;
@@ -888,7 +893,7 @@ procedure TMainForm.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 resourcestring
   LNG_REALLY_QUIT = 'Do you really want to quit?';
 begin
-  CanClose := MessageDlg(LNG_REALLY_QUIT, mtConfirmation, mbYesNoCancel, 0) = mrYes;
+  CanClose := NoCloseQuery or (MessageDlg(LNG_REALLY_QUIT, mtConfirmation, mbYesNoCancel, 0) = mrYes);
 end;
 
 procedure TMainForm.MHelpClick(Sender: TObject);

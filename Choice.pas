@@ -82,7 +82,7 @@ end;
 
 procedure TLevelChoice.LevelListClick(Sender: TObject);
 var
-  LevelFile, LevelString: string;
+  LevelFile: string;
   Level: TLevel;
 begin
   PlayBtn.Enabled := Assigned(LevelList.Selected);
@@ -130,10 +130,13 @@ begin
       begin
         Caption := Copy(s.Name, 1, Length(s.Name)-Length(LVL_EXT));
         Level := TLevel.Create(LVL_PATH + s.Name);
-        case Level.GetGameMode of
-          gmNormal: ImageIndex := 0;
-          gmDiagonal: ImageIndex := 1;
-          gmUndefined: ImageIndex := 2;
+
+        if Level.CheckLevelIntegrity <> leNone then
+          ImageIndex := 2{Error}
+        else case Level.GetGameMode of
+          gmNormal: ImageIndex := 0{Normal};
+          gmDiagonal: ImageIndex := 1{Diagonal};
+          gmUndefined: ImageIndex := 2{Error};
         end;
       end;
     until FindNext(s) <> 0;
