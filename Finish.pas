@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, MMSystem, Math, ExtCtrls, Registry, Main;
+  Dialogs, StdCtrls, MMSystem, Math, ExtCtrls, Registry, LevelFunctions;
 
 type
   TFinishForm = class(TForm)
@@ -43,7 +43,7 @@ var
 implementation
 
 uses
-  History, Constants, LevelFunctions;
+  History, Constants;
 
 {$R *.dfm}
 
@@ -53,6 +53,15 @@ begin
 end;
 
 function TFinishForm.Execute(LevelName: String; Score, StonesTotal, StonesRemoved, Seconds: Integer; GoalStatus: TGoalStatus; JumpHistory: TStringList): Integer;
+resourcestring
+  LNG_SCORE = 'Score: %d';
+  LNG_REMAINING = 'Remaining stones: %d (%f%%)';
+  LNG_TIME_SECONDS = 'Time: %d seconds';
+  LNG_POINTS_PER_MINUTE = '%d points per minute';
+  LNG_GOAL_RED = 'Red stone in target field (%d points)';
+  LNG_GOAL_YELLOW = 'Yellow stone in target field (%d points)';
+  LNG_GOAL_GREEN = 'Green stone in target field (%d points)';
+  LNG_GOAL_MISSED = 'No stone in target field (%d points)';
 var
   ExtraPoints: Integer;
 begin
@@ -160,6 +169,8 @@ begin
 end;
 
 procedure TFinishForm.SaveBtnClick(Sender: TObject);
+resourcestring
+  LNG_ENTER_NAME = 'Please enter your name to get added to the high score lists.';
 begin
   if NameEdit.Text = '' then
   begin

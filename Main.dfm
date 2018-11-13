@@ -69,9 +69,9 @@ object MainForm: TMainForm
         OnClick = MRestartGameClick
       end
       object MPauseTime: TMenuItem
+        AutoCheck = True
         Caption = 'Pause timer'
         ShortCut = 16464
-        OnClick = MPauseTimeClick
       end
       object N2: TMenuItem
         Caption = '-'
@@ -107,10 +107,10 @@ object MainForm: TMainForm
     object MSettings: TMenuItem
       Caption = 'Settings'
       object MEnableSound: TMenuItem
+        AutoCheck = True
         Caption = 'Enable sound'
         Checked = True
         ShortCut = 32851
-        OnClick = MEnableSoundClick
       end
     end
     object Help2: TMenuItem

@@ -46,22 +46,9 @@ const
   JNL_ENTRY = '%s' + JNL_SEP + '%s' + JNL_SEP + '%d' + JNL_SEP + '%d' + JNL_SEP + '%d' + JNL_SEP + '%d';
 
 resourcestring
-  LNG_SAVED = 'History successfully saved!';
-  LNG_STONES_REMOVED = '%d of %d stones removed';
   LNG_POINTS = 'Score: %d';
   LNG_TIME = 'Time: %s';
-  LNG_LVL_INVALID_NO_JUMP = 'Warning! The level is not playable. There are no jumps possible.';
-  LNG_JUMP_LOG = '%d [%d, %d] -> %d [%d, %d];';
   LNG_COULD_NOT_CREATE_DIR = 'Warning: Could not create directory "%s".';
-  LNG_SCORE = 'Score: %d';
-  LNG_REMAINING = 'Remaining stones: %d (%f%%)';
-  LNG_TIME_SECONDS = 'Time: %d seconds';
-  LNG_POINTS_PER_MINUTE = '%d points per minute';
-  LNG_ENTER_NAME = 'Please enter your name to get added to the high score lists.';
-  LNG_GOAL_RED = 'Red stone in target field (%d points)';
-  LNG_GOAL_YELLOW = 'Yellow stone in target field (%d points)';
-  LNG_GOAL_GREEN = 'Green stone in target field (%d points)';
-  LNG_GOAL_MISSED = 'No stone in target field (%d points)';
 
 implementation
 

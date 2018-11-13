@@ -32,6 +32,8 @@ begin
 end;
 
 procedure THistoryForm.SaveBtnClick(Sender: TObject);
+resourcestring
+  LNG_SAVED = 'History successfully saved!';
 begin
   if JumpSaveDialog.Execute then
   begin

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ImgList, ComCtrls, Menus, ExtCtrls, System.ImageList;
+  Dialogs, StdCtrls, ImgList, ComCtrls, Menus, ExtCtrls, System.ImageList, LevelFunctions;
 
 type
   TLevelChoice = class(TForm)
@@ -22,13 +22,12 @@ type
     procedure CancelBtnClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure LevelListClick(Sender: TObject);
-    procedure LevelListChange(Sender: TObject; Item: TListItem;
-      Change: TItemChange);
+    procedure LevelListChange(Sender: TObject; Item: TListItem; Change: TItemChange);
     procedure PRefreshListClick(Sender: TObject);
-    procedure FormResize(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
     procedure RefreshList;
+    procedure DrawLevelPreview(Level: TLevel);
   public
     function SelectedLevel: string;
   end;
@@ -41,7 +40,56 @@ implementation
 {$R *.dfm}
 
 uses
-  Functions, LevelFunctions, Constants;
+  Functions, Constants;
+
+procedure TLevelChoice.DrawLevelPreview(Level: TLevel);
+var
+  LevelArray: TLevelArray;
+  y, x: integer;
+  t: TFieldType;
+  indent: Integer;
+  Image: TImage;
+  BackgroundColor: TColor;
+const
+  PREVIEW_BLOCK_SIZE = 10; // Enthält Field und Abstand
+  PREVIEW_TAB_SIZE = PREVIEW_BLOCK_SIZE div 2; // 5
+begin
+  Image := PreviewImage;
+  BackgroundColor := Self.Color;
+
+  LevelArray := nil;
+
+  ClearImage(Image, BackgroundColor);
+
+  LevelArray := Level.LevelStringToLevelArray(false);
+
+  for y := Low(LevelArray) to High(LevelArray) do
+  begin
+    for x := Low(LevelArray[y].Fields) to High(LevelArray[y].Fields) do
+    begin
+      t      := LevelArray[y].Fields[x].Typ;
+      indent := LevelArray[y].Indent;
+
+      case t of
+        ftFullSpace: Image.Canvas.Brush.Color := BackgroundColor;
+        ftEmpty:     Image.Canvas.Brush.Color := clWhite;
+        ftGreen:     Image.Canvas.Brush.Color := clLime;
+        ftYellow:    Image.Canvas.Brush.Color := clYellow;
+        ftRed:       Image.Canvas.Brush.Color := clRed;
+      end;
+
+      if LevelArray[y].Fields[x].Goal then
+        Image.Canvas.Pen.Color := clBlack
+      else
+        Image.Canvas.Pen.Color := BackgroundColor;
+
+      Image.Canvas.Rectangle(x*PREVIEW_BLOCK_SIZE + indent*PREVIEW_TAB_SIZE,
+                             y*PREVIEW_BLOCK_SIZE,
+                             x*PREVIEW_BLOCK_SIZE + indent*PREVIEW_TAB_SIZE + PREVIEW_BLOCK_SIZE,
+                             y*PREVIEW_BLOCK_SIZE                           + PREVIEW_BLOCK_SIZE);
+    end;
+  end;
+end;
 
 function TLevelChoice.SelectedLevel: string;
 begin
@@ -93,7 +141,7 @@ begin
     LevelFile := Format(LVL_FILE, [LevelList.Selected.Caption]);
     Level := TLevel.Create(LevelFile);
     try
-      DrawLevelPreview(Level, PreviewImage, Color);
+      DrawLevelPreview(Level);
     finally
       FreeAndNil(Level);
     end;
@@ -142,30 +190,6 @@ begin
     until FindNext(s) <> 0;
     FindClose(s);
   end;
-end;
-
-procedure TLevelChoice.FormResize(Sender: TObject);
-var
-  p: integer;
-begin
-  // WIDTH
-  p := ClientWidth - 3*LevelGrp.Left; // 100% useable
-  LevelGrp.Width := Round((1-MET_PREVIEW_SIZE_RATIO) * p);
-  PreviewGrp.Width := Round(MET_PREVIEW_SIZE_RATIO * p);
-  PreviewGrp.Left := 2*LevelGrp.Left + LevelGrp.Width;
-  LevelList.Width := LevelGrp.Width - 2*LevelList.Left;
-  PreviewImage.Width := PreviewGrp.Width - 2*PreviewImage.Left;
-  PlayBtn.Left := (LevelGrp.Left + LevelGrp.Width) - PlayBtn.Width;
-
-  // HEIGHT
-  LevelGrp.Height := ClientHeight - 3*LevelGrp.Top - PlayBtn.Height;
-  PreviewGrp.Height := LevelGrp.Height;
-  PlayBtn.Top := 2*LevelGrp.Top + LevelGrp.Height;
-  CancelBtn.Top := PlayBtn.Top;
-  LevelList.Height := LevelGrp.Height - 2*LevelList.Top;
-  PreviewImage.Height := PreviewGrp.Height - 2*PreviewImage.Top;
-
-  // TODO: Icons rearrangieren
 end;
 
 procedure TLevelChoice.FormCreate(Sender: TObject);

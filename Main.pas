@@ -7,19 +7,6 @@ uses
   ComCtrls, ExtCtrls, Forms, MMSystem, LevelFunctions, Registry;
 
 type
-  TField = record
-    FieldType: TFieldType;
-    Goal: Boolean;
-    Panel: TPanel;
-    Stone: TImage;
-  end;
-
-  TGoalStatus = (gsUndefined, gsNoGoal, gsMultipleStonesRemaining, gsLastStoneInGoalRed, gsLastStoneInGoalYellow, gsLastStoneInGoalGreen, gsLastStoneOutsideGoal);
-
-  TFieldState = (fsUndefined, fsError, fsLocked, fsAvailable, fsStone);
-
-  TPlayGroundMatrix = array of array of TField;
-
   TMainForm = class(TForm)
     Playground: TPanel;
     MainMenu: TMainMenu;
@@ -54,10 +41,8 @@ type
     procedure MJumpHistoryClick(Sender: TObject);
     procedure MRestartGameClick(Sender: TObject);
     procedure MHighScoresClick(Sender: TObject);
-    procedure MPauseTimeClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure MHelpClick(Sender: TObject);
-    procedure MEnableSoundClick(Sender: TObject);
     procedure MUndoClick(Sender: TObject);
     procedure Aboutthislevel1Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -99,16 +84,8 @@ type
     function DrawStone(fieldtype: TFieldType; panel: TPanel): TImage;
     function DrawStoneBox(x, y, tag, halftabs: integer; isGoal: boolean): TPanel;
     procedure BuildPlayground(LevelArray: TLevelArray);
-    function FieldState(t: TFieldType): TFieldState; overload;
-    function FieldState(f: TField): TFieldState; overload;
-    function FieldState(x, y: integer): TFieldState; overload;
-    procedure ClearMatrix(Matrix: TPlayGroundMatrix; FreeVCL: boolean);
-    function CloneMatrix(Source: TPlayGroundMatrix): TPlayGroundMatrix;
-    function MatrixHasGoal(Matrix: TPlayGroundMatrix): boolean;
     procedure LoadPictureForType(FieldType: TFieldType; Picture: TPicture);
-    function MatrixWorth(Matrix: TPlayGroundMatrix): integer;
     function GoalStatus: TGoalStatus;
-    function GoalFieldType(Matrix: TPlayGroundMatrix): TFieldType;
   end;
 
 var
@@ -121,79 +98,20 @@ uses
 
 {$R *.dfm}
 
-function TMainForm.MatrixHasGoal(Matrix: TPlayGroundMatrix): boolean;
-var
-  i, j: integer;
-begin
-  result := false;
-  for i := Low(Matrix) to High(Matrix) do
-  begin
-    for j := Low(Matrix[i]) to High(Matrix[i]) do
-    begin
-      result := result or Matrix[i][j].Goal;
-    end;
-  end;
-end;
-
-function TMainForm.GoalFieldType(Matrix: TPlayGroundMatrix): TFieldType;
-var
-  i, j: integer;
-begin
-  result := ftEmpty; // Damit der Compiler nicht meckert
-  for i := Low(Matrix) to High(Matrix) do
-  begin
-    for j := Low(Matrix[i]) to High(Matrix[i]) do
-    begin
-      if Matrix[i][j].Goal then result := Matrix[i][j].FieldType
-    end;
-  end;
-end;
-
-function TMainForm.MatrixWorth(Matrix: TPlayGroundMatrix): integer;
-var
-  i, j: integer;
-begin
-  result := 0;
-  for i := Low(Matrix) to High(Matrix) do
-  begin
-    for j := Low(Matrix[i]) to High(Matrix[i]) do
-    begin
-      Inc(result, FieldTypeWorth(Matrix[i][j].FieldType));
-    end;
-  end;
-end;
-
-procedure TMainForm.ClearMatrix(Matrix: TPlayGroundMatrix; FreeVCL: boolean);
-var
-  i, j: integer;
-begin
-  for i := Low(Matrix) to High(Matrix) do
-  begin
-    for j := Low(Matrix[i]) to High(Matrix[i]) do
-    begin
-      if FreeVCL then
-      begin
-        if Assigned(Matrix[i][j].Stone) then Matrix[i][j].Stone.Free;
-        if Assigned(Matrix[i][j].Panel) then Matrix[i][j].Panel.Free;
-      end;
-    end;
-    SetLength(Matrix[i], 0);
-  end;
-  SetLength(Matrix, 0);
-end;
+{ TMainForm }
 
 procedure TMainForm.RedrawStonesFromMatrix(Matrix: TPlayGroundMatrix);
 var
   i, j: integer;
 begin
-  for i := Low(Matrix) to High(Matrix) do
+  for i := Low(Matrix.Fields) to High(Matrix.Fields) do
   begin
-    for j := Low(Matrix[i]) to High(Matrix[i]) do
+    for j := Low(Matrix.Fields[i]) to High(Matrix.Fields[i]) do
     begin
-      if Assigned(Matrix[i][j].Stone) then
+      if Assigned(Matrix.Fields[i][j].Stone) then
       begin
-        LoadPictureForType(Matrix[i][j].FieldType, Matrix[i][j].Stone.Picture);
-        StoneDraggingAllow(Matrix[i][j].Stone, FieldState(Matrix[i][j].FieldType) <> fsAvailable);
+        LoadPictureForType(Matrix.Fields[i][j].FieldType, Matrix.Fields[i][j].Stone.Picture);
+        StoneDraggingAllow(Matrix.Fields[i][j].Stone, Matrix.FieldState(Matrix.Fields[i][j].FieldType) <> fsAvailable);
       end;
     end;
   end;
@@ -203,6 +121,7 @@ procedure TMainForm.DestroyLevel;
 var
   i: Integer;
 begin
+  MPauseTime.Checked := false;
   MPauseTime.Enabled := false;
   Timer.Enabled := false;
 
@@ -222,9 +141,9 @@ begin
 
   JumpHistory.Clear;
 
-  ClearMatrix(PlayGroundMatrix, true);
+  PlayGroundMatrix.ClearMatrix(true);
   for i := 0 to Length(PrevPlaygroundMatrixes)-1 do
-    ClearMatrix(PrevPlaygroundMatrixes[i], false);
+    PrevPlaygroundMatrixes[i].ClearMatrix(false);
   SetLength(PrevPlaygroundMatrixes, 0);
   MUndo.Enabled := false;
 
@@ -259,7 +178,7 @@ begin
   result.OnDragOver := panel.OnDragOver;
   result.OnDragDrop := panel.OnDragDrop;
 
-  StoneDraggingAllow(result, FieldState(fieldtype) <> fsAvailable);
+  StoneDraggingAllow(result, PlayGroundMatrix.FieldState(fieldtype) <> fsAvailable);
 end;
 
 procedure TMainForm.StoneDraggingAllow(Stone: TImage; Allow: boolean);
@@ -301,38 +220,14 @@ begin
   Close;
 end;
 
-function TMainForm.FieldState(t: TFieldType): TFieldState;
-begin
-  result := fsError;
-  case t of
-    ftFullSpace:     result := fsLocked;
-    ftEmpty:         result := fsAvailable;
-    ftGreen:         result := fsStone;
-    ftYellow:        result := fsStone;
-    ftRed:           result := fsStone;
-  end;
-end;
-
-function TMainForm.FieldState(f: TField): TFieldState;
-begin
-  result := FieldState(f.FieldType);
-end;
-
-function TMainForm.FieldState(x, y: integer): TFieldState;
-begin
-  result := fsError;
-  if (x < Low(PlayGroundMatrix)) or (x > High(PlayGroundMatrix)) then exit;
-  if (y < Low(PlayGroundMatrix[x])) or (y > High(PlayGroundMatrix[x])) then exit;
-
-  result := FieldState(PlayGroundMatrix[x][y]);
-end;
-
 procedure TMainForm.RefreshTime;
 begin
   Statistics.Panels.Items[0].Text := Format(LNG_TIME, [LevelTime]);
 end;
 
 procedure TMainForm.RefreshStonesRemoved;
+resourcestring
+  LNG_STONES_REMOVED = '%d of %d stones removed';
 begin
   Statistics.Panels.Items[1].Text := Format(LNG_STONES_REMOVED, [LevelRemovedStones, LevelTotalStones-1]);
 end;
@@ -352,18 +247,18 @@ procedure TMainForm.RemoveStone(x, y: integer; count_points: boolean);
 begin
   if count_points then
   begin
-    CountPoints(PlayGroundMatrix[x, y].FieldType);
+    CountPoints(PlayGroundMatrix.Fields[x, y].FieldType);
     Inc(LevelRemovedStones);
     RefreshStonesRemoved;
   end;
-  PlayGroundMatrix[x, y].FieldType := ftEmpty;
-  LoadPictureForType(PlayGroundMatrix[x, y].FieldType, PlayGroundMatrix[x, y].Stone.Picture);
-  StoneDraggingAllow(PlayGroundMatrix[x, y].Stone, false);
+  PlayGroundMatrix.Fields[x, y].FieldType := ftEmpty;
+  LoadPictureForType(PlayGroundMatrix.Fields[x, y].FieldType, PlayGroundMatrix.Fields[x, y].Stone.Picture);
+  StoneDraggingAllow(PlayGroundMatrix.Fields[x, y].Stone, false);
 end;
 
 function TMainForm.CanJump(x, y: integer): boolean;
 begin
-  if FieldState(x, y) <> fsStone then
+  if PlayGroundMatrix.FieldState(x, y) <> fsStone then
   begin
     result := false;
     exit;
@@ -422,9 +317,9 @@ var
   i, j: integer;
 begin
   result := false;
-  for i := Low(PlayGroundMatrix) to High(PlayGroundMatrix) do
+  for i := Low(PlayGroundMatrix.Fields) to High(PlayGroundMatrix.Fields) do
   begin
-    for j := Low(PlayGroundMatrix[i]) to High(PlayGroundMatrix[i]) do
+    for j := Low(PlayGroundMatrix.Fields[i]) to High(PlayGroundMatrix.Fields[i]) do
     begin
       if CanJump(i, j) then
       begin
@@ -437,6 +332,8 @@ begin
 end;
 
 procedure TMainForm.DoJump(SourceTag, DestTag: integer);
+resourcestring
+  LNG_JUMP_LOG = '%d [%d, %d] -> %d [%d, %d];';
 var
   d, s: TPoint;
   old_fieldtype: TFieldType;
@@ -452,42 +349,39 @@ begin
   {$REGION 'Stein entfernen und Punkte vergeben'}
   if Level.GetGameMode = gmDiagonal then
   begin
-    if (s.X-2 = d.X) and (s.Y-2 = d.Y) and (FieldState(s.X-1, s.Y-1) = fsStone) then RemoveStone(s.X-1, s.Y-1, true);
-    if (s.X-2 = d.X) and (s.Y+2 = d.Y) and (FieldState(s.X-1, s.Y+1) = fsStone) then RemoveStone(s.X-1, s.Y+1, true);
-    if (s.X+2 = d.X) and (s.Y-2 = d.Y) and (FieldState(s.X+1, s.Y-1) = fsStone) then RemoveStone(s.X+1, s.Y-1, true);
-    if (s.X+2 = d.X) and (s.Y+2 = d.Y) and (FieldState(s.X+1, s.Y+1) = fsStone) then RemoveStone(s.X+1, s.Y+1, true);
+    if (s.X-2 = d.X) and (s.Y-2 = d.Y) and (PlayGroundMatrix.FieldState(s.X-1, s.Y-1) = fsStone) then RemoveStone(s.X-1, s.Y-1, true);
+    if (s.X-2 = d.X) and (s.Y+2 = d.Y) and (PlayGroundMatrix.FieldState(s.X-1, s.Y+1) = fsStone) then RemoveStone(s.X-1, s.Y+1, true);
+    if (s.X+2 = d.X) and (s.Y-2 = d.Y) and (PlayGroundMatrix.FieldState(s.X+1, s.Y-1) = fsStone) then RemoveStone(s.X+1, s.Y-1, true);
+    if (s.X+2 = d.X) and (s.Y+2 = d.Y) and (PlayGroundMatrix.FieldState(s.X+1, s.Y+1) = fsStone) then RemoveStone(s.X+1, s.Y+1, true);
   end;
 
-  if (s.X+2 = d.X) and (s.Y = d.Y) and (FieldState(s.X+1, s.Y  ) = fsStone) then RemoveStone(s.X+1, s.Y, true);
-  if (s.X-2 = d.X) and (s.Y = d.Y) and (FieldState(s.X-1, s.Y  ) = fsStone) then RemoveStone(s.X-1, s.Y, true);
-  if (s.X = d.X) and (s.Y+2 = d.Y) and (FieldState(s.X  , s.Y+1) = fsStone) then RemoveStone(s.X, s.Y+1, true);
-  if (s.X = d.X) and (s.Y-2 = d.Y) and (FieldState(s.X  , s.Y-1) = fsStone) then RemoveStone(s.X, s.Y-1, true);
+  if (s.X+2 = d.X) and (s.Y = d.Y) and (PlayGroundMatrix.FieldState(s.X+1, s.Y  ) = fsStone) then RemoveStone(s.X+1, s.Y, true);
+  if (s.X-2 = d.X) and (s.Y = d.Y) and (PlayGroundMatrix.FieldState(s.X-1, s.Y  ) = fsStone) then RemoveStone(s.X-1, s.Y, true);
+  if (s.X = d.X) and (s.Y+2 = d.Y) and (PlayGroundMatrix.FieldState(s.X  , s.Y+1) = fsStone) then RemoveStone(s.X, s.Y+1, true);
+  if (s.X = d.X) and (s.Y-2 = d.Y) and (PlayGroundMatrix.FieldState(s.X  , s.Y-1) = fsStone) then RemoveStone(s.X, s.Y-1, true);
   {$ENDREGION}
 
   // Den Timer erst nach dem ersten Zug starten
   // oder nach einer Pause neustarten
-  if not Timer.Enabled then
-  begin
-    MPauseTime.Enabled := true;
-    Timer.Enabled := true;
-  end;
-
-  MRestartGame.Enabled := true;
+  MPauseTime.Checked := false;
+  MPauseTime.Enabled := true;
+  Timer.Enabled := true;
 
   // Sound abspielen
   if MEnableSound.Checked then PlaySound(RES_JUMP, HInstance, SND_ASYNC or SND_NOWAIT or SND_RESOURCE);
 
   {$REGION 'Nun den Stein springen lassen'}
-  old_fieldtype := PlayGroundMatrix[s.X, s.Y].FieldType; // Steinfarbe merken
+  old_fieldtype := PlayGroundMatrix.Fields[s.X, s.Y].FieldType; // Steinfarbe merken
   RemoveStone(s.X, s.Y, false); // Eigenen Stein entfernen. Keine Punkte zählen, da das unser eigener Stein ist, der springt
-  PlayGroundMatrix[d.X, d.Y].FieldType := old_fieldtype; // Farbe wiederherstellen
-  LoadPictureForType(PlayGroundMatrix[d.X, d.Y].FieldType, PlayGroundMatrix[d.X, d.Y].Stone.Picture); // Stein an neue Position malen
-  StoneDraggingAllow(PlayGroundMatrix[d.X, d.Y].Stone, true); // Und die Drag-Eigenschaft erneuern
+  PlayGroundMatrix.Fields[d.X, d.Y].FieldType := old_fieldtype; // Farbe wiederherstellen
+  LoadPictureForType(PlayGroundMatrix.Fields[d.X, d.Y].FieldType, PlayGroundMatrix.Fields[d.X, d.Y].Stone.Picture); // Stein an neue Position malen
+  StoneDraggingAllow(PlayGroundMatrix.Fields[d.X, d.Y].Stone, true); // Und die Drag-Eigenschaft erneuern
   {$ENDREGION}
 
   {$REGION 'Sind weitere Sprünge möglich oder ist das Spiel vorbei?'}
   if not AreJumpsPossible then
   begin
+    MPauseTime.Checked := false;
     MPauseTime.Enabled := false;
     Timer.Enabled := false;
     RefreshTime;
@@ -509,7 +403,7 @@ begin
   {$ENDREGION}
 
   SetLength(PrevPlaygroundMatrixes, Length(PrevPlaygroundMatrixes)+1);
-  PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1] := CloneMatrix(PlaygroundMatrix);
+  PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1] := PlaygroundMatrix.CloneMatrix;
   MUndo.Enabled := true;
 end;
 
@@ -518,21 +412,21 @@ begin
   result := false;
 
   // Check 1: Ist das Zielfeld überhaupt leer?
-  if FieldState(DestX, DestY) <> fsAvailable then exit;
+  if PlayGroundMatrix.FieldState(DestX, DestY) <> fsAvailable then exit;
 
   // Check 2: Befindet sich ein Stein zwischen Source und Destination und ist der Abstand 2?
   if Level.GetGameMode = gmDiagonal then
   begin
-    if (SourceX-2 = DestX) and (SourceY-2 = DestY) and (FieldState(SourceX-1, SourceY-1) = fsStone) then result := true;
-    if (SourceX-2 = DestX) and (SourceY+2 = DestY) and (FieldState(SourceX-1, SourceY+1) = fsStone) then result := true;
-    if (SourceX+2 = DestX) and (SourceY-2 = DestY) and (FieldState(SourceX+1, SourceY-1) = fsStone) then result := true;
-    if (SourceX+2 = DestX) and (SourceY+2 = DestY) and (FieldState(SourceX+1, SourceY+1) = fsStone) then result := true;
+    if (SourceX-2 = DestX) and (SourceY-2 = DestY) and (PlayGroundMatrix.FieldState(SourceX-1, SourceY-1) = fsStone) then result := true;
+    if (SourceX-2 = DestX) and (SourceY+2 = DestY) and (PlayGroundMatrix.FieldState(SourceX-1, SourceY+1) = fsStone) then result := true;
+    if (SourceX+2 = DestX) and (SourceY-2 = DestY) and (PlayGroundMatrix.FieldState(SourceX+1, SourceY-1) = fsStone) then result := true;
+    if (SourceX+2 = DestX) and (SourceY+2 = DestY) and (PlayGroundMatrix.FieldState(SourceX+1, SourceY+1) = fsStone) then result := true;
   end;
 
-  if (SourceX+2 = DestX) and (SourceY   = DestY) and (FieldState(SourceX+1, SourceY  ) = fsStone) then result := true;
-  if (SourceX-2 = DestX) and (SourceY   = DestY) and (FieldState(SourceX-1, SourceY  ) = fsStone) then result := true;
-  if (SourceX   = DestX) and (SourceY+2 = DestY) and (FieldState(SourceX  , SourceY+1) = fsStone) then result := true;
-  if (SourceX   = DestX) and (SourceY-2 = DestY) and (FieldState(SourceX  , SourceY-1) = fsStone) then result := true;
+  if (SourceX+2 = DestX) and (SourceY   = DestY) and (PlayGroundMatrix.FieldState(SourceX+1, SourceY  ) = fsStone) then result := true;
+  if (SourceX-2 = DestX) and (SourceY   = DestY) and (PlayGroundMatrix.FieldState(SourceX-1, SourceY  ) = fsStone) then result := true;
+  if (SourceX   = DestX) and (SourceY+2 = DestY) and (PlayGroundMatrix.FieldState(SourceX  , SourceY+1) = fsStone) then result := true;
+  if (SourceX   = DestX) and (SourceY-2 = DestY) and (PlayGroundMatrix.FieldState(SourceX  , SourceY-1) = fsStone) then result := true;
 end;
 
 function TMainForm.MayJump(SourceTag, DestTag: integer): boolean;
@@ -570,35 +464,17 @@ begin
   newField.Goal := t.Goal;
   newField.Panel := DrawStoneBox(x, y, index, indent, t.Goal);
   newField.Stone := DrawStone(t.Typ, newField.Panel);
-  if FieldState(t.Typ) = fsStone then Inc(LevelTotalStones);
+  if PlayGroundMatrix.FieldState(t.Typ) = fsStone then Inc(LevelTotalStones);
 
   SetLength(LookupFieldCoordinateArray, index + 1);
   LookupFieldCoordinateArray[index].X := x;
   LookupFieldCoordinateArray[index].Y := y;
 
-  if Length(PlayGroundMatrix) < x+1 then SetLength(PlayGroundMatrix, x+1);
-  if Length(PlayGroundMatrix[x]) < y+1 then SetLength(PlayGroundMatrix[x], y+1);
-  PlaygroundMatrix[x, y] := newField;
+  if Length(PlayGroundMatrix.Fields) < x+1 then SetLength(PlayGroundMatrix.Fields, x+1);
+  if Length(PlayGroundMatrix.Fields[x]) < y+1 then SetLength(PlayGroundMatrix.Fields[x], y+1);
+  PlaygroundMatrix.Fields[x, y] := newField;
 
   result := newField;
-end;
-
-function TMainForm.CloneMatrix(Source: TPlayGroundMatrix): TPlayGroundMatrix;
-var
-  i, j: integer;
-begin
-  SetLength(result, Length(Source));
-  for i := Low(Source) to High(Source) do
-  begin
-    SetLength(result[i], Length(Source[i]));
-    for j := Low(Source[i]) to High(Source[i]) do
-    begin
-      result[i][j].FieldType := Source[i][j].FieldType;
-      result[i][j].Goal      := Source[i][j].Goal;
-      result[i][j].Panel     := Source[i][j].Panel;
-      result[i][j].Stone     := Source[i][j].Stone;
-    end;
-  end;
 end;
 
 procedure TMainForm.BuildPlayground(LevelArray: TLevelArray);
@@ -644,26 +520,35 @@ begin
   Statistics.Panels.Items[1].Width := Round(ClientWidth*MET_PERCENT_PNL_STONES);
 
   SetLength(PrevPlaygroundMatrixes,1);
-  PrevPlaygroundMatrixes[0] := CloneMatrix(PlayGroundMatrix);
+  PrevPlaygroundMatrixes[0] := PlayGroundMatrix.CloneMatrix;
   MUndo.Enabled := false;
 end;
 
 procedure TMainForm.TimerTimer(Sender: TObject);
 begin
+  if MPauseTime.Checked then exit;
   if mainform.Focused then Inc(CountedSeconds);
   RefreshTime;
 end;
 
 function TMainForm.LevelTime: String;
 begin
-  result := SecondsToTimeString(CountedSeconds);
+  result := FormatDateTime('hh:nn:ss', CountedSeconds / SecsPerDay)
 end;
 
 procedure TMainForm.NewGame(Filename: string);
+resourcestring
+  LNG_LVL_INVALID_NO_JUMP = 'Warning! The level is not playable. There are no jumps possible.';
 var
   LevelArray: TLevelArray;
 begin
   DestroyLevel;
+
+  MPauseTime.Checked := true;
+  MPauseTime.Enabled := true;
+  Timer.Enabled := true;
+  MRestartGame.Enabled := true;
+
   LevelFile := Filename;
   Level := TLevel.Create(LevelFile);
   LevelArray := Level.LevelStringToLevelArray(true);
@@ -723,13 +608,13 @@ function TMainForm.GoalStatus: TGoalStatus;
 var
   ft: TFieldType;
 begin
-  if not MatrixHasGoal(PlaygroundMatrix) then
+  if not PlaygroundMatrix.MatrixHasGoal then
     result := gsNoGoal
   else if LevelRemovedStones < LevelTotalStones-1 then
     Result := gsMultipleStonesRemaining
   else
   begin
-    ft := GoalFieldType(PlaygroundMatrix);
+    ft := PlaygroundMatrix.GoalFieldType;
     if ft = ftRed then
       result := gsLastStoneInGoalRed
     else if ft = ftYellow then
@@ -763,10 +648,9 @@ procedure TMainForm.RestartLevel;
 var
   i: Integer;
 begin
-  MPauseTime.Enabled := false;
-  Timer.Enabled := false;
-
-  MRestartGame.Enabled := false;
+  MPauseTime.Checked := true;
+  MPauseTime.Enabled := true;
+  Timer.Enabled := true;
 
   CountedSeconds := 0;
   RefreshTime;
@@ -782,7 +666,7 @@ begin
   RedrawStonesFromMatrix(PrevPlaygroundMatrixes[0]);
   SetNewPlayGroundMatrix(PrevPlaygroundMatrixes[0]);
   for i := 1 to Length(PrevPlaygroundMatrixes)-1 do
-    ClearMatrix(PrevPlaygroundMatrixes[i], false);
+    PrevPlaygroundMatrixes[i].ClearMatrix(false);
   SetLength(PrevPlaygroundMatrixes, 1);
 
   MUndo.Enabled := false;
@@ -790,8 +674,8 @@ end;
 
 procedure TMainForm.SetNewPlayGroundMatrix(Matrix: TPlayGroundMatrix);
 begin
-  ClearMatrix(PlayGroundMatrix, false); // Memory Leak verhindern
-  PlayGroundMatrix := CloneMatrix(Matrix);
+  PlayGroundMatrix.ClearMatrix(false); // Memory Leak verhindern
+  PlayGroundMatrix := Matrix.CloneMatrix;
 end;
 
 procedure TMainForm.MRestartGameClick(Sender: TObject);
@@ -806,12 +690,12 @@ var
 begin
   if Length(PrevPlaygroundMatrixes) > 1 then
   begin
-    PrevWorth := MatrixWorth(PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1]);
+    PrevWorth := PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1].MatrixWorth;
 
-    ClearMatrix(PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1], false);
+    PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1].ClearMatrix(false);
     SetLength(PrevPlaygroundMatrixes, Length(PrevPlaygroundMatrixes)-1);
 
-    NewWorth := MatrixWorth(PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1]);
+    NewWorth := PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1].MatrixWorth;
     RedrawStonesFromMatrix(PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1]);
     SetNewPlayGroundMatrix(PrevPlaygroundMatrixes[Length(PrevPlaygroundMatrixes)-1]);
 
@@ -833,12 +717,6 @@ end;
 procedure TMainForm.MHighScoresClick(Sender: TObject);
 begin
   HighScoreForm.Execute(ExtractFileNameWithoutExt(LevelFile));
-end;
-
-procedure TMainForm.MPauseTimeClick(Sender: TObject);
-begin
-  MPauseTime.Enabled := false;
-  Timer.Enabled := false;
 end;
 
 procedure TMainForm.LoadSettings;
@@ -876,7 +754,6 @@ begin
   end;
 end;
 
-
 procedure TMainForm.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   SaveSettings;
@@ -896,11 +773,6 @@ end;
 procedure TMainForm.MHelpClick(Sender: TObject);
 begin
   HelpForm.ShowModal;
-end;
-
-procedure TMainForm.MEnableSoundClick(Sender: TObject);
-begin
-  MEnableSound.Checked := not MEnableSound.Checked; 
 end;
 
 end.

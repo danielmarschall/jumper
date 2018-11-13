@@ -3,7 +3,7 @@ unit LevelFunctions;
 interface
 
 uses
-  SysUtils, Dialogs, Functions, ExtCtrls, Graphics, Classes, Math;
+  SysUtils, Dialogs, Functions, ExtCtrls, Classes, Math;
 
 type
   TFieldType = (ftUndefined, ftFullSpace, ftEmpty, ftRed, ftYellow, ftGreen);
@@ -37,54 +37,33 @@ type
     function GetGameMode: TGameMode;
   end;
 
-procedure DrawLevelPreview(Level: TLevel; Image: TImage; BackgroundColor: TColor);
+  TField = record
+    FieldType: TFieldType;
+    Goal: Boolean;
+    Panel: TPanel;
+    Stone: TImage;
+  end;
+
+  TGoalStatus = (gsUndefined, gsNoGoal, gsMultipleStonesRemaining, gsLastStoneInGoalRed, gsLastStoneInGoalYellow, gsLastStoneInGoalGreen, gsLastStoneOutsideGoal);
+
+  TFieldState = (fsUndefined, fsError, fsLocked, fsAvailable, fsStone);
+
+  TPlayGroundMatrix = record
+    Fields: array of array of TField;
+  public
+    function MatrixHasGoal: boolean;
+    function GoalFieldType: TFieldType;
+    function MatrixWorth: integer;
+    procedure ClearMatrix(FreeVCL: boolean);
+    function CloneMatrix: TPlayGroundMatrix;
+    function FieldState(t: TFieldType): TFieldState; overload;
+    function FieldState(f: TField): TFieldState; overload;
+    function FieldState(x, y: integer): TFieldState; overload;
+  end;
+
 function FieldTypeWorth(t: TFieldType): integer;
 
 implementation
-
-procedure DrawLevelPreview(Level: TLevel; Image: TImage; BackgroundColor: TColor);
-var
-  LevelArray: TLevelArray;
-  y, x: integer;
-  t: TFieldType;
-  indent: Integer;
-const
-  PREVIEW_BLOCK_SIZE = 10; // Enthält Field und Abstand
-  PREVIEW_TAB_SIZE = PREVIEW_BLOCK_SIZE div 2; // 5
-begin
-  LevelArray := nil;
-
-  ClearImage(Image, BackgroundColor);
-
-  LevelArray := Level.LevelStringToLevelArray(false);
-
-  for y := Low(LevelArray) to High(LevelArray) do
-  begin
-    for x := Low(LevelArray[y].Fields) to High(LevelArray[y].Fields) do
-    begin
-      t      := LevelArray[y].Fields[x].Typ;
-      indent := LevelArray[y].Indent;
-
-      case t of
-        ftFullSpace: Image.Canvas.Brush.Color := BackgroundColor;
-        ftEmpty:     Image.Canvas.Brush.Color := clWhite;
-        ftGreen:     Image.Canvas.Brush.Color := clLime;
-        ftYellow:    Image.Canvas.Brush.Color := clYellow;
-        ftRed:       Image.Canvas.Brush.Color := clRed;
-      end;
-
-      if LevelArray[y].Fields[x].Goal then
-        Image.Canvas.Pen.Color := clBlack
-      else
-        Image.Canvas.Pen.Color := BackgroundColor;
-
-      Image.Canvas.Rectangle(x*PREVIEW_BLOCK_SIZE + indent*PREVIEW_TAB_SIZE,
-                             y*PREVIEW_BLOCK_SIZE,
-                             x*PREVIEW_BLOCK_SIZE + indent*PREVIEW_TAB_SIZE + PREVIEW_BLOCK_SIZE,
-                             y*PREVIEW_BLOCK_SIZE                           + PREVIEW_BLOCK_SIZE);
-    end;
-  end;
-end;
 
 function FieldTypeWorth(t: TFieldType): integer;
 begin
@@ -92,6 +71,113 @@ begin
   else if t = ftYellow then result := 20
   else if t = ftRed then result := 30
   else result := 0;
+end;
+
+{ TPlayGroundMatrix }
+
+function TPlayGroundMatrix.MatrixHasGoal: boolean;
+var
+  i, j: integer;
+begin
+  result := false;
+  for i := Low(Fields) to High(Fields) do
+  begin
+    for j := Low(Fields[i]) to High(Fields[i]) do
+    begin
+      result := result or Fields[i][j].Goal;
+    end;
+  end;
+end;
+
+function TPlayGroundMatrix.GoalFieldType: TFieldType;
+var
+  i, j: integer;
+begin
+  result := ftEmpty; // Damit der Compiler nicht meckert
+  for i := Low(Fields) to High(Fields) do
+  begin
+    for j := Low(Fields[i]) to High(Fields[i]) do
+    begin
+      if Fields[i][j].Goal then result := Fields[i][j].FieldType
+    end;
+  end;
+end;
+
+function TPlayGroundMatrix.MatrixWorth: integer;
+var
+  i, j: integer;
+begin
+  result := 0;
+  for i := Low(Fields) to High(Fields) do
+  begin
+    for j := Low(Fields[i]) to High(Fields[i]) do
+    begin
+      Inc(result, FieldTypeWorth(Fields[i][j].FieldType));
+    end;
+  end;
+end;
+
+procedure TPlayGroundMatrix.ClearMatrix(FreeVCL: boolean);
+var
+  i, j: integer;
+begin
+  for i := Low(Fields) to High(Fields) do
+  begin
+    for j := Low(Fields[i]) to High(Fields[i]) do
+    begin
+      if FreeVCL then
+      begin
+        if Assigned(Fields[i][j].Stone) then Fields[i][j].Stone.Free;
+        if Assigned(Fields[i][j].Panel) then Fields[i][j].Panel.Free;
+      end;
+    end;
+    SetLength(Fields[i], 0);
+  end;
+  SetLength(Fields, 0);
+end;
+
+function TPlayGroundMatrix.CloneMatrix: TPlayGroundMatrix;
+var
+  i, j: integer;
+begin
+  SetLength(result.Fields, Length(Fields));
+  for i := Low(Fields) to High(Fields) do
+  begin
+    SetLength(result.Fields[i], Length(Fields[i]));
+    for j := Low(Fields[i]) to High(Fields[i]) do
+    begin
+      result.Fields[i][j].FieldType := Fields[i][j].FieldType;
+      result.Fields[i][j].Goal      := Fields[i][j].Goal;
+      result.Fields[i][j].Panel     := Fields[i][j].Panel;
+      result.Fields[i][j].Stone     := Fields[i][j].Stone;
+    end;
+  end;
+end;
+
+function TPlayGroundMatrix.FieldState(t: TFieldType): TFieldState;
+begin
+  result := fsError;
+  case t of
+    ftFullSpace: result := fsLocked;
+    ftEmpty:     result := fsAvailable;
+    ftGreen:     result := fsStone;
+    ftYellow:    result := fsStone;
+    ftRed:       result := fsStone;
+  end;
+end;
+
+function TPlayGroundMatrix.FieldState(f: TField): TFieldState;
+begin
+  result := FieldState(f.FieldType);
+end;
+
+function TPlayGroundMatrix.FieldState(x, y: integer): TFieldState;
+begin
+  result := fsError;
+  if (x < Low(Fields)) or (x > High(Fields)) then exit;
+  if (y < Low(Fields[x])) or (y > High(Fields[x])) then exit;
+
+  result := FieldState(Fields[x][y]);
 end;
 
 { TLevel }
@@ -134,34 +220,6 @@ begin
   begin
     FStringList.Strings[i] := StringReplace(FStringList.Strings[i], ' ', '', [rfReplaceAll]);
     if FStringList.Strings[i] = '' then FStringList.Delete(i);
-  end;
-end;
-
-function DotsAtBeginning(s: string): integer;
-var
-  i: integer;
-begin
-  result := 0;
-  for i := 1 to Length(s) do
-  begin
-    if s[i] = '.' then
-      Inc(result)
-    else
-      Exit;
-  end;
-end;
-
-function DotsAtEnd(s: string): integer;
-var
-  i: integer;
-begin
-  result := 0;
-  for i := Length(s) downto 1 do
-  begin
-    if s[i] = '.' then
-      Inc(result)
-    else
-      Exit;
   end;
 end;
 

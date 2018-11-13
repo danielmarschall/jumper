@@ -6,48 +6,18 @@ uses
   SysUtils, Dialogs, Graphics, Classes, ExtCtrls;
 
 function ExtractFileNameWithoutExt(filename: string): string;
-function SecondsToTimeString(Seconds: Integer): string;
 procedure ClearImage(Image: TImage; BackgroundColor: TColor);
-function Ganzzahlig(num: extended): boolean;
 function Explode(Separator, Text: String): TStringList;
 function Position(FullString, Search: String): Integer;
-function ReadFile(InputFile: string): string;
+function DotsAtBeginning(s: string): integer;
+function DotsAtEnd(s: string): integer;
 
 implementation
-
-resourcestring
-  LNG_COULD_NOT_OPEN_FILE = 'Could not open file "%s".';
 
 function ExtractFileNameWithoutExt(filename: string): string;
 begin
   result := ExtractFileName(filename);
   result := copy(result, 1, Length(result)-Length(ExtractFileExt(result)));
-end;
-
-function SecondsToTimeString(Seconds: Integer): string;
-var
-  h, m, s: integer;
-  tim: TDateTime;
-begin
-  h := 0;
-  m := 0;
-  s := Seconds;
-
-  while s - 60*60 >= 0 do
-  begin
-    dec(s, 60*60);
-    inc(h);
-  end;
-
-  while s - 60 >= 0 do
-  begin
-    dec(s, 60);
-    inc(m);
-  end;
-
-  tim := EncodeTime(h, m, s, 0);
-
-  result := TimeToStr(tim);
 end;
 
 procedure ClearImage(Image: TImage; BackgroundColor: TColor);
@@ -61,11 +31,6 @@ begin
   Image.Canvas.Rectangle(0, 0, Image.Width, Image.Height);
   Image.Canvas.Pen.Color := OldPenColor;
   Image.Canvas.Brush.Color := OldBrushColor;
-end;
-
-function Ganzzahlig(num: extended): boolean;
-begin
-  result := num = round(num);
 end;
 
 function Explode(Separator, Text: String): TStringList;
@@ -105,27 +70,32 @@ begin
     result := Length(FullString) - x + 1;
 end;
 
-function ReadFile(InputFile: string): string;
+function DotsAtBeginning(s: string): integer;
 var
-  f: textfile;
-  tmp: string;
+  i: integer;
 begin
-  result := '';
-
-  if not FileExists(InputFile) then
+  result := 0;
+  for i := 1 to Length(s) do
   begin
-    MessageDlg(Format(LNG_COULD_NOT_OPEN_FILE, [InputFile]), mtError, [mbOk], 0);
-    Exit;
+    if s[i] = '.' then
+      Inc(result)
+    else
+      Exit;
   end;
+end;
 
-  AssignFile(f, InputFile);
-  Reset(f);
-  while not Eof(f) do
+function DotsAtEnd(s: string): integer;
+var
+  i: integer;
+begin
+  result := 0;
+  for i := Length(s) downto 1 do
   begin
-    ReadLn(f, tmp);
-    result := result + tmp + #13#10;
+    if s[i] = '.' then
+      Inc(result)
+    else
+      Exit;
   end;
-  CloseFile(f);
 end;
 
 end.
