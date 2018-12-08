@@ -181,7 +181,7 @@ begin
 
         if Level.CheckLevelIntegrity <> leNone then
           ImageIndex := 2{Error}
-        else case Level.GetGameMode of
+        else case Level.GameMode of
           gmNormal: ImageIndex := 0{Normal};
           gmDiagonal: ImageIndex := 1{Diagonal};
           gmUndefined: ImageIndex := 2{Error};

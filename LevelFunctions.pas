@@ -28,13 +28,14 @@ type
   private
     FStringList: TStringList;
     procedure Load(ABoardFile: string);
+    function GetGameMode: TGameMode;
   public
     constructor Create(ABoardFile: string);
     destructor Destroy; override;
     function LevelStringToLevelArray(ShowErrors: boolean): TLevelArray;
     function CheckLevelIntegrity: TLevelError; overload;
     function CheckLevelIntegrity(ShowErrors: boolean): TLevelError; overload;
-    function GetGameMode: TGameMode;
+    property GameMode: TGameMode read GetGameMode;
   end;
 
   TField = record
@@ -59,6 +60,9 @@ type
     function FieldState(t: TFieldType): TFieldState; overload;
     function FieldState(f: TField): TFieldState; overload;
     function FieldState(x, y: integer): TFieldState; overload;
+    function CanJump(SourceX, SourceY, DestX, DestY: integer; DiagonalOK: boolean): boolean; overload;
+    function CanJump(SourceX, SourceY: integer; DiagonalOK: boolean): boolean; overload;
+    function CanJump(DiagonalOK: boolean): boolean; overload;
   end;
 
 function FieldTypeWorth(t: TFieldType): integer;
@@ -77,79 +81,79 @@ end;
 
 function TPlayGroundMatrix.MatrixHasGoal: boolean;
 var
-  i, j: integer;
+  x, y: integer;
 begin
   result := false;
-  for i := Low(Fields) to High(Fields) do
+  for x := Low(Fields) to High(Fields) do
   begin
-    for j := Low(Fields[i]) to High(Fields[i]) do
+    for y := Low(Fields[x]) to High(Fields[x]) do
     begin
-      result := result or Fields[i][j].Goal;
+      result := result or Fields[x][y].Goal;
     end;
   end;
 end;
 
 function TPlayGroundMatrix.GoalFieldType: TFieldType;
 var
-  i, j: integer;
+  x, y: integer;
 begin
   result := ftEmpty; // Damit der Compiler nicht meckert
-  for i := Low(Fields) to High(Fields) do
+  for x := Low(Fields) to High(Fields) do
   begin
-    for j := Low(Fields[i]) to High(Fields[i]) do
+    for y := Low(Fields[x]) to High(Fields[x]) do
     begin
-      if Fields[i][j].Goal then result := Fields[i][j].FieldType
+      if Fields[x][y].Goal then result := Fields[x][y].FieldType
     end;
   end;
 end;
 
 function TPlayGroundMatrix.MatrixWorth: integer;
 var
-  i, j: integer;
+  x, y: integer;
 begin
   result := 0;
-  for i := Low(Fields) to High(Fields) do
+  for x := Low(Fields) to High(Fields) do
   begin
-    for j := Low(Fields[i]) to High(Fields[i]) do
+    for y := Low(Fields[x]) to High(Fields[x]) do
     begin
-      Inc(result, FieldTypeWorth(Fields[i][j].FieldType));
+      Inc(result, FieldTypeWorth(Fields[x][y].FieldType));
     end;
   end;
 end;
 
 procedure TPlayGroundMatrix.ClearMatrix(FreeVCL: boolean);
 var
-  i, j: integer;
+  x, y: integer;
 begin
-  for i := Low(Fields) to High(Fields) do
+  for x := Low(Fields) to High(Fields) do
   begin
-    for j := Low(Fields[i]) to High(Fields[i]) do
+    for y := Low(Fields[x]) to High(Fields[x]) do
     begin
       if FreeVCL then
       begin
-        if Assigned(Fields[i][j].Stone) then Fields[i][j].Stone.Free;
-        if Assigned(Fields[i][j].Panel) then Fields[i][j].Panel.Free;
+        if Assigned(Fields[x][y].Stone) then Fields[x][y].Stone.Free;
+        if Assigned(Fields[x][y].Panel) then Fields[x][y].Panel.Free;
       end;
     end;
-    SetLength(Fields[i], 0);
+    SetLength(Fields[x], 0);
   end;
   SetLength(Fields, 0);
 end;
 
 function TPlayGroundMatrix.CloneMatrix: TPlayGroundMatrix;
 var
-  i, j: integer;
+  x, y: integer;
 begin
   SetLength(result.Fields, Length(Fields));
-  for i := Low(Fields) to High(Fields) do
+  for x := Low(Fields) to High(Fields) do
   begin
-    SetLength(result.Fields[i], Length(Fields[i]));
-    for j := Low(Fields[i]) to High(Fields[i]) do
+    SetLength(result.Fields[x], Length(Fields[x]));
+    for y := Low(Fields[x]) to High(Fields[x]) do
     begin
-      result.Fields[i][j].FieldType := Fields[i][j].FieldType;
-      result.Fields[i][j].Goal      := Fields[i][j].Goal;
-      result.Fields[i][j].Panel     := Fields[i][j].Panel;
-      result.Fields[i][j].Stone     := Fields[i][j].Stone;
+      result.Fields[x][y].FieldType := Fields[x][y].FieldType;
+      result.Fields[x][y].Goal      := Fields[x][y].Goal;
+      result.Fields[x][y].Panel     := Fields[x][y].Panel;
+      result.Fields[x][y].Stone     := Fields[x][y].Stone;
     end;
   end;
 end;
@@ -178,6 +182,73 @@ begin
   if (y < Low(Fields[x])) or (y > High(Fields[x])) then exit;
 
   result := FieldState(Fields[x][y]);
+end;
+
+function TPlayGroundMatrix.CanJump(SourceX, SourceY, DestX, DestY: integer; DiagonalOK: boolean): boolean;
+begin
+  result := false;
+
+  // Check 1: Ist das Zielfeld überhaupt leer?
+  if FieldState(DestX, DestY) <> fsAvailable then exit;
+
+  // Check 2: Befindet sich ein Stein zwischen Source und Destination und ist der Abstand 2?
+  if DiagonalOK then
+  begin
+    if (SourceX-2 = DestX) and (SourceY-2 = DestY) and (FieldState(SourceX-1, SourceY-1) = fsStone) then result := true;
+    if (SourceX-2 = DestX) and (SourceY+2 = DestY) and (FieldState(SourceX-1, SourceY+1) = fsStone) then result := true;
+    if (SourceX+2 = DestX) and (SourceY-2 = DestY) and (FieldState(SourceX+1, SourceY-1) = fsStone) then result := true;
+    if (SourceX+2 = DestX) and (SourceY+2 = DestY) and (FieldState(SourceX+1, SourceY+1) = fsStone) then result := true;
+  end;
+
+  if (SourceX+2 = DestX) and (SourceY   = DestY) and (FieldState(SourceX+1, SourceY  ) = fsStone) then result := true;
+  if (SourceX-2 = DestX) and (SourceY   = DestY) and (FieldState(SourceX-1, SourceY  ) = fsStone) then result := true;
+  if (SourceX   = DestX) and (SourceY+2 = DestY) and (FieldState(SourceX  , SourceY+1) = fsStone) then result := true;
+  if (SourceX   = DestX) and (SourceY-2 = DestY) and (FieldState(SourceX  , SourceY-1) = fsStone) then result := true;
+end;
+
+function TPlayGroundMatrix.CanJump(SourceX, SourceY: integer; DiagonalOK: boolean): boolean;
+begin
+  if FieldState(SourceX, SourceY) <> fsStone then
+  begin
+    result := false;
+    exit;
+  end;
+
+  result := true;
+
+  if CanJump(SourceX, SourceY, SourceX+2, SourceY, DiagonalOK) then exit;
+  if CanJump(SourceX, SourceY, SourceX-2, SourceY, DiagonalOK) then exit;
+  if CanJump(SourceX, SourceY, SourceX, SourceY+2, DiagonalOK) then exit;
+  if CanJump(SourceX, SourceY, SourceX, SourceY-2, DiagonalOK) then exit;
+
+  if DiagonalOK then
+  begin
+    if CanJump(SourceX, SourceY, SourceX-2, SourceY-2, DiagonalOK) then exit;
+    if CanJump(SourceX, SourceY, SourceX+2, SourceY-2, DiagonalOK) then exit;
+    if CanJump(SourceX, SourceY, SourceX-2, SourceY+2, DiagonalOK) then exit;
+    if CanJump(SourceX, SourceY, SourceX+2, SourceY+2, DiagonalOK) then exit;
+  end;
+
+  result := false;
+end;
+
+function TPlayGroundMatrix.CanJump(DiagonalOK: boolean): boolean;
+var
+  x, y: integer;
+begin
+  result := false;
+  for x := Low(Fields) to High(Fields) do
+  begin
+    for y := Low(Fields[x]) to High(Fields[x]) do
+    begin
+      if CanJump(x, y, DiagonalOK) then
+      begin
+        result := true;
+        break;
+      end;
+      if result then break;
+    end;
+  end;
 end;
 
 { TLevel }
@@ -361,7 +432,7 @@ begin
     end;
   end;
 
-  // Check 5: Kann im Level gesprungen werden
+  // Check 5: Kann im Level gesprungen werden?
 
   { Wird hier nicht abgeprüft, da dafür zuerst der PlayGround gebaut sein muss.
     Es ist außerdem eher ein logischer Fehler, kein Fehler in der Levelstruktur! }

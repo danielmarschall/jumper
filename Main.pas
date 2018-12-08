@@ -64,7 +64,6 @@ type
     procedure SetNewPlayGroundMatrix(Matrix: TPlayGroundMatrix);
     procedure RedrawStonesFromMatrix(Matrix: TPlayGroundMatrix);
     function AskForLevel: String;
-    function AreJumpsPossible: boolean;
     procedure StoneDraggingAllow(Stone: TImage; Allow: boolean);
     procedure NewGame(Filename: string);
     function LevelTime: String;
@@ -72,11 +71,8 @@ type
     procedure RefreshTime;
     procedure RefreshPoints;
     procedure RefreshStonesRemoved;
-    procedure CountPoints(t: TFieldType);
     procedure RemoveStone(x, y: integer; count_points: boolean);
     procedure DoJump(SourceTag, DestTag: integer);
-    function CanJump(x, y: integer): boolean;
-    function MayJump(SourceX, SourceY, DestX, DestY: integer): boolean; overload;
     function MayJump(SourceTag, DestTag: integer): boolean; overload;
     procedure StoneDragOver(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
     procedure StoneDragDrop(Sender, Source: TObject; X, Y: Integer);
@@ -237,49 +233,19 @@ begin
   Statistics.Panels.Items[2].Text := Format(LNG_POINTS, [Points]);
 end;
 
-procedure TMainForm.CountPoints(t: TFieldType);
-begin
-  inc(Points, FieldTypeWorth(t));
-  RefreshPoints;
-end;
-
 procedure TMainForm.RemoveStone(x, y: integer; count_points: boolean);
 begin
   if count_points then
   begin
-    CountPoints(PlayGroundMatrix.Fields[x, y].FieldType);
+    Inc(Points, FieldTypeWorth(PlayGroundMatrix.Fields[x, y].FieldType));
+    RefreshPoints;
+
     Inc(LevelRemovedStones);
     RefreshStonesRemoved;
   end;
   PlayGroundMatrix.Fields[x, y].FieldType := ftEmpty;
   LoadPictureForType(PlayGroundMatrix.Fields[x, y].FieldType, PlayGroundMatrix.Fields[x, y].Stone.Picture);
   StoneDraggingAllow(PlayGroundMatrix.Fields[x, y].Stone, false);
-end;
-
-function TMainForm.CanJump(x, y: integer): boolean;
-begin
-  if PlayGroundMatrix.FieldState(x, y) <> fsStone then
-  begin
-    result := false;
-    exit;
-  end;
-
-  result := true;
-
-  if MayJump(x, y, x+2, y) then exit;
-  if MayJump(x, y, x-2, y) then exit;
-  if MayJump(x, y, x, y+2) then exit;
-  if MayJump(x, y, x, y-2) then exit;
-
-  if Level.GetGameMode = gmDiagonal then
-  begin
-    if MayJump(x, y, x-2, y-2) then exit;
-    if MayJump(x, y, x+2, y-2) then exit;
-    if MayJump(x, y, x-2, y+2) then exit;
-    if MayJump(x, y, x+2, y+2) then exit;
-  end;
-
-  result := false;
 end;
 
 procedure TMainForm.Aboutthislevel1Click(Sender: TObject);
@@ -293,12 +259,11 @@ resourcestring
   LNG_GOAL_AVAILABLE = 'Target field defined';
   LNG_NO_GOAL = 'No target field';
 begin
-  if Level.GetGameMode = gmDiagonal then
-    mode := 'Diagonal'
-  else if Level.GetGameMode = gmNormal then
-    mode := 'Normal'
-  else
-    mode := '?';
+  case Level.GameMode of
+    gmNormal:    mode := 'Diagonal';
+    gmDiagonal:  mode := 'Normal';
+    gmUndefined: mode := '?';
+  end;
 
   if GoalStatus = gsNoGoal then
     goalYeSNo := LNG_NO_GOAL
@@ -310,25 +275,6 @@ begin
               Format(LNG_MODE, [mode]) + #13#10 +
               Format(LNG_STONES_TOTAL, [LevelTotalStones]) + #13#10 +
               goalYesNo);
-end;
-
-function TMainForm.AreJumpsPossible: boolean;
-var
-  i, j: integer;
-begin
-  result := false;
-  for i := Low(PlayGroundMatrix.Fields) to High(PlayGroundMatrix.Fields) do
-  begin
-    for j := Low(PlayGroundMatrix.Fields[i]) to High(PlayGroundMatrix.Fields[i]) do
-    begin
-      if CanJump(i, j) then
-      begin
-        result := true;
-        break;
-      end;
-      if result then break;
-    end;
-  end;
 end;
 
 procedure TMainForm.DoJump(SourceTag, DestTag: integer);
@@ -347,7 +293,7 @@ begin
   JumpHistory.Add(Format(LNG_JUMP_LOG, [SourceTag+1, s.x+1, s.y+1, DestTag+1, d.x+1, d.y+1]));
 
   {$REGION 'Stein entfernen und Punkte vergeben'}
-  if Level.GetGameMode = gmDiagonal then
+  if Level.GameMode = gmDiagonal then
   begin
     if (s.X-2 = d.X) and (s.Y-2 = d.Y) and (PlayGroundMatrix.FieldState(s.X-1, s.Y-1) = fsStone) then RemoveStone(s.X-1, s.Y-1, true);
     if (s.X-2 = d.X) and (s.Y+2 = d.Y) and (PlayGroundMatrix.FieldState(s.X-1, s.Y+1) = fsStone) then RemoveStone(s.X-1, s.Y+1, true);
@@ -379,7 +325,7 @@ begin
   {$ENDREGION}
 
   {$REGION 'Sind weitere Sprünge möglich oder ist das Spiel vorbei?'}
-  if not AreJumpsPossible then
+  if not PlayGroundMatrix.CanJump(Level.GameMode = gmDiagonal) then
   begin
     MPauseTime.Checked := false;
     MPauseTime.Enabled := false;
@@ -407,28 +353,6 @@ begin
   MUndo.Enabled := true;
 end;
 
-function TMainForm.MayJump(SourceX, SourceY, DestX, DestY: integer): boolean;
-begin
-  result := false;
-
-  // Check 1: Ist das Zielfeld überhaupt leer?
-  if PlayGroundMatrix.FieldState(DestX, DestY) <> fsAvailable then exit;
-
-  // Check 2: Befindet sich ein Stein zwischen Source und Destination und ist der Abstand 2?
-  if Level.GetGameMode = gmDiagonal then
-  begin
-    if (SourceX-2 = DestX) and (SourceY-2 = DestY) and (PlayGroundMatrix.FieldState(SourceX-1, SourceY-1) = fsStone) then result := true;
-    if (SourceX-2 = DestX) and (SourceY+2 = DestY) and (PlayGroundMatrix.FieldState(SourceX-1, SourceY+1) = fsStone) then result := true;
-    if (SourceX+2 = DestX) and (SourceY-2 = DestY) and (PlayGroundMatrix.FieldState(SourceX+1, SourceY-1) = fsStone) then result := true;
-    if (SourceX+2 = DestX) and (SourceY+2 = DestY) and (PlayGroundMatrix.FieldState(SourceX+1, SourceY+1) = fsStone) then result := true;
-  end;
-
-  if (SourceX+2 = DestX) and (SourceY   = DestY) and (PlayGroundMatrix.FieldState(SourceX+1, SourceY  ) = fsStone) then result := true;
-  if (SourceX-2 = DestX) and (SourceY   = DestY) and (PlayGroundMatrix.FieldState(SourceX-1, SourceY  ) = fsStone) then result := true;
-  if (SourceX   = DestX) and (SourceY+2 = DestY) and (PlayGroundMatrix.FieldState(SourceX  , SourceY+1) = fsStone) then result := true;
-  if (SourceX   = DestX) and (SourceY-2 = DestY) and (PlayGroundMatrix.FieldState(SourceX  , SourceY-1) = fsStone) then result := true;
-end;
-
 function TMainForm.MayJump(SourceTag, DestTag: integer): boolean;
 var
   s, d: TPoint;
@@ -436,7 +360,7 @@ begin
   d := LookupFieldCoordinateArray[DestTag];
   s := LookupFieldCoordinateArray[SourceTag];
 
-  result := MayJump(s.X, s.Y, d.X, d.Y);
+  result := PlaygroundMatrix.CanJump(s.X, s.Y, d.X, d.Y, Level.GameMode = gmDiagonal);
 end;
 
 procedure TMainForm.StoneDragDrop(Sender, Source: TObject; X, Y: Integer);
@@ -554,7 +478,7 @@ begin
   LevelArray := Level.LevelStringToLevelArray(true);
   if Length(LevelArray) = 0 then Exit;
   BuildPlayground(LevelArray);
-  if not AreJumpsPossible then
+  if not PlayGroundMatrix.CanJump(Level.GameMode = gmDiagonal) then
   begin
     MessageDlg(LNG_LVL_INVALID_NO_JUMP, mtError, [mbOk], 0);
   end;
