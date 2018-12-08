@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ImgList, ComCtrls, Menus, ExtCtrls, System.ImageList, LevelFunctions;
+  Dialogs, StdCtrls, ImgList, ComCtrls, Menus, ExtCtrls, ImageList,
+  LevelFunctions;
 
 type
   TLevelChoice = class(TForm)
@@ -44,9 +45,8 @@ uses
 
 procedure TLevelChoice.DrawLevelPreview(Level: TLevel);
 var
-  LevelArray: TLevelArray;
+  PlaygroundMatrix: TPlayGroundMatrix;
   y, x: integer;
-  t: TFieldType;
   indent: Integer;
   Image: TImage;
   BackgroundColor: TColor;
@@ -57,37 +57,44 @@ begin
   Image := PreviewImage;
   BackgroundColor := Self.Color;
 
-  LevelArray := nil;
-
   ClearImage(Image, BackgroundColor);
 
-  LevelArray := Level.LevelStringToLevelArray(false);
-
-  for y := Low(LevelArray) to High(LevelArray) do
-  begin
-    for x := Low(LevelArray[y].Fields) to High(LevelArray[y].Fields) do
+  Level.FillPlaygroundMatrix(PlaygroundMatrix, false);
+  try
+    for x := Low(PlaygroundMatrix.Fields) to High(PlaygroundMatrix.Fields) do
     begin
-      t      := LevelArray[y].Fields[x].Typ;
-      indent := LevelArray[y].Indent;
+      for y := Low(PlaygroundMatrix.Fields[x]) to High(PlaygroundMatrix.Fields[x]) do
+      begin
+        // Rectange filling
+        case PlaygroundMatrix.Fields[x,y].FieldType of
+          ftFullSpace: Image.Canvas.Brush.Color := BackgroundColor; // invisible
+          ftEmpty:     Image.Canvas.Brush.Color := clWhite;
+          ftGreen:     Image.Canvas.Brush.Color := clLime;
+          ftYellow:    Image.Canvas.Brush.Color := clYellow;
+          ftRed:       Image.Canvas.Brush.Color := clRed;
+        end;
 
-      case t of
-        ftFullSpace: Image.Canvas.Brush.Color := BackgroundColor;
-        ftEmpty:     Image.Canvas.Brush.Color := clWhite;
-        ftGreen:     Image.Canvas.Brush.Color := clLime;
-        ftYellow:    Image.Canvas.Brush.Color := clYellow;
-        ftRed:       Image.Canvas.Brush.Color := clRed;
+        // Rectangle border
+        if PlaygroundMatrix.Fields[x,y].Goal then
+          Image.Canvas.Pen.Color := clBlack
+        else
+        begin
+          if PlaygroundMatrix.Fields[x,y].FieldType = ftFullSpace then
+            Image.Canvas.Pen.Color := BackgroundColor // invisible
+          else
+            Image.Canvas.Pen.Color := clLtGray;
+        end;
+
+        // Draw the rectangle
+        indent := PlaygroundMatrix.Fields[x,y].Indent;
+        Image.Canvas.Rectangle(x*PREVIEW_BLOCK_SIZE + indent*PREVIEW_TAB_SIZE,
+                               y*PREVIEW_BLOCK_SIZE,
+                               x*PREVIEW_BLOCK_SIZE + indent*PREVIEW_TAB_SIZE + PREVIEW_BLOCK_SIZE,
+                               y*PREVIEW_BLOCK_SIZE                           + PREVIEW_BLOCK_SIZE);
       end;
-
-      if LevelArray[y].Fields[x].Goal then
-        Image.Canvas.Pen.Color := clBlack
-      else
-        Image.Canvas.Pen.Color := BackgroundColor;
-
-      Image.Canvas.Rectangle(x*PREVIEW_BLOCK_SIZE + indent*PREVIEW_TAB_SIZE,
-                             y*PREVIEW_BLOCK_SIZE,
-                             x*PREVIEW_BLOCK_SIZE + indent*PREVIEW_TAB_SIZE + PREVIEW_BLOCK_SIZE,
-                             y*PREVIEW_BLOCK_SIZE                           + PREVIEW_BLOCK_SIZE);
     end;
+  finally
+    PlaygroundMatrix.ClearMatrix(true);
   end;
 end;
 

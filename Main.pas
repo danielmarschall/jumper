@@ -75,10 +75,9 @@ type
     function MayJump(SourceTag, DestTag: integer): boolean; overload;
     procedure StoneDragOver(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
     procedure StoneDragDrop(Sender, Source: TObject; X, Y: Integer);
-    function DrawField(x, y: integer; t: TFieldProperties; indent: integer): TField;
+    procedure DrawField(x, y: integer; var f: TField);
     function DrawStone(fieldtype: TFieldType; panel: TPanel): TImage;
     function DrawStoneBox(x, y, tag, halftabs: integer; isGoal: boolean): TPanel;
-    procedure BuildPlayground(LevelArray: TLevelArray);
     procedure LoadPictureForType(FieldType: TFieldType; Picture: TPicture);
     function GoalStatus: TGoalStatus;
   end;
@@ -103,10 +102,10 @@ begin
   begin
     for y := Low(Matrix.Fields[x]) to High(Matrix.Fields[x]) do
     begin
-      if Assigned(Matrix.Fields[x][y].Stone) then
+      if Assigned(Matrix.Fields[x,y].Stone) then
       begin
-        LoadPictureForType(Matrix.Fields[x][y].FieldType, Matrix.Fields[x][y].Stone.Picture);
-        StoneDraggingAllow(Matrix.Fields[x][y].Stone, Matrix.FieldState(Matrix.Fields[x][y].FieldType) <> fsAvailable);
+        LoadPictureForType(Matrix.Fields[x,y].FieldType, Matrix.Fields[x,y].Stone.Picture);
+        StoneDraggingAllow(Matrix.Fields[x,y].Stone, Matrix.FieldState(Matrix.Fields[x,y].FieldType) <> fsAvailable);
       end;
     end;
   end;
@@ -234,16 +233,16 @@ procedure TMainForm.RemoveStone(x, y: integer; count_points: boolean);
 begin
   if count_points then
   begin
-    Inc(Points, FieldTypeWorth(PlayGroundMatrix.Fields[x, y].FieldType));
+    Inc(Points, FieldTypeWorth(PlayGroundMatrix.Fields[x,y].FieldType));
     RefreshPoints;
 
     Inc(LevelRemovedStones);
     RefreshStonesRemoved;
   end;
 
-  PlayGroundMatrix.Fields[x, y].FieldType := ftEmpty;
-  LoadPictureForType(PlayGroundMatrix.Fields[x, y].FieldType, PlayGroundMatrix.Fields[x, y].Stone.Picture);
-  StoneDraggingAllow(PlayGroundMatrix.Fields[x, y].Stone, false);
+  PlayGroundMatrix.Fields[x,y].FieldType := ftEmpty;
+  LoadPictureForType(PlayGroundMatrix.Fields[x,y].FieldType, PlayGroundMatrix.Fields[x,y].Stone.Picture);
+  StoneDraggingAllow(PlayGroundMatrix.Fields[x,y].Stone, false);
 end;
 
 procedure TMainForm.Aboutthislevel1Click(Sender: TObject);
@@ -277,7 +276,7 @@ end;
 
 procedure TMainForm.DoJump(SourceTag, DestTag: integer);
 resourcestring
-  LNG_JUMP_LOG = '%d [%d, %d] -> %d [%d, %d];';
+  LNG_JUMP_LOG = '[%d, %d] -> [%d, %d];';
 var
   d, s: TCoord;
   old_fieldtype: TFieldType;
@@ -288,21 +287,21 @@ begin
   s := PlaygroundMatrix.IndexToCoord(SourceTag);
   d := PlaygroundMatrix.IndexToCoord(DestTag);
 
-  JumpHistory.Add(Format(LNG_JUMP_LOG, [SourceTag+1, s.x+1, s.y+1, DestTag+1, d.x+1, d.y+1]));
+  JumpHistory.Add(Format(LNG_JUMP_LOG, [s.x+1, s.y+1, d.x+1, d.y+1]));
 
   {$REGION 'Stein entfernen und Punkte vergeben'}
   if Level.GameMode = gmDiagonal then
   begin
-    if (s.X-2 = d.X) and (s.Y-2 = d.Y) and (PlayGroundMatrix.FieldState(s.X-1, s.Y-1) = fsStone) then RemoveStone(s.X-1, s.Y-1, true);
-    if (s.X-2 = d.X) and (s.Y+2 = d.Y) and (PlayGroundMatrix.FieldState(s.X-1, s.Y+1) = fsStone) then RemoveStone(s.X-1, s.Y+1, true);
-    if (s.X+2 = d.X) and (s.Y-2 = d.Y) and (PlayGroundMatrix.FieldState(s.X+1, s.Y-1) = fsStone) then RemoveStone(s.X+1, s.Y-1, true);
-    if (s.X+2 = d.X) and (s.Y+2 = d.Y) and (PlayGroundMatrix.FieldState(s.X+1, s.Y+1) = fsStone) then RemoveStone(s.X+1, s.Y+1, true);
+    if (s.X-2 = d.X) and (s.Y-2 = d.Y) and (PlayGroundMatrix.FieldState(s.X-1, s.Y-1) = fsOccupied) then RemoveStone(s.X-1, s.Y-1, true);
+    if (s.X-2 = d.X) and (s.Y+2 = d.Y) and (PlayGroundMatrix.FieldState(s.X-1, s.Y+1) = fsOccupied) then RemoveStone(s.X-1, s.Y+1, true);
+    if (s.X+2 = d.X) and (s.Y-2 = d.Y) and (PlayGroundMatrix.FieldState(s.X+1, s.Y-1) = fsOccupied) then RemoveStone(s.X+1, s.Y-1, true);
+    if (s.X+2 = d.X) and (s.Y+2 = d.Y) and (PlayGroundMatrix.FieldState(s.X+1, s.Y+1) = fsOccupied) then RemoveStone(s.X+1, s.Y+1, true);
   end;
 
-  if (s.X+2 = d.X) and (s.Y = d.Y) and (PlayGroundMatrix.FieldState(s.X+1, s.Y  ) = fsStone) then RemoveStone(s.X+1, s.Y, true);
-  if (s.X-2 = d.X) and (s.Y = d.Y) and (PlayGroundMatrix.FieldState(s.X-1, s.Y  ) = fsStone) then RemoveStone(s.X-1, s.Y, true);
-  if (s.X = d.X) and (s.Y+2 = d.Y) and (PlayGroundMatrix.FieldState(s.X  , s.Y+1) = fsStone) then RemoveStone(s.X, s.Y+1, true);
-  if (s.X = d.X) and (s.Y-2 = d.Y) and (PlayGroundMatrix.FieldState(s.X  , s.Y-1) = fsStone) then RemoveStone(s.X, s.Y-1, true);
+  if (s.X+2 = d.X) and (s.Y = d.Y) and (PlayGroundMatrix.FieldState(s.X+1, s.Y  ) = fsOccupied) then RemoveStone(s.X+1, s.Y, true);
+  if (s.X-2 = d.X) and (s.Y = d.Y) and (PlayGroundMatrix.FieldState(s.X-1, s.Y  ) = fsOccupied) then RemoveStone(s.X-1, s.Y, true);
+  if (s.X = d.X) and (s.Y+2 = d.Y) and (PlayGroundMatrix.FieldState(s.X  , s.Y+1) = fsOccupied) then RemoveStone(s.X, s.Y+1, true);
+  if (s.X = d.X) and (s.Y-2 = d.Y) and (PlayGroundMatrix.FieldState(s.X  , s.Y-1) = fsOccupied) then RemoveStone(s.X, s.Y-1, true);
   {$ENDREGION}
 
   // Den Timer erst nach dem ersten Zug starten
@@ -358,7 +357,7 @@ begin
   s := PlayGroundMatrix.IndexToCoord(SourceTag);
   d := PlayGroundMatrix.IndexToCoord(DestTag);
 
-  result := PlaygroundMatrix.CanJump(s.X, s.Y, d.X, d.Y, Level.GameMode = gmDiagonal);
+  result := PlaygroundMatrix.CanJump(s, d, Level.GameMode = gmDiagonal);
 end;
 
 procedure TMainForm.StoneDragDrop(Sender, Source: TObject; X, Y: Integer);
@@ -372,48 +371,63 @@ begin
   Accept := MayJump(TComponent(Source).Tag, TComponent(Sender).Tag);
 end;
 
-function TMainForm.DrawField(x, y: integer; t: TFieldProperties; indent: integer): TField;
+procedure TMainForm.DrawField(x, y: integer; var f: TField);
 var
-  newField: TField;
   index: integer;
 begin
-  ZeroMemory(@result, SizeOf(result));
-  if t.Typ = ftFullSpace then exit;
+  if f.FieldType = ftFullSpace then exit;
 
   index := PlaygroundMatrix.CoordToIndex(x, y);
 
-  newField.FieldType := t.Typ;
-  newField.Goal := t.Goal;
-  newField.Panel := DrawStoneBox(x, y, index, indent, t.Goal);
-  newField.Stone := DrawStone(t.Typ, newField.Panel);
-
-  result := newField;
+  f.Panel := DrawStoneBox(x, y, index, f.indent, f.Goal);
+  f.Stone := DrawStone(f.FieldType, f.Panel);
 end;
 
-procedure TMainForm.BuildPlayground(LevelArray: TLevelArray);
+procedure TMainForm.TimerTimer(Sender: TObject);
+begin
+  if MPauseTime.Checked then exit;
+  if mainform.Focused then Inc(CountedSeconds);
+  RefreshTime;
+end;
+
+function TMainForm.LevelTime: String;
+begin
+  result := FormatDateTime('hh:nn:ss', CountedSeconds / SecsPerDay)
+end;
+
+procedure TMainForm.NewGame(Filename: string);
+resourcestring
+  LNG_LVL_INVALID_NO_JUMP = 'Warning! The level is not playable. There are no jumps possible.';
 var
   y, x: integer;
   max_x, max_y: integer;
   p: TPanel;
-  newField: TField;
 begin
-  PlayGround.Visible := false;
+  DestroyLevel;
 
-  // Attention: PlaygroundMatrix is indexed [x,y] while LevelArray is indexed [y,x]
-  // TODO: PlaygroundMatrix and LevelArray are redundant. Can't we just replace one with the other?
-  PlaygroundMatrix.InitFieldArray(Length(LevelArray[0].Fields), Length(LevelArray));
+  MPauseTime.Checked := true;
+  MPauseTime.Enabled := true;
+  Timer.Enabled := true;
+  MRestartGame.Enabled := true;
+
+  LevelFile := Filename;
+  Level := TLevel.Create(LevelFile);
+
+  Level.FillPlaygroundMatrix(PlaygroundMatrix, true);
+  if Length(PlaygroundMatrix.Fields) = 0 then Exit;
+
+  PlayGround.Visible := false;
 
   max_x := 0;
   max_y := 0;
-  for y := Low(LevelArray) to High(LevelArray) do
+  for x := Low(PlaygroundMatrix.Fields) to High(PlaygroundMatrix.Fields) do
   begin
-    for x := Low(LevelArray[y].Fields) to High(LevelArray[y].Fields) do
+    for y := Low(PlaygroundMatrix.Fields[x]) to High(PlaygroundMatrix.Fields[x]) do
     begin
-      if TPlayGroundMatrix.FieldState(LevelArray[y].Fields[x].Typ) = fsStone then
+      if TPlayGroundMatrix.FieldState(PlaygroundMatrix.Fields[x,y].FieldType) = fsOccupied then
         Inc(LevelTotalStones);
-      newField := DrawField(x, y, LevelArray[y].Fields[x], LevelArray[y].Indent);
-      PlaygroundMatrix.Fields[x, y] := newField;
-      p := newField.Panel;
+      DrawField(x, y, PlaygroundMatrix.Fields[x,y]);
+      p := PlaygroundMatrix.Fields[x,y].Panel;
       if Assigned(p) then
       begin
         max_x := Max(max_x, p.Left + p.Width);
@@ -437,44 +451,13 @@ begin
   PlayGround.Left := ClientWidth div 2 - Playground.Width div 2;
   PlayGround.Top := (ClientHeight - Statistics.Height) div 2 - Playground.Height div 2;
 
-  Statistics.Panels.Items[0].Width := Round(ClientWidth*MET_PERCENT_PNL_TIME);
-  Statistics.Panels.Items[1].Width := Round(ClientWidth*MET_PERCENT_PNL_STONES);
+  Statistics.Panels.Items[0].Width := Round(ClientWidth * MET_PERCENT_PNL_TIME);
+  Statistics.Panels.Items[1].Width := Round(ClientWidth * MET_PERCENT_PNL_STONES);
 
   SetLength(PrevPlaygroundMatrixes,1);
   PrevPlaygroundMatrixes[0] := PlayGroundMatrix.CloneMatrix;
   MUndo.Enabled := false;
-end;
 
-procedure TMainForm.TimerTimer(Sender: TObject);
-begin
-  if MPauseTime.Checked then exit;
-  if mainform.Focused then Inc(CountedSeconds);
-  RefreshTime;
-end;
-
-function TMainForm.LevelTime: String;
-begin
-  result := FormatDateTime('hh:nn:ss', CountedSeconds / SecsPerDay)
-end;
-
-procedure TMainForm.NewGame(Filename: string);
-resourcestring
-  LNG_LVL_INVALID_NO_JUMP = 'Warning! The level is not playable. There are no jumps possible.';
-var
-  LevelArray: TLevelArray;
-begin
-  DestroyLevel;
-
-  MPauseTime.Checked := true;
-  MPauseTime.Enabled := true;
-  Timer.Enabled := true;
-  MRestartGame.Enabled := true;
-
-  LevelFile := Filename;
-  Level := TLevel.Create(LevelFile);
-  LevelArray := Level.LevelStringToLevelArray(true);
-  if Length(LevelArray) = 0 then Exit;
-  BuildPlayground(LevelArray);
   if not PlayGroundMatrix.CanJump(Level.GameMode = gmDiagonal) then
   begin
     MessageDlg(LNG_LVL_INVALID_NO_JUMP, mtError, [mbOk], 0);

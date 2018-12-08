@@ -13,37 +13,13 @@ type
 
   TFieldType = (ftUndefined, ftFullSpace, ftEmpty, ftRed, ftYellow, ftGreen);
 
-  TFieldProperties = record
-    Typ: TFieldType;
-    Goal: Boolean;
-  end;
-
   TGameMode = (gmUndefined, gmNormal, gmDiagonal);
-
-  TRow = record
-    Indent: integer;
-    Fields: array of TFieldProperties;
-  end;
-  TLevelArray = array of TRow;
 
   TLevelError = (leUndefined, leNone, leInvalidElement, leEmptyBoard, leRowInvalidLength,
                  leUnsupportedVersion, leUnsupportedMode);
 
-  TLevel = class(TObject)
-  private
-    FStringList: TStringList;
-    procedure Load(ABoardFile: string);
-    function GetGameMode: TGameMode;
-  public
-    constructor Create(ABoardFile: string);
-    destructor Destroy; override;
-    function LevelStringToLevelArray(ShowErrors: boolean): TLevelArray;
-    function CheckLevelIntegrity: TLevelError; overload;
-    function CheckLevelIntegrity(ShowErrors: boolean): TLevelError; overload;
-    property GameMode: TGameMode read GetGameMode;
-  end;
-
   TField = record
+    Indent: integer;
     FieldType: TFieldType;
     Goal: Boolean;
     Panel: TPanel;
@@ -52,7 +28,7 @@ type
 
   TGoalStatus = (gsUndefined, gsNoGoal, gsMultipleStonesRemaining, gsLastStoneInGoalRed, gsLastStoneInGoalYellow, gsLastStoneInGoalGreen, gsLastStoneOutsideGoal);
 
-  TFieldState = (fsUndefined, fsError, fsLocked, fsAvailable, fsStone);
+  TFieldState = (fsUndefined, fsLocked, fsAvailable, fsOccupied);
 
   TPlayGroundMatrix = record
     Fields: array of array of TField;
@@ -67,13 +43,29 @@ type
     function FieldState(f: TField): TFieldState; overload;
     function FieldState(x, y: integer): TFieldState; overload;
     function CanJump(SourceX, SourceY, DestX, DestY: integer; DiagonalOK: boolean): boolean; overload;
+    function CanJump(Source, Dest: TCoord; DiagonalOK: boolean): boolean; overload;
     function CanJump(SourceX, SourceY: integer; DiagonalOK: boolean): boolean; overload;
+    function CanJump(Source: TCoord; DiagonalOK: boolean): boolean; overload;
     function CanJump(DiagonalOK: boolean): boolean; overload;
     function IndexToCoord(index: integer): TCoord;
     function CoordToIndex(coord: TCoord): integer; overload;
     function CoordToIndex(x, y: integer): integer; overload;
     function Width: integer;
     function Height: integer;
+  end;
+
+  TLevel = class(TObject)
+  private
+    FStringList: TStringList;
+    procedure Load(ABoardFile: string);
+    function GetGameMode: TGameMode;
+  public
+    constructor Create(ABoardFile: string);
+    destructor Destroy; override;
+    procedure FillPlaygroundMatrix(var matrix: TPlayGroundMatrix; ShowErrors: boolean);
+    function CheckLevelIntegrity: TLevelError; overload;
+    function CheckLevelIntegrity(ShowErrors: boolean): TLevelError; overload;
+    property GameMode: TGameMode read GetGameMode;
   end;
 
 function FieldTypeWorth(t: TFieldType): integer;
@@ -141,7 +133,7 @@ begin
   begin
     for y := Low(Fields[x]) to High(Fields[x]) do
     begin
-      Fields[x,y].FieldType := ftUndefined;
+      Fields[x,y].FieldType := ftUndefined
     end;
   end;
 end;
@@ -165,15 +157,27 @@ begin
   result := Length(Fields);
 end;
 
+function TPlayGroundMatrix.CanJump(Source: TCoord;
+  DiagonalOK: boolean): boolean;
+begin
+  result := CanJump(Source.X, Source.Y, DiagonalOK);
+end;
+
+function TPlayGroundMatrix.CanJump(Source, Dest: TCoord;
+  DiagonalOK: boolean): boolean;
+begin
+  result := CanJump(Source.X, Source.Y, Dest.X, Dest.Y, DiagonalOK);
+end;
+
 procedure TPlayGroundMatrix.ClearMatrix(FreeVCL: boolean);
 var
   x, y: integer;
 begin
-  for x := Low(Fields) to High(Fields) do
+  if FreeVCL then
   begin
-    for y := Low(Fields[x]) to High(Fields[x]) do
+    for x := Low(Fields) to High(Fields) do
     begin
-      if FreeVCL then
+      for y := Low(Fields[x]) to High(Fields[x]) do
       begin
         if Assigned(Fields[x,y].Stone) then Fields[x,y].Stone.Free;
         if Assigned(Fields[x,y].Panel) then Fields[x,y].Panel.Free;
@@ -202,28 +206,24 @@ begin
 end;
 
 function TPlayGroundMatrix.CoordToIndex(x, y: integer): integer;
-var
-  c: TCoord;
 begin
-  c.X := x;
-  c.Y := y;
-  result := CoordToIndex(c);
+  result := x + y * Width;
 end;
 
 function TPlayGroundMatrix.CoordToIndex(coord: TCoord): integer;
 begin
-  result := coord.X + coord.Y * Width;
+  result := CoordToIndex(coord.X, coord.Y);
 end;
 
 class function TPlayGroundMatrix.FieldState(t: TFieldType): TFieldState;
 begin
-  result := fsError;
+  result := fsUndefined;
   case t of
     ftFullSpace: result := fsLocked;
     ftEmpty:     result := fsAvailable;
-    ftGreen:     result := fsStone;
-    ftYellow:    result := fsStone;
-    ftRed:       result := fsStone;
+    ftGreen:     result := fsOccupied;
+    ftYellow:    result := fsOccupied;
+    ftRed:       result := fsOccupied;
   end;
 end;
 
@@ -234,7 +234,7 @@ end;
 
 function TPlayGroundMatrix.FieldState(x, y: integer): TFieldState;
 begin
-  result := fsError;
+  result := fsUndefined;
   if (x < Low(Fields)) or (x > High(Fields)) then exit;
   if (y < Low(Fields[x])) or (y > High(Fields[x])) then exit;
 
@@ -251,21 +251,21 @@ begin
   // Check 2: Befindet sich ein Stein zwischen Source und Destination und ist der Abstand 2?
   if DiagonalOK then
   begin
-    if (SourceX-2 = DestX) and (SourceY-2 = DestY) and (FieldState(SourceX-1, SourceY-1) = fsStone) then result := true;
-    if (SourceX-2 = DestX) and (SourceY+2 = DestY) and (FieldState(SourceX-1, SourceY+1) = fsStone) then result := true;
-    if (SourceX+2 = DestX) and (SourceY-2 = DestY) and (FieldState(SourceX+1, SourceY-1) = fsStone) then result := true;
-    if (SourceX+2 = DestX) and (SourceY+2 = DestY) and (FieldState(SourceX+1, SourceY+1) = fsStone) then result := true;
+    if (SourceX-2 = DestX) and (SourceY-2 = DestY) and (FieldState(SourceX-1, SourceY-1) = fsOccupied) then result := true;
+    if (SourceX-2 = DestX) and (SourceY+2 = DestY) and (FieldState(SourceX-1, SourceY+1) = fsOccupied) then result := true;
+    if (SourceX+2 = DestX) and (SourceY-2 = DestY) and (FieldState(SourceX+1, SourceY-1) = fsOccupied) then result := true;
+    if (SourceX+2 = DestX) and (SourceY+2 = DestY) and (FieldState(SourceX+1, SourceY+1) = fsOccupied) then result := true;
   end;
 
-  if (SourceX+2 = DestX) and (SourceY   = DestY) and (FieldState(SourceX+1, SourceY  ) = fsStone) then result := true;
-  if (SourceX-2 = DestX) and (SourceY   = DestY) and (FieldState(SourceX-1, SourceY  ) = fsStone) then result := true;
-  if (SourceX   = DestX) and (SourceY+2 = DestY) and (FieldState(SourceX  , SourceY+1) = fsStone) then result := true;
-  if (SourceX   = DestX) and (SourceY-2 = DestY) and (FieldState(SourceX  , SourceY-1) = fsStone) then result := true;
+  if (SourceX+2 = DestX) and (SourceY   = DestY) and (FieldState(SourceX+1, SourceY  ) = fsOccupied) then result := true;
+  if (SourceX-2 = DestX) and (SourceY   = DestY) and (FieldState(SourceX-1, SourceY  ) = fsOccupied) then result := true;
+  if (SourceX   = DestX) and (SourceY+2 = DestY) and (FieldState(SourceX  , SourceY+1) = fsOccupied) then result := true;
+  if (SourceX   = DestX) and (SourceY-2 = DestY) and (FieldState(SourceX  , SourceY-1) = fsOccupied) then result := true;
 end;
 
 function TPlayGroundMatrix.CanJump(SourceX, SourceY: integer; DiagonalOK: boolean): boolean;
 begin
-  if FieldState(SourceX, SourceY) <> fsStone then
+  if FieldState(SourceX, SourceY) <> fsOccupied then
   begin
     result := false;
     exit;
@@ -351,7 +351,7 @@ begin
   end;
 end;
 
-function TLevel.LevelStringToLevelArray(ShowErrors: boolean): TLevelArray;
+procedure TLevel.FillPlaygroundMatrix(var matrix: TPlayGroundMatrix; ShowErrors: boolean);
 var
   i: integer;
   t: TFieldType;
@@ -361,23 +361,36 @@ var
   Line: string;
   lch, uch: char;
   ch: char;
+  width: Integer;
+  height: Integer;
+  lineIndent: Integer;
 begin
   // Zuerst nach Fehlern suchen
   err := CheckLevelIntegrity(ShowErrors);
   if err <> leNone then exit;
 
+  // Breite feststellen
+  if FStringList.Count > NUM_HEADERS then
+  begin
+    Line := FStringList.Strings[NUM_HEADERS];
+    Line := StringReplace(Line, '.', '', [rfReplaceAll]);
+    width := Length(Line);
+  end
+  else width := 0;
+
+  // Höhe feststellen
+  height := FStringList.Count - NUM_HEADERS;
+
   // Nun Matrix aufbauen
-  SetLength(result, 0);
+  matrix.ClearMatrix(true);
+  matrix.InitFieldArray(width, height);
   for i := NUM_HEADERS to FStringList.Count-1 do
   begin
     y := i - NUM_HEADERS;
 
-    SetLength(result, Length(result)+1); // add line to matrix
-
     Line := FStringList.Strings[i];
-    result[y].Indent := DotsAtBeginning(Line) - DotsAtEnd(Line);
+    lineIndent := DotsAtBeginning(Line) - DotsAtEnd(Line);
     Line := StringReplace(Line, '.', '', [rfReplaceAll]);
-    SetLength(result[y].Fields, Length(Line));
 
     for x := 0 to Length(Line)-1 do
     begin
@@ -394,8 +407,9 @@ begin
         'g': t := ftGreen;
       end;
 
-      result[y].Fields[x].Typ := t;
-      result[y].Fields[x].Goal := (ch = uch) and (ch <> lch);
+      matrix.Fields[x,y].Indent := lineIndent;
+      matrix.Fields[x,y].FieldType := t;
+      matrix.Fields[x,y].Goal := (ch = uch) and (ch <> lch);
     end;
   end;
 end;
@@ -440,7 +454,8 @@ begin
     exit;
   end;
 
-  if ((LowerCase(FStringList.Strings[1]) <> 'mode: normal') and (LowerCase(FStringList.Strings[1]) <> 'mode: diagonal')) then
+  if ((LowerCase(FStringList.Strings[1]) <> 'mode: normal') and
+      (LowerCase(FStringList.Strings[1]) <> 'mode: diagonal')) then
   begin
     result := leUnsupportedMode;
     exit;
@@ -464,7 +479,7 @@ begin
     thisLine := StringReplace(FStringList.Strings[i], '.', '', [rfReplaceAll]);
     if Length(thisLine) <> Length(firstLine) then
     begin
-      result := leRowInvalidLength; // at row y-NUM_HEADERS
+      result := leRowInvalidLength; // at row y = i-NUM_HEADERS
       exit;
     end;
   end;
@@ -484,7 +499,7 @@ begin
 
     if Length(Line) > 0 then
     begin
-      result := leInvalidElement; // at row y-NUM_HEADERS
+      result := leInvalidElement; // at row y = i-NUM_HEADERS
       Exit;
     end;
   end;
