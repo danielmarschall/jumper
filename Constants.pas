@@ -16,6 +16,11 @@ const
   MET_OUTER_MARGIN = 8;
   MET_SHAPE_MARGIN = 3;
 
+  // Field type worth
+  WORTH_RED    = 30;
+  WORTH_YELLOW = 20;
+  WORTH_GREEN  = 10;
+
   // Resourcennamen
   RES_JUMP = 'Jump';
   RES_UNDO = 'Undo';

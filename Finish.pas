@@ -55,7 +55,7 @@ end;
 function TFinishForm.Execute(LevelName: String; Score, StonesTotal, StonesRemoved, Seconds: Integer; GoalStatus: TGoalStatus; JumpHistory: TStringList): Integer;
 resourcestring
   LNG_SCORE = 'Score: %d';
-  LNG_REMAINING = 'Remaining stones: %d (%f%%)';
+  LNG_REMAINING = 'Remaining stones: %d (%f%%)'; // Jumping stone not counted!
   LNG_TIME_SECONDS = 'Time: %d seconds';
   LNG_POINTS_PER_MINUTE = '%d points per minute';
   LNG_GOAL_RED = 'Red stone in target field (%d points)';

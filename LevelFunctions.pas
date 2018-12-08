@@ -6,17 +6,23 @@ uses
   SysUtils, Dialogs, Functions, ExtCtrls, Classes, Math;
 
 type
+  TFieldType = (ftUndefined, ftFullSpace, ftEmpty, ftRed, ftYellow, ftGreen);
+
+  TFieldState = (fsUndefined, fsLocked, fsAvailable, fsOccupied);
+
+  TGameMode = (gmUndefined, gmNormal, gmDiagonal);
+
+  TLevelError = (leUndefined, leNone, leInvalidElement, leEmptyBoard,
+                 leRowInvalidLength, leUnsupportedVersion, leUnsupportedMode);
+
+  TGoalStatus = (gsUndefined, gsNoGoal, gsMultipleStonesRemaining,
+                 gsLastStoneInGoalRed, gsLastStoneInGoalYellow,
+                 gsLastStoneInGoalGreen, gsLastStoneOutsideGoal);
+
   TCoord = record
     X: integer;
     Y: integer;
   end;
-
-  TFieldType = (ftUndefined, ftFullSpace, ftEmpty, ftRed, ftYellow, ftGreen);
-
-  TGameMode = (gmUndefined, gmNormal, gmDiagonal);
-
-  TLevelError = (leUndefined, leNone, leInvalidElement, leEmptyBoard, leRowInvalidLength,
-                 leUnsupportedVersion, leUnsupportedMode);
 
   TField = record
     Indent: integer;
@@ -26,15 +32,12 @@ type
     Stone: TImage;
   end;
 
-  TGoalStatus = (gsUndefined, gsNoGoal, gsMultipleStonesRemaining, gsLastStoneInGoalRed, gsLastStoneInGoalYellow, gsLastStoneInGoalGreen, gsLastStoneOutsideGoal);
-
-  TFieldState = (fsUndefined, fsLocked, fsAvailable, fsOccupied);
-
   TPlayGroundMatrix = record
     Fields: array of array of TField;
   public
     procedure InitFieldArray(width, height: integer);
     function MatrixHasGoal: boolean;
+    function GoalStatus(StonesRemaining: integer): TGoalStatus;
     function GoalFieldType: TFieldType;
     function MatrixWorth: integer;
     procedure ClearMatrix(FreeVCL: boolean);
@@ -42,6 +45,7 @@ type
     class function FieldState(t: TFieldType): TFieldState; overload; static;
     function FieldState(f: TField): TFieldState; overload;
     function FieldState(x, y: integer): TFieldState; overload;
+    function FieldState(c: TCoord): TFieldState; overload;
     function CanJump(SourceX, SourceY, DestX, DestY: integer; DiagonalOK: boolean): boolean; overload;
     function CanJump(Source, Dest: TCoord; DiagonalOK: boolean): boolean; overload;
     function CanJump(SourceX, SourceY: integer; DiagonalOK: boolean): boolean; overload;
@@ -72,11 +76,14 @@ function FieldTypeWorth(t: TFieldType): integer;
 
 implementation
 
+uses
+  Constants;
+
 function FieldTypeWorth(t: TFieldType): integer;
 begin
-  if t = ftGreen then result := 10
-  else if t = ftYellow then result := 20
-  else if t = ftRed then result := 30
+  if      t = ftGreen  then result := WORTH_GREEN
+  else if t = ftYellow then result := WORTH_YELLOW
+  else if t = ftRed    then result := WORTH_RED
   else result := 0;
 end;
 
@@ -93,6 +100,28 @@ begin
     begin
       result := result or Fields[x,y].Goal;
     end;
+  end;
+end;
+
+function TPlayGroundMatrix.GoalStatus(StonesRemaining: integer): TGoalStatus;
+var
+  ft: TFieldType;
+begin
+  if not MatrixHasGoal then
+    result := gsNoGoal
+  else if StonesRemaining > 1 then
+    Result := gsMultipleStonesRemaining
+  else
+  begin
+    ft := GoalFieldType;
+    if ft = ftRed then
+      result := gsLastStoneInGoalRed
+    else if ft = ftYellow then
+      result := gsLastStoneInGoalYellow
+    else if ft = ftGreen then
+      result := gsLastStoneInGoalGreen
+    else
+      result := gsUndefined;
   end;
 end;
 
@@ -208,6 +237,11 @@ end;
 function TPlayGroundMatrix.CoordToIndex(x, y: integer): integer;
 begin
   result := x + y * Width;
+end;
+
+function TPlayGroundMatrix.FieldState(c: TCoord): TFieldState;
+begin
+  result := FieldState(c.X, c.Y);
 end;
 
 function TPlayGroundMatrix.CoordToIndex(coord: TCoord): integer;

@@ -219,7 +219,7 @@ end;
 
 procedure TMainForm.RefreshStonesRemoved;
 resourcestring
-  LNG_STONES_REMOVED = '%d of %d stones removed';
+  LNG_STONES_REMOVED = '%d of %d stones removed'; // Jumping stone not counted
 begin
   Statistics.Panels.Items[1].Text := Format(LNG_STONES_REMOVED, [LevelRemovedStones, LevelTotalStones-1]);
 end;
@@ -509,25 +509,8 @@ begin
 end;
 
 function TMainForm.GoalStatus: TGoalStatus;
-var
-  ft: TFieldType;
 begin
-  if not PlaygroundMatrix.MatrixHasGoal then
-    result := gsNoGoal
-  else if LevelRemovedStones < LevelTotalStones-1 then
-    Result := gsMultipleStonesRemaining
-  else
-  begin
-    ft := PlaygroundMatrix.GoalFieldType;
-    if ft = ftRed then
-      result := gsLastStoneInGoalRed
-    else if ft = ftYellow then
-      result := gsLastStoneInGoalYellow
-    else if ft = ftGreen then
-      result := gsLastStoneInGoalGreen
-    else
-      result := gsUndefined;
-  end;
+  result := PlaygroundMatrix.GoalStatus(LevelTotalStones - LevelRemovedStones);
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
