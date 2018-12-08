@@ -6,6 +6,11 @@ uses
   SysUtils, Dialogs, Functions, ExtCtrls, Classes, Math;
 
 type
+  TCoord = record
+    X: integer;
+    Y: integer;
+  end;
+
   TFieldType = (ftUndefined, ftFullSpace, ftEmpty, ftRed, ftYellow, ftGreen);
 
   TFieldProperties = record
@@ -52,17 +57,23 @@ type
   TPlayGroundMatrix = record
     Fields: array of array of TField;
   public
+    procedure InitFieldArray(width, height: integer);
     function MatrixHasGoal: boolean;
     function GoalFieldType: TFieldType;
     function MatrixWorth: integer;
     procedure ClearMatrix(FreeVCL: boolean);
     function CloneMatrix: TPlayGroundMatrix;
-    function FieldState(t: TFieldType): TFieldState; overload;
+    class function FieldState(t: TFieldType): TFieldState; overload; static;
     function FieldState(f: TField): TFieldState; overload;
     function FieldState(x, y: integer): TFieldState; overload;
     function CanJump(SourceX, SourceY, DestX, DestY: integer; DiagonalOK: boolean): boolean; overload;
     function CanJump(SourceX, SourceY: integer; DiagonalOK: boolean): boolean; overload;
     function CanJump(DiagonalOK: boolean): boolean; overload;
+    function IndexToCoord(index: integer): TCoord;
+    function CoordToIndex(coord: TCoord): integer; overload;
+    function CoordToIndex(x, y: integer): integer; overload;
+    function Width: integer;
+    function Height: integer;
   end;
 
 function FieldTypeWorth(t: TFieldType): integer;
@@ -88,7 +99,7 @@ begin
   begin
     for y := Low(Fields[x]) to High(Fields[x]) do
     begin
-      result := result or Fields[x][y].Goal;
+      result := result or Fields[x,y].Goal;
     end;
   end;
 end;
@@ -102,7 +113,35 @@ begin
   begin
     for y := Low(Fields[x]) to High(Fields[x]) do
     begin
-      if Fields[x][y].Goal then result := Fields[x][y].FieldType
+      if Fields[x,y].Goal then result := Fields[x,y].FieldType
+    end;
+  end;
+end;
+
+function TPlayGroundMatrix.Height: integer;
+begin
+  if Length(Fields) = 0 then
+    result := 0
+  else
+    result := Length(Fields[0]);
+end;
+
+function TPlayGroundMatrix.IndexToCoord(index: integer): TCoord;
+begin
+  result.X := index mod Width;
+  result.Y := index div Width;
+end;
+
+procedure TPlayGroundMatrix.InitFieldArray(width, height: integer);
+var
+  x, y: integer;
+begin
+  SetLength(Fields, width, height);
+  for x := Low(Fields) to High(Fields) do
+  begin
+    for y := Low(Fields[x]) to High(Fields[x]) do
+    begin
+      Fields[x,y].FieldType := ftUndefined;
     end;
   end;
 end;
@@ -116,9 +155,14 @@ begin
   begin
     for y := Low(Fields[x]) to High(Fields[x]) do
     begin
-      Inc(result, FieldTypeWorth(Fields[x][y].FieldType));
+      Inc(result, FieldTypeWorth(Fields[x,y].FieldType));
     end;
   end;
+end;
+
+function TPlayGroundMatrix.Width: integer;
+begin
+  result := Length(Fields);
 end;
 
 procedure TPlayGroundMatrix.ClearMatrix(FreeVCL: boolean);
@@ -131,13 +175,12 @@ begin
     begin
       if FreeVCL then
       begin
-        if Assigned(Fields[x][y].Stone) then Fields[x][y].Stone.Free;
-        if Assigned(Fields[x][y].Panel) then Fields[x][y].Panel.Free;
+        if Assigned(Fields[x,y].Stone) then Fields[x,y].Stone.Free;
+        if Assigned(Fields[x,y].Panel) then Fields[x,y].Panel.Free;
       end;
     end;
-    SetLength(Fields[x], 0);
   end;
-  SetLength(Fields, 0);
+  SetLength(Fields, 0, 0);
 end;
 
 function TPlayGroundMatrix.CloneMatrix: TPlayGroundMatrix;
@@ -150,15 +193,29 @@ begin
     SetLength(result.Fields[x], Length(Fields[x]));
     for y := Low(Fields[x]) to High(Fields[x]) do
     begin
-      result.Fields[x][y].FieldType := Fields[x][y].FieldType;
-      result.Fields[x][y].Goal      := Fields[x][y].Goal;
-      result.Fields[x][y].Panel     := Fields[x][y].Panel;
-      result.Fields[x][y].Stone     := Fields[x][y].Stone;
+      result.Fields[x,y].FieldType := Fields[x,y].FieldType;
+      result.Fields[x,y].Goal      := Fields[x,y].Goal;
+      result.Fields[x,y].Panel     := Fields[x,y].Panel;
+      result.Fields[x,y].Stone     := Fields[x,y].Stone;
     end;
   end;
 end;
 
-function TPlayGroundMatrix.FieldState(t: TFieldType): TFieldState;
+function TPlayGroundMatrix.CoordToIndex(x, y: integer): integer;
+var
+  c: TCoord;
+begin
+  c.X := x;
+  c.Y := y;
+  result := CoordToIndex(c);
+end;
+
+function TPlayGroundMatrix.CoordToIndex(coord: TCoord): integer;
+begin
+  result := coord.X + coord.Y * Width;
+end;
+
+class function TPlayGroundMatrix.FieldState(t: TFieldType): TFieldState;
 begin
   result := fsError;
   case t of
@@ -181,7 +238,7 @@ begin
   if (x < Low(Fields)) or (x > High(Fields)) then exit;
   if (y < Low(Fields[x])) or (y > High(Fields[x])) then exit;
 
-  result := FieldState(Fields[x][y]);
+  result := FieldState(Fields[x,y]);
 end;
 
 function TPlayGroundMatrix.CanJump(SourceX, SourceY, DestX, DestY: integer; DiagonalOK: boolean): boolean;

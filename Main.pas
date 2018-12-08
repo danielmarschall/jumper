@@ -50,7 +50,6 @@ type
     NoCloseQuery: boolean;
     CountedSeconds: Integer;
     LevelFile: String;
-    LookupFieldCoordinateArray: array of TPoint;
     PrevPlaygroundMatrixes: array of TPlayGroundMatrix;
     PlaygroundMatrix: TPlayGroundMatrix;
     Points: Integer;
@@ -98,16 +97,16 @@ uses
 
 procedure TMainForm.RedrawStonesFromMatrix(Matrix: TPlayGroundMatrix);
 var
-  i, j: integer;
+  x, y: integer;
 begin
-  for i := Low(Matrix.Fields) to High(Matrix.Fields) do
+  for x := Low(Matrix.Fields) to High(Matrix.Fields) do
   begin
-    for j := Low(Matrix.Fields[i]) to High(Matrix.Fields[i]) do
+    for y := Low(Matrix.Fields[x]) to High(Matrix.Fields[x]) do
     begin
-      if Assigned(Matrix.Fields[i][j].Stone) then
+      if Assigned(Matrix.Fields[x][y].Stone) then
       begin
-        LoadPictureForType(Matrix.Fields[i][j].FieldType, Matrix.Fields[i][j].Stone.Picture);
-        StoneDraggingAllow(Matrix.Fields[i][j].Stone, Matrix.FieldState(Matrix.Fields[i][j].FieldType) <> fsAvailable);
+        LoadPictureForType(Matrix.Fields[x][y].FieldType, Matrix.Fields[x][y].Stone.Picture);
+        StoneDraggingAllow(Matrix.Fields[x][y].Stone, Matrix.FieldState(Matrix.Fields[x][y].FieldType) <> fsAvailable);
       end;
     end;
   end;
@@ -142,8 +141,6 @@ begin
     PrevPlaygroundMatrixes[i].ClearMatrix(false);
   SetLength(PrevPlaygroundMatrixes, 0);
   MUndo.Enabled := false;
-
-  SetLength(LookupFieldCoordinateArray, 0);
 
   if Assigned(Level) then FreeAndNil(Level);
 end;
@@ -243,6 +240,7 @@ begin
     Inc(LevelRemovedStones);
     RefreshStonesRemoved;
   end;
+
   PlayGroundMatrix.Fields[x, y].FieldType := ftEmpty;
   LoadPictureForType(PlayGroundMatrix.Fields[x, y].FieldType, PlayGroundMatrix.Fields[x, y].Stone.Picture);
   StoneDraggingAllow(PlayGroundMatrix.Fields[x, y].Stone, false);
@@ -281,14 +279,14 @@ procedure TMainForm.DoJump(SourceTag, DestTag: integer);
 resourcestring
   LNG_JUMP_LOG = '%d [%d, %d] -> %d [%d, %d];';
 var
-  d, s: TPoint;
+  d, s: TCoord;
   old_fieldtype: TFieldType;
   res: Integer;
 begin
   if not MayJump(SourceTag, DestTag) then exit;
 
-  d := LookupFieldCoordinateArray[DestTag];
-  s := LookupFieldCoordinateArray[SourceTag];
+  s := PlaygroundMatrix.IndexToCoord(SourceTag);
+  d := PlaygroundMatrix.IndexToCoord(DestTag);
 
   JumpHistory.Add(Format(LNG_JUMP_LOG, [SourceTag+1, s.x+1, s.y+1, DestTag+1, d.x+1, d.y+1]));
 
@@ -355,10 +353,10 @@ end;
 
 function TMainForm.MayJump(SourceTag, DestTag: integer): boolean;
 var
-  s, d: TPoint;
+  s, d: TCoord;
 begin
-  d := LookupFieldCoordinateArray[DestTag];
-  s := LookupFieldCoordinateArray[SourceTag];
+  s := PlayGroundMatrix.IndexToCoord(SourceTag);
+  d := PlayGroundMatrix.IndexToCoord(DestTag);
 
   result := PlaygroundMatrix.CanJump(s.X, s.Y, d.X, d.Y, Level.GameMode = gmDiagonal);
 end;
@@ -382,21 +380,12 @@ begin
   ZeroMemory(@result, SizeOf(result));
   if t.Typ = ftFullSpace then exit;
 
-  index := Length(LookupFieldCoordinateArray);
+  index := PlaygroundMatrix.CoordToIndex(x, y);
 
   newField.FieldType := t.Typ;
   newField.Goal := t.Goal;
   newField.Panel := DrawStoneBox(x, y, index, indent, t.Goal);
   newField.Stone := DrawStone(t.Typ, newField.Panel);
-  if PlayGroundMatrix.FieldState(t.Typ) = fsStone then Inc(LevelTotalStones);
-
-  SetLength(LookupFieldCoordinateArray, index + 1);
-  LookupFieldCoordinateArray[index].X := x;
-  LookupFieldCoordinateArray[index].Y := y;
-
-  if Length(PlayGroundMatrix.Fields) < x+1 then SetLength(PlayGroundMatrix.Fields, x+1);
-  if Length(PlayGroundMatrix.Fields[x]) < y+1 then SetLength(PlayGroundMatrix.Fields[x], y+1);
-  PlaygroundMatrix.Fields[x, y] := newField;
 
   result := newField;
 end;
@@ -406,17 +395,25 @@ var
   y, x: integer;
   max_x, max_y: integer;
   p: TPanel;
+  newField: TField;
 begin
   PlayGround.Visible := false;
 
-  // Die Dimensionen ermitteln
+  // Attention: PlaygroundMatrix is indexed [x,y] while LevelArray is indexed [y,x]
+  // TODO: PlaygroundMatrix and LevelArray are redundant. Can't we just replace one with the other?
+  PlaygroundMatrix.InitFieldArray(Length(LevelArray[0].Fields), Length(LevelArray));
+
   max_x := 0;
   max_y := 0;
   for y := Low(LevelArray) to High(LevelArray) do
   begin
     for x := Low(LevelArray[y].Fields) to High(LevelArray[y].Fields) do
     begin
-      p := DrawField(x, y, LevelArray[y].Fields[x], LevelArray[y].Indent).Panel;
+      if TPlayGroundMatrix.FieldState(LevelArray[y].Fields[x].Typ) = fsStone then
+        Inc(LevelTotalStones);
+      newField := DrawField(x, y, LevelArray[y].Fields[x], LevelArray[y].Indent);
+      PlaygroundMatrix.Fields[x, y] := newField;
+      p := newField.Panel;
       if Assigned(p) then
       begin
         max_x := Max(max_x, p.Left + p.Width);
