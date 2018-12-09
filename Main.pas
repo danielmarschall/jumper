@@ -76,8 +76,8 @@ type
     procedure StoneDragOver(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
     procedure StoneDragDrop(Sender, Source: TObject; X, Y: Integer);
     procedure DrawField(x, y: integer; var f: TField);
-    function DrawStone(fieldtype: TFieldType; panel: TPanel): TImage;
-    function DrawStoneBox(x, y, tag, halftabs: integer; isGoal: boolean): TPanel;
+    function DrawStone(f: TField): TImage;
+    function DrawStoneBox(x, y, tag: integer; f: TField): TPanel;
     procedure LoadPictureForType(FieldType: TFieldType; Picture: TPicture);
     function GoalStatus: TGoalStatus;
   end;
@@ -92,6 +92,14 @@ uses
 
 {$R *.dfm}
 
+type
+  TFieldVclData = class(TObject)
+  public
+    Panel: TPanel;
+    Stone: TImage;
+    destructor Destroy; override;
+  end;
+
 { TMainForm }
 
 procedure TMainForm.RedrawStonesFromMatrix(Matrix: TPlayGroundMatrix);
@@ -102,10 +110,13 @@ begin
   begin
     for y := Low(Matrix.Fields[x]) to High(Matrix.Fields[x]) do
     begin
-      if Assigned(Matrix.Fields[x,y].Stone) then
+      if Assigned(Matrix.Fields[x,y].Data) and
+         Assigned(TFieldVclData(Matrix.Fields[x,y].Data).Stone) then
       begin
-        LoadPictureForType(Matrix.Fields[x,y].FieldType, Matrix.Fields[x,y].Stone.Picture);
-        StoneDraggingAllow(Matrix.Fields[x,y].Stone, Matrix.FieldState(Matrix.Fields[x,y].FieldType) <> fsAvailable);
+        LoadPictureForType(Matrix.Fields[x,y].FieldType,
+                           TFieldVclData(Matrix.Fields[x,y].Data).Stone.Picture);
+        StoneDraggingAllow(TFieldVclData(Matrix.Fields[x,y].Data).Stone,
+                           Matrix.Fields[x,y].FieldState <> fsAvailable);
       end;
     end;
   end;
@@ -154,11 +165,15 @@ begin
   end;
 end;
 
-function TMainForm.DrawStone(fieldtype: TFieldType; panel: TPanel): TImage;
+function TMainForm.DrawStone(f: TField): TImage;
+var
+  panel: TPanel;
 begin
+  panel := TFieldVclData(f.Data).Panel;
+
   result := TImage.Create(panel);
   result.Parent := panel;
-  LoadPictureForType(fieldtype, result.Picture);
+  LoadPictureForType(f.FieldType, result.Picture);
   result.Width := panel.Width - 2*MET_SHAPE_MARGIN;
   result.Height := panel.Height - 2*MET_SHAPE_MARGIN;
   result.Left := MET_SHAPE_MARGIN;
@@ -170,7 +185,7 @@ begin
   result.OnDragOver := panel.OnDragOver;
   result.OnDragDrop := panel.OnDragDrop;
 
-  StoneDraggingAllow(result, PlayGroundMatrix.FieldState(fieldtype) <> fsAvailable);
+  StoneDraggingAllow(result, f.FieldState <> fsAvailable);
 end;
 
 procedure TMainForm.StoneDraggingAllow(Stone: TImage; Allow: boolean);
@@ -187,11 +202,11 @@ begin
   end;
 end;
 
-function TMainForm.DrawStoneBox(x, y, tag, halftabs: integer; isGoal: boolean): TPanel;
+function TMainForm.DrawStoneBox(x, y, tag: integer; f: TField): TPanel;
 begin
   result := TPanel.Create(Playground);
   result.Parent := Playground;
-  if isGoal then
+  if f.Goal then
   begin
     result.BevelInner := bvLowered;
   end;
@@ -199,7 +214,7 @@ begin
   result.BevelOuter := bvLowered;
   result.Width := MET_FIELD_SIZE;
   result.Height := MET_FIELD_SIZE;
-  result.Left := x * (MET_FIELD_SIZE+MET_FIELD_SPACE) + MET_FIELD_SPACE + (halftabs*MET_HALFTAB_SIZE);
+  result.Left := x * (MET_FIELD_SIZE+MET_FIELD_SPACE) + MET_FIELD_SPACE + (f.Indent*MET_HALFTAB_SIZE);
   result.Top := y * (MET_FIELD_SIZE+MET_FIELD_SPACE) + MET_FIELD_SPACE;
 
   result.Tag := tag;
@@ -241,8 +256,9 @@ begin
   end;
 
   PlayGroundMatrix.Fields[x,y].FieldType := ftEmpty;
-  LoadPictureForType(PlayGroundMatrix.Fields[x,y].FieldType, PlayGroundMatrix.Fields[x,y].Stone.Picture);
-  StoneDraggingAllow(PlayGroundMatrix.Fields[x,y].Stone, false);
+  LoadPictureForType(PlayGroundMatrix.Fields[x,y].FieldType,
+                     TFieldVclData(PlayGroundMatrix.Fields[x,y].Data).Stone.Picture);
+  StoneDraggingAllow(TFieldVclData(PlayGroundMatrix.Fields[x,y].Data).Stone, false);
 end;
 
 procedure TMainForm.Aboutthislevel1Click(Sender: TObject);
@@ -317,8 +333,9 @@ begin
   old_fieldtype := PlayGroundMatrix.Fields[s.X, s.Y].FieldType; // Steinfarbe merken
   RemoveStone(s.X, s.Y, false); // Eigenen Stein entfernen. Keine Punkte zählen, da das unser eigener Stein ist, der springt
   PlayGroundMatrix.Fields[d.X, d.Y].FieldType := old_fieldtype; // Farbe wiederherstellen
-  LoadPictureForType(PlayGroundMatrix.Fields[d.X, d.Y].FieldType, PlayGroundMatrix.Fields[d.X, d.Y].Stone.Picture); // Stein an neue Position malen
-  StoneDraggingAllow(PlayGroundMatrix.Fields[d.X, d.Y].Stone, true); // Und die Drag-Eigenschaft erneuern
+  LoadPictureForType(PlayGroundMatrix.Fields[d.X, d.Y].FieldType,
+                     TFieldVclData(PlayGroundMatrix.Fields[d.X, d.Y].Data).Stone.Picture); // Stein an neue Position malen
+  StoneDraggingAllow(TFieldVclData(PlayGroundMatrix.Fields[d.X, d.Y].Data).Stone, true); // Und die Drag-Eigenschaft erneuern
   {$ENDREGION}
 
   {$REGION 'Sind weitere Sprünge möglich oder ist das Spiel vorbei?'}
@@ -379,8 +396,9 @@ begin
 
   index := PlaygroundMatrix.CoordToIndex(x, y);
 
-  f.Panel := DrawStoneBox(x, y, index, f.indent, f.Goal);
-  f.Stone := DrawStone(f.FieldType, f.Panel);
+  if not Assigned(f.Data) then f.Data := TFieldVclData.Create;
+  TFieldVclData(f.Data).Panel := DrawStoneBox(x, y, index, f);
+  TFieldVclData(f.Data).Stone := DrawStone(f);
 end;
 
 procedure TMainForm.TimerTimer(Sender: TObject);
@@ -424,10 +442,10 @@ begin
   begin
     for y := Low(PlaygroundMatrix.Fields[x]) to High(PlaygroundMatrix.Fields[x]) do
     begin
-      if TPlayGroundMatrix.FieldState(PlaygroundMatrix.Fields[x,y].FieldType) = fsOccupied then
+      if PlaygroundMatrix.Fields[x,y].FieldState = fsOccupied then
         Inc(LevelTotalStones);
       DrawField(x, y, PlaygroundMatrix.Fields[x,y]);
-      p := PlaygroundMatrix.Fields[x,y].Panel;
+      p := TFieldVclData(PlaygroundMatrix.Fields[x,y].Data).Panel;
       if Assigned(p) then
       begin
         max_x := Max(max_x, p.Left + p.Width);
@@ -660,6 +678,15 @@ end;
 procedure TMainForm.MHelpClick(Sender: TObject);
 begin
   HelpForm.ShowModal;
+end;
+
+{ TFieldVclData }
+
+destructor TFieldVclData.Destroy;
+begin
+  if Assigned(Stone) then Stone.Free;
+  if Assigned(Panel) then Panel.Free;
+  inherited;
 end;
 
 end.

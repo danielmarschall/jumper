@@ -3,7 +3,7 @@ unit LevelFunctions;
 interface
 
 uses
-  SysUtils, Dialogs, Functions, ExtCtrls, Classes, Math;
+  SysUtils, Dialogs, Functions, Classes;
 
 type
   TFieldType = (ftUndefined, ftFullSpace, ftEmpty, ftRed, ftYellow, ftGreen);
@@ -20,16 +20,16 @@ type
                  gsLastStoneInGoalGreen, gsLastStoneOutsideGoal);
 
   TCoord = record
-    X: integer;
-    Y: integer;
+    X: integer; // fields. not pixels
+    Y: integer; // fields. not pixels
   end;
 
   TField = record
-    Indent: integer;
+    Indent: integer; // half steps
     FieldType: TFieldType;
     Goal: Boolean;
-    Panel: TPanel;
-    Stone: TImage;
+    Data: TObject; // can be used to hold VCL references. Is not cloned when calling CloneMatrix!
+    function FieldState: TFieldState;
   end;
 
   TPlayGroundMatrix = record
@@ -42,8 +42,6 @@ type
     function MatrixWorth: integer;
     procedure ClearMatrix(FreeVCL: boolean);
     function CloneMatrix: TPlayGroundMatrix;
-    class function FieldState(t: TFieldType): TFieldState; overload; static;
-    function FieldState(f: TField): TFieldState; overload;
     function FieldState(x, y: integer): TFieldState; overload;
     function FieldState(c: TCoord): TFieldState; overload;
     function CanJump(SourceX, SourceY, DestX, DestY: integer; DiagonalOK: boolean): boolean; overload;
@@ -208,8 +206,7 @@ begin
     begin
       for y := Low(Fields[x]) to High(Fields[x]) do
       begin
-        if Assigned(Fields[x,y].Stone) then Fields[x,y].Stone.Free;
-        if Assigned(Fields[x,y].Panel) then Fields[x,y].Panel.Free;
+        if Assigned(Fields[x,y].Data) then Fields[x,y].Data.Free;
       end;
     end;
   end;
@@ -228,8 +225,7 @@ begin
     begin
       result.Fields[x,y].FieldType := Fields[x,y].FieldType;
       result.Fields[x,y].Goal      := Fields[x,y].Goal;
-      result.Fields[x,y].Panel     := Fields[x,y].Panel;
-      result.Fields[x,y].Stone     := Fields[x,y].Stone;
+      result.Fields[x,y].Data      := Fields[x,y].Data;
     end;
   end;
 end;
@@ -249,30 +245,13 @@ begin
   result := CoordToIndex(coord.X, coord.Y);
 end;
 
-class function TPlayGroundMatrix.FieldState(t: TFieldType): TFieldState;
-begin
-  result := fsUndefined;
-  case t of
-    ftFullSpace: result := fsLocked;
-    ftEmpty:     result := fsAvailable;
-    ftGreen:     result := fsOccupied;
-    ftYellow:    result := fsOccupied;
-    ftRed:       result := fsOccupied;
-  end;
-end;
-
-function TPlayGroundMatrix.FieldState(f: TField): TFieldState;
-begin
-  result := FieldState(f.FieldType);
-end;
-
 function TPlayGroundMatrix.FieldState(x, y: integer): TFieldState;
 begin
   result := fsUndefined;
   if (x < Low(Fields)) or (x > High(Fields)) then exit;
   if (y < Low(Fields[x])) or (y > High(Fields[x])) then exit;
 
-  result := FieldState(Fields[x,y]);
+  result := Fields[x,y].FieldState;
 end;
 
 function TPlayGroundMatrix.CanJump(SourceX, SourceY, DestX, DestY: integer; DiagonalOK: boolean): boolean;
@@ -542,6 +521,20 @@ begin
 
   { Wird hier nicht abgeprüft, da dafür zuerst der PlayGround gebaut sein muss.
     Es ist außerdem eher ein logischer Fehler, kein Fehler in der Levelstruktur! }
+end;
+
+{ TField }
+
+function TField.FieldState: TFieldState;
+begin
+  result := fsUndefined;
+  case FieldType of
+    ftFullSpace: result := fsLocked;
+    ftEmpty:     result := fsAvailable;
+    ftGreen:     result := fsOccupied;
+    ftYellow:    result := fsOccupied;
+    ftRed:       result := fsOccupied;
+  end;
 end;
 
 end.
