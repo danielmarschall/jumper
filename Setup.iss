@@ -5,44 +5,49 @@
 AppName=PegSolitaire
 AppVerName=PegSolitaire
 AppVersion=1.0
-AppCopyright=© Copyright 2009 - 2018 ViaThinkSoft.
+AppCopyright=© Copyright 2009 - 2018 ViaThinkSoft
 AppPublisher=ViaThinkSoft
 AppPublisherURL=http://www.viathinksoft.de/
 AppSupportURL=http://www.daniel-marschall.de/
 AppUpdatesURL=http://www.viathinksoft.de/
-DefaultDirName={pf}\PegSolitaire
+DefaultDirName={autopf}\PegSolitaire
 DefaultGroupName=PegSolitaire
 UninstallDisplayIcon={app}\PegSolitaire.exe
 VersionInfoCompany=ViaThinkSoft
-VersionInfoCopyright=© Copyright 2009 - 2018 ViaThinkSoft.
+VersionInfoCopyright=© Copyright 2009 - 2018 ViaThinkSoft
 VersionInfoDescription=PegSolitaire Setup
 VersionInfoTextVersion=1.0.0.0
 VersionInfoVersion=1.
+OutputDir=.
 OutputBaseFilename=PegSolitaireSetup
-Compression=zip/9
+; Configure Sign Tool in InnoSetup at "Tools => Configure Sign Tools" (adjust the path to your SVN repository location)
+; Name    = sign_single   
+; Command = "C:\SVN\...\sign_single.bat" $f
+SignTool=sign_single
+SignedUninstaller=yes
 
 [Languages]
 Name: de; MessagesFile: "compiler:Languages\German.isl"
 
 [Files]
 ; Allgemein
-Source: "PegSolitaire.exe"; DestDir: "{app}"
-Source: "PegSolitaire.deu"; DestDir: "{app}"
+Source: "PegSolitaire.exe"; DestDir: "{app}"; Flags: ignoreversion signonce
+Source: "PegSolitaire.deu"; DestDir: "{app}"; Flags: ignoreversion signonce
 Source: "Boards\*.brd"; DestDir: "{app}\Boards"; Flags: ignoreversion
 Source: "Boards\*.txt"; DestDir: "{app}\Boards"; Flags: ignoreversion
 Source: "Journal\Info.txt"; DestDir: "{app}\Journal"; Flags: ignoreversion
 
-[Folders]
-Name: "{group}\Webseiten"; Languages: de
+;[Folders]
+;Name: "{group}\Webseiten"; Languages: de
 
 [Icons]
 ; Allgemein
 Name: "{group}\PegSolitaire"; Filename: "{app}\PegSolitaire.exe"
 ; Deutsch
-Name: "{group}\Deinstallieren"; Filename: "{uninstallexe}"
-Name: "{group}\Webseiten\Daniel Marschall"; Filename: "https://www.daniel-marschall.de/"
-Name: "{group}\Webseiten\ViaThinkSoft"; Filename: "https://www.viathinksoft.de/"
-Name: "{group}\Webseiten\Projektseite auf ViaThinkSoft"; Filename: "https://www.viathinksoft.de/projects/jumper"
+;Name: "{group}\Deinstallieren"; Filename: "{uninstallexe}"
+;Name: "{group}\Webseiten\Daniel Marschall"; Filename: "https://www.daniel-marschall.de/"
+;Name: "{group}\Webseiten\ViaThinkSoft"; Filename: "https://www.viathinksoft.de/"
+;Name: "{group}\Webseiten\Projektseite auf ViaThinkSoft"; Filename: "https://www.viathinksoft.de/projects/jumper"
 
 [Run]
 Filename: "{app}\PegSolitaire.exe"; Description: "PegSolitaire"; Flags: nowait postinstall skipifsilent
