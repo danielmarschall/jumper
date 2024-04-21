@@ -2,7 +2,7 @@ object HelpForm: THelpForm
   Left = 192
   Top = 103
   BorderIcons = [biSystemMenu, biMinimize]
-  BorderStyle = bsSingle
+  BorderStyle = bsDialog
   Caption = 'Hilfe'
   ClientHeight = 276
   ClientWidth = 427
@@ -13,7 +13,7 @@ object HelpForm: THelpForm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesktopCenter
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object HelpMemo: TMemo
