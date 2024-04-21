@@ -2,8 +2,8 @@ object LevelChoice: TLevelChoice
   Left = 257
   Top = 146
   Caption = 'ViaThinkSoft Peg Solit'#228'r - Brettwahl'
-  ClientHeight = 415
-  ClientWidth = 656
+  ClientHeight = 423
+  ClientWidth = 820
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,57 +13,79 @@ object LevelChoice: TLevelChoice
   OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
-  OnResize = FormResize
   OnShow = FormShow
+  DesignSize = (
+    820
+    423)
   PixelsPerInch = 96
   TextHeight = 13
   object PlayBtn: TButton
-    Left = 336
-    Top = 384
+    Left = 515
+    Top = 390
     Width = 121
     Height = 25
+    Anchors = [akRight, akBottom]
     Caption = 'Spielen!'
     Default = True
     Enabled = False
     TabOrder = 2
     OnClick = PlayBtnClick
+    ExplicitLeft = 513
+    ExplicitTop = 382
   end
   object CancelBtn: TButton
     Left = 8
-    Top = 384
+    Top = 392
     Width = 121
     Height = 25
+    Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Abbruch'
     TabOrder = 3
     OnClick = CancelBtnClick
+    ExplicitTop = 384
   end
   object PreviewGrp: TGroupBox
-    Left = 464
+    Left = 642
     Top = 8
-    Width = 169
-    Height = 369
+    Width = 170
+    Height = 377
+    Anchors = [akTop, akRight, akBottom]
     Caption = 'Vorschau'
     TabOrder = 1
+    ExplicitLeft = 640
+    ExplicitHeight = 369
+    DesignSize = (
+      170
+      377)
     object PreviewImage: TImage
       Left = 8
       Top = 16
       Width = 153
-      Height = 345
+      Height = 353
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      ExplicitHeight = 345
     end
   end
   object LevelGrp: TGroupBox
     Left = 8
     Top = 8
-    Width = 449
-    Height = 369
+    Width = 628
+    Height = 377
+    Anchors = [akLeft, akTop, akRight, akBottom]
     Caption = 'Bitte w'#228'hlen Sie das Brett, dass Sie verwenden m'#246'chten'
     TabOrder = 0
+    ExplicitWidth = 626
+    ExplicitHeight = 369
+    DesignSize = (
+      628
+      377)
     object LevelList: TListView
       Left = 8
       Top = 16
-      Width = 433
-      Height = 345
+      Width = 612
+      Height = 353
+      Anchors = [akLeft, akTop, akRight, akBottom]
       Columns = <>
       IconOptions.AutoArrange = True
       LargeImages = LevelImageList
@@ -75,6 +97,8 @@ object LevelChoice: TLevelChoice
       OnChange = LevelListChange
       OnClick = LevelListClick
       OnDblClick = PlayBtnClick
+      ExplicitWidth = 433
+      ExplicitHeight = 345
     end
   end
   object LevelImageList: TImageList
@@ -83,7 +107,7 @@ object LevelChoice: TLevelChoice
     Left = 24
     Top = 32
     Bitmap = {
-      494C0101030018003C0020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010103001800400020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000002000000001002000000000000040
       0000000000000000000000000000000000000000000000000000000000000000
       0000800000008000000080000000800000008000000080000000800000008000

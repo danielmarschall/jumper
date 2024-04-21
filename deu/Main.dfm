@@ -15,14 +15,12 @@ object MainForm: TMainForm
   Font.Name = 'Tahoma'
   Font.Style = []
   Menu = MainMenu
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Playground: TPanel
     Left = 0
@@ -49,6 +47,8 @@ object MainForm: TMainForm
         Alignment = taRightJustify
         Width = 50
       end>
+    ExplicitTop = 257
+    ExplicitWidth = 336
   end
   object MainMenu: TMainMenu
     Left = 8
@@ -69,9 +69,9 @@ object MainForm: TMainForm
         OnClick = MRestartGameClick
       end
       object MPauseTime: TMenuItem
+        AutoCheck = True
         Caption = 'Zeit anhalten'
         ShortCut = 16464
-        OnClick = MPauseTimeClick
       end
       object N2: TMenuItem
         Caption = '-'
@@ -107,10 +107,10 @@ object MainForm: TMainForm
     object MSettings: TMenuItem
       Caption = 'Einstellungen'
       object MEnableSound: TMenuItem
+        AutoCheck = True
         Caption = 'Ton'
         Checked = True
         ShortCut = 32851
-        OnClick = MEnableSoundClick
       end
     end
     object Help2: TMenuItem

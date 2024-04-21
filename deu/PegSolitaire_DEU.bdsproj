@@ -5,7 +5,7 @@
 			<Option Name="Personality">W32ResourceDLL.Personality</Option>
 			<Option Name="ProjectType">ResourceDLL</Option>
 			<Option Name="Version">1.0</Option>
-			<Option Name="GUID">{0F72D401-316E-45F3-B804-2F17A354F2E4}</Option>
+			<Option Name="GUID">{11AC43DD-F86A-4BD1-8216-F899CDB510E7}</Option>
 		</Option>
 	</PersonalityInfo>
 	<W32ResourceDLL.Personality>

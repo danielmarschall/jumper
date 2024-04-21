@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file original="C:\Users\DELL User\SVN\Jumper\trunk\Help.dfm" source-language="en-US" target-language="de-DE" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\DELL User\SVN\Jumper\trunk\Help.dfm">
+  <file original="D:\SVN\__Noch keine ReadMe und Lizenz Datei\Jumper\trunk\Help.dfm" source-language="en-US" target-language="de-DE" datatype="delphiform" tool="ETM v10.0" ts="D:\SVN\__Noch keine ReadMe und Lizenz Datei\Jumper\trunk\Help.dfm">
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">43415.8226851852</prop>
-        <prop prop-type="OrigDateTime">43415.8097222222</prop>
-        <prop prop-type="XlatDateTime">43414.8876388889</prop>
+        <prop prop-type="SelfDateTime">45403.7730092593</prop>
+        <prop prop-type="OrigDateTime">44030.4828009259</prop>
+        <prop prop-type="XlatDateTime">44030.4828703704</prop>
         <prop prop-type="Translated">28</prop>
         <prop prop-type="UnTranslated">39</prop>
       </prop-group>
@@ -16,702 +16,365 @@
       <trans-unit id="O:HelpForm.Left" resname="O:HelpForm.Left">
         <source>192</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">0</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.Top" resname="O:HelpForm.Top">
         <source>103</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">1</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.BorderIcons" resname="O:HelpForm.BorderIcons">
         <source>[biSystemMenu, biMinimize]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">2</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.BorderStyle" resname="O:HelpForm.BorderStyle">
         <source>bsSingle</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">3</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.Caption" resname="O:HelpForm.Caption">
         <source>'Help'</source>
         <target>'Hilfe'</target>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">4</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">4</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.ClientHeight" resname="O:HelpForm.ClientHeight">
         <source>276</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">5</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.ClientWidth" resname="O:HelpForm.ClientWidth">
         <source>427</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">6</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.Color" resname="O:HelpForm.Color">
         <source>clBtnFace</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">7</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.Font.Charset" resname="O:HelpForm.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">8</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.Font.Color" resname="O:HelpForm.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">9</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.Font.Height" resname="O:HelpForm.Font.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">10</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.Font.Name" resname="O:HelpForm.Font.Name">
         <source>'MS Sans Serif'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">11</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.Font.Style" resname="O:HelpForm.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">12</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.OldCreateOrder" resname="O:HelpForm.OldCreateOrder">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">13</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.Position" resname="O:HelpForm.Position">
         <source>poDesktopCenter</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">14</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.PixelsPerInch" resname="O:HelpForm.PixelsPerInch">
         <source>96</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">15</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.TextHeight" resname="O:HelpForm.TextHeight">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">16</prop>
-          <prop prop-type="Type">THelpForm</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">THelpForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Left" resname="O:HelpForm.O:HelpMemo.Left">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">17</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Top" resname="O:HelpForm.O:HelpMemo.Top">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">18</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Width" resname="O:HelpForm.O:HelpMemo.Width">
         <source>409</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">19</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Height" resname="O:HelpForm.O:HelpMemo.Height">
         <source>217</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">20</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.TabStop" resname="O:HelpForm.O:HelpMemo.TabStop">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">21</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Color" resname="O:HelpForm.O:HelpMemo.Color">
         <source>clBtnFace</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">22</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[0]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[0]">
         <source>'The rules of Peg Solitaire are simple. You have to jump over the neighboring '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653241</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">23</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">(</prop>
-        </prop-group>
         <target>'Die Regeln von Peg Solitär sind einfach. Sie müssen ähnlich wie beim Damespiel über die benachbarten Steine hüpfen,'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653241</prop><prop prop-type="Status">1</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[1]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[1]">
         <source>'stones in a similar way to the drafts to remove them. The game is over when there '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653241</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">24</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'um diese zu entfernen. Das Spiel ist beendet,'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653241</prop><prop prop-type="Status">1</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[2]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[2]">
         <source>'are no more moves.'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653241</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">25</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'wenn keine weiteren Züge mehr vorhanden sind.'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653241</prop><prop prop-type="Status">1</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[3]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[3]">
         <source>''</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653241</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">26</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">43415.8099653241</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[4]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[4]">
         <source>'ViaThinkSoft Peg Solitär offers you freely variable and extensible board files that '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653241</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">27</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'ViaThinkSoft Peg Solitär bietet Ihnen beliebig variierbare und erweiterbare Brettdateien, die Ihnen die Vorlage zum Spielen bieten.'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653241</prop><prop prop-type="Status">1</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[5]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[5]">
         <source>'provide you with the template for playing. In the next versions, a comfortable level '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653241</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">28</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'In den nächsten Versionen ist auch ein komfortabler Leveleditor geplant, '</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653241</prop><prop prop-type="Status">1</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[6]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[6]">
         <source>'editor is also planned that will make editing via the editor superfluous. However, '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653356</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">29</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'der das Editieren per Editor überflüssig machen soll. '</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653356</prop><prop prop-type="Status">1</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[7]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[7]">
         <source>'the boards already supplied correspond to the usual standard boards.'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653356</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">30</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Die bereits mitgelieferten Bretter entsprechen jedoch den üblichen Standardbrettern.'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653356</prop><prop prop-type="Status">1</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[8]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[8]">
         <source>''</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653356</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">31</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">43415.8099653356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[9]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[9]">
         <source>'This variant of Peg Solitaire has different colored stones, which are weighted '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653356</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">32</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Diese Variante von Peg Solitär hat verschiedenfarbige Steine, die unterschiedlich in der Punktezahl gewichtet wird. Ein entfernter roter Stein bringt Ihnen 30 Punkte,'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653356</prop><prop prop-type="Status">1</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[10]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[10]">
         <source>'differently in the number of points. A distant red stone will give you 30 points, a '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653356</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">33</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'ein gelber 20 und ein entfernter Grüner 10. '</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653356</prop><prop prop-type="Status">1</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[11]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[11]">
         <source>'yellow 20 and a distant green 10.'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653356</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">34</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>''</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653356</prop><prop prop-type="Status">1</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[12]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[12]">
         <source>''</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653356</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">35</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">43415.8099653356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[13]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[13]">
         <source>'However, playing for points is not absolutely necessary. You can also play on '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653356</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">36</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Das Spielen nach Punktezahl ist jedoch nicht zwingend notwendig. Sie können auch auf Zeit spielen, auf die wenigsten verbleibenden Steine oder auf die Zielfeldbelegung. Wählen Sie das Ziel, das Sie bevorzugen.'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653356</prop><prop prop-type="Status">1</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[14]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[14]">
         <source>'time, on the fewest remaining stones or on the target field assignment. Choose the '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653356</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">37</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>' '</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653356</prop><prop prop-type="Status">1</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[15]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[15]">
         <source>'destination you prefer.'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653356</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">38</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>''</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653356</prop><prop prop-type="Status">1</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[16]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[16]">
         <source>''</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653356</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">39</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">43415.8099653356</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[17]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[17]">
         <source>'As a rule, diagonal moves are not allowed. The decision as to whether the '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653356</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">40</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'In der Regel sind diagonale Spielzüge nicht erlaubt. Die Entscheidung, ob die diagonalen Züge trotzdem erlaubt sind, wird vom Entwickler der Leveldatei festgelegt. Es ist möglich, dass gewisse Bretter diagonale züge erfordern, um korrekt gelöst zu werden. Dies ist Mathematisch jedoch sehr komplex nachzuweisen. Wie haben als Komfort die Standardbretter in zwei Varianten ausgeliefert: Mit und ohne Diagonalzug.'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653356</prop><prop prop-type="Status">1</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[18]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[18]">
         <source>'diagonal moves are still allowed is determined by the developer of the level file. It '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653356</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">41</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>''</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653356</prop><prop prop-type="Status">1</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[19]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[19]">
         <source>'is possible that certain boards require diagonal pulls to be loosened correctly. '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653472</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">42</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>''</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653472</prop><prop prop-type="Status">1</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[20]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[20]">
         <source>'However, this is mathematically very complex to prove. How have the standard '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653472</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">43</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>''</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653472</prop><prop prop-type="Status">1</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[21]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[21]">
         <source>'boards delivered in two versions as comfort: with and without diagonal pull.'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653472</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">44</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>''</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653472</prop><prop prop-type="Status">1</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[22]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[22]">
         <source>''</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653472</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">45</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">43415.8099653472</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[23]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[23]">
         <source>'Some levels have target fields. These are characterized by a deeper imprint on '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653472</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">46</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Einige Levels besitzen Zielfelder. Diese sind durch eine tiefere Prägung auf dem Spielfeld  bzw. in der Vorschau durch einen schwarzen Rand gekennzeichnet. Das Peg Solitär ist korrekt beendet, wenn auf den Zielfeldern Steine (Farbe egal) liegen, keine weiteren Züge mehr möglich sind und sonst keine Steine auf dem Brett liegen. Sie erhalten hierfür eine besondere Auszeichnung in den Highscorelisten. Sie müssen aber wie gesagt, dieses Primärziel nicht verfolgen. Sie können stattdessen auch auf Zeit oder Punktezahlen spielen.'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653472</prop><prop prop-type="Status">1</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[24]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[24]">
         <source>'the field or in the preview by a black border. The Peg Solitaire is finished correctly, '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653472</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">47</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>''</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653472</prop><prop prop-type="Status">1</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[25]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[25]">
         <source>'if there are stones on the target fields (color does not matter), no further moves are '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653472</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">48</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>''</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653472</prop><prop prop-type="Status">1</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[26]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[26]">
         <source>'possible and there are no other stones on the board. You will receive a special '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653472</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">49</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>''</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653472</prop><prop prop-type="Status">1</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[27]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[27]">
         <source>'award in the high score lists. But as I said, you do not have to pursue this primary '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653472</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">50</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>''</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653472</prop><prop prop-type="Status">1</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[28]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[28]">
         <source>'goal. You can also play for time or points instead.'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653472</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">51</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>''</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653472</prop><prop prop-type="Status">1</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[29]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[29]">
         <source>''</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653472</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">52</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">43415.8099653472</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[30]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[30]">
         <source>'Further information about the game can be found on the internet under the '</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653472</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">53</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Weitere Informationen zu dem Spiel finden Sie im Internet unter dem Stichwort "Solitär" bzw. "Peg Solitaire".'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653472</prop><prop prop-type="Status">1</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.Lines.Strings[31]" resname="O:HelpForm.O:HelpMemo.Lines.Strings[31]">
         <source>'keyword "Solitaire" or "Peg Solitaire".'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653472</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">54</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">)</prop>
-        </prop-group>
         <target>''</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">43415.8099653472</prop><prop prop-type="Status">1</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.ReadOnly" resname="O:HelpForm.O:HelpMemo.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653588</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">55</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">43415.8099653588</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.ScrollBars" resname="O:HelpForm.O:HelpMemo.ScrollBars">
         <source>ssVertical</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">43415.8099653588</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">56</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">43415.8099653588</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:HelpMemo.TabOrder" resname="O:HelpForm.O:HelpMemo.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">57</prop>
-          <prop prop-type="Type">TMemo</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:CloseBtn.Left" resname="O:HelpForm.O:CloseBtn.Left">
         <source>160</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">58</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:CloseBtn.Top" resname="O:HelpForm.O:CloseBtn.Top">
         <source>240</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">59</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:CloseBtn.Width" resname="O:HelpForm.O:CloseBtn.Width">
         <source>105</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">60</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:CloseBtn.Height" resname="O:HelpForm.O:CloseBtn.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">61</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:CloseBtn.Cancel" resname="O:HelpForm.O:CloseBtn.Cancel">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">62</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:CloseBtn.Caption" resname="O:HelpForm.O:CloseBtn.Caption">
         <source>'Close'</source>
         <target>'Schließen'</target>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">63</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:CloseBtn.Default" resname="O:HelpForm.O:CloseBtn.Default">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">64</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:CloseBtn.TabOrder" resname="O:HelpForm.O:CloseBtn.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">65</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HelpForm.O:CloseBtn.OnClick" resname="O:HelpForm.O:CloseBtn.OnClick">
         <source>CloseBtnClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">39879.996412037</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">66</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

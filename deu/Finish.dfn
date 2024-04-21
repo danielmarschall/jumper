@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file original="C:\Users\DELL User\SVN\Jumper\trunk\Finish.dfm" source-language="en-US" target-language="de-DE" datatype="delphiform" tool="ETM v10.0" ts="C:\Users\DELL User\SVN\Jumper\trunk\Finish.dfm">
+  <file original="D:\SVN\__Noch keine ReadMe und Lizenz Datei\Jumper\trunk\Finish.dfm" source-language="en-US" target-language="de-DE" datatype="delphiform" tool="ETM v10.0" ts="D:\SVN\__Noch keine ReadMe und Lizenz Datei\Jumper\trunk\Finish.dfm">
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">43415.8099537037</prop>
-        <prop prop-type="OrigDateTime">43415.0256018518</prop>
-        <prop prop-type="XlatDateTime">43414.887662037</prop>
-        <prop prop-type="Translated">12</prop>
-        <prop prop-type="UnTranslated">83</prop>
+        <prop prop-type="SelfDateTime">45403.7730092593</prop>
+        <prop prop-type="OrigDateTime">44030.4828009259</prop>
+        <prop prop-type="XlatDateTime">44030.4824768519</prop>
+        <prop prop-type="Translated">18</prop>
+        <prop prop-type="UnTranslated">77</prop>
       </prop-group>
     </header>
     <body>
@@ -41,8 +41,9 @@
       </trans-unit>
       <trans-unit id="O:FinishForm.ClientHeight" resname="O:FinishForm.ClientHeight">
         <source>306</source>
+        <target>290</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFinishForm</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFinishForm</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FinishForm.ClientWidth" resname="O:FinishForm.ClientWidth">
         <source>274</source>
@@ -247,8 +248,9 @@
       </trans-unit>
       <trans-unit id="O:FinishForm.O:JumpHistoryLink.Top" resname="O:FinishForm.O:JumpHistoryLink.Top">
         <source>216</source>
+        <target>200</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FinishForm.O:JumpHistoryLink.Width" resname="O:FinishForm.O:JumpHistoryLink.Width">
         <source>232</source>
@@ -319,8 +321,9 @@
       </trans-unit>
       <trans-unit id="O:FinishForm.O:SaveBtn.Top" resname="O:FinishForm.O:SaveBtn.Top">
         <source>272</source>
+        <target>256</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FinishForm.O:SaveBtn.Width" resname="O:FinishForm.O:SaveBtn.Width">
         <source>137</source>
@@ -359,8 +362,9 @@
       </trans-unit>
       <trans-unit id="O:FinishForm.O:CancelBtn.Top" resname="O:FinishForm.O:CancelBtn.Top">
         <source>272</source>
+        <target>256</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FinishForm.O:CancelBtn.Width" resname="O:FinishForm.O:CancelBtn.Width">
         <source>89</source>
@@ -435,8 +439,9 @@
       </trans-unit>
       <trans-unit id="O:FinishForm.O:PerformanceMemo.Height" resname="O:FinishForm.O:PerformanceMemo.Height">
         <source>98</source>
+        <target>81</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FinishForm.O:PerformanceMemo.TabStop" resname="O:FinishForm.O:PerformanceMemo.TabStop">
         <source>False</source>
@@ -465,8 +470,9 @@
       </trans-unit>
       <trans-unit id="O:FinishForm.O:ReplayCheckBox.Top" resname="O:FinishForm.O:ReplayCheckBox.Top">
         <source>240</source>
+        <target>224</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">1</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FinishForm.O:ReplayCheckBox.Width" resname="O:FinishForm.O:ReplayCheckBox.Width">
         <source>145</source>

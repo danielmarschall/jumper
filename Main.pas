@@ -445,11 +445,14 @@ begin
       if PlaygroundMatrix.Fields[x,y].FieldState = fsOccupied then
         Inc(LevelTotalStones);
       DrawField(x, y, PlaygroundMatrix.Fields[x,y]);
-      p := TFieldVclData(PlaygroundMatrix.Fields[x,y].Data).Panel;
-      if Assigned(p) then
+      if Assigned(PlaygroundMatrix.Fields[x,y].Data) then
       begin
-        max_x := Max(max_x, p.Left + p.Width);
-        max_y := Max(max_y, p.Top  + p.Height);
+        p := TFieldVclData(PlaygroundMatrix.Fields[x,y].Data).Panel;
+        if Assigned(p) then
+        begin
+          max_x := Max(max_x, p.Left + p.Width);
+          max_y := Max(max_y, p.Top  + p.Height);
+        end;
       end;
     end;
   end;
