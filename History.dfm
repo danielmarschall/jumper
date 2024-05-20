@@ -54,7 +54,7 @@ object HistoryForm: THistoryForm
     OnClick = CloseBtnClick
   end
   object JumpSaveDialog: TSaveDialog
-    DefaultExt = '*.txt'
+    DefaultExt = 'txt'
     Filter = 'Text files (*.txt)|*.txt|All files (*.*)|*.*'
     Options = [ofOverwritePrompt, ofHideReadOnly, ofPathMustExist, ofEnableSizing]
     Left = 16

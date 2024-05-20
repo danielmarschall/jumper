@@ -257,7 +257,7 @@
         <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:HistoryForm.O:JumpSaveDialog.DefaultExt" resname="O:HistoryForm.O:JumpSaveDialog.DefaultExt">
-        <source>'*.txt'</source>
+        <source>'txt'</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">39879.996412037</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TSaveDialog</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
