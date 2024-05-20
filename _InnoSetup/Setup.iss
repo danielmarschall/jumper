@@ -5,7 +5,7 @@
 AppName=PegSolitaire
 AppVerName=PegSolitaire
 AppVersion=1.0
-AppCopyright=© Copyright 2009 - 2018 ViaThinkSoft
+AppCopyright=© Copyright 2009 - 2024 ViaThinkSoft
 AppPublisher=ViaThinkSoft
 AppPublisherURL=https://www.viathinksoft.de/
 AppSupportURL=https://www.daniel-marschall.de/
@@ -14,7 +14,7 @@ DefaultDirName={autopf}\PegSolitaire
 DefaultGroupName=PegSolitaire
 UninstallDisplayIcon={app}\PegSolitaire.exe
 VersionInfoCompany=ViaThinkSoft
-VersionInfoCopyright=© Copyright 2009 - 2018 ViaThinkSoft
+VersionInfoCopyright=© Copyright 2009 - 2024 ViaThinkSoft
 VersionInfoDescription=PegSolitaire Setup
 VersionInfoTextVersion=1.0.0.0
 VersionInfoVersion=1.0
