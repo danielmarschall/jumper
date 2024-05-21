@@ -7,7 +7,7 @@ uses
 
 function ExtractFileNameWithoutExt(filename: string): string;
 procedure ClearImage(Image: TImage; BackgroundColor: TColor);
-function Explode(Separator, Text: String): TStringList;
+procedure Explode(Separator, Text: String; sl: TStringList);
 function Position(FullString, Search: String): Integer;
 function DotsAtBeginning(s: string): integer;
 function DotsAtEnd(s: string): integer;
@@ -33,13 +33,11 @@ begin
   Image.Canvas.Brush.Color := OldBrushColor;
 end;
 
-function Explode(Separator, Text: String): TStringList;
+procedure Explode(Separator, Text: String; sl: TStringList);
 var
   pos: integer;
   tmp: string;
 begin
-  result := TStringList.Create;
-  
   while Length(Text) > 0 do
   begin
     pos := Functions.Position(Text, Separator);
@@ -55,7 +53,7 @@ begin
       Text := copy(Text, pos+1, Length(Text)-pos);
     end;
 
-    result.Add(tmp);
+    sl.Add(tmp);
   end;
 end;
 

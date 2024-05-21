@@ -69,71 +69,76 @@ var
   Score, Seconds, Removed, Total: Integer;
   Remaining, PPM: integer;
 begin
-  res := Explode(JNL_SEP, JournalEntry);
+  res := TStringList.Create;
+  try
+    Explode(JNL_SEP, JournalEntry, res);
 
-  // VARIABLES
+    // VARIABLES
 
-  Date := res.Strings[0];
-  Name := res.Strings[1];
-  Score := StrToIntDef(res.Strings[2], 0);
-  Seconds := StrToIntDef(res.Strings[3], 0);
-  Removed := StrToIntDef(res.Strings[4], 0);
-  Total := StrToIntDef(res.Strings[5], 0);
+    Date := res.Strings[0];
+    Name := res.Strings[1];
+    Score := StrToIntDef(res.Strings[2], 0);
+    Seconds := StrToIntDef(res.Strings[3], 0);
+    Removed := StrToIntDef(res.Strings[4], 0);
+    Total := StrToIntDef(res.Strings[5], 0);
 
-  Remaining := Total - Removed;
-  PPM := Round(Score / Seconds * 60);
+    Remaining := Total - Removed;
+    PPM := Round(Score / Seconds * 60);
 
-  // CATEGORY A - LOWEST REMAINING STONES
+    // CATEGORY A - LOWEST REMAINING STONES
 
-  RemainingList.SortType := stNone;
+    RemainingList.SortType := stNone;
 
-  with RemainingList.Items.Add do
-  begin
-    Caption := Name;
-    SubItems.Add(Date);
-    SubItems.Add(IntToStr(Remaining));
+    with RemainingList.Items.Add do
+    begin
+      Caption := Name;
+      SubItems.Add(Date);
+      SubItems.Add(IntToStr(Remaining));
+    end;
+
+    RemainingList.SortType := stText;
+
+    // CATEGORY B - HIGHEST SCORE
+
+    ScoreList.SortType := stNone;
+
+    with ScoreList.Items.Add do
+    begin
+      Caption := Name;
+      SubItems.Add(Date);
+      SubItems.Add(IntToStr(Score));
+    end;
+
+    ScoreList.SortType := stText;
+
+    // CATEGORY C - LOWEST TIME
+
+    TimeList.SortType := stNone;
+
+    with TimeList.Items.Add do
+    begin
+      Caption := Name;
+      SubItems.Add(Date);
+      SubItems.Add(IntToStr(Seconds));
+    end;
+
+    TimeList.SortType := stText;
+
+    // CATEGORY D - HIGHEST POINTS PER MINUTE
+
+    PPMList.SortType := stNone;
+
+    with PPMList.Items.Add do
+    begin
+      Caption := Name;
+      SubItems.Add(Date);
+      SubItems.Add(IntToStr(PPM));
+    end;
+
+    PPMList.SortType := stText;
+  finally
+    FreeAndNil(res);
   end;
-
-  RemainingList.SortType := stText;
-
-  // CATEGORY B - HIGHEST SCORE
-
-  ScoreList.SortType := stNone;
-
-  with ScoreList.Items.Add do
-  begin
-    Caption := Name;
-    SubItems.Add(Date);
-    SubItems.Add(IntToStr(Score));
-  end;
-
-  ScoreList.SortType := stText;
-
-  // CATEGORY C - LOWEST TIME
-
-  TimeList.SortType := stNone;
-
-  with TimeList.Items.Add do
-  begin
-    Caption := Name;
-    SubItems.Add(Date);
-    SubItems.Add(IntToStr(Seconds));
-  end;
-
-  TimeList.SortType := stText;
-
-  // CATEGORY D - HIGHEST POINTS PER MINUTE
-
-  PPMList.SortType := stNone;
-
-  with PPMList.Items.Add do
-  begin
-    Caption := Name;
-    SubItems.Add(Date);
-    SubItems.Add(IntToStr(PPM));
-  end;
-
-  PPMList.SortType := stText;
 end;
 
 procedure THighScoreForm.ReadOutJournal;
