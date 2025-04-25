@@ -1,6 +1,12 @@
 @echo off
+
+del *.obj
+del *.dsm
+del *.lib
+del *.lck
 del *.dcu
-del *.~*
 del *.ddp
-del deu\*.~*
-cls
+del *.~*
+del *.local
+del *.identcache
+del *.xlat.$*

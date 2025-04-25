@@ -6,9 +6,6 @@
         <Projects Include="PegSolitaire.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="DEU\PegSolitaire_DEU.bdsproj">
-            <Dependencies/>
-        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -26,23 +23,14 @@
     <Target Name="PegSolitaire:Make">
         <MSBuild Projects="PegSolitaire.dproj" Targets="Make"/>
     </Target>
-    <Target Name="PegSolitaire_DEU">
-        <MSBuild Projects="DEU\PegSolitaire_DEU.bdsproj"/>
-    </Target>
-    <Target Name="PegSolitaire_DEU:Clean">
-        <MSBuild Projects="DEU\PegSolitaire_DEU.bdsproj" Targets="Clean"/>
-    </Target>
-    <Target Name="PegSolitaire_DEU:Make">
-        <MSBuild Projects="DEU\PegSolitaire_DEU.bdsproj" Targets="Make"/>
-    </Target>
     <Target Name="Build">
-        <CallTarget Targets="PegSolitaire;PegSolitaire_DEU"/>
+        <CallTarget Targets="PegSolitaire"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="PegSolitaire:Clean;PegSolitaire_DEU:Clean"/>
+        <CallTarget Targets="PegSolitaire:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="PegSolitaire:Make;PegSolitaire_DEU:Make"/>
+        <CallTarget Targets="PegSolitaire:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

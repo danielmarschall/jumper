@@ -7,9 +7,14 @@ More information at Wikipedia: https://en.wikipedia.org/wiki/Peg_solitaire
 
 ## Screenshots
 
-![Command line tool](https://raw.githubusercontent.com/danielmarschall/jumper/master/Screenshot1.png)
+![Round board](Screenshot1.png)
 
-![Command line tool](https://raw.githubusercontent.com/danielmarschall/jumper/master/Screenshot2.png)
+![Triangle board](Screenshot2.png)
 
-![Command line tool](https://raw.githubusercontent.com/danielmarschall/jumper/master/Screenshot3.png)
+![Board selection](Screenshot3.png)
 
+# Tools required for editing source code
+
+* Embarcadero Delphi 12 (Community edition available for non-commercial use)
+
+* [Better Translation Manager](https://github.com/andersmelander/better-translation-manager/)

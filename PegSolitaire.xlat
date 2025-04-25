@@ -1,0 +1,3883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xlat>
+  <meta>
+    <version>3</version>
+    <created>2025-04-25T19:10:31.097+02:00</created>
+    <tool>amTranslationManager</tool>
+    <toolversion>2.3.9199.24584</toolversion>
+  </meta>
+  <options>
+    <stringlisthandling>2</stringlisthandling>
+    <omitdonttranslate>True</omitdonttranslate>
+    <sorted>True</sorted>
+    <omitnewstate>True</omitnewstate>
+  </options>
+  <project sourcefile=".\PegSolitaire.exe" stringsymbolfile=".\PegSolitaire.drc" language="en-US" properties="516">
+    <targetlanguages>
+      <language language="de-DE" translated="96"/>
+    </targetlanguages>
+    <modules>
+      <module name="resourcestrings" type="strings" properties="412">
+        <items>
+          <item name="Constants_LNG_COULD_NOT_CREATE_DIR">
+            <properties>
+              <property>
+                <value>Warning: Could not create directory "%s".</value>
+                <translations>
+                  <translation language="de-DE">Achtung: Konnte das Verzeichnis "%s" nicht anlegen.</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Constants_LNG_POINTS">
+            <properties>
+              <property>
+                <value>Score: %d</value>
+                <translations>
+                  <translation language="de-DE">Punkte: %d</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Constants_LNG_TIME">
+            <properties>
+              <property>
+                <value>Time: %s</value>
+                <translations>
+                  <translation language="de-DE">Zeit: %s</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Finish_LNG_ENTER_NAME">
+            <properties>
+              <property>
+                <value>Please enter your name to get added to the high score lists.</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Finish_LNG_GOAL_GREEN">
+            <properties>
+              <property>
+                <value>Green stone in target field (%d points)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Finish_LNG_GOAL_MISSED">
+            <properties>
+              <property>
+                <value>No stone in target field (%d points)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Finish_LNG_GOAL_RED">
+            <properties>
+              <property>
+                <value>Red stone in target field (%d points)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Finish_LNG_GOAL_YELLOW">
+            <properties>
+              <property>
+                <value>Yellow stone in target field (%d points)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Finish_LNG_POINTS_PER_MINUTE">
+            <properties>
+              <property>
+                <value>%d points per minute</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Finish_LNG_REMAINING">
+            <properties>
+              <property>
+                <value>Remaining stones: %d (%f%%)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Finish_LNG_SCORE">
+            <properties>
+              <property>
+                <value>Score: %d</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Punkte: %d</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Finish_LNG_TIME_SECONDS">
+            <properties>
+              <property>
+                <value>Time: %d seconds</value>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScore_LNG_ARE_YOU_SURE">
+            <properties>
+              <property>
+                <value>Are you really sure you want to clear the high score list?</value>
+                <translations>
+                  <translation language="de-DE">Sind Sie sicher, dass Sie die Highscore-Liste leeren möchten?</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="History_LNG_SAVED">
+            <properties>
+              <property>
+                <value>History successfully saved!</value>
+              </property>
+            </properties>
+          </item>
+          <item name="LevelFunctions_LNG_LVL_EMPTY_BOARD">
+            <properties>
+              <property>
+                <value>Level invalid: Board is empty.</value>
+                <translations>
+                  <translation language="de-DE">Level ungültig: Das Brett ist leer.</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="LevelFunctions_LNG_LVL_INVALID_ELEMENT">
+            <properties>
+              <property>
+                <value>Level invalid: There are invalid elements in the file.&amp;#13;&amp;#10;&amp;#13;&amp;#10;Valid elements are r/R, y/Y, g/G, e/E, . and *.</value>
+                <translations>
+                  <translation language="de-DE">Level ungültig: Es sind ungültige Zeichen vorhanden.&amp;#13;&amp;#10;&amp;#13;&amp;#10;Gültige Zeichen sind: r/R, y/Y, g/G, e/E, . und *.</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="LevelFunctions_LNG_LVL_INVALID_LENGTH">
+            <properties>
+              <property>
+                <value>Level invalid: Lines don't have an equal amount of elements.</value>
+                <translations>
+                  <translation language="de-DE">Level ungültig: Zeilen haben nicht die gleiche Anzahl an Elementen.</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="LevelFunctions_LNG_LVL_UNSUPPORTED_MODE">
+            <properties>
+              <property>
+                <value>Level format invalid: Mode not supported.</value>
+                <translations>
+                  <translation language="de-DE">Level ungültig: Modus nicht unterstützt.</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="LevelFunctions_LNG_LVL_UNSUPPORTED_VERSION">
+            <properties>
+              <property>
+                <value>Level format invalid: Version not supported.</value>
+                <translations>
+                  <translation language="de-DE">Level ungültig: Version wird nicht unterstützt.</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Main_LNG_BOARD">
+            <properties>
+              <property>
+                <value>Board: %s</value>
+                <translations>
+                  <translation language="de-DE">Brett: %s</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Main_LNG_GOAL_AVAILABLE">
+            <properties>
+              <property>
+                <value>Target field defined</value>
+                <translations>
+                  <translation language="de-DE">Ziel-Feld vorhanden</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Main_LNG_JUMP_LOG">
+            <properties>
+              <property>
+                <value>[%d, %d] -&gt; [%d, %d];</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Main_LNG_LVL_INVALID_NO_JUMP">
+            <properties>
+              <property>
+                <value>Warning! The level is not playable. There are no jumps possible.</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Main_LNG_MODE">
+            <properties>
+              <property>
+                <value>Mode: %s</value>
+                <translations>
+                  <translation language="de-DE">Modus: %s</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Main_LNG_NO_GOAL">
+            <properties>
+              <property>
+                <value>No target field</value>
+                <translations>
+                  <translation language="de-DE">Kein Ziel-Feld vorhanden</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Main_LNG_REALLY_QUIT">
+            <properties>
+              <property>
+                <value>Do you really want to quit?</value>
+                <translations>
+                  <translation language="de-DE">Möchten Sie das Spiel wirklich beenden?</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Main_LNG_STONES_REMOVED">
+            <properties>
+              <property>
+                <value>%d of %d stones removed</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Main_LNG_STONES_TOTAL">
+            <properties>
+              <property>
+                <value>Stones: %d</value>
+                <translations>
+                  <translation language="de-DE">Steine gesamt: %d</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_hNoFilterViewer">
+            <properties>
+              <property>
+                <value>Kein Hilfe-Viewer, der Filter unterstützt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SAncestorNotFound">
+            <properties>
+              <property>
+                <value>Vorfahr für '%s' nicht gefunden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sArgumentInvalid">
+            <properties>
+              <property>
+                <value>Ungültiges Argument</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SArgumentNil">
+            <properties>
+              <property>
+                <value>Argument darf nicht nil sein</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SArgumentOutOfRange">
+            <properties>
+              <property>
+                <value>Argument außerhalb des Bereichs</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SAssignError">
+            <properties>
+              <property>
+                <value>%s kann nicht zu %s zugewiesen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sBeginInvokeDestroying">
+            <properties>
+              <property>
+                <value>BeginInvoke kann bei der Freigabe für TComponent nicht aufgerufen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SBitsIndexError">
+            <properties>
+              <property>
+                <value>Bits-Index außerhalb des zulässigen Bereichs</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SByRefArgMismatch">
+            <properties>
+              <property>
+                <value>VAR- und OUT-Argumente müssen exakt mit dem Parametertyp übereinstimmen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sCannotNegateTimespan">
+            <properties>
+              <property>
+                <value>Negation des Minimalwertes einer Zeitspanne ist ungültig</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SCantWriteResourceStreamError">
+            <properties>
+              <property>
+                <value>In einen zum Lesen geöffneten Ressourcen-Stream kann nicht geschrieben werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SCheckSynchronizeError">
+            <properties>
+              <property>
+                <value>CheckSynchronize wurde vom Thread $%x aufgerufen, der NICHT der Haupt-Thread ist.</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SClassNotFound">
+            <properties>
+              <property>
+                <value>Klasse %s nicht gefunden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SDuplicateClass">
+            <properties>
+              <property>
+                <value>Klasse mit der Bezeichnung %s existiert bereits</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SDuplicateItem">
+            <properties>
+              <property>
+                <value>Liste gestattet keine doppelten Einträge ($0%x)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SDuplicateName">
+            <properties>
+              <property>
+                <value>Komponente mit der Bezeichnung %s existiert bereits</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SDuplicateString">
+            <properties>
+              <property>
+                <value>In der String-Liste sind Duplikate nicht zulässig</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SFCreateErrorEx">
+            <properties>
+              <property>
+                <value>Datei "%s" kann nicht erstellt werden. %s</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SFOpenErrorEx">
+            <properties>
+              <property>
+                <value>Datei %s kann nicht geöffnet werden. %s</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SGenericDuplicateItem">
+            <properties>
+              <property>
+                <value>Duplikate nicht zulässig</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SGenericItemNotFound">
+            <properties>
+              <property>
+                <value>Eintrag nicht gefunden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInputBufferExceed">
+            <properties>
+              <property>
+                <value>Eingabepuffer für %s = %d, %s = %d überschritten</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInsufficientRtti">
+            <properties>
+              <property>
+                <value>Unzureichende RTTI zur Unterstützung dieser Operation verfügbar</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidCharsInPath">
+            <properties>
+              <property>
+                <value>Ungültige Zeichen im Pfad</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidDateString" state="unused">
+            <properties>
+              <property>
+                <value>Ungültiger Datums-String: %s</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidImage">
+            <properties>
+              <property>
+                <value>Ungültiges Stream-Format</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidName">
+            <properties>
+              <property>
+                <value>''%s'' ist kein gültiger Komponentenname</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidOffsetString" state="unused">
+            <properties>
+              <property>
+                <value>Ungültiger Zeit-Offset-String: %s</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidProperty">
+            <properties>
+              <property>
+                <value>Ungültiger Eigenschaftswert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidPropertyPath">
+            <properties>
+              <property>
+                <value>Ungültiger Pfad für Eigenschaft</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidPropertyValue">
+            <properties>
+              <property>
+                <value>Ungültiger Eigenschaftswert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidRegType">
+            <properties>
+              <property>
+                <value>Ungültiger Datentyp für '%s'</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidRttiDestroy">
+            <properties>
+              <property>
+                <value>RTTI-Objekte können nicht manuell vom Anwendungscode freigegeben werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sInvalidStringAndObjectArrays">
+            <properties>
+              <property>
+                <value>Die Länge von String- und Objekt-Arrays muss gleich sein</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sInvalidTimeoutValue">
+            <properties>
+              <property>
+                <value>Ungültiger Wert für Zeitüberschreitung: %s</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sInvalidTimespanDuration">
+            <properties>
+              <property>
+                <value>Die Dauer kann nicht zurückgegeben werden, weil der absolute Wert den Wert von TTimeSpan.MaxValue überschreitet</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sInvalidTimespanFormat">
+            <properties>
+              <property>
+                <value>Ungültiges TimeSpan-Format</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SInvalidTimeString" state="unused">
+            <properties>
+              <property>
+                <value>Ungültiger Zeit-String: %s</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SListCapacityError">
+            <properties>
+              <property>
+                <value>Kapazität der Liste ist erschöpft (%d)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SListCountError">
+            <properties>
+              <property>
+                <value>Zu viele Einträge in der Liste (%d)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SListIndexError">
+            <properties>
+              <property>
+                <value>Listenindex außerhalb des gültigen Bereichs (%d)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SListIndexErrorEmptyReason">
+            <properties>
+              <property>
+                <value>. %s ist leer</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SListIndexErrorExt" state="unused">
+            <properties>
+              <property>
+                <value>Listenindex außerhalb des gültigen Bereichs (%0:d). %2:s Objektbereich ist 0..%1:d</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SListIndexErrorRangeReason">
+            <properties>
+              <property>
+                <value>. %s-Bereich ist 0..%d</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SMemoryStreamError">
+            <properties>
+              <property>
+                <value>Expandieren des Speicher-Stream wegen Speichermangel nicht möglich</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sMustWaitOnOneEvent">
+            <properties>
+              <property>
+                <value>Es muss auf mindestens ein Ereignis gewartet werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNoComSupport">
+            <properties>
+              <property>
+                <value>%s wurde nicht als COM-Klasse registriert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sNoConstruct">
+            <properties>
+              <property>
+                <value>Klasse %s soll nicht erzeugt werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNoContext">
+            <properties>
+              <property>
+                <value>Keine kontextsensitive Hilfe installiert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNoContextFound">
+            <properties>
+              <property>
+                <value>Keine Hilfe für Kontext %d gefunden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNoIndex">
+            <properties>
+              <property>
+                <value>Index kann nicht geöffnet werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNonPublicType">
+            <properties>
+              <property>
+                <value>Typ '%s' ist im interface-Abschnitt einer Unit nicht deklariert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNoSearch">
+            <properties>
+              <property>
+                <value>Suche kann nicht geöffnet werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNoTableOfContents">
+            <properties>
+              <property>
+                <value>Inhaltsverzeichnis nicht gefunden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNothingFound">
+            <properties>
+              <property>
+                <value>Keine Hilfe für %s gefunden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SNoTopics">
+            <properties>
+              <property>
+                <value>Kein themenbezogenes Hilfesystem installiert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sObserverMultipleSingleCast">
+            <properties>
+              <property>
+                <value>Der Observer-Kollektion können nicht mehrere Einfach-Typumwandlungs-Observer hinzugefügt werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sObserverNoInterface">
+            <properties>
+              <property>
+                <value>Das Objekt implementiert das Observer-Interface nicht</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sObserverNoMulticastFound">
+            <properties>
+              <property>
+                <value>Der Observer-Kollektion wurde kein Mehrfach-Typumwandlungs-Observer mit der ID %d hinzugefügt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sObserverNoSinglecastFound">
+            <properties>
+              <property>
+                <value>Der Observer-Kollektion wurde kein Einfach-Typumwandlungs-Observer mit der ID %d hinzugefügt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sObserverNotAvailable">
+            <properties>
+              <property>
+                <value>Observer ist nicht verfügbar</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sObserverUnsupported">
+            <properties>
+              <property>
+                <value>Observer wird nicht unterstützt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SParameterCountMismatch">
+            <properties>
+              <property>
+                <value>Parameteranzahl stimmt nicht überein</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SParamIsNegative">
+            <properties>
+              <property>
+                <value>Parameter %s darf kein negativer Wert sein</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SParamIsNil">
+            <properties>
+              <property>
+                <value>Parameter %s darf nicht Nil sein</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SPropertyException">
+            <properties>
+              <property>
+                <value>Fehler beim Lesen von %s%s%s: %s</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SPropIsReadOnly">
+            <properties>
+              <property>
+                <value>Eigenschaft '%s' ist schreibgeschützt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SPropIsWriteOnly">
+            <properties>
+              <property>
+                <value>Eigenschaft '%s' kann nur geschrieben werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SReadError">
+            <properties>
+              <property>
+                <value>Stream-Lesefehler</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SReadOnlyProperty">
+            <properties>
+              <property>
+                <value>Eigenschaft kann nur gelesen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SRegCreateFailed">
+            <properties>
+              <property>
+                <value>Erzeugung von Schlüssel %s misslungen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SRegGetDataFailed">
+            <properties>
+              <property>
+                <value>Fehler beim Holen der Daten für '%s'</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SRegSetDataFailed">
+            <properties>
+              <property>
+                <value>Fehler beim Setzen der Daten für '%s'</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SResNotFound">
+            <properties>
+              <property>
+                <value>Ressource %s nicht gefunden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sSameArrays">
+            <properties>
+              <property>
+                <value>Quell- und Ziel-Arrays dürfen nicht gleich sein</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SSeekNotImplemented">
+            <properties>
+              <property>
+                <value>%s.Seek nicht implementiert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SServiceNotFound">
+            <properties>
+              <property>
+                <value>Angegebener Dienst für die Anmeldeinformationen nicht gefunden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SSortedListError">
+            <properties>
+              <property>
+                <value>Operation für sortierte Listen nicht zulässig</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sSpinCountOutOfRange">
+            <properties>
+              <property>
+                <value>SpinCount außerhalb des Bereichs. Muss zwischen 0 und %d liegen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SSPVersionStr">
+            <properties>
+              <property>
+                <value>%s Service Pack %4:d (Version %1:d.%2:d, Build %3:d, %5:s)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SThreadCreateError">
+            <properties>
+              <property>
+                <value>Fehler beim Erzeugen des Thread: %s</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SThreadError">
+            <properties>
+              <property>
+                <value>Thread-Fehler: %s (%d)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SThreadExternalCheckTerminated">
+            <properties>
+              <property>
+                <value>CheckTerminated kann nicht für einen extern erstellten Thread aufgerufen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SThreadExternalSetReturnValue">
+            <properties>
+              <property>
+                <value>SetReturnValue kann nicht für einen extern erstellten Thread aufgerufen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SThreadExternalTerminate">
+            <properties>
+              <property>
+                <value>Ein extern erstellter Thread kann nicht beendet werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SThreadExternalWait">
+            <properties>
+              <property>
+                <value>Auf einen extern erstellten Thread kann nicht gewartet werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SThreadStartError">
+            <properties>
+              <property>
+                <value>Start kann für einen laufenden oder unterbrochenen Thread nicht aufgerufen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sTimespanElementTooLong">
+            <properties>
+              <property>
+                <value>TimeSpan-Element zu lang</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sTimespanTooLong">
+            <properties>
+              <property>
+                <value>TimeSpan zu lang</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_sTimespanValueCannotBeNan">
+            <properties>
+              <property>
+                <value>Wert darf nicht NaN</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SUnknownGroup">
+            <properties>
+              <property>
+                <value>%s befindet sich nicht in einer Gruppe für Klassenregistrierungen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SUnknownProperty">
+            <properties>
+              <property>
+                <value>Eigenschaft %s existiert nicht</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SVersion32">
+            <properties>
+              <property>
+                <value>32-Bit-Edition</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SVersion64">
+            <properties>
+              <property>
+                <value>64-Bit-Edition</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SVersionStr">
+            <properties>
+              <property>
+                <value>%s (Version %d.%d, Build %d, %5:s)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindows">
+            <properties>
+              <property>
+                <value>Windows</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindows10">
+            <properties>
+              <property>
+                <value>Windows 10</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindows11">
+            <properties>
+              <property>
+                <value>Windows 11</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindows2000">
+            <properties>
+              <property>
+                <value>Windows 2000</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindows7">
+            <properties>
+              <property>
+                <value>Windows 7</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindows8">
+            <properties>
+              <property>
+                <value>Windows 8</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindows8Point1">
+            <properties>
+              <property>
+                <value>Windows 8.1</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2003">
+            <properties>
+              <property>
+                <value>Windows Server 2003</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2003R2">
+            <properties>
+              <property>
+                <value>Windows Server 2003 R2</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2008">
+            <properties>
+              <property>
+                <value>Windows Server 2008</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2008R2">
+            <properties>
+              <property>
+                <value>Windows Server 2008 R2</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2012">
+            <properties>
+              <property>
+                <value>Windows Server 2012</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2012R2">
+            <properties>
+              <property>
+                <value>Windows Server 2012 R2</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2016">
+            <properties>
+              <property>
+                <value>Windows Server 2016</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2019">
+            <properties>
+              <property>
+                <value>Windows Server 2019</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsServer2022">
+            <properties>
+              <property>
+                <value>Windows Server 2022</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsVista">
+            <properties>
+              <property>
+                <value>Windows Vista</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWindowsXP">
+            <properties>
+              <property>
+                <value>Windows XP</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWinRTInstanceError">
+            <properties>
+              <property>
+                <value>Instanz der Klasse %s kann nicht erstellt werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_RTLConsts_SWriteError">
+            <properties>
+              <property>
+                <value>Stream-Schreibfehler</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SAbstractError">
+            <properties>
+              <property>
+                <value>Abstrakter Fehler</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SAccessDenied">
+            <properties>
+              <property>
+                <value>Dateizugriff verweigert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SAccessViolationArg3">
+            <properties>
+              <property>
+                <value>Zugriffsverletzung bei Adresse %p. %s von Adresse %p</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SAccessViolationNoArg">
+            <properties>
+              <property>
+                <value>Zugriffsverletzung</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SArgumentMissing">
+            <properties>
+              <property>
+                <value>Kein Argument für Format '%s'</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SAssertError">
+            <properties>
+              <property>
+                <value>%s (%s, Zeile %d)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SAssertionFailed">
+            <properties>
+              <property>
+                <value>Auswertung von assert fehlgeschlagen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SByteIndexOutOfBounds">
+            <properties>
+              <property>
+                <value>Startindex außerhalb des gültigen Bereichs (%d)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SCannotCreateDir">
+            <properties>
+              <property>
+                <value>Verzeichnis kann nicht erstellt werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SCharIndexOutOfBounds">
+            <properties>
+              <property>
+                <value>Zeichenindex außerhalb des gültigen Bereichs (%d)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SControlC">
+            <properties>
+              <property>
+                <value>Strg+C gedrückt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SDateEncodeError">
+            <properties>
+              <property>
+                <value>Ungültiges Argument zum Codieren des Datums</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SDiskFull">
+            <properties>
+              <property>
+                <value>Zu wenig Speicherplatz</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SDispatchError">
+            <properties>
+              <property>
+                <value>Variant-Methodenaufruf nicht unterstützt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SDivByZero">
+            <properties>
+              <property>
+                <value>Division durch Null</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SEndOfFile">
+            <properties>
+              <property>
+                <value>Versuch hinter dem Dateiende zu lesen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SException">
+            <properties>
+              <property>
+                <value>Exception %s in Modul %s bei %p.&amp;#13;&amp;#10;%s%s&amp;#13;&amp;#10;</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SExceptTitle">
+            <properties>
+              <property>
+                <value>Anwendungsfehler</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SExecuteAccess">
+            <properties>
+              <property>
+                <value>Ausführung</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SExternalException">
+            <properties>
+              <property>
+                <value>Externe Exception %x</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SFileNotFound">
+            <properties>
+              <property>
+                <value>Datei nicht gefunden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInOutError">
+            <properties>
+              <property>
+                <value>E/A-Fehler %d</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SIntfCastError">
+            <properties>
+              <property>
+                <value>Interface nicht unterstützt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SIntOverflow">
+            <properties>
+              <property>
+                <value>Integerüberlauf</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidAccess">
+            <properties>
+              <property>
+                <value>Ungültiger Zugriff</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidCast">
+            <properties>
+              <property>
+                <value>Ungültige Typumwandlung</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidCharCount">
+            <properties>
+              <property>
+                <value>Ungültige Anzahl (%d)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidCodePage">
+            <properties>
+              <property>
+                <value>Ungültige Codeseite</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidDestinationArray">
+            <properties>
+              <property>
+                <value>Ungültiges Ziel-Array</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidDestinationIndex">
+            <properties>
+              <property>
+                <value>Ungültiger Zielindex (%d)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidEncodingName">
+            <properties>
+              <property>
+                <value>Ungültiger Codierungsname</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidFormat">
+            <properties>
+              <property>
+                <value>Format '%s' ungültig oder nicht kompatibel mit Argument</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidGUID">
+            <properties>
+              <property>
+                <value>'%s' kein gültiger Wert für GUID</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidInput">
+            <properties>
+              <property>
+                <value>Ungültige numerische Eingabe</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidInteger">
+            <properties>
+              <property>
+                <value>'%s' ist kein gültiger Integerwert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidOp">
+            <properties>
+              <property>
+                <value>Ungültige Gleitkommaoperation</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidPointer">
+            <properties>
+              <property>
+                <value>Ungültige Zeigeroperation</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidSourceArray">
+            <properties>
+              <property>
+                <value>Ungültiges Quell-Array</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidStringBaseIndex">
+            <properties>
+              <property>
+                <value>Ungültiger StringBaseIndex</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidTimeStamp">
+            <properties>
+              <property>
+                <value>'%d.%d' ist kein gültiger Zeitstempel</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidUnknownFilename">
+            <properties>
+              <property>
+                <value>Ungültiger Dateiname</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidVarCast">
+            <properties>
+              <property>
+                <value>Ungültige Varianten-Typumwandlung</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidVarNullOp">
+            <properties>
+              <property>
+                <value>Ungültige NULL-Variantenoperation</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidVarOp">
+            <properties>
+              <property>
+                <value>Ungültige Variantenoperation</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SInvalidVarOpWithHResultWithPrefix">
+            <properties>
+              <property>
+                <value>Ungültige Variantenoperation (%s%.8x)&amp;#10;%s</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongDayNameFri">
+            <properties>
+              <property>
+                <value>Freitag</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongDayNameMon">
+            <properties>
+              <property>
+                <value>Montag</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongDayNameSat">
+            <properties>
+              <property>
+                <value>Samstag</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongDayNameSun">
+            <properties>
+              <property>
+                <value>Sonntag</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongDayNameThu">
+            <properties>
+              <property>
+                <value>Donnerstag</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongDayNameTue">
+            <properties>
+              <property>
+                <value>Dienstag</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongDayNameWed">
+            <properties>
+              <property>
+                <value>Mittwoch</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameApr">
+            <properties>
+              <property>
+                <value>April</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameAug">
+            <properties>
+              <property>
+                <value>August</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameDec">
+            <properties>
+              <property>
+                <value>Dezember</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameFeb">
+            <properties>
+              <property>
+                <value>Februar</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameJan">
+            <properties>
+              <property>
+                <value>Januar</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameJul">
+            <properties>
+              <property>
+                <value>Juli</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameJun">
+            <properties>
+              <property>
+                <value>Juni</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameMar">
+            <properties>
+              <property>
+                <value>März</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameMay">
+            <properties>
+              <property>
+                <value>Mai</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameNov">
+            <properties>
+              <property>
+                <value>November</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameOct">
+            <properties>
+              <property>
+                <value>Oktober</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SLongMonthNameSep">
+            <properties>
+              <property>
+                <value>September</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SModuleAccessViolation">
+            <properties>
+              <property>
+                <value>Zugriffsverletzung bei Adresse %p in Modul '%s' (Offset %x). %s von Adresse %p</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SMonitorLockException">
+            <properties>
+              <property>
+                <value>Kein Eigentümer der Objektsperre</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SNoMappingForUnicodeCharacter">
+            <properties>
+              <property>
+                <value>Keine Zuordnung für Unicode-Zeichen in der Multibyte-Zielcodeseite vorhanden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SNoMonitorSupportException">
+            <properties>
+              <property>
+                <value>Unterstützungsfunktion für Monitor nicht initialisiert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SNotImplemented">
+            <properties>
+              <property>
+                <value>Feature nicht implementiert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SObjectDisposed">
+            <properties>
+              <property>
+                <value>Methode für freigegebenes Objekt aufgerufen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SOSError">
+            <properties>
+              <property>
+                <value>Systemfehler.  Code: %d.&amp;#13;&amp;#10;%s%s</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SOutOfMemory">
+            <properties>
+              <property>
+                <value>Zu wenig Arbeitsspeicher</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SOverflow">
+            <properties>
+              <property>
+                <value>Gleitkommaüberlauf</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SPrivilege">
+            <properties>
+              <property>
+                <value>Privilegierte Anweisung</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SRangeError">
+            <properties>
+              <property>
+                <value>Fehler bei Bereichsprüfung</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SReadAccess">
+            <properties>
+              <property>
+                <value>Lesen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SSafecallException">
+            <properties>
+              <property>
+                <value>Exception in safecall-Methode</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortDayNameFri">
+            <properties>
+              <property>
+                <value>Fr</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortDayNameMon">
+            <properties>
+              <property>
+                <value>Mo</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortDayNameSat">
+            <properties>
+              <property>
+                <value>Sa</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortDayNameSun">
+            <properties>
+              <property>
+                <value>So</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortDayNameThu">
+            <properties>
+              <property>
+                <value>Do</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortDayNameTue">
+            <properties>
+              <property>
+                <value>Di</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortDayNameWed">
+            <properties>
+              <property>
+                <value>Mi</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameApr">
+            <properties>
+              <property>
+                <value>Apr</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameAug">
+            <properties>
+              <property>
+                <value>Aug</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameDec">
+            <properties>
+              <property>
+                <value>Dez</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameFeb">
+            <properties>
+              <property>
+                <value>Feb</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameJan">
+            <properties>
+              <property>
+                <value>Jan</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameJul">
+            <properties>
+              <property>
+                <value>Jul</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameJun">
+            <properties>
+              <property>
+                <value>Jun</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameMar">
+            <properties>
+              <property>
+                <value>Mär</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameMay">
+            <properties>
+              <property>
+                <value>Mai</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameNov">
+            <properties>
+              <property>
+                <value>Nov</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameOct">
+            <properties>
+              <property>
+                <value>Okt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SShortMonthNameSep">
+            <properties>
+              <property>
+                <value>Sep</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SStackOverflow">
+            <properties>
+              <property>
+                <value>Stack-Überlauf</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_STimeEncodeError">
+            <properties>
+              <property>
+                <value>Ungültiges Argument zum Codieren der Uhrzeit</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_STooManyOpenFiles">
+            <properties>
+              <property>
+                <value>Zu viele geöffnete Dateien</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SUnderflow">
+            <properties>
+              <property>
+                <value>Gleitkommaunterlauf</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SUnknown">
+            <properties>
+              <property>
+                <value>&lt;unbekannt&gt;</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SUnkOSError">
+            <properties>
+              <property>
+                <value>Ein Aufruf einer Betriebssystemfunktion ist fehlgeschlagen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarArrayBounds">
+            <properties>
+              <property>
+                <value>Variante oder sicheres Array-Index außerhalb des gültigen Bereichs</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarArrayCreate">
+            <properties>
+              <property>
+                <value>Fehler beim Erzeugen von Variante oder sicherem Array</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarArrayLocked">
+            <properties>
+              <property>
+                <value>Variante oder sicheres Array ist gesperrt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarBadType">
+            <properties>
+              <property>
+                <value>Ungültiger Variant-Typ</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarInvalid">
+            <properties>
+              <property>
+                <value>Ungültiges Argument</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarNotImplemented">
+            <properties>
+              <property>
+                <value>Operation nicht unterstützt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarOverflow">
+            <properties>
+              <property>
+                <value>Variant-Überlauf</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarTypeAlreadyUsedWithPrefix">
+            <properties>
+              <property>
+                <value>Benutzerdefinierter Variant-Typ (%s%.4x) bereits benutzt von %s</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarTypeConvertOverflow">
+            <properties>
+              <property>
+                <value>Überlauf bei der Konvertierung einer Variante vom Typ (%s) in Typ (%s)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarTypeCouldNotConvert">
+            <properties>
+              <property>
+                <value>Variante des Typs (%s) konnte nicht in Typ (%s) konvertiert werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarTypeNotUsableWithPrefix">
+            <properties>
+              <property>
+                <value>Benutzerdefinierter Variant-Typ (%s%.4x) nicht brauchbar</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarTypeOutOfRangeWithPrefix">
+            <properties>
+              <property>
+                <value>Benutzerdefinierter Variant-Typ (%s%.4x) außerhalb des gültigen Bereichs</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarTypeTooManyCustom">
+            <properties>
+              <property>
+                <value>Es wurden zu viele benutzerdefinierte Variant-Typen registriert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SVarUnexpected">
+            <properties>
+              <property>
+                <value>Unerwarteter Variant-Fehler</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SWriteAccess">
+            <properties>
+              <property>
+                <value>Schreiben</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_SysConst_SZeroDivide">
+            <properties>
+              <property>
+                <value>Gleitkommadivision durch Null</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_Win_ComConst_SNoMethod">
+            <properties>
+              <property>
+                <value>Die Methode '%s' wird vom Automatisierungsobjekt nicht unterstützt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_Win_ComConst_SOleError">
+            <properties>
+              <property>
+                <value>OLE-Fehler %.8x</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_Win_ComConst_STooManyParams">
+            <properties>
+              <property>
+                <value>Dispatch-Methoden unterstützen maximal 64 Parameter.</value>
+              </property>
+            </properties>
+          </item>
+          <item name="System_Win_ComConst_SVarNotObject">
+            <properties>
+              <property>
+                <value>Variante referenziert kein Automatisierungsobjekt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_ComStrs_sInvalidOwner">
+            <properties>
+              <property>
+                <value>Ungültiger Besitzer</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_ComStrs_sListViewCannotAddItem">
+            <properties>
+              <property>
+                <value>ListView-Element kann nur hinzugefügt werden, wenn OwnerData False ist. Verwenden Sie stattdessen OnData.</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_ComStrs_sPageIndexError">
+            <properties>
+              <property>
+                <value>%d ist ein ungültiger Wert für PageIndex.  PageIndex muss zwischen 0 und %d liegen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_ComStrs_sTabFailClear">
+            <properties>
+              <property>
+                <value>Registerelement konnte nicht geleert werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_ComStrs_sTabFailDelete">
+            <properties>
+              <property>
+                <value>Registerseite mit Index %d konnte nicht gelöscht werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_ComStrs_sTabFailGetObject">
+            <properties>
+              <property>
+                <value>Objekt mit Index %d konnte nicht gelesen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_ComStrs_sTabFailRetrieve">
+            <properties>
+              <property>
+                <value>Registerseite mit Index %d konnte nicht gelesen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_ComStrs_sTabFailSet">
+            <properties>
+              <property>
+                <value>Registerseite  "%s" mit Index %d konnte nicht gesetzt werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_ComStrs_sTabFailSetObject">
+            <properties>
+              <property>
+                <value>Objekt mit Index %d konnte nicht gesetzt werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_ComStrs_sTabMustBeMultiLine">
+            <properties>
+              <property>
+                <value>Für TabPosition tpLeft und tpRight muss MultiLine True sein</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SAbortButton">
+            <properties>
+              <property>
+                <value>Abbrechen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SAllButton">
+            <properties>
+              <property>
+                <value>&amp;Alle</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_sAllFilter">
+            <properties>
+              <property>
+                <value>Alle</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_sBeginInvokeNoHandle">
+            <properties>
+              <property>
+                <value>BeginInvoke kann nicht ohne übergeordnetes Element oder Fenster-Handle aufgerufen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SCancelButton">
+            <properties>
+              <property>
+                <value>Abbrechen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SCannotDragForm">
+            <properties>
+              <property>
+                <value>Formulare können nicht gezogen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SCannotFocus">
+            <properties>
+              <property>
+                <value>Deaktiviertes oder unsichtbares Fenster kann den Fokus nicht erhalten</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SCannotOpenClipboard">
+            <properties>
+              <property>
+                <value>Zwischenablage %s kann nicht geöffnet werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SCannotShowModal">
+            <properties>
+              <property>
+                <value>Sichtbares Fenster kann nicht in modales geändert werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SChangeIconSize">
+            <properties>
+              <property>
+                <value>Die Größe eines Symbols kann nicht geändert werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SChangeWicSize">
+            <properties>
+              <property>
+                <value>Die Größe einer WIC-Grafik kann nicht verändert werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SCloseButton">
+            <properties>
+              <property>
+                <value>&amp;Schließen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SControlNonMainThreadUsage">
+            <properties>
+              <property>
+                <value>Steuerelement '%s' wird nicht für einen Haupt-Thread verwendet</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SControlParentSetToSelf">
+            <properties>
+              <property>
+                <value>Steuerelement kann nicht sich selbst als Vorfahr haben</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SControlPath">
+            <properties>
+              <property>
+                <value>. Pfad:&amp;#13;&amp;#10;%s</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDeviceOnPort">
+            <properties>
+              <property>
+                <value>%s an %s</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDockedCtlNeedsName">
+            <properties>
+              <property>
+                <value>Angedocktes Steuerelement muss einen Namen haben.</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDockTreeRemoveError">
+            <properties>
+              <property>
+                <value>Fehler beim Entfernen des Steuerelements aus der Andock-Hierarchie</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDockZoneHasNoCtl">
+            <properties>
+              <property>
+                <value> - Andockzone enthält kein Steuerelement</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDockZoneNotFound">
+            <properties>
+              <property>
+                <value> - Andockzone nicht gefunden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDockZoneVersionConflict">
+            <properties>
+              <property>
+                <value>Fehler beim Laden der Andockzone aus dem Stream. Version %d erwartet, aber %d gefunden.</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDomain">
+            <properties>
+              <property>
+                <value>&amp;Domäne</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SDuplicateMenus">
+            <properties>
+              <property>
+                <value>Menü '%s' wird bereits von einem anderen Formular verwendet</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SGroupIndexTooLow">
+            <properties>
+              <property>
+                <value>GroupIndex darf nicht kleiner sein als der GroupIndex eines vorherigen Menüelements</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SHelpButton">
+            <properties>
+              <property>
+                <value>&amp;Hilfe</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SIconToClipboard">
+            <properties>
+              <property>
+                <value>Zwischenablage unterstützt keine Symbole</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SIgnoreButton">
+            <properties>
+              <property>
+                <value>&amp;Ignorieren</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SImageCanvasNeedsBitmap">
+            <properties>
+              <property>
+                <value>Ein Bild kann nur geändert werden, wenn es ein Bitmap enthält</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SImageIndexError">
+            <properties>
+              <property>
+                <value>Ungültiger ImageList-Index</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SImageReadFail">
+            <properties>
+              <property>
+                <value>ImageList-Daten konnten nicht aus dem Stream gelesen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SImageWriteFail">
+            <properties>
+              <property>
+                <value>ImageList-Daten konnten nicht in den Stream geschrieben werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInsertImage">
+            <properties>
+              <property>
+                <value>Bild kann nicht eingefügt werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidBitmap">
+            <properties>
+              <property>
+                <value>Bitmap ist ungültig</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidFrameIndex">
+            <properties>
+              <property>
+                <value>Ungültiger Bild-Frame-Index %d: es sind %d Frames vorhanden (0-%d)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidIcon">
+            <properties>
+              <property>
+                <value>Ungültiges Symbol</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidImage">
+            <properties>
+              <property>
+                <value>Ungültiges Bild</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidImageList">
+            <properties>
+              <property>
+                <value>Ungültige Bilderliste</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidImageSize">
+            <properties>
+              <property>
+                <value>Ungültige Bildgröße</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidMemoSize">
+            <properties>
+              <property>
+                <value>Text überschreitet Memo-Kapazität</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidMetafile">
+            <properties>
+              <property>
+                <value>Metadatei ist ungültig</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidPixelFormat">
+            <properties>
+              <property>
+                <value>Ungültiges Pixel-Format</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidPrinter">
+            <properties>
+              <property>
+                <value>Ausgewählter Drucker ist ungültig</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidPrinterOp">
+            <properties>
+              <property>
+                <value>Operation auf ausgewähltem Drucker nicht verfügbar</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidTabPosition">
+            <properties>
+              <property>
+                <value>Position des Registers ist nicht mit dem aktuellen Registerstil kompatibel</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidTabStyle">
+            <properties>
+              <property>
+                <value>Registerstil ist nicht mit der aktuellen Position kompatibel</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidTaskDlgButtonCaption">
+            <properties>
+              <property>
+                <value>Caption darf nicht leer sein</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SInvalidTextFormatFlag">
+            <properties>
+              <property>
+                <value>Das Textformat-Flag '%s' wird nicht unterstützt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SLogin">
+            <properties>
+              <property>
+                <value>Anmelden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMDIChildNotVisible">
+            <properties>
+              <property>
+                <value>Untergeordnetes MDI-Formular kann nicht verborgen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMenuIndexError">
+            <properties>
+              <property>
+                <value>Menüindex außerhalb des zulässigen Bereichs</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMenuNotFound">
+            <properties>
+              <property>
+                <value>Untermenü ist nicht im Menü</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMenuReinserted">
+            <properties>
+              <property>
+                <value>Menü zweimal eingefügt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcAlt">
+            <properties>
+              <property>
+                <value>Alt+</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcBkSp">
+            <properties>
+              <property>
+                <value>Rück</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcCtrl">
+            <properties>
+              <property>
+                <value>Strg+</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcDel">
+            <properties>
+              <property>
+                <value>Entf</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcDown">
+            <properties>
+              <property>
+                <value>Ab</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcEnd">
+            <properties>
+              <property>
+                <value>Ende</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcEnter">
+            <properties>
+              <property>
+                <value>Eingabe</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcEsc">
+            <properties>
+              <property>
+                <value>Esc</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcHome">
+            <properties>
+              <property>
+                <value>Pos1</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcIns">
+            <properties>
+              <property>
+                <value>Einfg</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcLeft">
+            <properties>
+              <property>
+                <value>Links</value>
+                <translations>
+                  <translation language="de-DE">Link</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcPgDn">
+            <properties>
+              <property>
+                <value>BildAb</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcPgUp">
+            <properties>
+              <property>
+                <value>BildAuf</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcRight">
+            <properties>
+              <property>
+                <value>Rechts</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcShift">
+            <properties>
+              <property>
+                <value>Umsch+</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcSpace">
+            <properties>
+              <property>
+                <value>Leer</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcTab">
+            <properties>
+              <property>
+                <value>Tab</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SmkcUp">
+            <properties>
+              <property>
+                <value>Auf</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgAbort">
+            <properties>
+              <property>
+                <value>&amp;Abbrechen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgAll">
+            <properties>
+              <property>
+                <value>&amp;Alle</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgCancel">
+            <properties>
+              <property>
+                <value>Abbrechen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgClose">
+            <properties>
+              <property>
+                <value>S&amp;chließen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgConfirm">
+            <properties>
+              <property>
+                <value>Bestätigen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgError">
+            <properties>
+              <property>
+                <value>Fehler</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgHelp">
+            <properties>
+              <property>
+                <value>&amp;Hilfe</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgIgnore">
+            <properties>
+              <property>
+                <value>&amp;Ignorieren</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgInformation">
+            <properties>
+              <property>
+                <value>Informationen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgNo">
+            <properties>
+              <property>
+                <value>&amp;Nein</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgNoToAll">
+            <properties>
+              <property>
+                <value>&amp;Alle Nein</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgOK">
+            <properties>
+              <property>
+                <value>OK</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgRetry">
+            <properties>
+              <property>
+                <value>&amp;Wiederholen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgWarning">
+            <properties>
+              <property>
+                <value>Warnung</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgYes">
+            <properties>
+              <property>
+                <value>&amp;Ja</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SMsgDlgYesToAll">
+            <properties>
+              <property>
+                <value>A&amp;lle Ja</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SNoButton">
+            <properties>
+              <property>
+                <value>&amp;Nein</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SNoCanvasHandle">
+            <properties>
+              <property>
+                <value>Canvas erlaubt kein Zeichnen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SNoDefaultPrinter">
+            <properties>
+              <property>
+                <value>Aktuell ist kein Standarddrucker ausgewählt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SNoGetItemEventHandler">
+            <properties>
+              <property>
+                <value>Keine OnGetItem-Ereignisbehandlungsroutine zugewiesen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SNoMDIForm">
+            <properties>
+              <property>
+                <value>Formular kann nicht erstellt werden. Aktuell sind keine MDI-Formulare aktiv</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SNoTimers">
+            <properties>
+              <property>
+                <value>Nicht genügend Timer verfügbar</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SNotPrinting">
+            <properties>
+              <property>
+                <value>Der Drucker druckt aktuell nicht</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SOKButton">
+            <properties>
+              <property>
+                <value>OK</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SOutOfRange">
+            <properties>
+              <property>
+                <value>Wert muss zwischen %d und %d liegen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SOutOfResources">
+            <properties>
+              <property>
+                <value>Systemressourcen erschöpft</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SPageControlNotSet">
+            <properties>
+              <property>
+                <value>PageControl muss zuerst zugewiesen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SParentGivenNotAParent">
+            <properties>
+              <property>
+                <value>Das angegebene übergeordnete Element ist kein übergeordnetes Element von '%s'</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SParentRequired">
+            <properties>
+              <property>
+                <value>Element '%s' hat kein übergeordnetes Fenster</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SPassword">
+            <properties>
+              <property>
+                <value>&amp;Passwort</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SPrinterIndexError">
+            <properties>
+              <property>
+                <value>Druckerindex außerhalb des zulässigen Bereichs</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SPrinting">
+            <properties>
+              <property>
+                <value>Druckvorgang läuft</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SPromptArrayEmpty">
+            <properties>
+              <property>
+                <value>Prompt-Array darf nicht leer sein</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SPromptArrayTooShort">
+            <properties>
+              <property>
+                <value>Länge des Werte-Arrays muss &gt;= der Länge des Prompt-Arrays sein</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SPropertyOutOfRange">
+            <properties>
+              <property>
+                <value>Eigenschaft %s außerhalb des zulässigen Bereichs</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SReplaceImage">
+            <properties>
+              <property>
+                <value>Bild kann nicht ersetzt werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SRetryButton">
+            <properties>
+              <property>
+                <value>&amp;Wiederholen</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SScanLine">
+            <properties>
+              <property>
+                <value>Bereichsüberschreitung bei Zeilenindex</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SScrollBarRange">
+            <properties>
+              <property>
+                <value>Eigenschaft Scrollbar außerhalb des zulässigen Bereichs</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleClassNotFound">
+            <properties>
+              <property>
+                <value>Stilklasse '%s' nicht gefunden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleClassRegisterError">
+            <properties>
+              <property>
+                <value>Stilklasse '%s' bereits registriert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleFeatureNotSupported">
+            <properties>
+              <property>
+                <value>Funktion wird von diesem Stil nicht unterstützt</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleFormatError">
+            <properties>
+              <property>
+                <value>Ungültiges Stilformat</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleHookClassNotRegistered">
+            <properties>
+              <property>
+                <value>Klasse '%s' ist für '%s' nicht registriert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleHookClassRegistered">
+            <properties>
+              <property>
+                <value>Klasse '%s' ist für '%s' bereits registriert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleInvalidHandle">
+            <properties>
+              <property>
+                <value>Ungültiges Stil-Handle</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleInvalidParameter">
+            <properties>
+              <property>
+                <value>Parameter %s darf nicht nil sein</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleLoadError">
+            <properties>
+              <property>
+                <value>Stil '%s' kann nicht geladen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleLoadErrors">
+            <properties>
+              <property>
+                <value>Stile %s können nicht geladen werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleNotFound">
+            <properties>
+              <property>
+                <value>Stil '%s' nicht gefunden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleNotRegistered">
+            <properties>
+              <property>
+                <value>Der Stil '%s' ist nicht registriert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleNotRegisteredNoName">
+            <properties>
+              <property>
+                <value>Stil nicht registriert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleRegisterError">
+            <properties>
+              <property>
+                <value>Stil '%s' bereits registriert</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SStyleUnregisterError">
+            <properties>
+              <property>
+                <value>Die Registrierung des Systemstils kann nicht aufgehoben werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_STaskDlgButtonCaption">
+            <properties>
+              <property>
+                <value>Button%d</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_STaskDlgRadioButtonCaption">
+            <properties>
+              <property>
+                <value>RadioButton%d</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_STrayIconRemoveError">
+            <properties>
+              <property>
+                <value>Shell-Benachrichtigungssymbol kann nicht entfernt werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SUnknownClipboardFormat">
+            <properties>
+              <property>
+                <value>Nicht unterstütztes Zwischenablagenformat</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SUnknownExtension">
+            <properties>
+              <property>
+                <value>Unbekannte Bilddateierweiterung (.%s)</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SUnknownStreamFormat">
+            <properties>
+              <property>
+                <value>Nicht unterstütztes Stream-Format</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SUsername">
+            <properties>
+              <property>
+                <value>&amp;Benutzername</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SVBitmaps">
+            <properties>
+              <property>
+                <value>Bitmaps</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SVEnhMetafiles">
+            <properties>
+              <property>
+                <value>Erweiterte Metadateien</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SVIcons">
+            <properties>
+              <property>
+                <value>Symbole</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SVisibleChanged">
+            <properties>
+              <property>
+                <value>Eigenschaft Visible kann in OnShow oder OnHide nicht verändert werden</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SVMetafiles">
+            <properties>
+              <property>
+                <value>Metadateien</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SVTIFFImages">
+            <properties>
+              <property>
+                <value>TIFF-Grafiken</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SWindowClass">
+            <properties>
+              <property>
+                <value>Fehler beim Erzeugen einer Fensterklasse</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SWindowDCError">
+            <properties>
+              <property>
+                <value>Fehler beim Erstellen des Fenster-Gerätekontexts</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SWindowsVistaRequired">
+            <properties>
+              <property>
+                <value>Für %s ist Windows Vista oder höher erforderlich</value>
+              </property>
+            </properties>
+          </item>
+          <item name="Vcl_Consts_SYesButton">
+            <properties>
+              <property>
+                <value>&amp;Ja</value>
+              </property>
+            </properties>
+          </item>
+        </items>
+      </module>
+      <module name="TABOUTBOX" type="form" properties="11">
+        <items>
+          <item name="AboutBox" type="TAboutBox">
+            <properties>
+              <property name="Caption">
+                <value>Info</value>
+              </property>
+              <property name="Font.Name" status="skip">
+                <value>MS Sans Serif</value>
+              </property>
+            </properties>
+          </item>
+          <item name="AboutBox.AboutPanel.Comments" type="TLabel">
+            <properties>
+              <property name="Caption">
+                <value>This is a remake of the peg solitaire game "Drag-n-Drop Solitaire" from Intuitive Software Inc. 1995 with several new features and in 32-Bit.</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Ein Remake des Peg Solitärspiels "Drag-n-Drop Solitaire" von Intuitive Software Inc. 1995 mit vielen Neuerungen und in 32-Bit.</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="AboutBox.AboutPanel.CompanyHomepage" type="TLabel">
+            <properties>
+              <property name="Caption">
+                <value>Homepage</value>
+              </property>
+              <property name="Font.Name" status="skip">
+                <value>MS Sans Serif</value>
+              </property>
+              <property name="Hint">
+                <value>www.viathinksoft.com</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">www.viathinksoft.de</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="AboutBox.AboutPanel.Copyright" type="TLabel">
+            <properties>
+              <property name="Caption">
+                <value>Copyright © 2009 ViaThinkSoft</value>
+              </property>
+            </properties>
+          </item>
+          <item name="AboutBox.AboutPanel.LeaderHomepage" type="TLabel">
+            <properties>
+              <property name="Caption">
+                <value>Homepage</value>
+              </property>
+              <property name="Font.Name" status="skip">
+                <value>MS Sans Serif</value>
+              </property>
+              <property name="Hint">
+                <value>www.daniel-marschall.de</value>
+              </property>
+            </properties>
+          </item>
+          <item name="AboutBox.AboutPanel.ProductName" type="TLabel">
+            <properties>
+              <property name="Caption">
+                <value>ViaThinkSoft Peg Solitaire</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">ViaThinkSoft Peg Solitär</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="AboutBox.AboutPanel.ProjectLeader" type="TLabel">
+            <properties>
+              <property name="Caption">
+                <value>Project leader: Daniel Marschall</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Projektleiter: Daniel Marschall</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="AboutBox.AboutPanel.Version" type="TLabel">
+            <properties>
+              <property name="Caption">
+                <value>Version 1.0</value>
+              </property>
+            </properties>
+          </item>
+          <item name="AboutBox.OKButton" type="TButton">
+            <properties>
+              <property name="Caption">
+                <value>OK</value>
+              </property>
+            </properties>
+          </item>
+        </items>
+      </module>
+      <module name="TFINISHFORM" type="form" properties="8">
+        <items>
+          <item name="FinishForm" type="TFinishForm">
+            <properties>
+              <property name="Caption">
+                <value>Level finished</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Spiel beendet</translation>
+                </translations>
+              </property>
+              <property name="Font.Name" status="skip">
+                <value>MS Sans Serif</value>
+              </property>
+            </properties>
+          </item>
+          <item name="FinishForm.CancelBtn" type="TButton">
+            <properties>
+              <property name="Caption">
+                <value>Cancel</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Abbruch</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FinishForm.JumpHistoryLink" type="TLabel">
+            <properties>
+              <property name="Caption">
+                <value>View jump history (will not be saved in the journal)</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Sprungverlauf ansehen (wird nicht im gespeichert)</translation>
+                </translations>
+              </property>
+              <property name="Font.Name" status="skip">
+                <value>MS Sans Serif</value>
+              </property>
+            </properties>
+          </item>
+          <item name="FinishForm.Label1" type="TLabel">
+            <properties>
+              <property name="Caption">
+                <value>There are no more jumps possible.</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Es sind keine Züge mehr möglich.</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FinishForm.Label2" type="TLabel">
+            <properties>
+              <property name="Caption">
+                <value>Please enter your name to get added to the highscore lists.</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Bitte geben Sie Ihren Namen ein, um in die Highscore Liste eingetragen zu werden.</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FinishForm.Label3" type="TLabel">
+            <properties>
+              <property name="Caption">
+                <value>Your performance was:</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Ihre Leistung war:</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FinishForm.ReplayCheckBox" type="TCheckBox">
+            <properties>
+              <property name="Caption">
+                <value>Play the same level again</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Erneut spielen</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="FinishForm.SaveBtn" type="TButton">
+            <properties>
+              <property name="Caption">
+                <value>OK</value>
+              </property>
+            </properties>
+          </item>
+        </items>
+      </module>
+      <module name="THELPFORM" type="form" properties="34">
+        <items>
+          <item name="HelpForm" type="THelpForm">
+            <properties>
+              <property name="Caption">
+                <value>Help</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Hilfe</translation>
+                </translations>
+              </property>
+              <property name="Font.Name" status="skip">
+                <value>MS Sans Serif</value>
+              </property>
+            </properties>
+          </item>
+          <item name="HelpForm.CloseBtn" type="TButton">
+            <properties>
+              <property name="Caption">
+                <value>Close</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Schließen</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HelpForm.HelpMemo" type="TMemo">
+            <properties>
+              <property name="Lines.Strings[0]">
+                <value>The rules of Peg Solitaire are simple. You have to jump over the neighboring </value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Die Regeln von Peg Solitär sind einfach. Sie müssen ähnlich wie beim Damespiel über die benachbarten Steine hüpfen,</translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[1]">
+                <value>stones in a similar way to the drafts to remove them. The game is over when there </value>
+                <translations>
+                  <translation language="de-DE" status="proposed">um diese zu entfernen. Das Spiel ist beendet,</translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[10]">
+                <value>differently in the number of points. A distant red stone will give you 30 points, a </value>
+                <translations>
+                  <translation language="de-DE" status="proposed">ein gelber 20 und ein entfernter Grüner 10. </translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[11]">
+                <value>yellow 20 and a distant green 10.</value>
+                <translations>
+                  <translation language="de-DE" status="proposed"></translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[12]">
+                <value></value>
+              </property>
+              <property name="Lines.Strings[13]">
+                <value>However, playing for points is not absolutely necessary. You can also play on </value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Das Spielen nach Punktezahl ist jedoch nicht zwingend notwendig. Sie können auch auf Zeit spielen, auf die wenigsten verbleibenden Steine oder auf die Zielfeldbelegung. Wählen Sie das Ziel, das Sie bevorzugen.</translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[14]">
+                <value>time, on the fewest remaining stones or on the target field assignment. Choose the </value>
+                <translations>
+                  <translation language="de-DE" status="proposed"> </translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[15]">
+                <value>destination you prefer.</value>
+                <translations>
+                  <translation language="de-DE" status="proposed"></translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[16]">
+                <value></value>
+              </property>
+              <property name="Lines.Strings[17]">
+                <value>As a rule, diagonal moves are not allowed. The decision as to whether the </value>
+                <translations>
+                  <translation language="de-DE" status="proposed">In der Regel sind diagonale Spielzüge nicht erlaubt. Die Entscheidung, ob die diagonalen Züge trotzdem erlaubt sind, wird vom Entwickler der Leveldatei festgelegt. Es ist möglich, dass gewisse Bretter diagonale züge erfordern, um korrekt gelöst zu werden. Dies ist Mathematisch jedoch sehr komplex nachzuweisen. Wie haben als Komfort die Standardbretter in zwei Varianten ausgeliefert: Mit und ohne Diagonalzug.</translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[18]">
+                <value>diagonal moves are still allowed is determined by the developer of the level file. It </value>
+                <translations>
+                  <translation language="de-DE" status="proposed"></translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[19]">
+                <value>is possible that certain boards require diagonal pulls to be loosened correctly. </value>
+                <translations>
+                  <translation language="de-DE" status="proposed"></translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[2]">
+                <value>are no more moves.</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">wenn keine weiteren Züge mehr vorhanden sind.</translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[20]">
+                <value>However, this is mathematically very complex to prove. How have the standard </value>
+                <translations>
+                  <translation language="de-DE" status="proposed"></translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[21]">
+                <value>boards delivered in two versions as comfort: with and without diagonal pull.</value>
+                <translations>
+                  <translation language="de-DE" status="proposed"></translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[22]">
+                <value></value>
+              </property>
+              <property name="Lines.Strings[23]">
+                <value>Some levels have target fields. These are characterized by a deeper imprint on </value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Einige Levels besitzen Zielfelder. Diese sind durch eine tiefere Prägung auf dem Spielfeld  bzw. in der Vorschau durch einen schwarzen Rand gekennzeichnet. Das Peg Solitär ist korrekt beendet, wenn auf den Zielfeldern Steine (Farbe egal) liegen, keine weiteren Züge mehr möglich sind und sonst keine Steine auf dem Brett liegen. Sie erhalten hierfür eine besondere Auszeichnung in den Highscorelisten. Sie müssen aber wie gesagt, dieses Primärziel nicht verfolgen. Sie können stattdessen auch auf Zeit oder Punktezahlen spielen.</translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[24]">
+                <value>the field or in the preview by a black border. The Peg Solitaire is finished correctly, </value>
+                <translations>
+                  <translation language="de-DE" status="proposed"></translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[25]">
+                <value>if there are stones on the target fields (color does not matter), no further moves are </value>
+                <translations>
+                  <translation language="de-DE" status="proposed"></translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[26]">
+                <value>possible and there are no other stones on the board. You will receive a special </value>
+                <translations>
+                  <translation language="de-DE" status="proposed"></translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[27]">
+                <value>award in the high score lists. But as I said, you do not have to pursue this primary </value>
+                <translations>
+                  <translation language="de-DE" status="proposed"></translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[28]">
+                <value>goal. You can also play for time or points instead.</value>
+                <translations>
+                  <translation language="de-DE" status="proposed"></translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[29]">
+                <value></value>
+              </property>
+              <property name="Lines.Strings[3]">
+                <value></value>
+              </property>
+              <property name="Lines.Strings[30]">
+                <value>Further information about the game can be found on the internet under the </value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Weitere Informationen zu dem Spiel finden Sie im Internet unter dem Stichwort "Solitär" bzw. "Peg Solitaire".</translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[31]">
+                <value>keyword "Solitaire" or "Peg Solitaire".</value>
+                <translations>
+                  <translation language="de-DE" status="proposed"></translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[4]">
+                <value>ViaThinkSoft Peg Solitär offers you freely variable and extensible board files that </value>
+                <translations>
+                  <translation language="de-DE" status="proposed">ViaThinkSoft Peg Solitär bietet Ihnen beliebig variierbare und erweiterbare Brettdateien, die Ihnen die Vorlage zum Spielen bieten.</translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[5]">
+                <value>provide you with the template for playing. In the next versions, a comfortable level </value>
+                <translations>
+                  <translation language="de-DE" status="proposed">In den nächsten Versionen ist auch ein komfortabler Leveleditor geplant, </translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[6]">
+                <value>editor is also planned that will make editing via the editor superfluous. However, </value>
+                <translations>
+                  <translation language="de-DE" status="proposed">der das Editieren per Editor überflüssig machen soll. </translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[7]">
+                <value>the boards already supplied correspond to the usual standard boards.</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Die bereits mitgelieferten Bretter entsprechen jedoch den üblichen Standardbrettern.</translation>
+                </translations>
+              </property>
+              <property name="Lines.Strings[8]">
+                <value></value>
+              </property>
+              <property name="Lines.Strings[9]">
+                <value>This variant of Peg Solitaire has different colored stones, which are weighted </value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Diese Variante von Peg Solitär hat verschiedenfarbige Steine, die unterschiedlich in der Punktezahl gewichtet wird. Ein entfernter roter Stein bringt Ihnen 30 Punkte,</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+        </items>
+      </module>
+      <module name="THIGHSCOREFORM" type="form" properties="19">
+        <items>
+          <item name="HighScoreForm" type="THighScoreForm">
+            <properties>
+              <property name="Caption">
+                <value>High scores</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Highscores</translation>
+                </translations>
+              </property>
+              <property name="Font.Name" status="skip">
+                <value>MS Sans Serif</value>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.ClearBtn" type="TButton">
+            <properties>
+              <property name="Caption">
+                <value>Clear list</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Liste leeren</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.CloseBtn" type="TButton">
+            <properties>
+              <property name="Caption">
+                <value>Close</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Schließen</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.PPMTab" type="TTabSheet">
+            <properties>
+              <property name="Caption">
+                <value>Highest Points per Minute</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Höchste Punkte pro Minute</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.PPMTab.PPMList.Columns[0]" type="TListView">
+            <properties>
+              <property name="Caption">
+                <value>Name</value>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.PPMTab.PPMList.Columns[1]" type="TListView">
+            <properties>
+              <property name="Caption">
+                <value>Date</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Datum</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.PPMTab.PPMList.Columns[2]" type="TListView">
+            <properties>
+              <property name="Caption">
+                <value>Points per Minute</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Punkte pro Minute</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.RemainingTab" type="TTabSheet">
+            <properties>
+              <property name="Caption">
+                <value>Lowest remaining stones</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Geringste verbleibende Steine</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.RemainingTab.RemainingList.Columns[0]" type="TListView">
+            <properties>
+              <property name="Caption">
+                <value>Name</value>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.RemainingTab.RemainingList.Columns[1]" type="TListView">
+            <properties>
+              <property name="Caption">
+                <value>Date</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Datum</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.RemainingTab.RemainingList.Columns[2]" type="TListView">
+            <properties>
+              <property name="Caption">
+                <value>Remaining stones</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Verbleibende Steine</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.ScoreTab" type="TTabSheet">
+            <properties>
+              <property name="Caption">
+                <value>Highest score</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Höchste Punktezahl</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.ScoreTab.ScoreList.Columns[0]" type="TListView">
+            <properties>
+              <property name="Caption">
+                <value>Name</value>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.ScoreTab.ScoreList.Columns[1]" type="TListView">
+            <properties>
+              <property name="Caption">
+                <value>Date</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Datum</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.ScoreTab.ScoreList.Columns[2]" type="TListView">
+            <properties>
+              <property name="Caption">
+                <value>Score</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Punkte</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.TimeTab" type="TTabSheet">
+            <properties>
+              <property name="Caption">
+                <value>Shortest time</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Kürzeste Zeit</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.TimeTab.TimeList.Columns[0]" type="TListView">
+            <properties>
+              <property name="Caption">
+                <value>Name</value>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.TimeTab.TimeList.Columns[1]" type="TListView">
+            <properties>
+              <property name="Caption">
+                <value>Date</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Datum</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HighScoreForm.PageControl.TimeTab.TimeList.Columns[2]" type="TListView">
+            <properties>
+              <property name="Caption">
+                <value>Time [Seconds]</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Zeit in Sekunden</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+        </items>
+      </module>
+      <module name="THISTORYFORM" type="form" properties="5">
+        <items>
+          <item name="HistoryForm" type="THistoryForm">
+            <properties>
+              <property name="Caption">
+                <value>Jump History</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Sprungverlauf</translation>
+                </translations>
+              </property>
+              <property name="Font.Name" status="skip">
+                <value>MS Sans Serif</value>
+              </property>
+            </properties>
+          </item>
+          <item name="HistoryForm.CloseBtn" type="TButton">
+            <properties>
+              <property name="Caption">
+                <value>Close</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Schließen</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HistoryForm.JumpMemo" type="TMemo">
+            <properties>
+              <property name="Font.Name" status="skip">
+                <value>Courier New</value>
+              </property>
+            </properties>
+          </item>
+          <item name="HistoryForm.JumpSaveDialog" type="TSaveDialog">
+            <properties>
+              <property name="DefaultExt">
+                <value>txt</value>
+              </property>
+              <property name="Filter">
+                <value>Text files (*.txt)|*.txt|All files (*.*)|*.*</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="HistoryForm.SaveBtn" type="TButton">
+            <properties>
+              <property name="Caption">
+                <value>Save to file</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">In Datei speichern</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+        </items>
+      </module>
+      <module name="TLEVELCHOICE" type="form" properties="7">
+        <items>
+          <item name="LevelChoice" type="TLevelChoice">
+            <properties>
+              <property name="Caption">
+                <value>ViaThinkSoft Peg Solitaire - Board choice</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">ViaThinkSoft Peg Solitär - Brettwahl</translation>
+                </translations>
+              </property>
+              <property name="Font.Name" status="skip">
+                <value>MS Sans Serif</value>
+              </property>
+            </properties>
+          </item>
+          <item name="LevelChoice.CancelBtn" type="TButton">
+            <properties>
+              <property name="Caption">
+                <value>Cancel</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Abbruch</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="LevelChoice.LevelGrp" type="TGroupBox">
+            <properties>
+              <property name="Caption">
+                <value>Please select the board you want to play with</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Bitte wählen Sie das Brett, dass Sie verwenden möchten</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="LevelChoice.LevelPopupMenu.PLoadLevel" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>Load level</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Level laden</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="LevelChoice.LevelPopupMenu.PRefreshList" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>Refresh list</value>
+              </property>
+            </properties>
+          </item>
+          <item name="LevelChoice.PlayBtn" type="TButton">
+            <properties>
+              <property name="Caption">
+                <value>Play!</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Spielen!</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="LevelChoice.PreviewGrp" type="TGroupBox">
+            <properties>
+              <property name="Caption">
+                <value>Preview</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Vorschau</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+        </items>
+      </module>
+      <module name="TMAINFORM" type="form" properties="20">
+        <items>
+          <item name="MainForm" type="TMainForm">
+            <properties>
+              <property name="Caption">
+                <value>ViaThinkSoft Peg Solitaire</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">ViaThinkSoft Peg Solitär</translation>
+                </translations>
+              </property>
+              <property name="Font.Name" status="skip">
+                <value>Tahoma</value>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help1" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>Game</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Spiel</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help1.MExit" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>Exit</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Beenden</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help1.MHighScores" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>High scores of this level...</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Highscores von diesem Level...</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help1.MJumpHistory" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>View jump history...</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Sprungverlauf...</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help1.MNewGame" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>New game...</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Neues Spiel...</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help1.MPauseTime" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>Pause timer</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Zeit anhalten</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help1.MRestartGame" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>Restart level</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Neu starten</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help1.MUndo" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>Undo</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Rückgängig</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help1.N1" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>-</value>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help1.N2" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>-</value>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help1.N3" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>-</value>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help1.N4" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>-</value>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help2" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>Help</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Hilfe</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help2.Aboutthislevel1" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>About this level</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Info über dieses Brett</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help2.MAbout" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>About...</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Über...</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help2.MHelp" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>Help...</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Hilfe anzeigen...</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.Help2.N5" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>-</value>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.MSettings" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>Settings</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Einstellungen</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+          <item name="MainForm.MainMenu.MSettings.MEnableSound" type="TMenuItem">
+            <properties>
+              <property name="Caption">
+                <value>Enable sound</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">Ton</translation>
+                </translations>
+              </property>
+            </properties>
+          </item>
+        </items>
+      </module>
+    </modules>
+  </project>
+</xlat>
