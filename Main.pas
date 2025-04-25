@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, SysUtils, Classes, Graphics, Dialogs, StdCtrls, Menus, Controls,
-  ComCtrls, ExtCtrls, Forms, MMSystem, LevelFunctions, Registry;
+  ComCtrls, ExtCtrls, Forms, MMSystem, LevelFunctions, Registry, System.UITypes;
 
 type
   TMainForm = class(TForm)

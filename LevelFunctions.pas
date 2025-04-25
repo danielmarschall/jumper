@@ -3,7 +3,7 @@ unit LevelFunctions;
 interface
 
 uses
-  SysUtils, Dialogs, Functions, Classes;
+  SysUtils, Dialogs, Functions, Classes, System.UITypes;
 
 type
   TFieldType = (ftUndefined, ftFullSpace, ftEmpty, ftRed, ftYellow, ftGreen);

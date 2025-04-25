@@ -3,7 +3,7 @@ unit Functions;
 interface
 
 uses
-  SysUtils, Dialogs, Graphics, Classes, ExtCtrls;
+  SysUtils, Dialogs, Graphics, Classes, ExtCtrls, System.UITypes;
 
 function ExtractFileNameWithoutExt(filename: string): string;
 procedure ClearImage(Image: TImage; BackgroundColor: TColor);

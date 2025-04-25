@@ -47,8 +47,6 @@ object MainForm: TMainForm
         Alignment = taRightJustify
         Width = 50
       end>
-    ExplicitTop = 257
-    ExplicitWidth = 336
   end
   object MainMenu: TMainMenu
     Left = 8

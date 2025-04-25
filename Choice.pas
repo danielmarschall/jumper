@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ImgList, ComCtrls, Menus, ExtCtrls, ImageList,
-  LevelFunctions;
+  LevelFunctions, System.UITypes;
 
 type
   TLevelChoice = class(TForm)

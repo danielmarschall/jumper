@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, MMSystem, Math, ExtCtrls, Registry, LevelFunctions;
+  Dialogs, StdCtrls, MMSystem, Math, ExtCtrls, Registry, LevelFunctions,
+  System.UITypes;
 
 type
   TFinishForm = class(TForm)
