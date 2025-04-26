@@ -13,7 +13,7 @@ More information at Wikipedia: https://en.wikipedia.org/wiki/Peg_solitaire
 
 ![Board selection](Screenshot3.png)
 
-## Tools required for editing source code
+## Tools required for editing the source code
 
 * Embarcadero Delphi 12 (Community edition available for non-commercial use)
 

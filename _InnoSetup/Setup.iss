@@ -32,7 +32,7 @@ Name: de; MessagesFile: "compiler:Languages\German.isl"
 [Files]
 ; Allgemein
 Source: "..\PegSolitaire.exe"; DestDir: "{app}"; Flags: ignoreversion signonce
-Source: "..\PegSolitaire.deu"; DestDir: "{app}"; Flags: ignoreversion signonce
+Source: "..\PegSolitaire.de"; DestDir: "{app}"; Flags: ignoreversion signonce
 Source: "..\Boards\*.brd"; DestDir: "{app}\Boards"; Flags: ignoreversion
 Source: "..\Boards\*.txt"; DestDir: "{app}\Boards"; Flags: ignoreversion
 Source: "..\Journal\Info.txt"; DestDir: "{app}\Journal"; Flags: ignoreversion

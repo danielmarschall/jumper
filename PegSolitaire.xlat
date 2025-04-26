@@ -2,7 +2,7 @@
 <xlat>
   <meta>
     <version>3</version>
-    <created>2025-04-25T20:12:28.319+02:00</created>
+    <created>2025-04-26T23:40:04.081+02:00</created>
     <tool>amTranslationManager</tool>
     <toolversion>2.3.9199.24584</toolversion>
   </meta>
@@ -12,9 +12,9 @@
     <sorted>True</sorted>
     <omitnewstate>True</omitnewstate>
   </options>
-  <project sourcefile=".\PegSolitaire.exe" stringsymbolfile=".\PegSolitaire.drc" language="en-US" properties="516">
+  <project sourcefile=".\PegSolitaire.exe" stringsymbolfile=".\PegSolitaire.drc" language="en-US" properties="510">
     <targetlanguages>
-      <language language="de-DE" translated="96"/>
+      <language language="de-DE" translated="111"/>
     </targetlanguages>
     <modules>
       <module name="resourcestrings" type="strings" properties="412">
@@ -103,7 +103,7 @@
               <property>
                 <value>Score: %d</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Punkte: %d</translation>
+                  <translation language="de-DE">Punkte: %d</translation>
                 </translations>
               </property>
             </properties>
@@ -431,13 +431,6 @@
               </property>
             </properties>
           </item>
-          <item name="System_RTLConsts_SInvalidDateString" state="unused">
-            <properties>
-              <property>
-                <value>Ungültiger Datums-String: %s</value>
-              </property>
-            </properties>
-          </item>
           <item name="System_RTLConsts_SInvalidImage">
             <properties>
               <property>
@@ -449,13 +442,6 @@
             <properties>
               <property>
                 <value>''%s'' ist kein gültiger Komponentenname</value>
-              </property>
-            </properties>
-          </item>
-          <item name="System_RTLConsts_SInvalidOffsetString" state="unused">
-            <properties>
-              <property>
-                <value>Ungültiger Zeit-Offset-String: %s</value>
               </property>
             </properties>
           </item>
@@ -522,13 +508,6 @@
               </property>
             </properties>
           </item>
-          <item name="System_RTLConsts_SInvalidTimeString" state="unused">
-            <properties>
-              <property>
-                <value>Ungültiger Zeit-String: %s</value>
-              </property>
-            </properties>
-          </item>
           <item name="System_RTLConsts_SListCapacityError">
             <properties>
               <property>
@@ -554,13 +533,6 @@
             <properties>
               <property>
                 <value>. %s ist leer</value>
-              </property>
-            </properties>
-          </item>
-          <item name="System_RTLConsts_SListIndexErrorExt" state="unused">
-            <properties>
-              <property>
-                <value>Listenindex außerhalb des gültigen Bereichs (%0:d). %2:s Objektbereich ist 0..%1:d</value>
               </property>
             </properties>
           </item>
@@ -2566,6 +2538,9 @@
             <properties>
               <property>
                 <value>OK</value>
+                <translations>
+                  <translation language="de-DE">OK</translation>
+                </translations>
               </property>
             </properties>
           </item>
@@ -2650,6 +2625,9 @@
             <properties>
               <property>
                 <value>OK</value>
+                <translations>
+                  <translation language="de-DE">OK</translation>
+                </translations>
               </property>
             </properties>
           </item>
@@ -2990,6 +2968,9 @@
             <properties>
               <property name="Caption">
                 <value>Info</value>
+                <translations>
+                  <translation language="de-DE">Info</translation>
+                </translations>
               </property>
               <property name="Font.Name" status="skip">
                 <value>MS Sans Serif</value>
@@ -3001,7 +2982,7 @@
               <property name="Caption">
                 <value>This is a remake of the peg solitaire game "Drag-n-Drop Solitaire" from Intuitive Software Inc. 1995 with several new features and in 32-Bit.</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Ein Remake des Peg Solitärspiels "Drag-n-Drop Solitaire" von Intuitive Software Inc. 1995 mit vielen Neuerungen und in 32-Bit.</translation>
+                  <translation language="de-DE">Ein Remake des Peg Solitärspiels "Drag-n-Drop Solitaire" von Intuitive Software Inc. 1995 mit vielen Neuerungen und in 32-Bit.</translation>
                 </translations>
               </property>
             </properties>
@@ -3010,6 +2991,9 @@
             <properties>
               <property name="Caption">
                 <value>Homepage</value>
+                <translations>
+                  <translation language="de-DE">Homepage</translation>
+                </translations>
               </property>
               <property name="Font.Name" status="skip">
                 <value>MS Sans Serif</value>
@@ -3017,7 +3001,7 @@
               <property name="Hint">
                 <value>www.viathinksoft.com</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">www.viathinksoft.de</translation>
+                  <translation language="de-DE">www.viathinksoft.de</translation>
                 </translations>
               </property>
             </properties>
@@ -3026,6 +3010,9 @@
             <properties>
               <property name="Caption">
                 <value>Copyright © 2009 ViaThinkSoft</value>
+                <translations>
+                  <translation language="de-DE">Copyright © 2009 ViaThinkSoft</translation>
+                </translations>
               </property>
             </properties>
           </item>
@@ -3033,12 +3020,18 @@
             <properties>
               <property name="Caption">
                 <value>Homepage</value>
+                <translations>
+                  <translation language="de-DE">Homepage</translation>
+                </translations>
               </property>
               <property name="Font.Name" status="skip">
                 <value>MS Sans Serif</value>
               </property>
               <property name="Hint">
                 <value>www.daniel-marschall.de</value>
+                <translations>
+                  <translation language="de-DE">www.daniel-marschall.de</translation>
+                </translations>
               </property>
             </properties>
           </item>
@@ -3047,7 +3040,7 @@
               <property name="Caption">
                 <value>ViaThinkSoft Peg Solitaire</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">ViaThinkSoft Peg Solitär</translation>
+                  <translation language="de-DE">ViaThinkSoft Peg Solitär</translation>
                 </translations>
               </property>
             </properties>
@@ -3057,7 +3050,7 @@
               <property name="Caption">
                 <value>Project leader: Daniel Marschall</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Projektleiter: Daniel Marschall</translation>
+                  <translation language="de-DE">Projektleiter: Daniel Marschall</translation>
                 </translations>
               </property>
             </properties>
@@ -3066,6 +3059,9 @@
             <properties>
               <property name="Caption">
                 <value>Version 1.0</value>
+                <translations>
+                  <translation language="de-DE">Version 1.0</translation>
+                </translations>
               </property>
             </properties>
           </item>
@@ -3073,6 +3069,9 @@
             <properties>
               <property name="Caption">
                 <value>OK</value>
+                <translations>
+                  <translation language="de-DE">OK</translation>
+                </translations>
               </property>
             </properties>
           </item>
@@ -3160,6 +3159,9 @@
             <properties>
               <property name="Caption">
                 <value>OK</value>
+                <translations>
+                  <translation language="de-DE" status="proposed">OK</translation>
+                </translations>
               </property>
             </properties>
           </item>
@@ -3377,7 +3379,7 @@
               <property name="Caption">
                 <value>High scores</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Highscores</translation>
+                  <translation language="de-DE">Highscores</translation>
                 </translations>
               </property>
               <property name="Font.Name" status="skip">
@@ -3390,7 +3392,7 @@
               <property name="Caption">
                 <value>Clear list</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Liste leeren</translation>
+                  <translation language="de-DE">Liste leeren</translation>
                 </translations>
               </property>
             </properties>
@@ -3400,7 +3402,7 @@
               <property name="Caption">
                 <value>Close</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Schließen</translation>
+                  <translation language="de-DE">Schließen</translation>
                 </translations>
               </property>
             </properties>
@@ -3410,7 +3412,7 @@
               <property name="Caption">
                 <value>Highest Points per Minute</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Höchste Punkte pro Minute</translation>
+                  <translation language="de-DE">Höchste Punkte pro Minute</translation>
                 </translations>
               </property>
             </properties>
@@ -3419,6 +3421,9 @@
             <properties>
               <property name="Caption">
                 <value>Name</value>
+                <translations>
+                  <translation language="de-DE">Name</translation>
+                </translations>
               </property>
             </properties>
           </item>
@@ -3427,7 +3432,7 @@
               <property name="Caption">
                 <value>Date</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Datum</translation>
+                  <translation language="de-DE">Datum</translation>
                 </translations>
               </property>
             </properties>
@@ -3437,7 +3442,7 @@
               <property name="Caption">
                 <value>Points per Minute</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Punkte pro Minute</translation>
+                  <translation language="de-DE">Punkte pro Minute</translation>
                 </translations>
               </property>
             </properties>
@@ -3447,7 +3452,7 @@
               <property name="Caption">
                 <value>Lowest remaining stones</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Geringste verbleibende Steine</translation>
+                  <translation language="de-DE">Geringste verbleibende Steine</translation>
                 </translations>
               </property>
             </properties>
@@ -3456,6 +3461,9 @@
             <properties>
               <property name="Caption">
                 <value>Name</value>
+                <translations>
+                  <translation language="de-DE">Name</translation>
+                </translations>
               </property>
             </properties>
           </item>
@@ -3464,7 +3472,7 @@
               <property name="Caption">
                 <value>Date</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Datum</translation>
+                  <translation language="de-DE">Datum</translation>
                 </translations>
               </property>
             </properties>
@@ -3474,7 +3482,7 @@
               <property name="Caption">
                 <value>Remaining stones</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Verbleibende Steine</translation>
+                  <translation language="de-DE">Verbleibende Steine</translation>
                 </translations>
               </property>
             </properties>
@@ -3484,7 +3492,7 @@
               <property name="Caption">
                 <value>Highest score</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Höchste Punktezahl</translation>
+                  <translation language="de-DE">Höchste Punktezahl</translation>
                 </translations>
               </property>
             </properties>
@@ -3493,6 +3501,9 @@
             <properties>
               <property name="Caption">
                 <value>Name</value>
+                <translations>
+                  <translation language="de-DE">Name</translation>
+                </translations>
               </property>
             </properties>
           </item>
@@ -3501,7 +3512,7 @@
               <property name="Caption">
                 <value>Date</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Datum</translation>
+                  <translation language="de-DE">Datum</translation>
                 </translations>
               </property>
             </properties>
@@ -3511,7 +3522,7 @@
               <property name="Caption">
                 <value>Score</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Punkte</translation>
+                  <translation language="de-DE">Punkte</translation>
                 </translations>
               </property>
             </properties>
@@ -3521,7 +3532,7 @@
               <property name="Caption">
                 <value>Shortest time</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Kürzeste Zeit</translation>
+                  <translation language="de-DE">Kürzeste Zeit</translation>
                 </translations>
               </property>
             </properties>
@@ -3530,6 +3541,9 @@
             <properties>
               <property name="Caption">
                 <value>Name</value>
+                <translations>
+                  <translation language="de-DE">Name</translation>
+                </translations>
               </property>
             </properties>
           </item>
@@ -3538,7 +3552,7 @@
               <property name="Caption">
                 <value>Date</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Datum</translation>
+                  <translation language="de-DE">Datum</translation>
                 </translations>
               </property>
             </properties>
@@ -3548,21 +3562,21 @@
               <property name="Caption">
                 <value>Time [Seconds]</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Zeit in Sekunden</translation>
+                  <translation language="de-DE">Zeit in Sekunden</translation>
                 </translations>
               </property>
             </properties>
           </item>
         </items>
       </module>
-      <module name="THISTORYFORM" type="form" properties="5">
+      <module name="THISTORYFORM" type="form" properties="4">
         <items>
           <item name="HistoryForm" type="THistoryForm">
             <properties>
               <property name="Caption">
                 <value>Jump History</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Sprungverlauf</translation>
+                  <translation language="de-DE">Sprungverlauf</translation>
                 </translations>
               </property>
               <property name="Font.Name" status="skip">
@@ -3575,7 +3589,7 @@
               <property name="Caption">
                 <value>Close</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Schließen</translation>
+                  <translation language="de-DE">Schließen</translation>
                 </translations>
               </property>
             </properties>
@@ -3589,13 +3603,13 @@
           </item>
           <item name="HistoryForm.JumpSaveDialog" type="TSaveDialog">
             <properties>
-              <property name="DefaultExt">
+              <property name="DefaultExt" status="skip">
                 <value>txt</value>
               </property>
               <property name="Filter">
                 <value>Text files (*.txt)|*.txt|All files (*.*)|*.*</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*</translation>
+                  <translation language="de-DE">Textdateien (*.txt)|*.txt|Alle Dateien (*.*)|*.*</translation>
                 </translations>
               </property>
             </properties>
@@ -3605,7 +3619,7 @@
               <property name="Caption">
                 <value>Save to file</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">In Datei speichern</translation>
+                  <translation language="de-DE">In Datei speichern</translation>
                 </translations>
               </property>
             </properties>
@@ -3619,7 +3633,7 @@
               <property name="Caption">
                 <value>ViaThinkSoft Peg Solitaire - Board choice</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">ViaThinkSoft Peg Solitär - Brettwahl</translation>
+                  <translation language="de-DE">ViaThinkSoft Peg Solitär - Brettwahl</translation>
                 </translations>
               </property>
               <property name="Font.Name" status="skip">
@@ -3632,7 +3646,7 @@
               <property name="Caption">
                 <value>Cancel</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Abbruch</translation>
+                  <translation language="de-DE">Abbruch</translation>
                 </translations>
               </property>
             </properties>
@@ -3642,7 +3656,7 @@
               <property name="Caption">
                 <value>Please select the board you want to play with</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Bitte wählen Sie das Brett, dass Sie verwenden möchten</translation>
+                  <translation language="de-DE">Bitte wählen Sie das Brett, dass Sie verwenden möchten</translation>
                 </translations>
               </property>
             </properties>
@@ -3652,7 +3666,7 @@
               <property name="Caption">
                 <value>Load level</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Level laden</translation>
+                  <translation language="de-DE">Level laden</translation>
                 </translations>
               </property>
             </properties>
@@ -3661,6 +3675,9 @@
             <properties>
               <property name="Caption">
                 <value>Refresh list</value>
+                <translations>
+                  <translation language="de-DE">Liste neu laden</translation>
+                </translations>
               </property>
             </properties>
           </item>
@@ -3669,7 +3686,7 @@
               <property name="Caption">
                 <value>Play!</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Spielen!</translation>
+                  <translation language="de-DE">Spielen!</translation>
                 </translations>
               </property>
             </properties>
@@ -3679,21 +3696,21 @@
               <property name="Caption">
                 <value>Preview</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Vorschau</translation>
+                  <translation language="de-DE">Vorschau</translation>
                 </translations>
               </property>
             </properties>
           </item>
         </items>
       </module>
-      <module name="TMAINFORM" type="form" properties="20">
+      <module name="TMAINFORM" type="form" properties="15">
         <items>
           <item name="MainForm" type="TMainForm">
             <properties>
               <property name="Caption">
                 <value>ViaThinkSoft Peg Solitaire</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">ViaThinkSoft Peg Solitär</translation>
+                  <translation language="de-DE">ViaThinkSoft Peg Solitär</translation>
                 </translations>
               </property>
               <property name="Font.Name" status="skip">
@@ -3706,7 +3723,7 @@
               <property name="Caption">
                 <value>Game</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Spiel</translation>
+                  <translation language="de-DE">Spiel</translation>
                 </translations>
               </property>
             </properties>
@@ -3716,7 +3733,7 @@
               <property name="Caption">
                 <value>Exit</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Beenden</translation>
+                  <translation language="de-DE">Beenden</translation>
                 </translations>
               </property>
             </properties>
@@ -3726,7 +3743,7 @@
               <property name="Caption">
                 <value>High scores of this level...</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Highscores von diesem Level...</translation>
+                  <translation language="de-DE">Highscores von diesem Level...</translation>
                 </translations>
               </property>
             </properties>
@@ -3736,7 +3753,7 @@
               <property name="Caption">
                 <value>View jump history...</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Sprungverlauf...</translation>
+                  <translation language="de-DE">Sprungverlauf...</translation>
                 </translations>
               </property>
             </properties>
@@ -3746,7 +3763,7 @@
               <property name="Caption">
                 <value>New game...</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Neues Spiel...</translation>
+                  <translation language="de-DE">Neues Spiel...</translation>
                 </translations>
               </property>
             </properties>
@@ -3756,7 +3773,7 @@
               <property name="Caption">
                 <value>Pause timer</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Zeit anhalten</translation>
+                  <translation language="de-DE">Zeit anhalten</translation>
                 </translations>
               </property>
             </properties>
@@ -3766,7 +3783,7 @@
               <property name="Caption">
                 <value>Restart level</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Neu starten</translation>
+                  <translation language="de-DE">Neu starten</translation>
                 </translations>
               </property>
             </properties>
@@ -3776,35 +3793,35 @@
               <property name="Caption">
                 <value>Undo</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Rückgängig</translation>
+                  <translation language="de-DE">Rückgängig</translation>
                 </translations>
               </property>
             </properties>
           </item>
           <item name="MainForm.MainMenu.Help1.N1" type="TMenuItem">
             <properties>
-              <property name="Caption">
+              <property name="Caption" status="skip">
                 <value>-</value>
               </property>
             </properties>
           </item>
           <item name="MainForm.MainMenu.Help1.N2" type="TMenuItem">
             <properties>
-              <property name="Caption">
+              <property name="Caption" status="skip">
                 <value>-</value>
               </property>
             </properties>
           </item>
           <item name="MainForm.MainMenu.Help1.N3" type="TMenuItem">
             <properties>
-              <property name="Caption">
+              <property name="Caption" status="skip">
                 <value>-</value>
               </property>
             </properties>
           </item>
           <item name="MainForm.MainMenu.Help1.N4" type="TMenuItem">
             <properties>
-              <property name="Caption">
+              <property name="Caption" status="skip">
                 <value>-</value>
               </property>
             </properties>
@@ -3814,7 +3831,7 @@
               <property name="Caption">
                 <value>Help</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Hilfe</translation>
+                  <translation language="de-DE">Hilfe</translation>
                 </translations>
               </property>
             </properties>
@@ -3824,7 +3841,7 @@
               <property name="Caption">
                 <value>About this level</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Info über dieses Brett</translation>
+                  <translation language="de-DE">Info über dieses Brett</translation>
                 </translations>
               </property>
             </properties>
@@ -3834,7 +3851,7 @@
               <property name="Caption">
                 <value>About...</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Über...</translation>
+                  <translation language="de-DE">Über...</translation>
                 </translations>
               </property>
             </properties>
@@ -3844,14 +3861,14 @@
               <property name="Caption">
                 <value>Help...</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Hilfe anzeigen...</translation>
+                  <translation language="de-DE">Hilfe anzeigen...</translation>
                 </translations>
               </property>
             </properties>
           </item>
           <item name="MainForm.MainMenu.Help2.N5" type="TMenuItem">
             <properties>
-              <property name="Caption">
+              <property name="Caption" status="skip">
                 <value>-</value>
               </property>
             </properties>
@@ -3861,7 +3878,7 @@
               <property name="Caption">
                 <value>Settings</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Einstellungen</translation>
+                  <translation language="de-DE">Einstellungen</translation>
                 </translations>
               </property>
             </properties>
@@ -3871,7 +3888,7 @@
               <property name="Caption">
                 <value>Enable sound</value>
                 <translations>
-                  <translation language="de-DE" status="proposed">Ton</translation>
+                  <translation language="de-DE">Ton</translation>
                 </translations>
               </property>
             </properties>
